@@ -5,9 +5,9 @@ und andere, die `AGENTS.md` und Agent Skills lesen). Claude Code liest dieselben
 
 ## Zu Beginn jeder Sitzung
 
-1. `bash einrichten.sh` ausführen (Claude Code macht das selbst beim Start). Das Skript findet den persönlichen
+1. `python3 einrichten.py` ausführen (unter Windows `python einrichten.py`; Claude Code macht das selbst beim Start). Das Skript findet den persönlichen
    Arbeitsbereich und teilt ihn den drei Werkzeugen mit. In Cloud- oder Linux-Umgebungen ohne LaTeX und LibreOffice:
-   `bash einrichten.sh --programme`.
+   `python3 einrichten.py --programme`. Unter Windows `python` statt `python3`.
 2. Gibt es noch keinen Arbeitsbereich mit `Profil/lehrkraft-profil.json`: auf `STARTPROMPT.md` hinweisen und die
    Einrichtung danach führen.
 3. Sonst wie der Skill `einstieg`: Profil laden, vorhandene Akten prüfen, fragen „Was steht an?“
