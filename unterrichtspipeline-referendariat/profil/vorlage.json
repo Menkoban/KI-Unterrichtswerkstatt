@@ -421,7 +421,7 @@
       "id": "innerer_zyklus.umfang",
       "gruppe": "Didaktik",
       "titel": "Umfang eines inneren Zyklus",
-      "erklaerung": "je Stunde: jede Doppelstunde ist ein Zyklus · je Arbeitsschritt: ein Zyklus umfasst 1 bis 3 Doppelstunden, eine Lernsituation hat 2 bis 3 Zyklen.",
+      "erklaerung": "je Stunde: jede Doppelstunde ist ein Zyklus · je Arbeitsschritt: ein Zyklus hängt an einem Arbeitsschritt des Auftrags (nie an einem Fachinhalt, der zur Lösung führt), endet mit einem Meilenstein und umfasst 1 bis 3 Doppelstunden; eine Lernsituation hat 2 bis 3 Zyklen. Jede DS endet mit einer kurzen Rückschau in der Planungsmappe der Lernenden.",
       "typ": "auswahl",
       "standard": "je_stunde",
       "optionen": [

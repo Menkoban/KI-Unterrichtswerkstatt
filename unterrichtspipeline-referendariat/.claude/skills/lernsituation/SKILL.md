@@ -14,7 +14,12 @@ Lehrkraft-Profil). Beispiel-Daten: `beispiele/daten/lernsituation/lf01_eg_ls01.j
 2. **Entwurf** `.daten/lernsituation/<kurz>.json` aus der Skizze: Situation ausformulieren
    (Kunde, Anlass, Zitat), Auftrag der Meisterin in der Sie-Form, Handlungsergebnis,
    Bewertungskriterien, Zyklen (innere vollständige Handlung je Arbeitsschritt, 2 bis 3 je
-   LS, Profil `innerer_zyklus.umfang`), Doppelstunden (Standard 2 Std.).
+   LS, Profil `innerer_zyklus.umfang`), Doppelstunden (Standard 2 Std.). **Zyklen** (Lehrkraft 2026-10-30): jeder
+   innere Zyklus hängt an einem **Arbeitsschritt des Auftrags** (z. B. „Fehler eingrenzen“, „Ursache belegen und
+   Kundschaft informieren“), nie an einem Fachinhalt, der zur Lösung führt; er endet mit einem **Meilenstein**, die
+   Doppelstunden sind nur Zeitrahmen. Leitfragen der DS sind Kundenfragen oder Arbeitsschritte, keine Fachhinweise.
+   Jede DS endet mit einer kurzen Rückschau der Lernenden in ihrer Planungsmappe (Stand, nächster Schritt), ohne
+   eigenen Zyklus.
 3. **Erzeugen:** `python lernsituation/ls_ausarbeitung.py <arbeitsbereich> <kurz>`. Der
    Generator prüft: Stunden der DS = Stunden der LS, Planen in jedem Zyklus (Fehler), alle
    Phasen je Zyklus (Warnung), alle LK der LS vorhanden, Legende passend.
