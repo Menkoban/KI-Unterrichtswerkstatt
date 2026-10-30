@@ -45,7 +45,7 @@ Den Text aus [`STARTPROMPT.md`](STARTPROMPT.md) einfügen. Die KI
 
 - prüft die Technik,
 - legt das Gerüst des Arbeitsbereichs an,
-- fragt Sie **eine Frage nach der anderen**: Schule und Logo, Seminar, Fächer und Klassen, Lehrpläne, eigene
+- fragt Sie **eine Frage nach der anderen**: Schule und Logo, Seminar, Fächer und Klassen, Lehrpläne, didaktische Quellen, eigene
   Unterlagen, Modellbetrieb, Vorlieben,
 - leitet aus hochgeladenen Arbeitsblättern und Entwürfen Ihre Gestaltung ab und lässt jeden Wert bestätigen,
 - schreibt daraus Ihr Lehrkraft-Profil und sichert es.

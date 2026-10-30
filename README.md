@@ -109,7 +109,7 @@ Die ausführliche Fassung mit Erklärungen steht in [`ANLEITUNG.md`](ANLEITUNG.m
    der Sitzungsstart findet den Arbeitsbereich auch als Nachbarordner.
 3. **Claude Code in der Wurzel dieses Repositorys starten.** Die Skills aller drei Pipelines werden dann gefunden.
 4. **Startprompt einfügen** aus [`STARTPROMPT.md`](STARTPROMPT.md). Die KI richtet den Arbeitsbereich ein und führt
-   Sie durch ein Interview (Schule, Seminar, Fächer, eigene Unterlagen, Vorlieben). Daraus entsteht Ihr
+   Sie durch ein Interview (Schule, Seminar, Fächer, didaktische Quellen, eigene Unterlagen, Vorlieben). Daraus entsteht Ihr
    Lehrkraft-Profil.
 5. **Loslegen:** sagen, was ansteht, etwa „Ich muss LF 3 planen“, „nächste Woche ist mein Unterrichtsbesuch“ oder
    „Material für DS 2 bauen“.

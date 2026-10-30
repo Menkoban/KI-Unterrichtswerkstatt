@@ -30,11 +30,19 @@ Warte jeweils meine Antwort ab.
       Namen). Gilt das Fachpaket Elektrotechnik (`fach.elektrotechnik`)?
    5. Rahmenlehrpläne bzw. Lehrpläne meiner Fächer: aus amtlicher Quelle laden oder ich lade sie hoch; Ablage unter
       `Quellen/`.
-   6. Eigene Unterlagen: Ich lade vorhandene Arbeitsblätter, Entwürfe oder Vorlagen der Schule hoch. Leite daraus
+   6. Didaktische Quellen: Ich lade hoch, worauf meine Planung fachlich und didaktisch fußen soll, zum Beispiel
+      Leitfäden und Handreichungen des Seminars, Unterlagen aus Fachseminar und Pädagogik, Fachdidaktik, Texte zu
+      Kompetenzorientierung, Handlungsorientierung, Lernfeldkonzept und Medienbildung, Landesvorgaben (etwa schulisches
+      Curriculum), Fachbücher und Tabellenbücher, die meine Lernenden nutzen. Lege sie im Arbeitsbereich unter
+      `Quellen/Didaktik/`, `Quellen/Seminar/` und `Quellen/Fach/` ab, je mit kurzer Quellenkarte (Titel, Autor,
+      Jahr, wofür nutzbar). Frag nach, wofür ich jede Quelle verwendet sehen will (Begründungen im Entwurf,
+      Kompetenzformulierung, Material), und nenne mir, welche Quellen für Besuchsentwürfe üblicherweise noch fehlen.
+      Diese Quellen bleiben privat; sie gehören nie in das öffentliche Werkzeug.
+   7. Eigene Unterlagen: Ich lade vorhandene Arbeitsblätter, Entwürfe oder Vorlagen der Schule hoch. Leite daraus
       Gestaltung und Vorlieben ab (Kopfzeile, Schrift, Merkkasten, Aufgabenform, Umfang) und **zeige mir jeden
       abgeleiteten Wert zur Bestätigung**, bevor du ihn einträgst.
-   7. Modellbetrieb: ein fiktiver Betrieb für die Handlungssituationen (Skill `modellbetrieb`) oder vorerst keiner.
-   8. Danach die übrigen Profilwerte gruppenweise (Arbeitsweise, Didaktik, Form, Material, Moodle): pro Gruppe nur
+   8. Modellbetrieb: ein fiktiver Betrieb für die Handlungssituationen (Skill `modellbetrieb`) oder vorerst keiner.
+   9. Danach die übrigen Profilwerte gruppenweise (Arbeitsweise, Didaktik, Form, Material, Moodle): pro Gruppe nur
       die Werte, bei denen der neutrale Standard für mich wahrscheinlich nicht passt; alles andere bleibt Standard.
 5. **Profil schreiben:** `Profil/lehrkraft-profil.json` im Format `{"werte": {...}}` nur mit Werten, die vom Standard
    abweichen; prüfen mit `python3 unterrichtspipeline-referendariat/profil/profil.py <arbeitsbereich>` (erzeugt auch
