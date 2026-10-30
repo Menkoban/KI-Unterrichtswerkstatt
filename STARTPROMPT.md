@@ -1,7 +1,7 @@
 # Startprompt: Einrichtung beim ersten Mal
 
-Claude Code in der Wurzel dieses Repositorys starten (unter claude.ai/code mit Ihrer Kopie dieses Repositorys und Ihrem
-leeren, privaten Arbeitsbereich), dann den Text zwischen den Linien einfügen. Mehr ist nicht nötig; alles Weitere
+Ihre KI-App (Claude Code, Codex, Antigravity, Hermes) in der Wurzel dieses Repositorys starten, in der Cloud mit Ihrer
+Kopie dieses Repositorys und Ihrem leeren, privaten Arbeitsbereich, dann den Text zwischen den Linien einfügen. Mehr ist nicht nötig; alles Weitere
 fragt die KI.
 
 ---
@@ -11,14 +11,14 @@ einrichten. Bitte arbeite auf Deutsch, in der Sie-Form, und stelle mir **immer n
 Kontext, drei gleich ausführliche Vorschläge (den empfohlenen zuerst), dazu die Möglichkeit, frei zu antworten.
 Warte jeweils meine Antwort ab.
 
-1. **Lesen:** zuerst `README.md` und `CLAUDE.md` in der Wurzel, dann
+1. **Lesen:** zuerst `README.md` und `AGENTS.md` in der Wurzel und führe `bash einrichten.sh` aus, dann
    `unterrichtspipeline-referendariat/docs/ARBEITSWEISE.md` und die Profil-Vorlage
    `unterrichtspipeline-referendariat/profil/vorlage.json` (alle Einstellungen mit neutralem Standard).
 2. **Technik prüfen:** Python 3, Git, `python-docx`, LibreOffice (`soffice`); fehlt etwas, sag mir kurz, wie ich es
    nachhole, und warte. Dann `python3 unterrichtspipeline-referendariat/setup_laptop.py`.
 3. **Arbeitsbereich:** Finde mein privates Repository `unterrichtspipeline-referendariat-<name>` (im Werkzeug-Ordner
    oder daneben). Fehlt es, führe mich Schritt für Schritt durch `ANLEITUNG.md` (Abschnitte 1 bis 3: Konto, Fork,
-   privates Repository über den vorausgefüllten Link, Zugriff für Claude) und warte; ich muss danach eine neue
+   privates Repository über den vorausgefüllten Link, Zugriff für die KI-App) und warte; ich muss danach eine neue
    Sitzung mit beiden Repositories starten. Ist es leer, kopiere den Inhalt von
    `unterrichtspipeline-referendariat/docs/arbeitsbereich/repo-geruest/` hinein (mit versteckten Dateien), committe
    und pushe. Prüfe, dass der Arbeitsbereich **privat** ist und **nicht** im Git dieses Werkzeugs landet. Ich kenne

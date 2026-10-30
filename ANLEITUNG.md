@@ -22,7 +22,12 @@ lässt sich zurückholen. Sie müssen dafür nichts über Git wissen; das erledi
    gewählt ist, und **Create repository** tippen. Sonst nichts ankreuzen. Hier landet alles, was nur Ihnen gehört:
    Profil, Quellen, Planungen, Material, Kurse.
 
-## 3. Claude verbinden
+## 3. KI-App verbinden
+
+Erprobt ist die Werkstatt mit **Claude Code**; die Schritte unten gelten dafür. **OpenAI Codex**, **Google
+Antigravity** und **Hermes Agent** lesen dieselben Anweisungen (`AGENTS.md`) und Skills (`.agents/skills/`): Dort
+verbinden Sie GitHub ebenso, öffnen beide Repositories und fügen denselben Startprompt ein. Hermes Agent sucht Skills
+sonst in `~/.hermes/skills/`; dann die Ordner aus `.agents/skills/` dorthin kopieren oder verlinken.
 
 1. Ein Abo mit Claude Code (Pro oder höher) auf [claude.ai](https://claude.ai). Unter
    [claude.ai/code](https://claude.ai/code) läuft Claude Code im Browser oder in der App, auch auf dem Tablet.
@@ -32,13 +37,13 @@ lässt sich zurückholen. Sie müssen dafür nichts über Git wissen; das erledi
    Ihre Kopie der KI-Unterrichtswerkstatt und Ihren Arbeitsbereich. Der Sitzungsstart richtet die Programme ein und
    findet den Arbeitsbereich von selbst.
 
-**Am eigenen Rechner** geht es auch: Claude Code installieren, dann im Terminal
+**Am eigenen Rechner** geht es auch: die KI-App installieren, dann im Terminal
 
 ```bash
 git clone https://github.com/<ihr-konto>/KI-Unterrichtswerkstatt.git
 cd KI-Unterrichtswerkstatt
 git clone https://github.com/<ihr-konto>/unterrichtspipeline-referendariat-<ihr name>.git
-claude
+claude        # oder codex, hermes; in Antigravity den Ordner öffnen
 ```
 
 Der Arbeitsbereich liegt dann im Werkzeug-Ordner, wird von dessen Git ignoriert und sichert sich in sein eigenes
@@ -91,4 +96,4 @@ stattdessen brauchen (Stationskarten, Beobachtungsbogen, Bewertungsraster). Rüc
 zu verbessern.
 
 **Wer sieht meine Daten?** Nur Sie: Ihr Arbeitsbereich ist privat. Was Sie in die Sitzung hochladen, verarbeitet
-Claude nach den Bedingungen Ihres Abos; laden Sie keine Namen von Lernenden hoch.
+die KI-App nach den Bedingungen Ihres Abos; laden Sie keine Namen von Lernenden hoch.

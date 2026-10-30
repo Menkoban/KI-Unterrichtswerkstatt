@@ -4,9 +4,11 @@
 Vorbereitungsdienst und alle, die es sonst brauchen können. Entstanden im Referendariat an einer berufsbildenden
 Schule in Niedersachsen, dort im Alltag erprobt und mit Zustimmung der Seminarleitung veröffentlicht.
 
-**Die Lehrkraft entscheidet, die KI fragt, entwirft, prüft und dokumentiert.** Grundlage ist
-[Claude Code](https://claude.com/claude-code): Die Arbeit läuft als Gespräch, die KI stellt eine Frage nach der
-anderen, baut daraus Word-Dokumente, Material und Kurse und legt jede Entscheidung nachvollziehbar ab.
+**Die Lehrkraft entscheidet, die KI fragt, entwirft, prüft und dokumentiert.** Die Arbeit läuft als Gespräch mit einem
+KI-Assistenten, der in diesem Repository arbeitet: Er stellt eine Frage nach der anderen, baut daraus Word-Dokumente,
+Material und Kurse und legt jede Entscheidung nachvollziehbar ab. Entwickelt und erprobt mit
+[Claude Code](https://claude.com/claude-code); die Anweisungen (`AGENTS.md`) und Skills (`.agents/skills/`) folgen den
+offenen Standards, die auch OpenAI Codex, Google Antigravity und Hermes Agent lesen.
 
 ![Gesamtübersicht: drei Pipelines und der persönliche Arbeitsbereich](unterrichtspipeline-referendariat/docs/visualisierung/gesamtuebersicht_4k.png)
 
@@ -84,8 +86,11 @@ Weitere Übersichten (jede Pipeline einzeln, Planungsebenen, Skill-Fahrplan zum 
 ## Was Sie brauchen
 
 - ein **GitHub-Konto** (kostenlos) für Ihren privaten Arbeitsbereich,
-- **Claude Code** mit einem Claude-Abo (Pro oder höher): im Browser oder in der App unter
-  [claude.ai/code](https://claude.ai/code) (läuft in der Cloud, gut am Tablet) oder auf dem eigenen Rechner,
+- einen **KI-Assistenten für Code-Repositories**, der `AGENTS.md` und Agent Skills liest:
+  - **Claude Code** (Claude-Abo Pro oder höher; erprobt): im Browser oder in der App unter
+    [claude.ai/code](https://claude.ai/code), auch am Tablet, oder auf dem eigenen Rechner;
+  - **OpenAI Codex** (ChatGPT-Abo), **Google Antigravity** oder **Hermes Agent**: lesen `AGENTS.md` und die Skills in
+    `.agents/skills/`; noch nicht im Alltag erprobt, Rückmeldungen willkommen,
 - auf dem eigenen Rechner zusätzlich Python 3, Git und LibreOffice; für Material mit Formeln und Schaltplänen
   LuaLaTeX. Das Skript `materialpipeline-referendariat/werkzeug/einrichten.sh` installiert unter Linux alles, was
   fehlt; in Cloud-Sitzungen läuft es beim Start von selbst.
@@ -97,9 +102,10 @@ Die ausführliche Fassung mit Erklärungen steht in [`ANLEITUNG.md`](ANLEITUNG.m
 1. **GitHub-Konto** anlegen (kostenlos), falls noch keins da ist.
 2. **Zwei Repositories:** dieses Repository mit **Fork** in Ihr Konto übernehmen und einen **privaten** Arbeitsbereich
    `unterrichtspipeline-referendariat-<ihr name>` anlegen ([vorausgefüllter Link](https://github.com/new?name=unterrichtspipeline-referendariat-IHRNAME&visibility=private&description=Pers%C3%B6nlicher+Arbeitsbereich+zur+KI-Unterrichtswerkstatt)). Dann unter
-   [claude.ai/connect-github](https://claude.ai/connect-github) Claude Zugriff auf beide geben.
-3. **Sitzung starten** unter [claude.ai/code](https://claude.ai/code) mit beiden Repositories (oder am eigenen Rechner
-   in der Wurzel dieses Repositorys). Die Skills aller drei Pipelines werden dann gefunden.
+   Ihrer KI-App Zugriff auf beide geben (bei Claude: [claude.ai/connect-github](https://claude.ai/connect-github)).
+3. **Sitzung starten** mit beiden Repositories, etwa unter [claude.ai/code](https://claude.ai/code), in Codex oder
+   Antigravity, oder am eigenen Rechner in der Wurzel dieses Repositorys. Die Skills aller drei Pipelines werden dann
+   gefunden; andere Apps als Claude Code führen zu Beginn `bash einrichten.sh` aus (steht in `AGENTS.md`).
 4. **Startprompt einfügen** aus [`STARTPROMPT.md`](STARTPROMPT.md). Die KI richtet den Arbeitsbereich ein und führt
    Sie durch ein Interview (Schule, Seminar, Fächer, didaktische Quellen, eigene Unterlagen, Vorlieben). Daraus entsteht Ihr
    Lehrkraft-Profil.
@@ -136,7 +142,8 @@ Die ausführliche Fassung mit Erklärungen steht in [`ANLEITUNG.md`](ANLEITUNG.m
 |---|---|
 | Arbeitsweise mit der Lehrkraft | [`unterrichtspipeline-referendariat/docs/ARBEITSWEISE.md`](unterrichtspipeline-referendariat/docs/ARBEITSWEISE.md) |
 | alle Profilwerte mit neutralem Standard | [`unterrichtspipeline-referendariat/profil/vorlage.json`](unterrichtspipeline-referendariat/profil/vorlage.json) |
-| Skills je Pipeline | `*/.claude/skills/` in den drei Ordnern |
+| Anweisungen für jede KI-App | [`AGENTS.md`](AGENTS.md) |
+| Skills | [`.agents/skills/`](.agents/skills/) (alle), Quelle `*/.claude/skills/` in den drei Ordnern |
 | Regeln für Material (Stil, Prüfcheckliste) | [`materialpipeline-referendariat/docs/regeln/`](materialpipeline-referendariat/docs/regeln/) |
 | Kurs im Moodle der Schule einspielen | [`moodlepipeline-referendariat/docs/anleitung_einspielen.md`](moodlepipeline-referendariat/docs/anleitung_einspielen.md) |
 | Gerüst eines Arbeitsbereichs | [`unterrichtspipeline-referendariat/docs/arbeitsbereich/repo-geruest/`](unterrichtspipeline-referendariat/docs/arbeitsbereich/repo-geruest/) |
@@ -150,3 +157,8 @@ Die ausführliche Fassung mit Erklärungen steht in [`ANLEITUNG.md`](ANLEITUNG.m
   amtlicher Quelle.
 - Das Projekt ist ein persönliches Werkzeug aus dem Referendariat, kein Produkt. Es wird weiterentwickelt, solange
   es im Alltag gebraucht wird.
+
+## Lizenz
+
+[MIT](LICENSE): frei nutzen, verändern und weitergeben, auch angepasst an die eigene Schule; der Urheberhinweis bleibt
+in der Lizenzdatei.
