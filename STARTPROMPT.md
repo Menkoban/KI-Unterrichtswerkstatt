@@ -45,7 +45,13 @@ Warte jeweils meine Antwort ab.
       Gestaltung und Vorlieben ab (Kopfzeile, Schrift, Merkkasten, Aufgabenform, Umfang) und **zeige mir jeden
       abgeleiteten Wert zur Bestätigung**, bevor du ihn einträgst.
    8. Modellbetrieb: ein fiktiver Betrieb für die Handlungssituationen (Skill `modellbetrieb`) oder vorerst keiner.
-   9. Danach die übrigen Profilwerte gruppenweise (Arbeitsweise, Didaktik, Form, Material, Moodle): pro Gruppe nur
+   9. Moodle der Schule (nur wenn ich Moodle-Kurse möchte): Moodle-Version, ob das **Kachelformat** (format_tiles)
+      installiert ist (Standard: ja, Profilwert `moodle.kachelformat`; ohne Plugin zeigt Moodle die Kurse im
+      Themenformat) und ob ich selbst neue Kurse anlegen darf. Erkläre mir kurz, dass jeder Kurs vor der Übergabe in
+      ein Test-Moodle eingespielt und nachgezählt wird (`moodlepipeline-referendariat/werkzeug/testmoodle/einspielen.sh`)
+      und dass ich ihn in der Schule **immer als neuen Kurs** einspiele
+      (`moodlepipeline-referendariat/docs/anleitung_einspielen.md`).
+   10. Danach die übrigen Profilwerte gruppenweise (Arbeitsweise, Didaktik, Form, Material, Moodle): pro Gruppe nur
       die Werte, bei denen der neutrale Standard für mich wahrscheinlich nicht passt; alles andere bleibt Standard.
 5. **Profil schreiben:** `Profil/lehrkraft-profil.json` im Format `{"werte": {...}}` nur mit Werten, die vom Standard
    abweichen; prüfen mit `python3 unterrichtspipeline-referendariat/profil/profil.py <arbeitsbereich>` (erzeugt auch

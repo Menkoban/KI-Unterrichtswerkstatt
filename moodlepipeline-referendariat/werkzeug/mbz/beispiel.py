@@ -147,7 +147,7 @@ def kursdefinition() -> dict:
                  for n, _, lo, hi in MEDAILLEN]
     return {
         "kurs": {"vollname": "EG1 · LF 1 · LS 1 Der Stromhof und das Haus Schütte",
-                 "kurzname": "EG1-LF01-LS01", "format": "topics", "abschlussverfolgung": True,
+                 "kurzname": "EG1-LF01-LS01", "format": "tiles", "abschlussverfolgung": True,
                  "ki_hinweis": "Erstellt von Alex Muster mit Hilfe von künstlicher Intelligenz",
                  "beschreibung": "<p>Familie Schütte lässt ihr Haus am Stromhof modernisieren. "
                                  "Sie planen mit Brinkmann Automation die Elektroinstallation.</p>",

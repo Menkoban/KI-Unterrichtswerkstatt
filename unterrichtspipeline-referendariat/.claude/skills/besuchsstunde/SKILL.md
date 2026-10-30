@@ -8,11 +8,16 @@ description: Besuchsstunden der Unterrichtspipeline (EUB, KUB, FLB, GUB, PU): pl
 Grundlage: `docs/ARBEITSWEISE.md`, `docs/KONZEPT.md` („Planungstiefe je Stundentyp“, Entwurf,
 Seitenbudget, Protokollzeilen zu EUB, KUB, GUB, PU vom 11. und 12.10.2026). Seminarprofil: `seminare/<id>/seminar.json`
 (Profilwert `seminar`; Name, Anschrift, Besuchsformen, Seitenbudget, Versicherung, Hinweise); ohne gewähltes Seminar
-zuerst das Seminar im Profil klären. Für Osnabrück stehen die Seminar-Originale in
-`Quellen/Wiki_StS_OS/` (Leitfaden „Handlungsschema für den Unterrichtsentwurf (GUB und PU)“,
-Weisungen für die Staatsprüfung, Muster in `dateien/`) und `Quellen/Seminar_Downloads/`.
-Beispiele im Arbeitsbereich: `.daten/stunde/lf01_eg_ls01_ue02.json` (EUB), `…_ue03` (KUB),
-`…_ue04` (GUB), `lf01_eg_ls02_ue01.json` (PU).
+zuerst das Seminar im Profil klären.
+
+**Seminar-Originale und didaktische Quellen** liegen im **Arbeitsbereich** (aus dem Einrichtungs-Interview):
+`Quellen/Seminar/` (Leitfaden zum Unterrichtsentwurf, Weisungen für die Prüfung, Muster, Formulare wie das
+KUB-Protokoll) und `Quellen/Didaktik/` (Fachdidaktik, Kompetenz- und Handlungsorientierung, Landesvorgaben), je mit
+Quellenkarte. Vor dem Entwurf die passenden Originale lesen; Begründungen im Entwurf stützen sich auf diese Quellen und
+stehen im Literaturverzeichnis. Fehlen sie, die Lehrkraft einmal darum bitten und sonst mit dem Seminarprofil allein
+arbeiten (im Prüfbericht als Warnung „Seminar-Originale fehlen“). Ältere Arbeitsbereiche: auch `Quellen/` direkt und
+im Werkzeug `Quellen/Wiki_StS_OS/`, `Quellen/Seminar_Downloads/` (nur in der privaten Fassung des Werkzeugs).
+Eigene frühere Besuche als Beispiel: im Arbeitsbereich `.daten/stunde/*.json` mit Feld `besuch`.
 
 ## Ablauf
 

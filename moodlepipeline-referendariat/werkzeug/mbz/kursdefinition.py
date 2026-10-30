@@ -10,7 +10,7 @@ gültig, wenn `pruefe(kursdef)` eine leere Liste liefert.
         "kurzname":  "EG1-LF01-LS01",
         "beschreibung": "<p>…</p>",              # HTML
         "ki_hinweis": "Erstellt von Alex … mit Hilfe von künstlicher Intelligenz",
-        "format": "topics",                       # oder "tiles" (Plugin, Profil-Option)
+        "format": "tiles",                        # Standard Kachelformat (format_tiles); "topics" nur ohne Plugin
         "abschlussverfolgung": true,
         "allgemein": "<p>…</p>",                  # optional, Text im Abschnitt „Allgemein“ (0)
         "allgemein_dateien": ["Profil/logo.png"], # optional, Dateien darin (wie dateien eines Abschnitts)
@@ -298,7 +298,7 @@ def pruefe(kursdef: dict, wurzel: Path | None = None) -> list[str]:
     if "künstlicher Intelligenz" not in str(kurs.get("ki_hinweis", "")):
         f.append("kurs.ki_hinweis muss „… mit Hilfe von künstlicher "
                  "Intelligenz“ enthalten (Punkt 32)")
-    if kurs.get("format", "topics") not in ("topics", "tiles"):
+    if kurs.get("format", "tiles") not in ("topics", "tiles"):
         f.append(f"kurs.format {kurs.get('format')!r}: erlaubt topics, tiles")
     f += _pruefe_kurstyp(kursdef)
     if not kursdef.get("abschnitte"):

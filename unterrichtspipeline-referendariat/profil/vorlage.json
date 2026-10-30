@@ -861,9 +861,9 @@
       "id": "moodle.kachelformat",
       "gruppe": "Moodle",
       "titel": "Kachelformat",
-      "erklaerung": "Themenkurse im Kachelformat (Plugin format_tiles), wenn die Schule es hat; sonst Themenformat.",
+      "erklaerung": "Themenkurse im Kachelformat (Plugin format_tiles), Standard. Aus nur, wenn das Moodle der Schule kein Kachelformat hat; beim Einspielen ohne Plugin fällt Moodle ohnehin auf das Themenformat zurück.",
       "typ": "ja_nein",
-      "standard": false
+      "standard": true
     },
     {
       "id": "moodle.schulfarben",

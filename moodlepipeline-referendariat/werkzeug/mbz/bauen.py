@@ -299,7 +299,7 @@ class Bau:
         text, ids = self.einbetten(ab.get("zusammenfassung", ""), ab.get("dateien"),
                                    self.COURSE_CTX, "course", "section", sec_id)
         kachel = ""
-        if ab.get("bild") and self.kurs.get("format", "topics") == "tiles":
+        if ab.get("bild") and self.kurs.get("format", "tiles") == "tiles":
             kachel, foto = self.kachelfoto(sec_id, ab["bild"])
             ids += foto
         self.xml(f"sections/section_{sec_id}/section.xml", (
@@ -616,7 +616,7 @@ class Bau:
     # -- Kurs ------------------------------------------------------------ #
     def _kurs(self) -> None:
         k = self.kurs
-        fmt = k.get("format", "topics")
+        fmt = k.get("format", "tiles")
         if k.get("kursbild"):
             self.kurs_filerefs += self.ablegen(
                 self.COURSE_CTX, "course", "overviewfiles", 0,
@@ -929,7 +929,7 @@ class Bau:
             ("original_wwwroot", "https://moodle.example.org"),
             ("original_site_identifier_hash", hashlib.md5(b"p3").hexdigest()),
             ("original_course_id", self.COURSE_ID), ("original_course_format",
-                                                     k.get("format", "topics")),
+                                                     k.get("format", "tiles")),
             ("original_course_fullname", k["vollname"]),
             ("original_course_shortname", k["kurzname"]),
             ("original_course_startdate", int(k.get("startdatum", self.jetzt))),
