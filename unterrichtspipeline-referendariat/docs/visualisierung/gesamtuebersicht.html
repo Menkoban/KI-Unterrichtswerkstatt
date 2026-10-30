@@ -1,0 +1,85 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Gesamtübersicht</title>
+<link rel="stylesheet" href="stil.css">
+<style>
+ .flow{display:grid;grid-template-columns:1fr 54px 1fr 54px 1fr;flex:1;min-height:0}
+ .arr{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#64748b;font-size:12px;text-align:center;font-weight:600}
+ .arr svg{width:40px;height:40px}
+ .pl{border-radius:18px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
+ .pl .head{padding:16px 20px;color:#fff}
+ .pl .head h2{font-size:26px;font-weight:800}
+ .pl .head p{font-size:14.5px;opacity:.9;margin-top:4px}
+ .p1 .head{background:var(--p1)} .p2 .head{background:var(--p2)} .p3 .head{background:var(--p3)}
+ .pl .body{padding:14px 20px;display:flex;flex-direction:column;gap:12px;flex:1}
+ .lbl{font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+ .chips{display:flex;flex-wrap:wrap;gap:6px}
+ .chip{font-size:14px;border:1px solid var(--line);border-radius:8px;padding:4px 9px;background:#fbfcfe}
+ .p1 .chip.k{border-color:#c7d6ff;background:var(--p1s)} .p2 .chip.k{border-color:#b8e2db;background:var(--p2s)} .p3 .chip.k{border-color:#f7cfb1;background:var(--p3s)}
+ ul{list-style:none} li{font-size:15px;line-height:1.4;padding-left:15px;position:relative;margin-bottom:3px}
+ li:before{content:"";position:absolute;left:1px;top:9px;width:6px;height:6px;border-radius:50%;background:#94a3b8}
+ .out{margin-top:auto;border-top:1px dashed var(--line);padding-top:10px}
+ .ref{display:grid;grid-template-columns:auto 1fr 1fr 1fr 1fr 1fr;gap:12px;align-items:stretch;background:var(--refs);border:1px solid #dccbfb;border-radius:16px;padding:12px 16px}
+ .ref .t{display:flex;flex-direction:column;justify-content:center;padding-right:8px}
+ .ref .t h3{font-size:20px;font-weight:800;color:var(--ref)} .ref .t p{font-size:13px;color:#5b4a86}
+ .ref .c{background:#fff;border-radius:10px;padding:8px 12px;font-size:14px;line-height:1.35}
+ .ref .c b{display:block;font-size:14.5px;margin-bottom:2px}
+ .loop{font-size:14px;color:#334155;text-align:center}
+ li{font-size:19px;margin-bottom:5px} li:before{top:11px} .chip{font-size:16px;padding:5px 11px} .lbl{font-size:13.5px} .pl .head h2{font-size:30px} .pl .head p{font-size:16.5px} .pl .body{justify-content:space-between;gap:14px} .steps2{display:flex;flex-direction:column;gap:6px} .s2{display:flex;gap:10px;align-items:baseline;font-size:17px;line-height:1.3} .s2 .nn{font-weight:800;font-size:13px;color:#fff;border-radius:6px;padding:2px 7px;min-width:78px;text-align:center;white-space:nowrap;flex-shrink:0} .p1 .nn{background:var(--p1)} .p2 .nn{background:var(--p2)} .p3 .nn{background:var(--p3)} .ref .c{font-size:15.5px} .ref .c b{font-size:16px} .loop{font-size:16px} .arr{font-size:13.5px}
+ .repo{display:inline-block;margin-top:6px;font-family:"DejaVu Sans Mono",monospace;font-size:13.5px;background:rgba(255,255,255,.2);border-radius:6px;padding:2px 8px;white-space:nowrap}
+ .chip{font-size:14.5px;padding:4px 9px} li{font-size:17px;margin-bottom:3px} .s2{font-size:16px} .pl .body{gap:10px;padding:12px 18px}
+ .badge{white-space:nowrap} .badges{flex-shrink:0}
+ .gate{display:inline-block;font-size:11.5px;font-weight:800;color:#15803d;background:#e8f6ed;border:1px solid #b9e3c7;border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:1px}
+ .ref .t h3{font-size:19px} .ref .c{font-size:14.5px}
+</style></head><body>
+<header>
+ <div><h1>Unterrichtspipeline Referendariat · Gesamtübersicht</h1>
+ <div class="sub">Drei Werkzeuge, ein persönlicher Arbeitsbereich · für alle Fächer · Seminar als austauschbares Seminarprofil · Stand 25.10.2026</div></div>
+ <div class="badges"><span class="badge b-draft">Übungsphase</span><span class="badge b-ok">P1 erprobt an LF 1</span><span class="badge b-ok">P2 LS 1 bis 3</span><span class="badge b-ok">P3 Kurs LS 1</span></div>
+</header>
+<div class="flow">
+ <section class="pl p1"><div class="head"><h2>1 · Unterrichtsplanung</h2><p>vom Lehrplan zur nachbereiteten Stunde</p><div class="repo">⎇ unterrichtspipeline-referendariat</div></div>
+  <div class="body"><div><div class="lbl">Schritte</div><div class="steps2">
+   <div class="s2"><span class="nn">00</span><span>Einstieg „Was steht an?“: vorhanden, fehlt, veraltet</span></div>
+   <div class="s2"><span class="nn">01 bis 03</span><span>Makro: Analyse · Lernsituationen · Modellbetrieb · Jahresplanung</span></div>
+   <div class="s2"><span class="nn">04 bis 06</span><span>Meso: Lernsituation · Arbeitsplan · Klasse · Fehlvorstellungen</span></div>
+   <div class="s2"><span class="nn">07 bis 17</span><span>Mikro: Stundentyp zuerst · Verlaufsskizze, Kurzskizze, Besuch · Nachbereitung</span></div>
+   <div class="s2"><span class="nn">LS</span><span>selbstständig: Arbeitsplan und Kurzskizze je DS</span></div>
+   <div class="s2"><span class="nn">17</span><span>Nachbereitung frei gesprochen, nach Reichweite abgelegt</span></div></div></div>
+   <div><div class="lbl">Akten</div><div class="chips"><span class="chip k">Lernfeld &amp; Jahr</span><span class="chip k">Lernsituation</span><span class="chip k">Klasse</span><span class="chip k">Stunde</span><span class="chip k">Planungsmappe</span></div></div>
+   <div><div class="lbl">braucht</div><ul><li>Rahmenlehrpläne, Seminarvorgaben (im Werkzeug)</li><li>Ihre Entscheidungen im Interview</li><li>Profil und Akten aus dem Arbeitsbereich</li></ul></div>
+   <div class="out"><div class="lbl" style="color:var(--ok)">liefert</div><ul><li>Akten als DOCX mit Prüfbericht <span class="gate">Freigabe</span></li><li>Entwürfe EUB, KUB, FLB, GUB, PU</li><li>Materialauftrag je Stunde oder je LS</li></ul></div>
+  </div></section>
+ <div class="arr"><svg viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Material&shy;auftrag</div>
+ <section class="pl p2"><div class="head"><h2>2 · Materialerstellung</h2><p>was in der Stunde auf den Tisch kommt</p><div class="repo">⎇ materialpipeline-referendariat</div></div>
+  <div class="body"><div><div class="lbl">Schritte</div><div class="steps2">
+   <div class="s2"><span class="nn">1 bis 2</span><span>Auftrag, Bibliothek, Quellen lesen · nur Lücken fragen</span></div>
+   <div class="s2"><span class="nn">3</span><span>Materialplan, chronologisch <span class="gate">Freigabe 1</span></span></div>
+   <div class="s2"><span class="nn">4</span><span>Bauen mit Fach-Skills und Bauskripten</span></div>
+   <div class="s2"><span class="nn">5</span><span>Prüfen: Automatik · Sichtprüfung · Leser-Test</span></div>
+   <div class="s2"><span class="nn">6 bis 7</span><span>Prüfbericht <span class="gate">Freigabe 2</span> · Ablage, Übergabe</span></div></div></div>
+   <div><div class="lbl">Bausteine</div><div class="chips"><span class="chip k">Arbeitsblätter fortlaufend</span><span class="chip k">Schüler- und Gesamtfassung</span><span class="chip k">Merkkasten</span><span class="chip k">Formeln mit Bruchstrich</span><span class="chip k">Quellen mit Kurzverweis</span><span class="chip k">Erwartungshorizont</span><span class="chip k">Schaltpläne DIN EN 60617</span><span class="chip k">Rechenprüfer</span><span class="chip k">HTML-Simulationen</span></div></div>
+   <div><div class="lbl">braucht</div><ul><li>Materialauftrag aus Pipeline 1</li><li>Quellen und Bibliothek je Lernfeld</li><li>Stilregeln und Prüfcheckliste</li></ul></div>
+   <div class="out"><div class="lbl" style="color:var(--ok)">liefert</div><ul><li>DOCX · XLSX · PPTX · HTML</li><li>Anlagen im Stundenordner, Glossar-Daten</li></ul></div>
+  </div></section>
+ <div class="arr"><svg viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Anlagen<br>und<br>Über&shy;gabe</div>
+ <section class="pl p3"><div class="head"><h2>3 · Moodle-Kurs</h2><p>ein Themenkurs je Lernsituation</p><div class="repo">⎇ moodlepipeline-referendariat</div></div>
+  <div class="body"><div><div class="lbl">Schritte</div><div class="steps2">
+   <div class="s2"><span class="nn">0 bis 1</span><span>Profil und Eingang lesen: die ganze Lernsituation</span></div>
+   <div class="s2"><span class="nn">2</span><span>Grilling bis zum Kursplan (DOCX) <span class="gate">Freigabe</span></span></div>
+   <div class="s2"><span class="nn">3</span><span>Bau in einem Lauf, Zusammenbau per Programm</span></div>
+   <div class="s2"><span class="nn">4</span><span>Prüfer · Sichtprüfung <span class="gate">Abnahme</span></span></div>
+   <div class="s2"><span class="nn">5</span><span>Ablage der .mbz, Test im Moodle 5.1.6</span></div></div></div>
+   <div><div class="lbl">Bausteine</div><div class="chips"><span class="chip k">Kacheln</span><span class="chip k">Tests mit Sternen</span><span class="chip k">Medaillen</span><span class="chip k">Infoseiten aus Word</span><span class="chip k">Glossar</span><span class="chip k">Kursvorschau</span></div></div>
+   <div><div class="lbl">braucht</div><ul><li>Lernsituation aus Pipeline 1</li><li>Material und uebergabe.json aus Pipeline 2</li><li>Profilgruppe „Moodle“</li></ul></div>
+   <div class="out"><div class="lbl" style="color:var(--ok)">liefert</div><ul><li>geprüfte Kurssicherung (.mbz)</li><li>Kursplan und Einspiel-Anleitung</li></ul></div>
+  </div></section>
+</div>
+<div class="loop">↺ Nachbereitung nach jeder Stunde fließt in die nächste Planung; jede Korrektur der Lehrkraft wird sofort Regel (Profilwert, Stilregel oder Prüfpunkt).</div>
+<div class="ref">
+ <div class="t"><h3>Arbeitsbereich</h3><p>persönlich, nur Daten:<br>…-referendariat-&lt;name&gt;</p></div>
+ <div class="c"><b>Lehrkraft-Profil</b>persönliche Werte gegen den neutralen Standard im Werkzeug</div>
+ <div class="c"><b>Akten und Material</b>Fach › Beruf › Lernfeld › LS; Unterricht › Klasse › Stunde</div>
+ <div class="c"><b>Ref-Akte</b>Besuche, Fristen, Dokumentation, KI-Verzeichnis</div>
+ <div class="c"><b>Freigaben</b>Leseseite vorneweg, Korrekturzähler in .daten/freigaben.json</div>
+ <div class="c"><b>Werkbank</b>Webseite mit Stand, Freigaben, Dateien und Chat; nachts aktualisiert</div>
+</div>
+</body></html>

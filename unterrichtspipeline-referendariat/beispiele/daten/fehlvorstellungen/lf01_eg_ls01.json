@@ -1,0 +1,193 @@
+{
+ "ls": "lf01_eg_ls01",
+ "datum": "2026-10-11",
+ "stand": "von der Lehrkraft freigegeben am 2026-10-11",
+ "einleitung": [
+  "LS 1 ist die erste Lernsituation des Ausbildungsjahres. Es wird noch nicht gerechnet und kaum gemessen; Fehlvorstellungen zeigen sich hier vor allem beim Ordnen (Systemebenen), beim Sprechen (Fachsprache) und beim Bild davon, wo die Energie herkommt und was der Zähler misst. Ziel des Schritts: die Vorstellungen früh sichtbar machen, die in LS 2 bis 5 tragen müssen.",
+  "Sechs Fehlvorstellungen, jede mit Herkunft (Nummern FV-06 und FV-08 gestrichen, die übrigen behalten ihre Nummer). Nachrecherche vom 2026-10-11: fünf sind in der Literatur belegt (FV-01 verwandt, FV-02 bis FV-05), FV-07 ist von der Lehrkraft bestätigt. Zwei sind mit Priorität A für den Unterricht vorgesehen, vier werden über das Eingangsquiz, Hilfekarten oder die Checkliste der Info-Mappe abgefangen."
+ ],
+ "lernausgangslage_text": "Der Klasse ist noch keine Lerngruppe zugeordnet; deshalb steht jede Einschätzung auf „unbekannt“. Geklärt wird die Lage mit dem Moodle-Eingang zu LF 1: Selbsteinschätzung (Vorwissen abfragen) und kurzer Eingangstest (Vorwissen abtesten), dessen falsche Antworten je einer Fehlvorstellung zugeordnet sind. Die Ergebnisse gehen ins Sitzplan-Profil und werden nach jeder Doppelstunde in der Nachbereitung fortgeschrieben.",
+ "lernausgangslage": [
+  {
+   "inhalt": "Ausbildungsbetrieb: Arbeitsfelder, Abläufe vom Auftrag bis zur Rechnung",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Selbsteinschätzung: „Ich kann die Arbeitsfelder meines Betriebs beschreiben.“ (4 Stufen)"
+  },
+  {
+   "inhalt": "Betriebsmittel im Wohnhaus benennen (Zählerplatz, Sicherungen, Unterverteilung, Leitungen, Steckdosen, Leuchten, Geräte)",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Eingangstest: Fotos den Begriffen zuordnen"
+  },
+  {
+   "inhalt": "Systemebenen Anlage, Gerät, Baugruppe, Bauelement",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Eingangstest: vier Betriebsmittel einer Ebene zuordnen (Distraktoren nach FV-01)"
+  },
+  {
+   "inhalt": "Energiefluss vom Hausanschluss zum Verbraucher, Aufgabe des Zählers",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Eingangstest: „Was zählt der Zähler?“ (Distraktoren nach FV-03, FV-04)"
+  },
+  {
+   "inhalt": "Grundbegriffe Strom, Spannung, Leistung, Energie (Physik Sekundarstufe I)",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Eingangstest: Größe und Einheit zuordnen; Aussagen „richtig/falsch“ (Distraktoren nach FV-02)"
+  },
+  {
+   "inhalt": "Schaltzeichen (erste)",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Selbsteinschätzung und zwei Zuordnungsaufgaben"
+  }
+ ],
+ "fv": [
+  {
+   "nr": "FV-01",
+   "name": "„Die Ebene ergibt sich aus der Größe“",
+   "aeusserung": "„Der Durchlauferhitzer ist groß, also Anlage. Die Steckdose ist klein, also Bauelement.“",
+   "kern": "Die Systemebenen werden nach Größe oder Preis geordnet statt nach der Funktion im System. Dass die Steckdose ein Gerät mit Baugruppen (Kontakte, Klemmen, Schutzkontakt) ist und die Hausinstallation die Anlage, liegt außerhalb der Vorstellung. LK-02 baut darauf auf.",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Hmelo-Silver & Pfeffer (2004)",
+    "notiz": "verwandt: Novizen beschreiben Systeme über sichtbare Teile, Fachleute über Funktion und Verhalten; die Übertragung auf die Systemebenen der Elektroinstallation ist eine KI-Vermutung"
+   },
+   "ds": [
+    "2"
+   ],
+   "prio": "A",
+   "aufdecken": "Eingangstest: „Ordnen Sie zu: Hausinstallation, Durchlauferhitzer, Heizstab, Steckdose.“ Distraktoren ordnen nach Größe.",
+   "aufgreifen": "In DS 2 erst nach Gefühl sortieren lassen, dann mit der Leitfrage „Was ist Teil wovon?“ den Systembaum bauen; die Steckdose aufschrauben (Muster) und ihre Teile benennen."
+  },
+  {
+   "nr": "FV-02",
+   "name": "„Strom“ für alles",
+   "aeusserung": "„Die Steckdose hat 230 Strom.“ „Der Durchlauferhitzer zieht viel Strom, das sind 3,5 kW.“",
+   "kern": "Im Alltag heißt alles Strom: Spannung, Stromstärke, Leistung und Energie. Für die Info-Mappe an die Familie und für LS 3 (Energie-Check) müssen die Begriffe getrennt sein; sonst lernen die Lernenden das Rechnen auf einer falschen Begriffsbasis.",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Koller, Waltner & Wiesner (2008), S. 6 f.",
+    "notiz": "„Stromstärke und Spannung als synonyme Begriffe“; Alltagssprache fördert die Vermischung"
+   },
+   "ds": [
+    "1",
+    "2",
+    "4"
+   ],
+   "prio": "A",
+   "aufdecken": "Eingangstest: Angaben vom Typenschild (230 V, 16 A, 3,5 kW, kWh auf der Rechnung) der richtigen Größe zuordnen.",
+   "aufgreifen": "Begriffswand ab DS 1 (Größe, Formelzeichen, Einheit, Alltagswort); in der Info-Mappe Fachbegriff plus Erklärung als Bewertungskriterium; Rollenspiel in DS 4: die „Familie“ fragt nach."
+  },
+  {
+   "nr": "FV-03",
+   "name": "„Strom wird verbraucht“",
+   "aeusserung": "„Der Zähler zählt, wie viel Strom wir verbraucht haben.“",
+   "kern": "Strom wird als Stoff gedacht, der im Gerät aufgebraucht wird; tatsächlich wird Energie umgesetzt, der Strom fließt zurück. Am Zähler wird das sichtbar: er misst Energie in kWh. In LS 1 nur benennen, in LS 3 (Energie) und LS 4 (Kirchhoff) wieder aufgreifen.",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Shipstone (1984); Koller, Waltner & Wiesner (2008), S. 6",
+    "notiz": "Stromverbrauchsvorstellung „extrem resistent“, gefördert durch die Wörter Stromverbrauch und Verbraucher; die Übertragung auf den Zähler ist eine KI-Vermutung"
+   },
+   "ds": [
+    "2"
+   ],
+   "prio": "B",
+   "aufdecken": "Eingangstest: „Was misst der Zähler?“ Antworten Strom in A, Energie in kWh, Spannung, Leistung.",
+   "aufgreifen": "Hilfekarte „Was der Zähler zählt“; Sprachregel „Energie wird umgesetzt, der Strom fließt zurück“ ab LS 1 durchhalten."
+  },
+  {
+   "nr": "FV-04",
+   "name": "„Der Strom kommt aus der Steckdose“",
+   "aeusserung": "„In der Steckdose ist der Strom drin.“",
+   "kern": "Die Steckdose wird als Quelle gedacht, nicht als Übergabestelle am Ende einer Kette vom Netz über Hausanschluss, Zähler, Unterverteilung und Leitung. Ohne das Bild fehlt der Zusammenhang der Systemebenen und später der Stromkreis über Hin- und Rückleiter (LS 3).",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Koller, Waltner & Wiesner (2008), S. 6",
+    "notiz": "Anschlussbedingung: eine Leitung zwischen Generator und Gerät reiche aus, gestützt durch die Wahrnehmung, Haushaltsgeräte seien nur durch eine Leitung mit der Steckdose verbunden"
+   },
+   "ds": [
+    "2"
+   ],
+   "prio": "B",
+   "aufdecken": "Eingangstest: Stationen des Energieflusses in die richtige Reihenfolge bringen.",
+   "aufgreifen": "Energiefluss im Systembaum als Pfeil vom Hausanschluss bis zum Verbraucher; Hilfekarte mit dem Weg der Energie."
+  },
+  {
+   "nr": "FV-05",
+   "name": "„Die Sicherung schützt den Menschen“",
+   "aeusserung": "„Wenn ich an die Phase komme, fliegt doch die Sicherung raus.“",
+   "kern": "Sicherung und Leitungsschutzschalter werden als Personenschutz gedacht; tatsächlich schützen sie die Leitung, den Menschen schützt die Fehlerstrom-Schutzeinrichtung (RCD). Haus Schütte hat Schraubsicherungen und keinen RCD; die Vorstellung kann zu gefährlichem Leichtsinn führen. In LS 1 nur erkennen und benennen, Aufgreifen mit Priorität A in LS 2.",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "BEST (2023), Electrical safety, mit Verweis auf Goodenough (2007)",
+    "notiz": "Vorstellung „die Sicherung im Stecker verhindert einen Stromschlag“ belegt; Originalartikel von Goodenough nicht eingesehen"
+   },
+   "ds": [
+    "1",
+    "2"
+   ],
+   "prio": "B",
+   "aufdecken": "Eingangstest: „Wovor schützt die Schraubsicherung?“ Distraktor „vor dem elektrischen Schlag“.",
+   "aufgreifen": "Bei den Fotos der Erstbegehung nur benennen und mit einem Merkzettel „Klären wir in LS 2“ parken; keine Bewertung des Altbaus (LF 5)."
+  },
+  {
+   "nr": "FV-07",
+   "name": "„Kunden verstehen unsere Begriffe“",
+   "aeusserung": "„Ich schreib einfach UV, LS und RCD rein, das versteht doch jeder.“",
+   "kern": "Fachsprache und Kundensprache werden nicht getrennt; Abkürzungen aus dem Betrieb werden als allgemein bekannt angenommen. Das Handlungsergebnis richtet sich aber an Laien.",
+   "herkunft": {
+    "art": "KI-Vermutung",
+    "notiz": "keine Studie gefunden, nur Praxisbeiträge aus dem Handwerk (Fachbegriffe gegenüber Laien erklären); von der Lehrkraft bestätigt 2026-10-11",
+    "bezug": "Praxisbeitrag SBZ Monteur (Fachbegriffe gegenüber Laien erklären)"
+   },
+   "bestaetigt": true,
+   "ds": [
+    "3",
+    "4"
+   ],
+   "prio": "B",
+   "aufdecken": "Kein Quiz-Item; zeigt sich im Entwurf der Info-Mappe (DS 3).",
+   "aufgreifen": "Checkliste „Versteht das Familie Schütte?“; Rollenspiel in DS 4 mit Rückfragen der „Familie“."
+  }
+ ],
+ "nicht_aufgenommen": [
+  "Katalog P3 bis P8 (Konstantstromquelle, sequenzielles Stromverständnis, Reihe und Parallel, Messgerät, Bruchstelle): gehören zu LS 3 bis LS 5, wo gerechnet, gebaut und gemessen wird.",
+  "„Altbau ist gefährlich, alles muss raus“ bzw. „hat 50 Jahre gehalten, also sicher“: Bewertung des Altbaus gehört zu LF 5; in LS 1 wird nur benannt (siehe Warnung in der Lernsituation).",
+  "„In meinem Betrieb ist es so, also überall“ (vorher FV-08): von der Lehrkraft gestrichen (2026-10-11).",
+  "„Das Schaltzeichen ist ein Bild des Bauteils“ (vorher FV-06): ohne Beleg, Gegenbefund bei Engelhardt & Beichner (2004); von der Lehrkraft gestrichen (2026-10-11). Die Schaltzeichenkarte in DS 2 bleibt als Material."
+ ],
+ "literatur": [
+  "BEST – Best Evidence Science Teaching (2023). Electrical safety: Progression toolkit and teacher notes (Key concept PEM 8.1). University of York Science Education Group; STEM Learning. https://www.stem.org.uk/system/files/elibrary-resources/2023/04/BEST_PEM_8_1_Progression%20toolkit%20and%20teacher%20notes_Key%20concept_Electrical%20safety.docx",
+  "Engelhardt, P. V., & Beichner, R. J. (2004). Students' understanding of direct current resistive electrical circuits. American Journal of Physics, 72(1), 98–115.",
+  "Hmelo-Silver, C. E., & Pfeffer, M. G. (2004). Comparing expert and novice understanding of a complex system from the perspective of structures, behaviors, and functions. Cognitive Science, 28(1), 127–138.",
+  "Koller, D., Waltner, C., & Wiesner, H. (2008). Zur Einführung von Stromstärke und Spannung. Praxis der Naturwissenschaften – Physik in der Schule, 57(6), 6–18.",
+  "Shipstone, D. M. (1984). A study of children's understanding of electricity in simple DC circuits. European Journal of Science Education, 6(2), 185–198.",
+  "SBZ Monteur (o. J.). Praxisbeitrag zur Kundenkommunikation. https://www.sbz-monteur.de/sites/default/files/sbzm_pdf/file_233471.pdf"
+ ],
+ "pruefbericht": [
+  [
+   "Hinweis",
+   "Die Fehlvorstellungen folgen der freigegebenen LS 1 (4 DS, LK-01, 02, 03, 09); A-Einträge in DS 2 (Systemebenen) und durchgängig (Fachsprache)."
+  ],
+  [
+   "Hinweis",
+   "Nachrecherche 2026-10-11: Koller u. a. (2008) im Volltext gelesen, Seitenangaben geprüft. Hmelo-Silver & Pfeffer (2004) und BEST (2023) nur über Zusammenfassungen und Auszüge geprüft; Goodenough (2007) nicht eingesehen. Vor einem Besuchsentwurf am Original prüfen."
+  ],
+  [
+   "Hinweis",
+   "Schecker u. a. (2018) als Beleg für FV-02 ersetzt durch Koller u. a. (2008), dort mit Seitenangabe."
+  ],
+  [
+   "Hinweis",
+   "FV-03 und FV-05 tauchen in LS 2 bis LS 4 wieder auf; dort steigen sie auf Priorität A."
+  ],
+  [
+   "Hinweis",
+   "Jedes A- und B-Item liefert einen Distraktor für den Moodle-Eingangstest zu LF 1 (Pipeline 3)."
+  ]
+ ]
+}

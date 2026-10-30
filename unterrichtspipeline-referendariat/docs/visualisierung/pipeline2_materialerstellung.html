@@ -1,0 +1,71 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Pipeline 2</title>
+<link rel="stylesheet" href="stil.css">
+<style>
+ .cols{grid-template-columns:repeat(4,1fr)}
+ .col .colhead{background:var(--p2s)} .col h2,.col .life{color:var(--p2)} .n{background:var(--p2)}
+ .band{grid-template-columns:1.4fr 1fr 1fr}
+ .io{font-size:18px;grid-template-columns:80px 1fr;row-gap:7px} .io .k{font-size:12px}
+ .st h3{font-size:21px;margin-bottom:9px} .f{font-size:14px}
+ .steps{gap:11px;padding:12px} .st{flex:1;display:flex;flex-direction:column;justify-content:center;padding:11px 14px}
+ .colhead h2{font-size:22px} .colhead .life{font-size:14px} .note{font-size:13.5px}
+ .panel p{font-size:15px} .panel h4{font-size:16px}
+ .gate{display:inline-block;font-size:11.5px;font-weight:800;color:#15803d;background:#e8f6ed;border:1px solid #b9e3c7;border-radius:6px;padding:0 6px;margin-left:6px;vertical-align:2px}
+ .sl{display:grid;grid-template-columns:auto 1fr;gap:9px 10px;font-size:16px;line-height:1.3}
+ .sl .f{font-size:13px;justify-self:start;align-self:start} .note{font-size:14.5px;margin-top:12px}
+</style></head><body>
+<header>
+ <div><h1>Pipeline 2 · Materialerstellung</h1>
+ <div class="sub">Aus dem freigegebenen Materialauftrag einer Stunde oder einer selbstständigen LS entsteht fertiges Material · Skill <b>materialauftrag</b> mit zehn Fach-Skills · Stand 25.10.2026</div></div>
+ <div class="badges"><span class="badge b-draft">Übungsphase</span><span class="badge b-ok">erprobt an LF 1, LS 1 bis 3</span></div>
+</header>
+<div class="cols">
+ <section class="col"><div class="colhead"><h2>1 · Lesen und fragen</h2><div class="life">Schritte 1 und 2</div></div><div class="steps">
+  <div class="st"><h3><span class="n">1</span>Lesen</h3><div class="io">
+   <span class="k">braucht</span><span>Materialauftrag mit Steckbrief je Anlage, Bibliothek des Lernfelds, Material der LS, Quellenkarte</span>
+   <span class="k out">liefert</span><span>Lesebericht: Vorlage vorhanden? · Material für diese Stunde (wiederverwenden, anpassen, wird gebaut) · Zeitschätzung gegen die effektive Lernzeit</span></div></div>
+  <div class="st"><h3><span class="n">2</span>Nur Lücken fragen</h3><div class="io">
+   <span class="k">braucht</span><span>echte Lücken aus dem Lesebericht</span>
+   <span class="k out">liefert</span><span>eine Frage zur Zeit, drei gleich ausführliche Vorschläge und freie Antwort; Varianten werden gefragt, nie angenommen</span></div></div>
+ </div></section>
+ <section class="col"><div class="colhead"><h2>2 · Materialplan</h2><div class="life">Schritt 3 · chronologisch nach dem Verlauf</div></div><div class="steps">
+  <div class="st"><h3><span class="n">3</span>Plan je Anlage<span class="gate">Freigabe 1</span></h3><div class="io">
+   <span class="k">braucht</span><span>Lesebericht, Antworten, Stilreferenzen</span>
+   <span class="k out">liefert</span><span>Datei <span class="f">Anl_&lt;Nr&gt;_&lt;Kurztitel&gt;</span>, Format, Fach-Skill, Quellen, Prüfschritte; je Arbeitsblatt zuerst das Blatt, dann seine Anlagen</span></div></div>
+  <div class="st"><h3><span class="n">AB</span>Arbeitsblätter fortlaufend</h3><div class="io">
+   <span class="k">Profil</span><span><span class="f">material.arbeitsblaetter_fortlaufend</span></span>
+   <span class="k out">liefert</span><span>ein Dokument je LS wie ein Fachkundebuch (AB 1, AB 2 …); <b>Schülerfassung</b> für Papier, <b>Gesamtfassung</b> mit Infotexten und Merkkästen für Lehrkraft und Moodle</span></div></div>
+ </div></section>
+ <section class="col"><div class="colhead"><h2>3 · Bauen</h2><div class="life">Schritt 4 · Fach-Skills und Bauskripte</div></div><div class="steps">
+  <div class="st"><h3><span class="n">4</span>Fach-Skill je Anlage</h3>
+   <div class="sl">
+    <span class="f">arbeitsblatt</span><span>problemorientiert, Rechen- und Skizzenfelder</span>
+    <span class="f">erwartungshorizont</span><span>gerechnet, andere Wege, Fehler mit Reaktion</span>
+    <span class="f">dokumente</span><span>Infoblatt, Messprotokoll, Karte A5, Folien, Tabelle …</span>
+    <span class="f">rechenblatt</span><span>Rechenprüfer mit Einheiten, Diagramme</span>
+    <span class="f">quellen</span><span>Fotos, Scans, Texterkennung, Recherche</span>
+    <span class="f">stromlaufplan</span><span>Industriestil A3, DIN EN 60617</span>
+    <span class="f">installationsplan</span><span>Installations- und Übersichtspläne, Bemessung</span>
+    <span class="f">technologieschema</span><span>Fachbuch-Stil (TikZ)</span>
+    <span class="f">simulation</span><span>HTML, nur bei Bedarf im Unterricht</span>
+    <span class="f">hilfekarten</span><span>nur wenn verlangt; Profil schaltet ab</span>
+   </div>
+   <div class="note">Vorlagen mit der Gestaltung aus dem Profil über <span class="f">persoenliche_vorlage(...)</span>; Bauskripte liegen im Arbeitsbereich.</div></div>
+ </div></section>
+ <section class="col"><div class="colhead"><h2>4 · Prüfen, freigeben, ablegen</h2><div class="life">Schritte 5 bis 7</div></div><div class="steps">
+  <div class="st"><h3><span class="n">5</span>Dreistufig prüfen</h3><div class="io">
+   <span class="k">braucht</span><span>alle Anlagen der Stunde</span>
+   <span class="k out">liefert</span><span>Automatik und Rechenabgleich · Sichtprüfung am Bild · Leser-Test in der Rolle der Facharbeiterin</span></div></div>
+  <div class="st"><h3><span class="n">6</span>Prüfbericht<span class="gate">Freigabe 2</span></h3><div class="io">
+   <span class="k">braucht</span><span>Ergebnis der Prüfung</span>
+   <span class="k out">liefert</span><span>Leseseite, Fehler · Warnung · Hinweis, Vorschau als PNG; Eintrag in <span class="f">.daten/freigaben.json</span> (Art material)</span></div></div>
+  <div class="st"><h3><span class="n">7</span>Ablage und Übergabe</h3><div class="io">
+   <span class="k">braucht</span><span>Freigabe</span>
+   <span class="k out">liefert</span><span><span class="f">&lt;LS&gt;/Material/&lt;DS oder M&gt;/</span>, Übertragbares in die Bibliothek, Kopie in <span class="f">Anlagen/</span> mit <span class="f">uebergabe.json</span></span></div></div>
+ </div></section>
+</div>
+<div class="band">
+ <div class="panel"><h4>Grundsätze</h4><p>Problemorientierter Einstieg, nichts vorweg · ein Niveau · jede Lösung gerechnet · Quelle an jeder Abbildung und im Quellenverzeichnis · KI-Fußnote · Formeln mit Bruchstrich · Merkkasten für neue Formeln · DOCX, XLSX, PPTX, HTML; PDF nur auf Wunsch</p></div>
+ <div class="panel"><h4>Von Pipeline 1</h4><p>Materialauftrag: je Anlage Zweck, Phase, Teilkompetenz, Wortlaut, Aufbau, Moodle, Quellen, Abnahmekriterien, Erwartungshorizont</p></div>
+ <div class="panel dark"><h4>Weiter an Pipeline 3</h4><p>Anlagen mit <span style="font-family:'DejaVu Sans Mono',monospace;font-size:13px">uebergabe.json</span> und Glossar-Daten je Doppelstunde; die Gesamtfassung wird zu Moodle-Seiten.</p></div>
+</div>
+</body></html>

@@ -1,0 +1,187 @@
+{
+ "titel": "Planungsmappe Lernfeld 1",
+ "untertitel": "Elektroniker/in, Fachrichtung Energie- und Gebäudetechnik, 1. Ausbildungsjahr · Probelauf einer KI-gestützten Unterrichtsplanung",
+ "fach": "Elektrotechnik",
+ "art": "lernfeld",
+ "ziel": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/Planungsmappe_LF01_EG_Probelauf.docx",
+ "deckblatt": [
+  "Lernfeld 1: Elektrotechnische Systeme analysieren, Funktionen prüfen und Fehler beheben (80 Stunden)",
+  "Schuljahr 2026/27 · Berufsschule, Teilzeit",
+  "Lehrkraft im Vorbereitungsdienst: [Name] · Studienseminar Osnabrück, Lehramt an berufsbildenden Schulen (Elektrotechnik, Mathematik)",
+  "Stand: 11.10.2026"
+ ],
+ "einfuehrung": [
+  {
+   "ueberschrift": "Worum es geht",
+   "absaetze": [
+    "Diese Mappe zeigt einen vollständigen Probelauf meiner Unterrichtsplanung für das Lernfeld 1 im ersten Ausbildungsjahr der Elektronikerinnen und Elektroniker für Energie- und Gebäudetechnik. Geplant wurde streng von oben nach unten: von der Jahresplanung über die curriculare Analyse des Lernfelds und den Zuschnitt in fünf Lernsituationen bis zu den Lernsituationen selbst, den zu erwartenden Fehlvorstellungen und, als Beispiel für die Stundenebene, der ersten Doppelstunde mit Verlaufsskizze und Materialauftrag. Weil mir noch keine Klasse zugeordnet ist, ist es eine Idealplanung ohne Kalender und ohne echte Lerngruppe; Annahmen über die Klasse sind dort, wo sie eine Rolle spielen, offen genannt und werden ersetzt, sobald ich die Klasse kenne.",
+    "Die Lernenden arbeiten durchgehend als Gesellinnen und Gesellen in einem fiktiven Handwerksbetrieb, der Stromhof Elektro GmbH. Eine übergeordnete Handlungssituation trägt durch das ganze Lernfeld: Familie Schütte hat ein Einfamilienhaus von 1968 gekauft und lässt es Schritt für Schritt sanieren. Von der Erstbegehung über die Sicherheitsunterweisung, den Energie-Check des alten Durchlauferhitzers und die Auslegung von Heizstufen und Orientierungslicht bis zur Fehlersuche an der Fußbodenheizung entsteht in jeder Lernsituation ein Handlungsprodukt für die Familie oder den Betrieb."
+   ]
+  },
+  {
+   "ueberschrift": "Wie die Planung entsteht",
+   "absaetze": [
+    "Geplant habe ich mit einer eigenen, KI-gestützten Planungspipeline (Claude Code von Anthropic), die ich im Referendariat aufbaue. Die Pipeline entwirft, recherchiert und prüft; jede didaktische Entscheidung treffe ich selbst. Sie legt mir dazu jeweils eine Frage mit drei gleich ausführlich ausgearbeiteten Vorschlägen vor, und vor jeder Freigabe steht ein Prüfbericht mit Fehlern, Warnungen und Hinweisen, etwa ob die Stunden des Lernfelds aufgehen, ob jede Lernfeldkompetenz vorkommt oder ob in jeder Lernsituation die vollständige Handlung durchlaufen wird. Alle Entscheidungen sind mit Datum in einem Konzeptdokument festgehalten.",
+    "Didaktisch folgt die Planung den Vorgaben des Studienseminars und dem Prinzip der vollständigen Handlung auf drei Ebenen: über das ganze Lernfeld, in jeder Lernsituation und innerhalb der Lernsituation in zwei bis drei Arbeitsschritten über mehrere Doppelstunden, wobei das Planen nie übersprungen wird. Die Fehlvorstellungen je Lernsituation sind vor dem Entwurf recherchiert und mit Literatur belegt; Vermutungen ohne jeden Bezug zu Forschung oder Fachquellen werden nicht aufgenommen. Material wird als Arbeitsblatt geplant und in zwei weiteren Schritten erstellt und als Moodle-Kurs für das selbstgesteuerte Lernen aufbereitet."
+   ]
+  },
+  {
+   "ueberschrift": "Das Lernfeld auf einen Blick",
+   "absaetze": [],
+   "tabelle": {
+    "kopf": [
+     "LS",
+     "Titel",
+     "Std.",
+     "Handlungsergebnis"
+    ],
+    "breiten": [
+     1.2,
+     5.3,
+     1.3,
+     9.2
+    ],
+    "zeilen": [
+     [
+      "1",
+      "Der Stromhof und das Haus Schütte",
+      "8",
+      "Info-Mappe für die Familie: Systemübersicht der Hauselektrik und Steckbrief des Betriebs"
+     ],
+     [
+      "2",
+      "Sicher beim Kunden",
+      "12",
+      "Sicherheitsunterweisung für Azubi Emma und Merkkarte; Schutzeinrichtungen im Überblick"
+     ],
+     [
+      "3",
+      "Was kostet der alte Durchlauferhitzer?",
+      "20",
+      "Energie-Check: Kennwerte, Kosten pro Jahr, Erklärung zur warmen Leitung, Empfehlung"
+     ],
+     [
+      "4",
+      "Heizstufen und Orientierungslicht für den Keller",
+      "18",
+      "Schaltpläne, Muster am Übungsbrett, Messprotokoll"
+     ],
+     [
+      "–",
+      "Puffer, Präsentation und Übungszirkel",
+      "6",
+      "bewertete Präsentation der Handlungsprodukte aus LS 3 und LS 4"
+     ],
+     [
+      "5",
+      "Die Fußbodenheizung im Bad regelt falsch",
+      "14",
+      "Fehlerprotokoll und Kundeninformation"
+     ],
+     [
+      "–",
+      "Klassenarbeit über das Lernfeld",
+      "2",
+      "bewertete Klassenarbeit"
+     ],
+     [
+      "",
+      "Summe",
+      "80",
+      ""
+     ]
+    ]
+   }
+  },
+  {
+   "ueberschrift": "Wie es weitergeht",
+   "absaetze": [
+    "Sobald feststeht, in welcher Klasse ich eingesetzt werde, wird die Planung an die Wirklichkeit angepasst: an den Stundenplan, an die Lerngruppe und an vorhandene Planungen der Schule, die sich jederzeit einlesen und abgleichen lassen. Aus den Materialaufträgen entstehen die Arbeitsblätter, aus diesen der Moodle-Kurs. Nach jeder gehaltenen Stunde fließt eine kurze, frei gesprochene Nachbereitung in die weitere Planung ein."
+   ]
+  }
+ ],
+ "ki_hinweis": "Die Dokumente sind mit KI-Unterstützung entstanden (Claude Code, Anthropic). Inhalte, Entscheidungen und Freigaben stammen von der Lehrkraft; die Pipeline hat Entwürfe erstellt, Quellen recherchiert und Prüfberichte erzeugt. Personen, Betrieb und Kunden sind fiktiv.",
+ "dokumente": [
+  {
+   "schritt": "03",
+   "titel": "Jahresplanung 2026/27, Elektroniker/in EG, 1. Ausbildungsjahr",
+   "pfad": "Unterricht/Elektrotechnik/2026-27_EG1/Jahresplanung.docx"
+  },
+  {
+   "schritt": "02",
+   "titel": "Modellbetrieb Stromhof Elektro GmbH (fiktiv)",
+   "pfad": "Elektrotechnik/Elektroniker_EG/Modellbetrieb_Stromhof_Elektro.docx"
+  },
+  {
+   "schritt": "01",
+   "titel": "Curriculare Analyse Lernfeld 1",
+   "pfad": "Elektrotechnik/Elektroniker_AS/LF01_Elektrotechnische_Systeme/Curriculare_Analyse.docx"
+  },
+  {
+   "schritt": "02",
+   "titel": "Lernsituationen des Lernfelds (Skizze)",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/Lernsituationen_Skizze.docx"
+  },
+  {
+   "schritt": "04",
+   "titel": "LS 1 „Der Stromhof und das Haus Schütte“: Lernsituation",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS01_Der_Stromhof_und_das_Haus_Schuette/Lernsituation.docx"
+  },
+  {
+   "schritt": "06",
+   "titel": "LS 1 „Der Stromhof und das Haus Schütte“: Lernausgangslage und Fehlvorstellungen",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS01_Der_Stromhof_und_das_Haus_Schuette/Fehlvorstellungen.docx"
+  },
+  {
+   "schritt": "04",
+   "titel": "LS 2 „Sicher beim Kunden“: Lernsituation",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS02_Sicher_beim_Kunden/Lernsituation.docx"
+  },
+  {
+   "schritt": "06",
+   "titel": "LS 2 „Sicher beim Kunden“: Lernausgangslage und Fehlvorstellungen",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS02_Sicher_beim_Kunden/Fehlvorstellungen.docx"
+  },
+  {
+   "schritt": "04",
+   "titel": "LS 3 „Was kostet der alte Durchlauferhitzer?“: Lernsituation",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS03_Was_kostet_der_alte_Durchlauferhitzer/Lernsituation.docx"
+  },
+  {
+   "schritt": "06",
+   "titel": "LS 3 „Was kostet der alte Durchlauferhitzer?“: Lernausgangslage und Fehlvorstellungen",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS03_Was_kostet_der_alte_Durchlauferhitzer/Fehlvorstellungen.docx"
+  },
+  {
+   "schritt": "04",
+   "titel": "LS 4 „Heizstufen und Orientierungslicht für den Keller“: Lernsituation",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS04_Heizstufen_und_Orientierungslicht/Lernsituation.docx"
+  },
+  {
+   "schritt": "06",
+   "titel": "LS 4 „Heizstufen und Orientierungslicht für den Keller“: Lernausgangslage und Fehlvorstellungen",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS04_Heizstufen_und_Orientierungslicht/Fehlvorstellungen.docx"
+  },
+  {
+   "schritt": "04",
+   "titel": "LS 5 „Die Fußbodenheizung im Bad regelt falsch“: Lernsituation",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS05_Die_Fussbodenheizung_regelt_falsch/Lernsituation.docx"
+  },
+  {
+   "schritt": "06",
+   "titel": "LS 5 „Die Fußbodenheizung im Bad regelt falsch“: Lernausgangslage und Fehlvorstellungen",
+   "pfad": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS05_Die_Fussbodenheizung_regelt_falsch/Fehlvorstellungen.docx"
+  },
+  {
+   "schritt": "13",
+   "titel": "LS 1, Doppelstunde 1 „Erstbegehung bei Familie Schütte“: Verlaufsskizze",
+   "pfad": "Unterricht/Elektrotechnik/2026-27_EG1/LF01/LS01/UE01_Erstbegehung/Verlaufsskizze.docx"
+  },
+  {
+   "schritt": "14",
+   "titel": "LS 1, Doppelstunde 1: Materialauftrag",
+   "pfad": "Unterricht/Elektrotechnik/2026-27_EG1/LF01/LS01/UE01_Erstbegehung/Materialauftrag.docx",
+   "format": "quer"
+  }
+ ]
+}

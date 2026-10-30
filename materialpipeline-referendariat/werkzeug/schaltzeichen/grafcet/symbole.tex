@@ -1,0 +1,51 @@
+% GRAFCET nach DIN EN 60848, Darstellung nach fischertechnik/Grollmus „GRAFCET“ (Biegemaschine 24V, 2024)
+% und Duhr, GRAFCET (Europa-Lehrmittel, 4. Aufl. 2024, Leseprobe).
+% Beleg je Zeichen: ../ergaenzung.csv (Gruppe A), Quellen: ../quellen_ergaenzung.md.
+% Schritte, Transitionen und Aktionen mit dem CTAN-Paket grafcet (LPPL),
+% Alternativ- und Parallelverzweigung als eigene TikZ-Zeichnung nach Bild 17 und 18 der fischertechnik-Unterlage.
+% Benötigt: \usepackage{grafcet} (verlangt ifsym, ggf. aus CTAN nachladen, siehe ../LIESMICH.md).
+\providecommand{\szA}[1]{\csname szA@#1\endcsname}
+% Aktion rechts neben Schritt #1 mit Verbindungslinie; das Paket setzt die Aktion sonst auf den Schritt.
+\providecommand{\szAaktion}[2]{%
+  \draw (X#1.east) -- ++(0.6,0) coordinate (AX#1a);
+  \Action{X#1a}{#2}}
+
+\expandafter\def\csname szA@schritt\endcsname{%
+  \EtapeSeule[0,0]{2}\draw (X2.north) -- ++(0,0.4) (X2.south) -- ++(0,-0.4);}
+\expandafter\def\csname szA@anfangsschritt\endcsname{%
+  \EtapeInit[0,0]{1}\draw (X1.south) -- ++(0,-0.4);}
+\expandafter\def\csname szA@transition\endcsname{%
+  \Transition[0,0]{1}\node[anchor=west] at (RT1.west) {B1};}
+\expandafter\def\csname szA@transition_zeit\endcsname{%
+  \Transition[0,0]{1}\node[anchor=west] at (RT1.west) {5s/X2};}
+\expandafter\def\csname szA@transition_flanke\endcsname{%
+  \Transition[0,0]{1}\node[anchor=west] at (RT1.west) {$\uparrow$S1};}
+\expandafter\def\csname szA@aktion\endcsname{%
+  \EtapeSeule[0,0]{2}\szAaktion{2}{Q1}}
+\expandafter\def\csname szA@aktion_bedingung\endcsname{%
+  \EtapeSeule[0,0]{2}\szAaktion{2}{Q1}\ActionCond{X2a}{B1}}
+\expandafter\def\csname szA@aktion_zeitbedingung\endcsname{%
+  \EtapeSeule[0,0]{2}\szAaktion{2}{Q1}\ActionCond{X2a}{5s/B1}}
+\expandafter\def\csname szA@aktion_aktivierung\endcsname{%
+  \EtapeSeule[0,0]{2}\szAaktion{2}{M1:=1}\ActionActiv{X2a}}
+\expandafter\def\csname szA@aktion_deaktivierung\endcsname{%
+  \EtapeSeule[0,0]{2}\szAaktion{2}{M1:=0}\ActionDesactiv{X2a}}
+\expandafter\def\csname szA@aktion_ereignis\endcsname{%
+  \EtapeSeule[0,0]{2}\szAaktion{2}{M1:=1}\ActionEvenement{X2a}{$\uparrow$B1}}
+% Alternativverzweigung: Schritt, einfache Querlinie, je Zweig eine Transition (Bild 17)
+\expandafter\def\csname szA@alternativ\endcsname{%
+  \EtapeSeule[0,0]{2}
+  \draw (X2.south) -- ++(0,-0.35) coordinate (szAv);
+  \draw (szAv) -- ++(1.6,0) -- ++(0,-1.2);
+  \draw (szAv) -- ++(0,-1.2);
+  \foreach \szAx/\szAb in {0/B2,1.6/B20} {%
+    \draw ($(szAv)+(\szAx-0.2,-0.65)$) -- ++(0.4,0);
+    \node[anchor=west,inner sep=2pt] at ($(szAv)+(\szAx+0.2,-0.65)$) {\szAb};}}
+% Parallelverzweigung: gemeinsame Transition, danach Doppellinie über beide Zweige (Bild 18)
+\expandafter\def\csname szA@parallel\endcsname{%
+  \EtapeSeule[0,0]{2}
+  \draw (X2.south) -- ++(0,-0.75) coordinate (szAv);
+  \draw ($(X2.south)+(-0.2,-0.4)$) -- ++(0.4,0);
+  \node[anchor=west,inner sep=2pt] at ($(X2.south)+(0.2,-0.4)$) {B2};
+  \draw[line width=0.4pt] ($(szAv)+(-0.25,0)$) -- ++(2.1,0) ($(szAv)+(-0.25,-0.07)$) -- ++(2.1,0);
+  \draw ($(szAv)+(0,-0.07)$) -- ++(0,-0.6) ($(szAv)+(1.6,-0.07)$) -- ++(0,-0.6);}

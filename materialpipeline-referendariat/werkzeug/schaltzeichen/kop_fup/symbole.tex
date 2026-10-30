@@ -1,0 +1,74 @@
+% KOP (Kontaktplan) und FUP (Funktionsplan) nach IEC 61131-3, Darstellung nach Siemens S7-1200
+% Systemhandbuch 04/2012 (A5E02486681-06) und S7-1200 Easy Book 01/2015 (A5E02486775-AG).
+% Beleg je Zeichen: ../ergaenzung.csv (Gruppen K und F), Quellen: ../quellen_ergaenzung.md.
+% KOP-Zeichen kommen aus der TikZ-Bibliothek tikz-ladder (CTAN, LPPL, circuits.plc.ladder),
+% FUP-Kästen sind eigene TikZ-Zeichnungen nach den Abbildungen im Systemhandbuch.
+% Benötigt: \usetikzlibrary{circuits.plc.ladder} (tikz-ladder aus CTAN nachladen, siehe ../LIESMICH.md).
+\providecommand{\szK}[1]{\csname szK@#1\endcsname}
+\providecommand{\szF}[1]{\csname szF@#1\endcsname}
+\providecommand{\szVar}[1]{{\scriptsize\textquotedbl#1\textquotedbl}}
+
+% ---------- KOP: Kontakte und Spulen (tikz-ladder) ----------
+\expandafter\def\csname szK@schliesser\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [contact NO={info={\szVar{IN}}}] ++(1,0);\end{scope}}
+\expandafter\def\csname szK@oeffner\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [contact NC={info={\szVar{IN}}}] ++(1,0);\end{scope}}
+\expandafter\def\csname szK@not\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [contact NO={symbol={\tiny NOT},minimum width=2.6\tikzcircuitssizeunit}] ++(1.3,0);\end{scope}}
+\expandafter\def\csname szK@flanke_p\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [contact P={info={\szVar{IN}},info'={\szVar{M\_BIT}}}] ++(1,0);\end{scope}}
+\expandafter\def\csname szK@flanke_n\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [contact N={info={\szVar{IN}},info'={\szVar{M\_BIT}}}] ++(1,0);\end{scope}}
+\expandafter\def\csname szK@spule\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [coil={info={\szVar{OUT}}}] ++(1,0);\end{scope}}
+\expandafter\def\csname szK@spule_negiert\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [coil NA={info={\szVar{OUT}}}] ++(1,0);\end{scope}}
+\expandafter\def\csname szK@setzen\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [coil S={info={\szVar{OUT}}}] ++(1,0);\end{scope}}
+\expandafter\def\csname szK@ruecksetzen\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [coil R={info={\szVar{OUT}}}] ++(1,0);\end{scope}}
+\expandafter\def\csname szK@spule_p\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [coil={info={\szVar{OUT}},info'={\szVar{M\_BIT}},symbol=P}] ++(1,0);\end{scope}}
+\expandafter\def\csname szK@spule_n\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0) to [coil={info={\szVar{OUT}},info'={\szVar{M\_BIT}},symbol=N}] ++(1,0);\end{scope}}
+% Strompfad wie im Easy Book S. 111: Start (Schließer) parallel zu Running (Selbsthaltung), Stop (Öffner), Spule Running
+\expandafter\def\csname szK@netzwerk\endcsname{\begin{scope}[circuit plc ladder,line width=0.8pt]
+  \draw (0,0.3) -- (0,-1.3);
+  \draw (0,0) to [contact NO={info={\szVar{Start}}}] ++(1,0) coordinate (n1)
+        to [contact NC={info={\szVar{Stop}}}] ++(1,0) -- ++(0.5,0)
+        to [coil={info={\szVar{Running}}}] ++(1,0);
+  \draw (0,-1) to [contact NO={info={\szVar{Running}}}] ++(1,0) -- (n1);
+\end{scope}}
+
+% ---------- FUP: Kästen nach Siemens S7-1200 Systemhandbuch ----------
+% \szFkasten{Titel}{Eingänge}{Ausgänge}{Zeilen}{Operand oben}{Operand unten}
+% Eingänge/Ausgänge als Liste; leere Ausgangsliste = kein Ausgang. Raster 0,4 cm.
+\providecommand{\szFkasten}[6]{%
+  \pgfmathsetmacro{\szFh}{0.45+0.4*#4}%
+  \draw[line width=0.8pt] (0,0) rectangle (1.4,-\szFh);
+  \draw[line width=0.4pt] (0,-0.4) -- (1.4,-0.4);
+  \node[font=\footnotesize\bfseries] at (0.7,-0.2) {#1};
+  \foreach \szFn [count=\szFi] in {#2} {%
+    \draw[line width=0.8pt] (-0.35,-0.25-0.4*\szFi) -- (0,-0.25-0.4*\szFi);
+    \node[font=\scriptsize,anchor=west,inner sep=1.5pt] at (0,-0.25-0.4*\szFi) {\szFn};}
+  \def\szFtmp{#3}\ifx\szFtmp\empty\else
+  \foreach \szFn [count=\szFi] in {#3} {%
+    \draw[line width=0.8pt] (1.4,-0.25-0.4*\szFi) -- (1.75,-0.25-0.4*\szFi);
+    \node[font=\scriptsize,anchor=east,inner sep=1.5pt] at (1.4,-0.25-0.4*\szFi) {\szFn};}\fi
+  \def\szFtmp{#5}\ifx\szFtmp\empty\else\node[anchor=south] at (0.7,0) {\szVar{#5}};\fi
+  \def\szFtmp{#6}\ifx\szFtmp\empty\else\node[anchor=north] at (0.7,-\szFh) {\szVar{#6}};\fi
+}
+\expandafter\def\csname szF@zuweisung\endcsname{\szFkasten{=}{{}}{}{1}{OUT}{}}
+\expandafter\def\csname szF@zuweisung_negiert\endcsname{\szFkasten{/=}{{}}{}{1}{OUT}{}}
+\expandafter\def\csname szF@setzen\endcsname{\szFkasten{S}{{}}{}{1}{OUT}{}\node[anchor=north,inner sep=1pt] at (-0.3,-0.7) {\szVar{IN}};}
+\expandafter\def\csname szF@ruecksetzen\endcsname{\szFkasten{R}{{}}{}{1}{OUT}{}\node[anchor=north,inner sep=1pt] at (-0.3,-0.7) {\szVar{IN}};}
+\expandafter\def\csname szF@sr\endcsname{\szFkasten{SR}{S,R1}{Q}{2}{OUT}{}}
+\expandafter\def\csname szF@rs\endcsname{\szFkasten{RS}{R,S1}{Q}{2}{OUT}{}}
+\expandafter\def\csname szF@p_trig\endcsname{\szFkasten{P\_TRIG}{CLK}{Q}{1}{}{M\_BIT}}
+\expandafter\def\csname szF@n_trig\endcsname{\szFkasten{N\_TRIG}{CLK}{Q}{1}{}{M\_BIT}}
+\expandafter\def\csname szF@tp\endcsname{\szFkasten{TP}{IN,PT}{Q,ET}{2}{}{}}
+\expandafter\def\csname szF@ton\endcsname{\szFkasten{TON}{IN,PT}{Q,ET}{2}{}{}}
+\expandafter\def\csname szF@tof\endcsname{\szFkasten{TOF}{IN,PT}{Q,ET}{2}{}{}}
+\expandafter\def\csname szF@ctu\endcsname{\szFkasten{CTU}{CU,R,PV}{Q,CV}{3}{}{}}
+\expandafter\def\csname szF@ctd\endcsname{\szFkasten{CTD}{CD,LOAD,PV}{Q,CV}{3}{}{}}
+\expandafter\def\csname szF@ctud\endcsname{\szFkasten{CTUD}{CU,CD,R,LOAD,PV}{QU,QD,CV}{5}{}{}}

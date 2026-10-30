@@ -1,0 +1,79 @@
+{
+ "schuljahr": "2026/27",
+ "fach": "Elektrotechnik",
+ "stand": "Entwurf",
+ "datum": "11.10.2026",
+ "klasse": "Elektroniker/in EG, 1. Ausbildungsjahr (Klassenbezeichnung noch offen, Arbeitsname EG1)",
+ "bildungsgang": "Berufsschule, Elektroniker/in Fachrichtung Energie- und Gebäudetechnik (Handwerk)",
+ "ausbildungsjahr": "1. Ausbildungsjahr",
+ "organisationsform": "Teilzeit, zwei Berufsschultage pro Woche; LF 1 epochal zu Beginn des Schuljahres mit 4 Doppelstunden (8 Std.) je Woche",
+ "berufsschultage": "Wochentage noch offen",
+ "rahmenlehrplan": "KMK-Rahmenlehrplan Elektroniker und Elektronikerin (Handwerk), 2020; Lernfelder 1 bis 4 je 80 Std.",
+ "schulplanung": "keine vorliegend (unbekannt, ob vorhanden); bei Vorlage abgleichen",
+ "kalender": "ferien_niedersachsen_2026-27.json",
+ "lernfelder": [
+  {
+   "nr": 1,
+   "titel": "Elektrotechnische Systeme analysieren, Funktionen prüfen und Fehler beheben",
+   "zeitrichtwert": 80,
+   "lehrkraft": "ich"
+  },
+  {
+   "nr": 2,
+   "titel": "Elektrische Systeme planen und installieren",
+   "zeitrichtwert": 80,
+   "lehrkraft": "offen"
+  },
+  {
+   "nr": 3,
+   "titel": "Steuerungen und Regelungen analysieren und realisieren",
+   "zeitrichtwert": 80,
+   "lehrkraft": "offen"
+  },
+  {
+   "nr": 4,
+   "titel": "Informationstechnische Systeme bereitstellen",
+   "zeitrichtwert": 80,
+   "lehrkraft": "offen"
+  }
+ ],
+ "querbezuege": [
+  "Querbezug: LF 1 legt Grundlagen (Strom, Spannung, Widerstand, Grundschaltungen, Messen) für LF 2 (Planen und Installieren, Leitungen) und LF 3 (Sensoren in Steuerungen). Weil alle Lernfelder parallel laufen, früh mit den Lehrkräften von LF 2 und LF 3 abstimmen, wann welche Grundlage sitzt.",
+  "Kompetenzfeststellung: in den Lernsituationen über das Handlungsprodukt, keine eigenen Klassenarbeitsblöcke (Konzept, Schritt 03)."
+ ],
+ "abweichungen": [
+  "Fachrichtungen werden laut Lehrkraft in der Praxis ab LF 7 getrennt (Rahmenlehrplan: ab dem 3. Jahr, LF 9 bis 13). Für das 1. Jahr ohne Folgen, da LF 1 bis 4 für alle Elektroberufe gleich sind.",
+  "Die Lernsituationen-Skizze LF 1 im Arbeitsbereich ist auf die Fachrichtung Automatisierungs- und Systemtechnik zugeschnitten. Für EG braucht LF 1 eine eigene Skizze und einen passenden Modellbetrieb (nächste Ebene)."
+ ],
+ "pruefbericht": [
+  [
+   "Hinweis",
+   "Ferien aus der amtlichen Übersicht des Kultusministeriums, Feiertage nach dem Niedersächsischen Feiertagsgesetz berechnet (Ostersonntag 28.03.2027)."
+  ],
+  [
+   "Hinweis",
+   "LF 1 epochal mit 8 Std. je Woche (Angabe der Lehrkraft, Annahme bis zum echten Stundenplan): 80 Std. in 10 vollen Schulwochen; die Herbstferien liegen dazwischen."
+  ],
+  [
+   "Warnung",
+   "Wochentage offen: Die angebrochene erste Schulwoche (Do. 13. und Fr. 14.08.) ist nicht mitgezählt. Liegen die Berufsschultage dort, endet LF 1 eine Woche früher."
+  ],
+  [
+   "Hinweis",
+   "LF 2 bis 4 sind noch nicht im Ablauf eingeplant (Lehrkraft offen); ob sie nach LF 1 epochal oder parallel laufen, klärt die Schulplanung."
+  ],
+  [
+   "Hinweis",
+   "Lernsituationen sind noch nicht eingesetzt. Sie entstehen auf der nächsten Ebene (Lernfeld-Akte LF 1 für EG)."
+  ]
+ ],
+ "klasse_kurz": "EG1",
+ "stundenplan": {
+  "quelle": "Angabe der Lehrkraft 11.10.2026 (Annahme bis zum echten Stundenplan): LF 1 epochal zuerst, 4 DS je Woche; Wochentage offen",
+  "lernfelder": {
+   "1": {
+    "std_woche": 8
+   }
+  }
+ }
+}

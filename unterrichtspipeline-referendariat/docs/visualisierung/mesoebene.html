@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Meso-Ebene</title>
+<style>
+  :root{
+    --ink:#14213d; --muted:#5b6578; --line:#d9dee7; --bg:#f6f7fb; --card:#ffffff;
+    --mk:#1d4ed8; --mks:#e8efff;          /* Makro (Eingang) */
+    --kl:#0f766e; --kls:#e3f5f2;          /* Klassen-Akte */
+    --ls:#7c3aed; --lss:#f1eafe;          /* Lernsituations-Akte */
+    --mi:#c2410c; --mis:#fff0e6;          /* Mikro (Ausgang) */
+    --ok:#15803d; --oks:#e8f6ed;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1920px;height:1080px;background:var(--bg);font-family:"Inter",sans-serif;color:var(--ink)}
+  body{padding:28px 40px 24px;display:flex;flex-direction:column;gap:14px}
+  header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--line);padding-bottom:12px}
+  h1{font-family:"Inter Display","Inter",sans-serif;font-weight:800;font-size:38px;letter-spacing:-.5px}
+  h1 span{color:var(--ls)}
+  .sub{color:var(--muted);font-size:16.5px;margin-top:6px}
+  .badge{font-size:14px;font-weight:700;color:var(--ok);background:var(--oks);border:1px solid #b9e3c7;border-radius:999px;padding:7px 16px}
+
+  .main{display:grid;grid-template-columns:250px 34px 1fr 34px 250px;flex:1;min-height:0}
+  .arrow{display:flex;align-items:center;justify-content:center;color:#94a3b8}
+  .arrow svg{width:30px;height:30px}
+
+  .side{border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line)}
+  .side h2{font-size:19px;font-weight:800}
+  .side .life{font-size:12.5px;font-weight:700;margin-top:-6px}
+  .in{background:var(--mks)} .in h2,.in .life{color:var(--mk)}
+  .out{background:var(--mis)} .out h2,.out .life{color:var(--mi)}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 11px;font-size:14.4px;line-height:1.4}
+  .chip b{display:block;font-size:15px;margin-bottom:2px}
+
+  .center{display:grid;grid-template-rows:auto 1fr;gap:10px;min-height:0}
+  .akten{display:flex;gap:12px;align-items:center}
+  .akten .lg{font-size:13px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted)}
+  .akte{border-radius:999px;padding:6px 16px;font-size:14px;font-weight:600;display:flex;gap:12px;align-items:center}
+  .akte b{font-size:16px;font-weight:800}
+  .a-kl{background:var(--kls);color:var(--kl);border:1px solid #b7e2da}
+  .a-ls{background:var(--lss);color:var(--ls);border:1px solid #dccbfb}
+
+  .steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;min-height:0}
+  .st{background:var(--card);border:1px solid var(--line);border-radius:16px;display:flex;flex-direction:column;overflow:hidden}
+  .st .top{padding:12px 16px 10px;border-bottom:1px solid var(--line)}
+  .num{display:inline-block;font-weight:800;font-size:14px;color:#fff;border-radius:7px;padding:2px 9px;margin-right:8px;vertical-align:middle}
+  .st h3{display:inline;font-size:24px;font-weight:800;vertical-align:middle}
+  .st .where{font-size:14px;font-weight:700;margin-top:6px}
+  .t-kl .top{background:var(--kls)} .t-kl .num{background:var(--kl)} .t-kl .where{color:var(--kl)}
+  .t-ls .top{background:var(--lss)} .t-ls .num{background:var(--ls)} .t-ls .where{color:var(--ls)}
+  .t-mix .top{background:linear-gradient(90deg,var(--kls),var(--lss))} .t-mix .num{background:linear-gradient(90deg,var(--kl),var(--ls))} .t-mix .where{color:#4b5563}
+  .blk{padding:16px 18px 0}
+  .lbl{font-size:12.5px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  ul{list-style:none}
+  li{font-size:17.6px;line-height:1.42;padding-left:17px;position:relative;margin-bottom:9px}
+  li:before{content:"";position:absolute;left:1px;top:10px;width:6px;height:6px;border-radius:50%;background:#9aa4b5}
+  .t-kl li:before{background:var(--kl)} .t-ls li:before{background:var(--ls)}
+  .how{border-top:1px solid var(--line);margin-top:8px;padding-top:12px}
+  .how li{font-size:15.5px;color:#334155}
+  .outp{margin-top:auto;border-top:1px dashed var(--line);padding:9px 16px 11px;background:#fbfcfe}
+  .file{font-family:"DejaVu Sans Mono",monospace;font-size:13.2px;color:#334155;background:#eef1f6;border-radius:5px;padding:1px 6px;display:inline-block;margin:2px 3px 2px 0}
+  .ex{font-size:14.5px;color:var(--muted);line-height:1.38;margin-top:5px}
+  .ex b{color:var(--ink)}
+
+  footer{display:grid;grid-template-columns:1.1fr 1fr 1.25fr 1fr;gap:12px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 15px}
+  .panel h4{font-size:14.5px;font-weight:800;margin-bottom:5px}
+  .panel p,.panel li{font-size:14px;line-height:1.4;color:#334155}
+  .panel li{padding-left:13px;margin-bottom:2px;line-height:1.4}
+  .panel li:before{top:8px;width:5px;height:5px}
+  .dark{background:var(--ink);border:none}.dark h4{color:#fff}.dark li{color:#dbe3f1}.dark li:before{background:#fbbf24}
+  .loop{display:flex;align-items:center;gap:10px;background:#fff;border:1px dashed #94a3b8;border-radius:12px;padding:7px 14px;font-size:13.8px;color:#334155}
+  .loop svg{flex:none}
+ .st li{font-size:16.2px;margin-bottom:6px;line-height:1.36} .st li:before{top:9px} .how li{font-size:14.8px} .blk{padding:12px 16px 0} .how{margin-top:6px;padding-top:9px}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Meso-Ebene: <span>von der Lernsituation zur Klasse</span></h1>
+    <div class="sub">Pipeline 1 · Schritte 04 bis 06 · Skills lernsituation, klassenakte, fehlvorstellungen · Ergebnisse im Arbeitsbereich</div>
+  </div>
+  <div class="badge">Stand 25.10.2026</div>
+</header>
+
+<div class="main">
+  <div class="side in">
+    <h2>Aus der Makro-Ebene</h2>
+    <div class="life">Lehrplan und Schule, wiederverwendbar</div>
+    <div class="chip"><b>01 Curriculare Analyse</b>Lernfeld-Kompetenzen LK-01 …, Inhalte Pflicht, Optional, Verschoben</div>
+    <div class="chip"><b>02 Skizze</b>je LS Handlungssituation, Handlungsergebnis, echte Entscheidung, LK, Stunden</div>
+    <div class="chip"><b>03 Jahresplanung</b>Lernfelder des Jahres, mit Stundenplan jede Stunde mit Datum</div>
+    <div class="chip"><b>Modellbetrieb</b>einmal je Beruf; Lernende als Gesellinnen und Gesellen</div>
+  </div>
+  <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+
+  <div class="center">
+    <div class="akten"><span class="lg">Farbe = Akte</span>
+      <div class="akte a-ls"><b>■ Lernsituations-Akte</b><span>je Lernsituation · gilt für alle Stunden darin</span></div>
+      <div class="akte a-kl"><b>■ Klassen-Akte</b><span>je Klasse · wird laufend aktualisiert</span></div>
+    </div>
+    <div class="steps">
+      <div class="st t-ls">
+        <div class="top"><span class="num">04</span><h3>Lernsituation ausarbeiten</h3>
+          <div class="where">Lernsituations-Akte · Skill lernsituation</div></div>
+        <div class="blk"><div class="lbl">Inhalt</div><ul>
+          <li><b>Handlungssituation</b> mit Kunde und Anlass, <b>Auftrag</b> der Meisterin in der Sie-Form</li>
+          <li><b>Handlungsergebnis</b>, echte Entscheidung, Bewertungskriterien</li>
+          <li><b>Zyklen</b>: innere vollständige Handlungen über Doppelstunden; Planen in jedem Zyklus</li>
+          <li><b>Doppelstunden</b> mit Leitfrage, Inhalten, Teilergebnis, Phasen, LK</li>
+        </ul></div>
+        <div class="blk how"><div class="lbl">Selbstständige LS (Profil lernsituation.form)</div><ul>
+          <li><b>Arbeitsplan</b>: Auftrag, Meilensteine mit spätestem Termin, fester Lernpfad aus Arbeitsblättern, Kriterien</li>
+          <li>Einzelarbeit, Partnerarbeit wenn es sich ergibt; Lehrkraft begleitet</li>
+          <li>daraus der <b>Materialauftrag der ganzen LS</b> für Pipeline 2</li>
+        </ul></div>
+        <div class="outp"><span class="file">Lernsituation.docx</span><span class="file">Arbeitsplan_Planung.docx</span><span class="file">Materialauftrag.docx</span>
+          <div class="ex">Prüfung: Stunden der DS gleich Stunden der LS, alle LK vorhanden</div></div>
+      </div>
+
+      <div class="st t-kl">
+        <div class="top"><span class="num">05–06</span><h3>Klassen-Akte</h3>
+          <div class="where">Klassen-Akte · Skill klassenakte</div></div>
+        <div class="blk"><div class="lbl">Inhalt</div><ul>
+          <li><b>Bedingungsfeld</b> nach Seminar-Leitfaden <b>1.1 bis 1.5</b></li>
+          <li>zu jeder Bedingung eine <b>Konsequenz</b> für die Planung</li>
+          <li><b>drei Personas</b> und allgemeine Lernausgangslage</li>
+          <li><b>kommentierter Sitzplan</b>: Bild aus dem Sitzplan-Studio, darunter Kommentartabelle mit Noten</li>
+        </ul></div>
+        <div class="blk how"><div class="lbl">So entsteht es</div><ul>
+          <li>erst frei erzählen, dann nur Lücken</li>
+          <li>ohne echte Klasse eine gekennzeichnete Musterklasse</li>
+          <li>Nachbereitungen schlagen Änderungen vor, Lehrkraft bestätigt</li>
+        </ul></div>
+        <div class="outp"><span class="file">Bedingungsfeld.docx</span><span class="file">Lernausgangslage.docx</span><span class="file">Sitzplan.docx</span>
+          <div class="ex"><b>Datenschutz:</b> Lernende nur als Kürzel S01, S02 …, nie mit Namen</div></div>
+      </div>
+
+      <div class="st t-ls">
+        <div class="top"><span class="num">06</span><h3>Fehlvorstellungen</h3>
+          <div class="where">Lernsituations-Akte · Skill fehlvorstellungen</div></div>
+        <div class="blk"><div class="lbl">Inhalt</div><ul>
+          <li><b>Lernausgangslage je Inhalt</b> der LS, „unbekannt“ solange ohne Quelle</li>
+          <li><b>Herkunft</b>: Forschung, Erfahrung der Lehrkraft, Beobachtung, KI-Vermutung nur mit Bezug</li>
+          <li>je Fehlvorstellung Doppelstunde und <b>Priorität</b> A, B, C</li>
+          <li><b>Diagnose-Item</b> zum Aufdecken, Aufgreifen im Unterricht</li>
+        </ul></div>
+        <div class="blk how"><div class="lbl">So entsteht es</div><ul>
+          <li>erst recherchieren, dann entwerfen; Literatur nach APA 7</li>
+          <li>KI-Vermutungen bestätigt oder streicht die Lehrkraft</li>
+        </ul></div>
+        <div class="outp"><span class="file">Fehlvorstellungen.docx</span>
+          <div class="ex">Fehlvorstellungen stehen nie im Entwurf, nur in den internen Unterlagen</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+
+  <div class="side out">
+    <h2>In die Mikro-Ebene</h2>
+    <div class="life">Stunden-Akte · Stundentyp zuerst</div>
+    <div class="chip"><b>Alltag, gelenkte LS</b>Verlaufsskizze und Materialauftrag je DS</div>
+    <div class="chip"><b>Alltag, selbstständige LS</b>Kurzskizze je DS: eine Seite in Seminarspalten</div>
+    <div class="chip"><b>EUB · KUB · FLB</b>Kurzentwurf nach Seminar-Muster, kein Fließtext</div>
+    <div class="chip"><b>GUB · PU</b>voller Entwurf mit Seitenbudget, Sachanalyse und Reduktion als Text</div>
+  </div>
+</div>
+
+<div class="loop">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.3L3 16M3 21v-5h5"/></svg>
+  <span><b>Rückkopplung:</b> Nach jeder Stunde die Nachbereitung (Schritt 17), frei gesprochen; jede Aussage geht nach Reichweite in die Stunden-, Klassen- oder Lernsituations-Akte oder ins Profil. Offene Punkte stehen am Anfang der nächsten Stundenplanung.</span>
+</div>
+
+<footer>
+  <div class="panel">
+    <h4>Modellbetrieb</h4>
+    <ul><li>fiktiv, einmal je Beruf bzw. Fachrichtung (Skill modellbetrieb)</li>
+      <li>Steckbrief, Personen, Kunden; durchgehende Handlungssituation</li>
+      <li>in der Übungsphase Probe, im Echtbetrieb optional</li></ul>
+  </div>
+  <div class="panel">
+    <h4>Lehrkraft-Profil</h4>
+    <ul><li>alle Skills lesen Werte nur über profil.lade()</li>
+      <li>z. B. Form der LS, Sozialform, Kontrolle am Ende der DS</li>
+      <li>persönliche Werte im Arbeitsbereich, neutraler Standard im Werkzeug</li></ul>
+  </div>
+  <div class="panel">
+    <h4>Grundsätze in jedem Schritt</h4>
+    <ul><li><b>Seminarvorgaben haben Vorrang</b></li>
+      <li>eine Frage zur Zeit, drei Vorschläge, freie Antwort; begründet widersprechen</li>
+      <li>Prüfbericht und Leseseite vor jeder Freigabe; Ausgabe als DOCX</li></ul>
+  </div>
+  <div class="panel dark">
+    <h4>Freigabe</h4>
+    <ul><li>je LS eine Freigabe, Steckbrief auf „freigegeben“</li>
+      <li>Eintrag in .daten/freigaben.json mit Zahl der Korrekturen</li>
+      <li>Planung ab LS 4 gezählt</li></ul>
+  </div>
+</footer>
+</body>
+</html>

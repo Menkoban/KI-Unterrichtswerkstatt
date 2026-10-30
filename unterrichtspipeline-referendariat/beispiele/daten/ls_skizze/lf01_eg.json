@@ -1,0 +1,278 @@
+{
+ "titel": "LF 1 Elektroniker/in EG: Lernsituationen",
+ "kurztitel": "LF 1 EG Lernsituationen (Skizze)",
+ "ordner": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme",
+ "fach": "Elektrotechnik",
+ "datum": "2026-10-11",
+ "stand": "Fassung 3 (Puffer und Klassenarbeit; ohne Kalender geplant, nach Ansage der Lehrkraft), freigegeben am 2026-10-11",
+ "zeitrichtwert": 80,
+ "baut_auf": [
+  "Elektrotechnik/Elektroniker_AS/LF01_Elektrotechnische_Systeme/Curriculare_Analyse.docx",
+  "Elektrotechnik/Elektroniker_EG/Modellbetrieb_Stromhof_Elektro.docx",
+  "Unterricht/Elektrotechnik/2026-27_EG1/Jahresplanung.docx"
+ ],
+ "lk_alle": [
+  "LK-01",
+  "LK-02",
+  "LK-03",
+  "LK-04",
+  "LK-05",
+  "LK-06",
+  "LK-07",
+  "LK-08",
+  "LK-09",
+  "LK-10",
+  "LK-11",
+  "LK-12"
+ ],
+ "meta": [
+  [
+   "Beruf",
+   "Elektroniker/in, Fachrichtung Energie- und Gebäudetechnik (Handwerk), 1. Ausbildungsjahr"
+  ],
+  [
+   "Lernfeld",
+   "LF 1 Elektrotechnische Systeme analysieren, Funktionen prüfen und Fehler beheben, 80 Std."
+  ],
+  [
+   "Curriculare Analyse",
+   "LF 1 (Schritt 01, fachrichtungsübergreifend, freigegeben 2026-10-09): LK-01 bis LK-12 und Inhaltskatalog"
+  ],
+  [
+   "Modellbetrieb",
+   "Stromhof Elektro GmbH (freigegeben 2026-10-11), Kunde Familie Schütte (Einfamilienhaus von 1968)"
+  ],
+  [
+   "Jahresplanung",
+   "2026/27 EG1: LF 1 epochal zuerst (Idealplanung). Die Skizze plant ohne Kalender; Ferien und Stundenplan werden erst bei der zeitlichen Zuordnung berücksichtigt."
+  ]
+ ],
+ "leitlinie": [
+  "Kontext aus der Gebäudetechnik von Anfang an: ein bewohntes Einfamilienhaus, das Schritt für Schritt saniert wird (Wahl der Lehrkraft, Variante A). Der Lerngegenstand bleibt auf LF-1-Niveau: Grundgrößen, Leitung, Bauelement, Grundschaltung, Messen, Sicherheit.",
+  "Keine Installationsschaltungen, keine Leitungsdimensionierung nach Norm (→ LF 2), keine Netzsysteme und Schutzmaßnahmen im Einzelnen (→ LF 5); keine Sensor-Aktor-Verknüpfung und Steuerungslogik (→ LF 3). Das Haus liefert nur Anlass und Gegenstände. Familie Schütte trägt weiter: Unterverteilung (LF 2), später PV und Wallbox."
+ ],
+ "handlungssituation": "Familie Schütte hat ein Einfamilienhaus von 1968 gekauft und lässt es Schritt für Schritt von der Stromhof Elektro GmbH sanieren. Als Gesellinnen und Gesellen verschaffen sich die Lernenden einen Überblick über die Elektrik des Hauses, bereiten sich und Azubi Emma auf sicheres Arbeiten im bewohnten Haus vor, prüfen für die Familie Energie und Kosten, legen die Heizstufen der Kellersauna und ein LED-Orientierungslicht aus und finden den Fehler an der Fußbodenheizung im Bad. Auftrag und Abnahme kommen von Meisterin Svenja Terhorst, Adressat der Ergebnisse ist die Familie.",
+ "ablauf": [
+  {
+   "nr": "1",
+   "titel": "„Der Stromhof und das Haus Schütte“",
+   "std": 8,
+   "situation": "Die Meisterin übergibt den neuen Kunden: Familie Schütte will ihr Haus von 1968 sanieren. Die Lernenden verschaffen sich einen Überblick und stellen für die Familie dar, aus welchen Teilen die Elektrik des Hauses besteht; dazu vergleichen sie ihren Ausbildungsbetrieb mit dem Stromhof.",
+   "ergebnis": "Systemübersicht des Hauses (Gebäude → Stromkreis → Betriebsmittel → Bauelement) für die Familie und Steckbrief des eigenen Ausbildungsbetriebs",
+   "entscheidung": "Wie stellen wir die Elektrik so dar, dass Laien sie verstehen?",
+   "lk": [
+    "LK-01",
+    "LK-02",
+    "LK-03",
+    "LK-09"
+   ],
+   "inhalt": "Betriebliche Strukturen und Arbeitsorganisation; Systemebenen; Schaltzeichen erster Überblick",
+   "mathe": "–",
+   "arp": "D1 Ausbildungsbetrieb; A7 Systeme analysieren"
+  },
+  {
+   "nr": "2",
+   "titel": "„Sicher beim Kunden“",
+   "std": 12,
+   "situation": "Azubi Emma (1. Jahr) kommt beim ersten Einsatz im bewohnten Haus mit. Die Meisterin beauftragt die Lernenden, Emma vorher zu unterweisen; im Altbau sind alte Leitungen und unbekannte Stromkreise zu erwarten. Bei der Begehung ist aufgefallen: Es gibt keinen Fehlerstrom-Schutzschalter, nur alte Schraubsicherungen.",
+   "ergebnis": "Sicherheitsunterweisung (durchgeführt) und Merkkarte „Sicher arbeiten und messen beim Kunden“",
+   "entscheidung": "Welche Maßnahme passt zu welcher Arbeitssituation im bewohnten Altbau?",
+   "lk": [
+    "LK-03",
+    "LK-04",
+    "LK-09",
+    "LK-11"
+   ],
+   "inhalt": "Wirkungen des Stromes auf den Menschen; 5 Sicherheitsregeln; PSA; sicherer Einsatz von Messgeräten; Schutzeinrichtungen im Überblick: RCD, Leitungsschutzschalter, Schmelzsicherung (Aufgabe, Wirkprinzip qualitativ, was fehlt bei Schüttes)",
+   "mathe": "–",
+   "arp": "A6 Sicherheitsregeln, Unfallverhütung; A4 auf Gefahren hinweisen"
+  },
+  {
+   "nr": "3",
+   "titel": "„Was kostet der alte Durchlauferhitzer?“",
+   "std": 20,
+   "situation": "Familie Schütte wundert sich über hohe Stromkosten und fragt, ob sich ein neuer Durchlauferhitzer lohnt; außerdem werden die Zuleitungen im Bad spürbar warm. Die Lernenden prüfen Kennwerte, rechnen Energie und Kosten und erklären die Erwärmung der Leitung.",
+   "ergebnis": "Energie-Check für die Familie: Kennwerte, Kosten pro Jahr, Erklärung zur Leitung, Empfehlung",
+   "entscheidung": "Lohnt sich der Austausch, und welche Empfehlung geben wir mit welcher Begründung?",
+   "lk": [
+    "LK-03",
+    "LK-06",
+    "LK-08",
+    "LK-12"
+   ],
+   "inhalt": "Ladung, Strom, Spannung; Widerstand, Ohmsches Gesetz; Leistung, Arbeit, Wirkungsgrad, Energiekosten; Leiterwiderstand (ρ, l, A), Temperaturabhängigkeit, Stromdichte, Wärmewirkung; Aufgabe des Leitungsschutzschalters: Schutz der Leitung bei Überlast und Kurzschluss (qualitativ)",
+   "mathe": "Formelzeichen und Einheiten, SI-Vorsätze, Umrechnen, Formeln umstellen (R = U/I, P = U·I, R = ρ·l/A)",
+   "arp": "A8 Größen berechnen, messen, bewerten; A6 Niederohmigkeit von Leitern"
+  },
+  {
+   "nr": "4",
+   "titel": "„Heizstufen und Orientierungslicht für den Keller“",
+   "std": 18,
+   "situation": "Im Keller soll die alte Sauna wieder in Betrieb gehen; ihre Heizwiderstände sollen drei Leistungsstufen ergeben. Für die Kellertreppe wünscht die Familie ein LED-Orientierungslicht an 24 V. Die Lernenden legen beides aus und bauen ein Muster zur Abnahme.",
+   "ergebnis": "Schaltplan der Heizstufen und des Orientierungslichts, Muster am Übungsbrett, Messprotokoll",
+   "entscheidung": "Welche Verschaltung der Heizwiderstände ergibt die gewünschten Stufen? Welcher LED-Vorwiderstand aus der E-Reihe, welche Belastbarkeit?",
+   "lk": [
+    "LK-05",
+    "LK-06",
+    "LK-07",
+    "LK-08",
+    "LK-09"
+   ],
+   "inhalt": "Reihen-, Parallel-, gemischte Schaltung; Kirchhoffsche Regeln; Leistung je Stufe; Diode/LED mit Vorwiderstand; E-Reihen, Farbcode, Belastbarkeit; Schaltpläne",
+   "mathe": "Gleichungen mit mehreren Größen, Bruchrechnen und Kehrwert (Parallelschaltung), Kirchhoff",
+   "arp": "A1 Stromlaufpläne lesen und zeichnen; A8 Kenndaten von Bauteilen prüfen"
+  },
+  {
+   "nr": "–",
+   "titel": "Puffer, Präsentation und Übungszirkel",
+   "std": 6,
+   "situation": "Abschluss von LS 3 und LS 4, ohne Klassenarbeit. DS 1 Nacharbeit und Fertigstellen (Energie-Check LS 3, Muster LS 4); DS 2 Präsentation und Fachgespräch zu den Handlungsprodukten aus LS 3 und LS 4, bewertet; DS 3 Übungszirkel nach Niveaus zu LS 1–4 (Wiederholung, zugleich Vorbereitung auf die Klassenarbeit).",
+   "ergebnis": "bewertete Handlungsprodukte LS 3 und LS 4",
+   "entscheidung": "",
+   "lk": [],
+   "inhalt": "",
+   "mathe": "",
+   "arp": ""
+  },
+  {
+   "nr": "5",
+   "titel": "„Die Fußbodenheizung im Bad regelt falsch“",
+   "std": 14,
+   "situation": "Einige Wochen später meldet sich Familie Schütte: Das Raumthermostat der elektrischen Fußbodenheizung zeigt falsche Temperaturen. Die Lernenden finden die Ursache am Temperaturfühler (NTC im Spannungsteiler) und informieren die Familie.",
+   "ergebnis": "Fehlerprotokoll mit Messwerten und Kundeninformation an die Familie",
+   "entscheidung": "Mit welcher Prüfstrategie beginnen wir, und warum?",
+   "lk": [
+    "LK-08",
+    "LK-10",
+    "LK-11",
+    "LK-12"
+   ],
+   "inhalt": "Spannungsteiler unbelastet und belastet; NTC; Messverfahren; Messfehler und Innenwiderstand des Messgeräts (qualitativ); systematische Fehlersuche",
+   "mathe": "Verhältnisse (Spannungsteiler), Prozent, Toleranz, Messabweichung",
+   "arp": "A9 Systematik der Fehlersuche; A2 Arbeitsergebnisse kontrollieren"
+  },
+  {
+   "nr": "–",
+   "titel": "Klassenarbeit LF 1",
+   "std": 2,
+   "situation": "Schriftliche Lernerfolgskontrolle über das ganze Lernfeld (LS 1–5), Std. 79–80.",
+   "ergebnis": "bewertete Klassenarbeit",
+   "entscheidung": "",
+   "lk": [],
+   "inhalt": "",
+   "mathe": "",
+   "arp": ""
+  }
+ ],
+ "abdeckung": [
+  "Alle Lernfeld-Kompetenzen LK-01 bis LK-12 kommen mindestens einmal vor; LK-08 (Messen und Rechnen) zieht sich durch LS 3 bis 5, LK-11 (Sicherheit) durch alle.",
+  "Pflicht-Inhaltskatalog vollständig: Grundgrößen und Leiterwiderstand (LS 3), Leistung und Energie (LS 3), Grundschaltungen und Bauelemente (LS 4), Spannungsteiler, Messen und Fehlersuche (LS 5), Sicherheit und Schutzeinrichtungen im Überblick (LS 2, Bezug in LS 3). Optional „Kondensator und Spule qualitativ“: als Ausblick in LS 4 möglich.",
+  "Progression: Überblick → sicher handeln → berechnen und beraten → auslegen und aufbauen → prüfen und Fehler suchen.",
+  "Abgrenzung: Leitung in LS 3 nur als Widerstand und Wärme, nicht Dimensionierung nach Norm (LF 2); Thermostat in LS 5 nur als Messkreis mit Fühler, nicht als Regelung (LF 3).",
+  "Schutzeinrichtungen: LF 1 nur Aufgabe und Wirkprinzip von RCD, Leitungsschutzschalter und Schmelzsicherung; Netzsysteme, Fehlerschleife, Auswahl, Bemessung und Prüfung gehören zu LF 5 (2. Jahr; Rahmenlehrplan LF 5: „Netzsysteme und Schutzmaßnahmen (Schutzeinrichtungen, Schutzklassen)“). LF 2 behandelt in der Praxis der Lehrkraft vor allem Installationsschaltungen und Schaltplanarten."
+ ],
+ "pruefbericht": [
+  [
+   "Hinweis",
+   "Fassung 3 (2026-10-11, Ansage der Lehrkraft): keine Klassenarbeit im Puffer; Puffer = Nacharbeit, bewertete Präsentation, Übungszirkel. Klassenarbeit über LF 1 in Std. 79–80, LS 5 dafür 14 statt 16 Std."
+  ],
+  [
+   "Hinweis",
+   "Fassung 2 (2026-10-11): Schutzeinrichtungen im Überblick in LS 2 (+2 Std.) und LS 3; Puffer 8 → 6 Std.."
+  ],
+  [
+   "Hinweis",
+   "Reihenfolge: LS 1–4, Puffer, LS 5, Klassenarbeit (Std. 1–80, gezählt im Lernfeld, nicht im Kalender). Ferien und Stundenplan berücksichtigt erst die zeitliche Zuordnung (Lehrkraft, 2026-10-11)."
+  ],
+  [
+   "Warnung",
+   "LS 4: Echte Saunaöfen werden meist an 400 V Drehstrom angeschlossen; das gehört nicht in LF 1. Die Heizstufen werden deshalb mit Heizwiderständen am Übungsbrett (Kleinspannung) modelliert, der Anschluss an der Anlage bleibt außen vor."
+  ],
+  [
+   "Warnung",
+   "LS 4: Das 24-V-Netzteil des Orientierungslichts wird als gegeben behandelt (Transformator, Gleichrichtung nicht in LF 1)."
+  ],
+  [
+   "Hinweis",
+   "Variante B (Neubau Lindenkamp) ist als Datei aufbewahrt und lässt sich jederzeit wieder erzeugen."
+  ],
+  [
+   "Hinweis",
+   "Die Situationen sind Skizzen; Ausarbeitung je Lernsituation in Schritt 04, wenn sie unterrichtet wird."
+  ]
+ ],
+ "lk_legende": [
+  [
+   "LK-01",
+   "Betriebliche Arbeitsaufträge analysieren und sich über Aufgaben, Tätigkeiten und Arbeitsprozesse im betrieblichen Umfeld informieren",
+   "Informieren",
+   "FK, MK"
+  ],
+  [
+   "LK-02",
+   "Elektrotechnische Systeme auf Anlagen-, Geräte-, Baugruppen- und Bauelementebene sowie Wirkungszusammenhänge zwischen den Ebenen analysieren",
+   "Informieren",
+   "FK"
+  ],
+  [
+   "LK-03",
+   "Informationen, auch digital, beschaffen und auswerten; fremdsprachige Dokumentationen mit Hilfsmitteln auswerten",
+   "Informieren",
+   "MK, FK"
+  ],
+  [
+   "LK-04",
+   "Umsetzung unter Beachtung des Sicherheits- und Gesundheitsschutzes (DGUV) mit Methoden der Arbeits-, Zeit- und Lernplanung planen",
+   "Planen",
+   "MK, SeK"
+  ],
+  [
+   "LK-05",
+   "Technische Unterlagen lesen und erstellen (Schaltpläne, Schaltzeichen)",
+   "Planen",
+   "FK"
+  ],
+  [
+   "LK-06",
+   "Sich auf Grundlage der Planung für einen Umsetzungsansatz entscheiden",
+   "Entscheiden",
+   "MK, SeK"
+  ],
+  [
+   "LK-07",
+   "Im Team Funktionen und Betriebsverhalten von Bauelementen und Baugruppen sowie deren Aufgaben im System bestimmen",
+   "Ausführen",
+   "FK, SoK"
+  ],
+  [
+   "LK-08",
+   "Elektrische Größen messtechnisch und rechnerisch zur Analyse und Prüfung von Grundschaltungen ermitteln",
+   "Ausführen",
+   "FK, MK"
+  ],
+  [
+   "LK-09",
+   "Sich unter Anwendung von Fachsprache über Erkenntnisse austauschen",
+   "Ausführen",
+   "MK"
+  ],
+  [
+   "LK-10",
+   "Funktion elektrischer Schaltungen und Betriebsmittel prüfen; Fehler analysieren und beheben",
+   "Kontrollieren",
+   "FK, MK"
+  ],
+  [
+   "LK-11",
+   "Verantwortungsbewusst unter Berücksichtigung sicherheitstechnischer Aspekte handeln",
+   "durchgängig",
+   "FK, SeK"
+  ],
+  [
+   "LK-12",
+   "Gewonnene Erkenntnisse dokumentieren und bewerten",
+   "Bewerten",
+   "MK, SeK"
+  ]
+ ]
+}

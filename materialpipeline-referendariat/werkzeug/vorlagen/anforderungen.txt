@@ -1,0 +1,25 @@
+# Python-Pakete für die Vorlagen (pip install -r werkzeug/vorlagen/anforderungen.txt)
+# Zusätzlich nötig: LibreOffice (soffice) und poppler (pdftoppm) für die PNG-Vorschau.
+python-docx
+docxtpl
+docxcompose
+python-pptx
+openpyxl
+Pillow
+# Rechenprüfer und Diagramme (werkzeug/rechnen): pint; lcapy mit --no-deps, dazu sympy numpy scipy networkx property-cached
+pint
+pymupdf
+lxml
+matplotlib
+sympy
+numpy
+scipy
+networkx
+property-cached
+playwright
+pillow-heif
+edge-tts
+# QR-Codes zu Filmen und Seiten (Vektor) und Prüfen, ob sie lesbar sind
+segno
+zxing-cpp
+cairosvg

@@ -1,0 +1,80 @@
+{
+  "id": "osnabrueck-bbs",
+  "stand": "2026-11",
+  "herkunft": "Lehrkraft 2026-11 (Veröffentlichung, bisher fest im Werkzeug): Studienseminar Osnabrück, Lehramt an berufsbildenden Schulen (LBS); Quellen: Seminar-Wiki (Leitfaden für den kompetenzorientierten Unterrichtsentwurf, Grundlegende Hinweise zur Ausbildung, Weisungen für die Staatsprüfung, KI-Nutzung im Studienseminar Osnabrück)",
+  "name": "Studienseminar Osnabrück für das Lehramt an berufsbildenden Schulen",
+  "name_kurz": "Studienseminar Osnabrück (LBS)",
+  "ort": "Osnabrück",
+  "anschrift": "Winkelhausenstraße 6, 49090 Osnabrück",
+  "ki_fussnote": {
+    "pflicht": true,
+    "regel": "KI-Fußnote auf jedem KI-gestützten Material (Seminarvorgabe, Wiki „KI-Nutzung im Studienseminar Osnabrück“)"
+  },
+  "besuchsformen": {
+    "EUB": {
+      "name": "Einfacher Unterrichtsbesuch",
+      "entwurf": "kurz"
+    },
+    "KUB": {
+      "name": "Kollegialer Unterrichtsbesuch",
+      "entwurf": "kurz"
+    },
+    "FLB": {
+      "name": "Fachleiter*innenbesuch",
+      "entwurf": "kurz"
+    },
+    "GUB": {
+      "name": "Gemeinsamer Unterrichtsbesuch",
+      "entwurf": "voll",
+      "paragraf": "(gem. § 7 Abs. 8 APVO-Lehr)"
+    },
+    "PU": {
+      "name": "Prüfungsunterricht",
+      "entwurf": "voll",
+      "paragraf": "(gem. § 14 Abs. 7 APVO-Lehr)"
+    }
+  },
+  "seitenbudget": {
+    "kapitel": [
+      [
+        "1 Analyse des Bedingungsfeldes",
+        1.5
+      ],
+      [
+        "2.1 Analyse der curricularen Vorgaben",
+        0.5
+      ],
+      [
+        "2.2 Angestrebte Kompetenzen",
+        0.5
+      ],
+      [
+        "2.3 Analyse der Thematik",
+        1.5
+      ],
+      [
+        "2.4 Auswahl- und Reduktionsentscheidungen",
+        1.0
+      ],
+      [
+        "3 Gestaltung der Verlaufsstruktur",
+        1.0
+      ]
+    ],
+    "hoechstens": 6.0
+  },
+  "versicherung": "Ich versichere, dass ich den Unterricht selbstständig vorbereitet und bei der Anfertigung des Entwurfs keine anderen als die angegebenen Quellen und Hilfsmittel benutzt und die Stellen der Arbeit, die ich im Wortlaut oder im wesentlichen Inhalt anderen Werken entnommen habe, mit genauer Angabe der Quelle kenntlich gemacht habe. Ich versichere des Weiteren, im Falle des Einsatzes von generativen IT-KI-gestützten Sprachmodellen diese Werkzeuge in der Übersicht verwendeter Hilfsmittel, der Art der Verwendung und ggf. den jeweiligen Prompts vollständig angeführt zu haben. Eine Dokumentation der Verwendung liegt der Arbeit bei (Nennung der Zugriffsquelle, Datum und Eingabeparameter [Prompts]). Darüber hinaus versichere ich, dass die Arbeit in gleicher oder ähnlicher Form noch keiner Prüfungsbehörde vorgelegen hat.",
+  "hinweise": {
+    "KUB": [
+      "KUB: Entwurf am Vortag an alle Teilnehmenden und fristgerecht an die Fachleitung; mindestens drei LiV, davon mindestens eine aus {fachrichtung}, keine Fachleitung im Raum. KUB-Protokoll liegt vorbefüllt bei."
+    ],
+    "PU": [
+      "PU (Weisungen für die Staatsprüfung, Wiki des Seminars): Thema 15 Tage vorher im Sekretariat einholen und Empfang bestätigen; Entwurf elektronisch an alle Mitglieder des Prüfungsausschusses am Tag vor der Prüfung bis 12:00 Uhr (bei Prüfung am Montag am Werktag davor); kommentierter Sitzplan mit personenbezogenen Daten nur passwortgeschützt; zwei gedruckte Ausgaben mit unterschriebener Versicherung vor Beginn an den Vorsitz.",
+      "Reflexion: 15 min Vorbereitung, höchstens 10 min; eigene Notizen erlaubt, danach abzugeben; vorher vorbereitete Unterlagen dürfen nicht Gegenstand der Reflexion sein. PU I und PU II sollen in verschiedenen Stufen oder Bildungsgängen liegen, mindestens einer in der Berufsschule."
+    ],
+    "sonst": [
+      "Mitsenden: Dokumentation der Ausbildung mit den vereinbarten Zielen (eigenes Dokument des Seminars); Übermittlung nur verschlüsselt."
+    ]
+  },
+  "kub_teilnehmende_platzhalter": "[mind. drei, davon mind. eine aus {fachrichtung}; keine Mentor/innen]"
+}

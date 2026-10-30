@@ -1,0 +1,73 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Ebenen und Ref-Akte</title>
+<link rel="stylesheet" href="stil.css">
+<style>
+ body{gap:12px}
+ .grid{display:grid;grid-template-columns:390px repeat(4,1fr);background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;flex:1;min-height:0}
+ .h{padding:12px 14px;border-bottom:2px solid var(--line);font-weight:800;font-size:19px;display:flex;flex-direction:column;justify-content:center}
+ .h small{font-weight:600;font-size:13px;color:var(--muted);margin-top:2px}
+ .h.mak{background:var(--p1);color:#fff} .h.mak small{color:#dbe6ff}
+ .h.mes{background:#e6f0fb;color:#1e40af} .h.mik{background:#eaf2ff;color:#1d4ed8} .h.na{background:var(--refs);color:var(--ref)}
+ .h.first{background:#f8fafc;color:var(--ink)}
+ .grp{grid-column:1/-1;padding:7px 14px;font-size:12.5px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted);background:#f1f4f9;border-bottom:1px solid var(--line)}
+ .r{padding:7px 14px;border-bottom:1px solid #edf0f5;font-size:16px;line-height:1.25;display:flex;align-items:center}
+ .r b{font-weight:700}
+ .c{padding:6px 10px;border-bottom:1px solid #edf0f5;border-left:1px solid #edf0f5;display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:13.8px;line-height:1.25;color:#334155}
+ .c.makcol{background:#f5f8ff}
+ .p{font-size:12.5px;font-weight:800;border-radius:6px;padding:2px 7px;color:#fff;white-space:nowrap}
+ .pm{background:var(--p1)} .pe{background:#1e40af} .pi{background:#2563eb} .pn{background:var(--ref)}
+ .band{grid-template-columns:1fr 1fr 1fr}
+ .tg{font-size:11px;font-weight:800;border-radius:6px;padding:1px 6px;margin-left:8px;white-space:nowrap}
+ .tg.da{color:#15803d;background:#e8f6ed;border:1px solid #b9e3c7} .tg.ge{color:#b45309;background:#fff6e5;border:1px solid #f3d79c}
+ .r{flex-wrap:wrap} .c.leer{color:#a0a9b8}
+ .grp small{font-weight:600;letter-spacing:0;text-transform:none;margin-left:8px}
+</style></head><body>
+<header>
+ <div><h1>Wo entsteht was? Planungsebenen, Entwurf und Ref-Akte</h1>
+ <div class="sub">Jeder Planungsschritt liefert Bausteine für die Besuchsentwürfe; die Ref-Akte ist erst zum Teil gebaut · Stand 25.10.2026</div></div>
+ <div class="badges"><span class="badge b-ok">Entwurf: vorhanden</span><span class="badge b-draft">Ref-Akte: geplant</span></div>
+</header>
+<div class="grid">
+ <div class="h first">Ref-Produkt<small>was das Seminar sehen will</small></div>
+ <div class="h mak">Makro-Ebene<small>01 Analyse · 02 Skizze · 03 Jahresplanung</small></div>
+ <div class="h mes">Meso-Ebene<small>04 Lernsituation · 05–06 Klasse · 06 Fehlvorstellungen</small></div>
+ <div class="h mik">Mikro-Ebene<small>07–16 · Besuchsstunde und Entwurf</small></div>
+ <div class="h na">Nachbereitung<small>17 · nach jeder Stunde</small></div>
+
+ <div class="grp">Im Besuchsentwurf <small>Skill besuchsstunde · entwurf/entwurf.py (EUB, KUB, FLB) · entwurf/voll.py (GUB, PU)</small></div>
+ <div class="r"><b>Kap. 1 · Bedingungsfeld</b>&nbsp;(GUB/PU)<span class="tg da">vorhanden</span></div>
+ <div class="c makcol"></div><div class="c"><span class="p pe">05</span><span class="p pe">06</span>Klasse 1.1 bis 1.5, Konsequenz je Bedingung</div><div class="c"></div><div class="c"><span class="p pn">17</span>Änderungen an der Klasse</div>
+ <div class="r"><b>Kap. 2.1 · Curriculare Vorgaben</b><span class="tg da">vorhanden</span></div>
+ <div class="c makcol"><span class="p pm">01</span><span class="p pm">02</span>Lernfeld, LK, Einordnung der LS</div><div class="c"></div><div class="c"><span class="p pi">10</span>Verortung, Legitimation</div><div class="c"></div>
+ <div class="r"><b>Kap. 2.2 · Kompetenzen</b>&nbsp;+ Kompetenztabelle<span class="tg da">vorhanden</span></div>
+ <div class="c makcol"><span class="p pm">01</span>Lernfeld-Kompetenzen als Bezug</div><div class="c"><span class="p pe">04</span>Kernkompetenz der LS</div><div class="c"><span class="p pi">09</span>Kernkompetenz, Teilkompetenzen „indem“</div><div class="c"></div>
+ <div class="r"><b>Kap. 2.3/2.4 · Sachanalyse, Reduktion</b><span class="tg da">vorhanden</span></div>
+ <div class="c makcol"><span class="p pm">01</span>Inhalte Pflicht, Optional, Verschoben</div><div class="c"><span class="p pe">06</span>Fehlvorstellungen (nur intern)</div><div class="c"><span class="p pi">07</span><span class="p pi">08</span>Sache, Reduktion nach Grüner</div><div class="c"></div>
+ <div class="r"><b>Kap. 3 · Verlauf</b>&nbsp;+ Verlaufsskizze<span class="tg da">vorhanden</span></div>
+ <div class="c makcol"></div><div class="c"></div><div class="c"><span class="p pi">11–13</span><span class="p pi">16</span>Phasen, Methoden, Reserve, Plan B</div><div class="c"><span class="p pn">17</span>offene Punkte am Anfang</div>
+ <div class="r"><b>Sequenzierung der Lernsituation</b><span class="tg da">vorhanden</span></div>
+ <div class="c makcol"><span class="p pm">02</span>Skizze, Stunden</div><div class="c"><span class="p pe">04</span>Handlungssituation, Doppelstunden</div><div class="c"><span class="p pi">10</span>genau eine Besuchsstunde markiert</div><div class="c"></div>
+ <div class="r"><b>Kommentierter Sitzplan</b><span class="tg da">vorhanden</span></div>
+ <div class="c makcol"></div><div class="c"><span class="p pe">05</span>Bild aus dem Sitzplan-Studio, Kommentartabelle; nur Kürzel</div><div class="c"></div><div class="c"></div>
+ <div class="r"><b>Material · Erwartungshorizont</b><span class="tg da">vorhanden</span></div>
+ <div class="c makcol"></div><div class="c"><span class="p pe">LS</span>Materialauftrag der selbstständigen LS</div><div class="c"><span class="p pi">14</span>Materialauftrag; Anlagen aus Pipeline 2 angehängt</div><div class="c"></div>
+ <div class="r"><b>Vereinbarte Ziele · Versicherung, KI-Übersicht</b><span class="tg da">vorhanden</span></div>
+ <div class="c makcol"></div><div class="c"></div><div class="c"><span class="p pi">E</span>Ziele im Kurzentwurf, Versicherung und KI-Übersicht am Schluss</div><div class="c"></div>
+
+ <div class="grp">In der Ref-Akte (Ordner Ref/) <small>eigener Skill ref-akte geplant (KONZEPT 1a); vorhanden sind nur die markierten Teile</small></div>
+ <div class="r"><b>Fahrplan der Personalisierung</b><span class="tg da">vorhanden</span></div>
+ <div class="c makcol" style="grid-column:span 4">akten/fahrplan.py erzeugt aus .daten/fahrplan.json den Fahrplan (Stufen, Zeitschätzung); Liste auch in der Werkbank</div>
+ <div class="r"><b>Legende der Besuchsarten · Gliederung GUB/PU</b><span class="tg da">vorhanden</span></div>
+ <div class="c makcol" style="grid-column:span 4">als Seminarunterlage im Werkzeug (Ref/Legende_Unterrichtsbesuche.docx, Ref/Gliederung_GUB_PU_Entwurf.docx)</div>
+ <div class="r"><b>Stundenübersicht</b><span class="tg ge">geplant</span></div>
+ <div class="c makcol leer"><span class="p pm">03</span>Wochen, Klasse</div><div class="c leer"></div><div class="c leer"><span class="p pi">→</span>Datum, Stundentyp, Thema</div><div class="c leer"><span class="p pn">17</span>Status: gehalten</div>
+ <div class="r"><b>Dokumentation der Ausbildung</b><span class="tg ge">geplant</span></div>
+ <div class="c makcol leer"></div><div class="c leer"></div><div class="c leer"><span class="p pi">→</span>Besuchsart, Thema, Zielformulierungen</div><div class="c leer"><span class="p pn">17</span>Zielvereinbarung</div>
+ <div class="r"><b>Termine und Fristen</b><span class="tg ge">geplant</span></div>
+ <div class="c makcol leer"><span class="p pm">03</span>Kalender</div><div class="c leer"></div><div class="c leer"><span class="p pi">→</span>Anmeldung, Abgabe bis 12 Uhr</div><div class="c leer"></div>
+</div>
+<div class="band">
+ <div class="panel"><h4>Einmal planen, mehrfach nutzen</h4><p>Was in Makro und Meso entsteht, übernimmt jeder spätere Entwurf dieses Lernfelds; nichts wird doppelt geschrieben.</p></div>
+ <div class="panel"><h4>Seminarvorgaben haben Vorrang</h4><p>Seitenbudget im fertigen Satz gemessen, Arial 11, 1,5-zeilig, APA 7, Seminarvorlagen im Original; Seminarfassung ohne Minuten und ohne Hinweise zu einzelnen Lernenden.</p></div>
+ <div class="panel dark"><h4>Noch offen</h4><p>Stundenübersicht, Dokumentation der Ausbildung und Fristen entstehen erst mit dem Skill ref-akte; bis dahin trägt die Lehrkraft sie selbst nach.</p></div>
+</div>
+</body></html>

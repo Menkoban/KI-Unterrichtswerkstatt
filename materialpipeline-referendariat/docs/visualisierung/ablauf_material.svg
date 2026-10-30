@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1243.7" viewBox="0 0 1800 1243.7" role="img" aria-labelledby="t"><title id="t">Pipeline 2 Material: Ablauf vom Materialauftrag bis zur Übergabe an Pipeline 3</title><defs><marker id="spitze08349C" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#08349C"/></marker><marker id="spitze1F6B1B" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1F6B1B"/></marker></defs><rect width="1800" height="1243.7" rx="18" fill="#F7F9FC"/>
+<text x="40.0" y="62.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="700" fill="#08349C" text-anchor="start">Pipeline 2 · Materialerstellung</text>
+<text x="40.0" y="92.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#5B6578" text-anchor="start">Hauptskill materialauftrag · vom Materialauftrag zu fertigem Material · Ergebnisse im persönlichen Arbeitsbereich · Stand 25.10.2026</text>
+<rect x="1576.8" y="44.0" width="183.2" height="22.0" rx="11.0" fill="#7DDE78"/>
+<text x="1668.4" y="59.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#14213D" text-anchor="middle">LF 1, LS 1 bis 3 gebaut</text>
+<rect x="1453.5" y="44.0" width="115.3" height="22.0" rx="11.0" fill="#FFF3D6"/>
+<text x="1511.1" y="59.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#8A5300" text-anchor="middle">Übungsphase</text>
+<line x1="40" y1="110" x2="1760" y2="110" stroke="#D3DAE6" stroke-width="2"/>
+<rect x="76.0" y="128.0" width="830.0" height="76.0" rx="12" fill="#ECF9EB" stroke="#7DDE78" stroke-width="1.6"/>
+<text x="94.0" y="156.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#1F6B1B" text-anchor="start">Profil der Lehrkraft</text>
+<text x="94.0" y="180.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Gruppen Material und Form: ein Niveau, effektive Lernzeit, schriftliche Hilfen, Merkkasten, Fassungen</text>
+<rect x="930.0" y="128.0" width="830.0" height="76.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.4"/>
+<text x="948.0" y="156.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#08349C" text-anchor="start">Regeln im Werkzeug</text>
+<text x="948.0" y="180.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">docs/regeln/stilregeln.md, pruefcheckliste.md, Checklisten für Pläne; abgenommene Muster in docs/stilreferenz/</text>
+<rect x="76.0" y="238.0" width="270.0" height="167.2" rx="12" fill="#08349C" stroke="#08349C" stroke-width="1.2"/>
+<text x="92.0" y="268.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#7DDE78" text-anchor="start">aus Pipeline 1</text>
+<text x="92.0" y="292.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start">Materialauftrag</text>
+<text x="92.0" y="318.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#FFFFFF" text-anchor="start">je Stunde oder je selbstständiger</text>
+<text x="92.0" y="335.6" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#FFFFFF" text-anchor="start">LS; die einzige Grundlage</text>
+<text x="92.0" y="371.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#7DDE78" text-anchor="start">Materialauftrag.docx</text>
+<text x="92.0" y="389.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#7DDE78" text-anchor="start">.daten/stunde/&lt;kurz&gt;.json</text>
+<path d="M 348.0 321.6 L 382.0 321.6" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="386.0" y="238.0" width="491.7" height="167.2" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="400.0" y="252.0" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="411.5" y="267.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="432.0" y="268.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Lesen und Bibliothek prüfen</text>
+<text x="400.0" y="291.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Materialauftrag mit Steckbrief je Anlage, Bibliothek des</text>
+<text x="400.0" y="310.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Lernfelds, Material der LS, Quellenkarte. Lesebericht: Vorlage</text>
+<text x="400.0" y="330.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">vorhanden? wiederverwenden, anpassen oder neu bauen;</text>
+<text x="400.0" y="350.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Zeitschätzung gegen die effektive Lernzeit</text>
+<path d="M 879.7 321.6 L 913.7 321.6" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="917.7" y="238.0" width="336.4" height="167.2" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="931.7" y="252.0" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="943.2" y="267.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="963.8" y="268.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Nur Lücken fragen</text>
+<text x="931.7" y="291.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">strikt eine Frage zur Zeit, drei gleich</text>
+<text x="931.7" y="310.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">ausführliche Vorschläge, der empfohlene</text>
+<text x="931.7" y="330.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">zuerst, dazu eine freie Antwort</text>
+<path d="M 1256.2 321.6 L 1290.2 321.6" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="1294.2" y="238.0" width="465.8" height="167.2" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="1308.2" y="252.0" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="1319.7" y="267.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="1340.2" y="268.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Materialplan</text>
+<text x="1308.2" y="291.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">je Anlage Datei Anl_&lt;Nr&gt;_&lt;Kurztitel&gt;, Format, Fach-Skill,</text>
+<text x="1308.2" y="310.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Stilreferenz, Quellen, Prüfschritte; chronologisch nach dem</text>
+<text x="1308.2" y="330.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Stundenverlauf, nur was der Auftrag verlangt</text>
+<rect x="1660.4" y="372.2" width="87.6" height="21.0" rx="10.5" fill="#7DDE78"/>
+<text x="1704.2" y="386.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#14213D" text-anchor="middle">Freigabe 1</text>
+<path d="M 1527.1 407.2 L 1527.1 445.2" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="76.0" y="449.2" width="1684.0" height="419.5" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="94.0" y="465.2" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="105.5" y="480.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="127.0" y="481.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#14213D" text-anchor="start">Bauen je Anlage mit dem passenden Fach-Skill</text>
+<text x="617.5" y="481.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#5B6578" text-anchor="start">in der Reihenfolge des Materialplans, Bauskripte im Arbeitsbereich</text>
+<rect x="94.0" y="505.2" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="106.0" y="526.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">arbeitsblatt</text>
+<text x="106.0" y="546.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Arbeitsblatt aus der Schulvorlage, problemorientiert</text>
+<rect x="597.0" y="505.2" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="609.0" y="526.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">erwartungshorizont</text>
+<text x="609.0" y="546.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Lösung gerechnet, andere Wege, typische Fehler; Pflicht je Anlage</text>
+<rect x="94.0" y="566.7" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="106.0" y="587.7" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">dokumente</text>
+<text x="106.0" y="607.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Einstieg, Infoblatt, Messprotokoll, Serviceauftrag, Folien, Tabelle</text>
+<rect x="597.0" y="566.7" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="609.0" y="587.7" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">rechenblatt</text>
+<text x="609.0" y="607.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">jede Zahl mit Einheiten gerechnet, Abgleich aller Anlagen</text>
+<rect x="94.0" y="628.2" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="106.0" y="649.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">quellen</text>
+<text x="106.0" y="669.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Fotos, Scans, PDF, Texterkennung, Recherche mit Quellenangabe</text>
+<rect x="597.0" y="628.2" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="609.0" y="649.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">stromlaufplan</text>
+<text x="609.0" y="669.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Industriestil A3 nach DIN EN 60617</text>
+<rect x="94.0" y="689.7" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="106.0" y="710.7" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">installationsplan</text>
+<text x="106.0" y="730.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Installations- und Übersichtspläne, Leitungsbemessung</text>
+<rect x="597.0" y="689.7" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="609.0" y="710.7" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">technologieschema</text>
+<text x="609.0" y="730.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Anlagen im Fachbuch-Stil, Vektor</text>
+<rect x="94.0" y="751.2" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="106.0" y="772.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">simulation</text>
+<text x="106.0" y="792.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">interaktives HTML, nur bei Bedarf im Unterricht</text>
+<rect x="597.0" y="751.2" width="489.0" height="51.5" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="609.0" y="772.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="13" font-weight="700" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">hilfekarten</text>
+<text x="609.0" y="792.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">nur wenn verlangt und das Profil sie zulässt</text>
+<text x="94.0" y="846.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-style="italic" fill="#5B6578" text-anchor="start">Vorlagen über material_bausteine.persoenliche_vorlage() mit den Profilwerten; KI-Fußnote; Quelle an jeder Abbildung und im Quellenverzeichnis</text>
+<text x="1134.0" y="515.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#5B6578" text-anchor="start">aus denselben Bauskripten</text>
+<rect x="1134.0" y="533.2" width="608.0" height="97.8" rx="10" fill="#ECF9EB" stroke="#7DDE78" stroke-width="1.2"/>
+<text x="1148.0" y="558.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#1F6B1B" text-anchor="start">Schülerfassung</text>
+<text x="1297.1" y="558.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5B6578" text-anchor="start">für Papier</text>
+<text x="1148.0" y="580.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Aufgaben mit Rechenfeldern auf dem Blatt, ohne Infotexte; die Lernenden</text>
+<text x="1148.0" y="598.6" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">informieren sich selbst im Fachkundebuch; Merkkasten nach Profil zum Ausfüllen</text>
+<rect x="1134.0" y="643.0" width="608.0" height="97.8" rx="10" fill="#ECF9EB" stroke="#7DDE78" stroke-width="1.2"/>
+<text x="1148.0" y="668.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#1F6B1B" text-anchor="start">Gesamtfassung</text>
+<text x="1297.7" y="668.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5B6578" text-anchor="start">für Lehrkraft und Moodle</text>
+<text x="1148.0" y="690.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">alle Infotexte, Beispielrechnungen und Merkkästen, Formeln mit echtem Bruchstrich;</text>
+<text x="1148.0" y="708.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">daraus baut Pipeline 3 den Kurs</text>
+<rect x="1134.0" y="752.9" width="608.0" height="97.8" rx="10" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1148.0" y="777.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="700" fill="#08349C" text-anchor="start">Erwartungshorizont</text>
+<text x="1336.8" y="777.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#5B6578" text-anchor="start">je Anlage</text>
+<text x="1148.0" y="799.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">erwartete Lösung gerechnet, anerkannte andere Wege, typische Fehler mit Reaktion</text>
+<text x="1148.0" y="818.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">und Impulsen für die Lernbegleitung</text>
+<path d="M 256.0 870.7 L 256.0 908.7" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="76.0" y="912.7" width="640.0" height="211.0" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="90.0" y="926.7" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="101.5" y="941.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="123.0" y="942.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Dreistufig prüfen, vor dem ersten Vorzeigen</text>
+<rect x="94.0" y="962.7" width="193.3" height="111.0" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="106.0" y="984.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#08349C" text-anchor="start">1. Automatik</text>
+<text x="106.0" y="1005.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">alle_bauen.py prüft jede</text>
+<text x="106.0" y="1024.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Datei; Rechenprüfer</text>
+<text x="106.0" y="1042.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">gleicht alle Anlagen ab</text>
+<rect x="299.3" y="962.7" width="193.3" height="111.0" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="311.3" y="984.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#08349C" text-anchor="start">2. Sichtprüfung</text>
+<text x="311.3" y="1005.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">als Bild durch einen</text>
+<text x="311.3" y="1024.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">frischen Helfer: nichts</text>
+<text x="311.3" y="1042.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">abgeschnitten oder</text>
+<text x="311.3" y="1061.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">verdeckt</text>
+<rect x="504.7" y="962.7" width="193.3" height="111.0" rx="8" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="516.7" y="984.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" font-weight="700" fill="#08349C" text-anchor="start">3. Leser-Test</text>
+<text x="516.7" y="1005.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">in der Rolle der</text>
+<text x="516.7" y="1024.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Facharbeiterin oder des</text>
+<text x="516.7" y="1042.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Facharbeiters</text>
+<text x="94.0" y="1105.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-style="italic" fill="#5B6578" text-anchor="start">Fehler werden vorher selbst behoben; Prüfpunkte aus pruefcheckliste.md</text>
+<path d="M 718.0 1018.2 L 752.0 1018.2" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="756.0" y="912.7" width="330.0" height="211.0" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="770.0" y="926.7" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="781.5" y="941.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<text x="802.0" y="942.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Prüfbericht</text>
+<text x="770.0" y="965.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Fehler, Warnung, Hinweis; Leseseite:</text>
+<text x="770.0" y="985.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">neu, selbst entschieden, unsicher;</text>
+<text x="770.0" y="1005.1" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Vorschau als PNG</text>
+<rect x="986.4" y="1090.7" width="87.6" height="21.0" rx="10.5" fill="#7DDE78"/>
+<text x="1030.2" y="1105.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#14213D" text-anchor="middle">Freigabe 2</text>
+<path d="M 1088.0 1018.2 L 1122.0 1018.2" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="1126.0" y="912.7" width="300.0" height="211.0" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="1140.0" y="926.7" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="1151.5" y="941.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+<text x="1173.0" y="942.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Ablage</text>
+<text x="1140.0" y="970.7" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">&lt;LS&gt;/Material/&lt;DS&gt;/</text>
+<text x="1140.0" y="988.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Bauskripte und Ausgaben</text>
+<text x="1140.0" y="1012.7" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">&lt;LF&gt;/Bibliothek/</text>
+<text x="1140.0" y="1030.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Übertragbares</text>
+<text x="1140.0" y="1054.7" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">Unterricht/…/Anlagen/</text>
+<text x="1140.0" y="1072.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Kopie für die Stunde</text>
+<path d="M 1428.0 1018.2 L 1462.0 1018.2" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="1466.0" y="912.7" width="294.0" height="211.0" rx="12" fill="#08349C" stroke="#08349C" stroke-width="1.2"/>
+<text x="1482.0" y="942.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#7DDE78" text-anchor="start">an Pipeline 3</text>
+<text x="1482.0" y="966.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="start">Moodle-Kurs</text>
+<text x="1482.0" y="994.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#FFFFFF" text-anchor="start">Anlagen, Gesamtfassung und</text>
+<text x="1482.0" y="1012.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#FFFFFF" text-anchor="start">Glossar-Daten; uebergabe.json</text>
+<text x="1482.0" y="1029.8" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#FFFFFF" text-anchor="start">beschreibt jede Datei</text>
+<text x="1482.0" y="1089.7" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#7DDE78" text-anchor="start">uebergabe.json</text>
+<text x="1482.0" y="1107.7" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#7DDE78" text-anchor="start">glossar_dsnn.json</text>
+<path d="M 76.0 1093.7 L 50.0 1093.7 L 50.0 166.0 L 72.0 166.0" fill="none" stroke="#1F6B1B" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#spitze1F6B1B)"/>
+<rect x="76.0" y="1149.7" width="1684.0" height="70.0" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="94.0" y="1163.7" width="108.8" height="21.0" rx="10.5" fill="#7DDE78"/>
+<text x="148.4" y="1178.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#14213D" text-anchor="middle">Freigabe 1 · 2</text>
+<text x="216.8" y="1179.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#14213D" text-anchor="start">Freigabe 1 am Materialplan, Freigabe 2 nach dem Prüfbericht; Eintrag in .daten/freigaben.json (Art material, Zahl der</text>
+<text x="216.8" y="1197.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#14213D" text-anchor="start">grundsätzlichen Korrekturen).</text>
+<path d="M 1156.0 1177.7 L 1200.0 1177.7" fill="none" stroke="#1F6B1B" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#spitze1F6B1B)"/>
+<text x="1214.0" y="1182.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#14213D" text-anchor="start">Jede Korrektur der Lehrkraft wird sofort Regel: Stilregel, Prüfpunkt oder</text>
+<text x="1214.0" y="1200.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#14213D" text-anchor="start">Profilwert.</text>
+</svg>

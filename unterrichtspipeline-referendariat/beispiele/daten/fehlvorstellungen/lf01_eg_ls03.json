@@ -1,0 +1,268 @@
+{
+ "ls": "lf01_eg_ls03",
+ "datum": "2026-10-11",
+ "stand": "von der Lehrkraft freigegeben am 2026-10-11",
+ "einleitung": [
+  "LS 3 ist die erste Rechen- und Messlernsituation: Grundgrößen, Ohmsches Gesetz, Leistung, Energie und Kosten, Leiterwiderstand und Erwärmung, alles am Energie-Check für Familie Schütte. Fehlvorstellungen zeigen sich hier beim Begriff (Strom, Energie, Leistung), beim Lesen von Formeln und bei der Frage, was ein neues Gerät eigentlich spart.",
+  "Zehn Fehlvorstellungen, vorab recherchiert (2026-10-11): acht mit Beleg aus der Forschung oder aus Unterrichtsmaterial, eine aus der Erfahrung der Lehrkraft, eine KI-Vermutung mit fachlichem Bezug. Reine KI-Vermutungen ohne Bezug sind entfernt (Regel der Lehrkraft). Drei sind mit Priorität A vorgesehen."
+ ],
+ "lernausgangslage_text": "Der Klasse ist noch keine Lerngruppe zugeordnet; jede Einschätzung steht auf „unbekannt“. Die Begriffswand aus LS 1 und die Diagnose aus dem Moodle-Eingang (FV-02 und FV-03 dort) liefern erste Hinweise. Für LS 3 kommt ein kurzer Rechencheck dazu (Einheiten, Vorsätze, Formel umstellen), weil die Mathe-Grundlagen hier zum ersten Mal tragen müssen.",
+ "lernausgangslage": [
+  {
+   "inhalt": "Grundgrößen Ladung, Strom, Spannung, Widerstand; Formelzeichen und Einheiten",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Rechencheck: Größe, Formelzeichen und Einheit zuordnen (FV-08, FV-10)"
+  },
+  {
+   "inhalt": "SI-Vorsätze, Umrechnen, Formeln umstellen",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Rechencheck: 3,5 kW in W, 0,5 mm² in m², R = U/I nach U umstellen (FV-08)"
+  },
+  {
+   "inhalt": "Messen mit dem Vielfachmessgerät",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Selbsteinschätzung und Bildaufgabe: Messgerät richtig anschließen"
+  },
+  {
+   "inhalt": "Ohmsches Gesetz",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Eingangstest: „Die Spannung wird verdoppelt. Was passiert mit dem Widerstand?“ (FV-05)"
+  },
+  {
+   "inhalt": "Leistung, Energie, kWh, Kosten",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Eingangstest: Typenschild und Stromrechnung lesen (FV-03)"
+  },
+  {
+   "inhalt": "Wirkungsgrad",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Eingangstest: „Wo bleibt die Energie im Durchlauferhitzer?“ (FV-02, FV-09)"
+  },
+  {
+   "inhalt": "Leiterwiderstand, Querschnitt, Länge, Material, Temperatur",
+   "stand": "unbekannt",
+   "quelle": "",
+   "diagnose": "Je-desto-Aussagen zuordnen (FV-06)"
+  }
+ ],
+ "fv": [
+  {
+   "nr": "FV-01",
+   "name": "„Strom wird verbraucht“",
+   "aeusserung": "„Die Leitung wird warm, weil sie Strom verbraucht.“ „Der Durchlauferhitzer verbraucht 15 Ampere.“",
+   "kern": "Strom wird als Stoff gedacht, der im Gerät aufgebraucht wird. Tatsächlich fließt derselbe Strom hin und zurück; umgesetzt wird Energie. Die Erwärmung der Leitung ist Energieumsatz im Leiterwiderstand, nicht „Stromverbrauch“. Aus LS 1 (dort FV-03, Priorität B) hier mit Priorität A, weil die Leitungserwärmung die Kernfrage der Familie ist.",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Shipstone (1984); Koller, Waltner & Wiesner (2008), S. 6",
+    "notiz": "Stromverbrauchsvorstellung „extrem resistent“, gefördert durch die Wörter Stromverbrauch und Verbraucher"
+   },
+   "ds": [
+    "5",
+    "8"
+   ],
+   "prio": "A",
+   "aufdecken": "Eingangstest: „Vor dem Durchlauferhitzer fließen 15 A. Wie viel fließt in der Rückleitung?“ Distraktor „weniger, ein Teil wurde verbraucht“.",
+   "aufgreifen": "Vorhersagen – Messen – Erklären in DS 8: Strom am Modell in Hin- und Rückleiter messen; Sprachregel „Energie wird umgesetzt, der Strom fließt zurück“."
+  },
+  {
+   "nr": "FV-02",
+   "name": "„Energie wird verbraucht und ist dann weg“",
+   "aeusserung": "„Die Energie ist aufgebraucht, wenn das Wasser warm ist.“",
+   "kern": "Im Alltag wird Energie verbraucht; physikalisch wird sie umgewandelt und dabei entwertet (Wärme im Wasser, Wärme an die Umgebung). Für den Energie-Check zählt, welcher Teil im Wasser ankommt und welcher als Bereitschaftsverlust des Speichers verloren geht.",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Schlichting & Backhaus (1984)",
+    "notiz": "Alltagsvorstellung Energieverbrauch prägt Lernende nachhaltiger als die Energieerhaltung"
+   },
+   "ds": [
+    "6",
+    "7"
+   ],
+   "prio": "B",
+   "aufdecken": "Eingangstest: „Wo ist die Energie, nachdem das Wasser abgekühlt ist?“",
+   "aufgreifen": "Energieflussbild für beide Geräte (Netz → Heizelement → Wasser → Umgebung); Hilfekarte „umgewandelt, nicht verbraucht“."
+  },
+  {
+   "nr": "FV-03",
+   "name": "Leistung und Energie verwechselt (kW und kWh)",
+   "aeusserung": "„Der Durchlauferhitzer hat 3,5 kWh.“ „Eine Kilowattstunde ist ein Kilowatt pro Stunde.“",
+   "kern": "Leistung (wie schnell Energie umgesetzt wird, kW) und Energie (wie viel insgesamt, kWh) werden gleichgesetzt; die Einheit kWh wird als Rate gelesen. Ohne diese Trennung lässt sich die Kostenrechnung nicht nachvollziehen.",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Sağlam-Arslan & Kurnaz (2009)",
+    "notiz": "Überblick: Lernende vermischen Energie mit Leistung und elektrischen Begriffen und scheitern an den Einheiten; dort mit Verweis auf Goldring & Osborne (1994)"
+   },
+   "ds": [
+    "5",
+    "6"
+   ],
+   "prio": "A",
+   "aufdecken": "Eingangstest: Typenschild (3,5 kW) und Stromrechnung (kWh, ct/kWh) den Begriffen Leistung, Energie, Preis zuordnen.",
+   "aufgreifen": "In DS 6 erst schätzen lassen „Was kosten sechs Minuten warmes Wasser am Waschbecken?“, dann rechnen: 3,5 kW · 0,1 h = 0,35 kWh; Einheitenkontrolle als feste Routine."
+  },
+  {
+   "nr": "FV-04",
+   "name": "„Das Netz liefert immer gleich viel Strom“",
+   "aeusserung": "„Aus der Steckdose kommen 16 Ampere.“",
+   "kern": "Die Quelle wird als Stromquelle gedacht, die unabhängig vom Gerät immer denselben Strom liefert. Tatsächlich hält das Netz die Spannung (230 V) und das Gerät bestimmt über seinen Widerstand den Strom. Die 16 A auf dem Leitungsschutzschalter sind dessen Bemessungsstrom, nicht der Strom des Geräts.",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Koller, Waltner & Wiesner (2008), S. 6; Engelhardt & Beichner (2004)",
+    "notiz": "Batterie als Konstantstromquelle; bei Engelhardt & Beichner die am häufigsten genutzte Fehlvorstellung"
+   },
+   "ds": [
+    "5"
+   ],
+   "prio": "B",
+   "aufdecken": "Eingangstest: „Speicher (2 kW) und Durchlauferhitzer (3,5 kW) hängen am selben Netz. Welcher Strom fließt?“ Distraktor „bei beiden gleich viel“.",
+   "aufgreifen": "Strom beider Geräte aus dem Typenschild berechnen und vergleichen; Hilfekarte „Das Netz hält die Spannung, das Gerät bestimmt den Strom“."
+  },
+  {
+   "nr": "FV-05",
+   "name": "„Der Widerstand hängt von der Spannung ab“",
+   "aeusserung": "„R = U durch I: mehr Spannung, also mehr Widerstand.“",
+   "kern": "Die Formel R = U/I wird als Ursache gelesen. Beim ohmschen Widerstand ist R konstant; U und I ändern sich gemeinsam. Der Widerstand hängt von Material, Länge, Querschnitt und Temperatur ab (DS 8, 9).",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Li & Singh (2012)",
+    "notiz": "Lernende verstehen schwer, wie R über U und I ausgedrückt werden kann, obwohl R sich beim Ändern der Spannung nicht ändert; nur über die Zusammenfassung geprüft"
+   },
+   "ds": [
+    "3"
+   ],
+   "prio": "B",
+   "aufdecken": "Eingangstest: „Die Spannung am Widerstand wird verdoppelt. Der Widerstand wird … doppelt so groß / halb so groß / bleibt gleich.“",
+   "aufgreifen": "U-I-Kennlinie in DS 3: Steigung bleibt gleich; Sprechweise „R ist eine Eigenschaft des Bauteils, U/I ist der Weg, sie zu messen“."
+  },
+  {
+   "nr": "FV-06",
+   "name": "Querschnitt und Länge falsch zugeordnet",
+   "aeusserung": "„Dickeres Kabel, mehr Kupfer, mehr Widerstand.“ „Doppelter Durchmesser, halber Widerstand.“",
+   "kern": "Mehr Material wird mit mehr Widerstand gleichgesetzt; Durchmesser und Querschnittsfläche werden verwechselt (doppelter Durchmesser = vierfache Fläche = ein Viertel des Widerstands).",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "IOP Spark, Episode 112: Resistivity",
+    "notiz": "Unterrichtsmaterial des Institute of Physics: Verwechslung von Durchmesser und Fläche; „mehr Material = mehr Widerstand“ in LS 3 AS als KI-Vermutung von der Lehrkraft bestätigt (2026-10-10)"
+   },
+   "ds": [
+    "8"
+   ],
+   "prio": "B",
+   "aufdecken": "Je-desto-Aussagen zuordnen (Länge doppelt, Querschnitt doppelt, Durchmesser doppelt).",
+   "aufgreifen": "Leitungsproben 1,5 mm² und 2,5 mm² gleicher Länge messen; Wasserrohr-Analogie als Hilfekarte."
+  },
+  {
+   "nr": "FV-08",
+   "name": "Formelzeichen, Einheiten, Vorsätze",
+   "aeusserung": "„U = V“, „0,5 mm² = 0,5 m²“, „3,5 kW = 350 W“",
+   "kern": "Formelzeichen und Einheit werden verwechselt, mm² und m² gleichgesetzt, Vorsätze falsch umgerechnet.",
+   "herkunft": {
+    "art": "Erfahrung der Lehrkraft",
+    "notiz": "KONZEPT, Mathe-Grundlagen: „überlasten viele Lernende“; in LS 3 AS bestätigt"
+   },
+   "ds": [
+    "1",
+    "5",
+    "6",
+    "8"
+   ],
+   "prio": "B",
+   "aufdecken": "Rechencheck zu Beginn der LS.",
+   "aufgreifen": "Mathe-Werkzeugkoffer LF 1; Einheitenkontrolle als feste Routine in jeder Rechnung."
+  },
+  {
+   "nr": "FV-09",
+   "name": "„Das alte Gerät verschwendet Strom, weil es einen schlechten Wirkungsgrad hat“",
+   "aeusserung": "„Der alte Durchlauferhitzer ist ineffizient, ein neuer braucht nur halb so viel.“",
+   "kern": "Elektrische Durchlauferhitzer setzen nahezu die gesamte elektrische Energie in Wärme im Wasser um, alte wie neue. Ein neues elektronisches Gerät spart durch genaue Temperaturregelung und weniger Mischwasser; der Speicher verliert zusätzlich durch Warmhalten (Bereitschaftsverluste). Das ist die fachliche Pointe der Empfehlung.",
+   "herkunft": {
+    "art": "KI-Vermutung",
+    "notiz": "fachlich gestützt: Wirkungsgrad nahezu 100 % (bau.de mit Verweis auf Stiftung Warentest), Unterschiede hydraulisch und elektronisch (Verbraucherzentrale); eine Studie zur Verbreitung der Vorstellung wurde nicht gefunden; von der Lehrkraft bestätigt 2026-10-11",
+    "bezug": "bau.de mit Verweis auf Stiftung Warentest (Wirkungsgrad nahezu 100 %); Verbraucherzentrale (hydraulisch und elektronisch)"
+   },
+   "ds": [
+    "7"
+   ],
+   "prio": "A",
+   "aufdecken": "Eingangstest: „Wie viel der elektrischen Energie kommt beim alten Durchlauferhitzer als Wärme im Wasser an?“ etwa 50 % / 75 % / fast alles.",
+   "aufgreifen": "Kognitiver Konflikt in DS 7: Wirkungsgrad rechnen lassen (Wassermenge, Temperaturdifferenz, Zeit) und erst danach fragen, woher dann die Einsparung kommen soll.",
+   "bestaetigt": true
+  },
+  {
+   "nr": "FV-10",
+   "name": "Strom und Spannung als dasselbe",
+   "aeusserung": "„Wie viel Strom hat die Steckdose? – 230.“",
+   "kern": "Stromstärke und Spannung werden synonym benutzt. In LS 1 über die Begriffswand angelegt, hier beim Messen entscheidend (Strom in Reihe, Spannung parallel messen).",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Koller, Waltner & Wiesner (2008), S. 6 f."
+   },
+   "ds": [
+    "1",
+    "2"
+   ],
+   "prio": "B",
+   "aufdecken": "Bildaufgabe: Messgerät für Strom- und für Spannungsmessung richtig einzeichnen.",
+   "aufgreifen": "Begriffswand aus LS 1; beim Messaufbau in DS 2 erst die Größe nennen, dann anschließen."
+  },
+  {
+   "nr": "FV-11",
+   "name": "„Das Messgerät misst genau, was da ist“",
+   "aeusserung": "„Das Multimeter zeigt 0,4 Ω, also hat die Leitungsprobe 0,4 Ω.“",
+   "kern": "Bei kleinen Widerständen (Leitungsproben, Niederohmigkeit) verfälscht der Widerstand der Messleitungen das Ergebnis deutlich. Widerstand nur spannungsfrei messen.",
+   "herkunft": {
+    "art": "Forschung",
+    "literatur": "Redish, Physics Suite (University of Maryland, PERG)",
+    "notiz": "verwandt: Lernende behandeln Messgeräte als ideal, sie messen „überall den Strom und die Spannung“; der Messleitungs-Anteil selbst ist nicht untersucht. In LS 3 AS von der Lehrkraft bestätigt"
+   },
+   "ds": [
+    "9"
+   ],
+   "prio": "B",
+   "aufdecken": "Beobachtung beim Messen (kein Quiz-Item nötig).",
+   "aufgreifen": "Messleitungen kurzschließen und ablesen („nullen“) als feste Messroutine."
+  }
+ ],
+ "nicht_aufgenommen": [
+  "Sequenzielles Denken, Reihe und Parallel (Katalog P4, P5): gehören zu LS 4.",
+  "Spannungsteiler und Fehlersuche (Katalog P8): gehören zu LS 5.",
+  "„Lange Leitung = schwächeres Signal“ (LS 3 AS, FV-02): betrifft den Messkreis des Pt100, nicht den Energie-Check.",
+  "„Ein Widerstand hat einen festen Wert“ (vorher FV-07): reine KI-Vermutung ohne Bezug, nach der Regel der Lehrkraft vom 2026-10-11 entfernt. Die Temperaturabhängigkeit bleibt Inhalt von DS 9."
+ ],
+ "literatur": [
+  "Engelhardt, P. V., & Beichner, R. J. (2004). Students' understanding of direct current resistive electrical circuits. American Journal of Physics, 72(1), 98–115.",
+  "Institute of Physics (o. J.). Episode 112: Resistivity. IOP Spark. https://spark.iop.org/episode-112-resistivity",
+  "Koller, D., Waltner, C., & Wiesner, H. (2008). Zur Einführung von Stromstärke und Spannung. Praxis der Naturwissenschaften – Physik in der Schule, 57(6), 6–18.",
+  "Li, J., & Singh, C. (2012). Students' difficulties with equations involving circuit elements. AIP Conference Proceedings, 1413, 243–246. https://doi.org/10.1063/1.3680040",
+  "Sağlam-Arslan, A., & Kurnaz, M. A. (2009). Prospective physics teachers' level of understanding energy, power and force concepts. Asia-Pacific Forum on Science Learning and Teaching, 10(1), Article 6.",
+  "Schlichting, H. J., & Backhaus, U. (1984). Energieverbrauch und Energieentwertung. Der Physikunterricht, 18(3), 24 ff.",
+  "Shipstone, D. M. (1984). A study of children's understanding of electricity in simple DC circuits. European Journal of Science Education, 6(2), 185–198.",
+  "Verbraucherzentrale (o. J.). Durchlauferhitzer kaufen: Das sollten Sie wissen. https://www.verbraucherzentrale.de/wissen/energie/heizen-und-warmwasser/durchlauferhitzer-kaufen-das-sollten-sie-wissen-42142",
+  "bau.de (o. J.). Warmwasser-Bereitung effizient gestalten. https://bau.de/text/120101-ratgeber-heizung-warmwasser-sicherheit.php",
+  "Redish, E. F. (o. J.). Teaching Physics with the Physics Suite, Problemsammlung Elektrizität. University of Maryland Physics Education Research Group. https://physics.umd.edu/perg/abp/TPProbs/Problems/E/E18.htm"
+ ],
+ "pruefbericht": [
+  [
+   "Hinweis",
+   "Die Fehlvorstellungen folgen der freigegebenen LS 3 (10 DS, LK-03, 06, 08, 12); A-Einträge in DS 5/8 (Strom verbraucht), DS 5/6 (kW und kWh) und DS 7 (Wirkungsgrad)."
+  ],
+  [
+   "Warnung",
+   "Im Volltext gelesen: Koller u. a. (2008), Schlichting & Backhaus (1984, Titelseite und Einleitung), Sağlam-Arslan & Kurnaz (2009, Abschnitt Literatur). Nur über Zusammenfassungen: Li & Singh (2012), IOP Spark, Engelhardt & Beichner (2004), Verbraucherzentrale, bau.de. Endseite bei Schlichting & Backhaus vor einem Entwurf ergänzen."
+  ],
+  [
+   "Hinweis",
+   "FV-11 ist aus LS 3 der Fachrichtung AS übernommen; nach der Regel vom 2026-10-11 jetzt mit verwandtem Forschungsbezug (Redish). FV-07 aus AS ist entfernt (ohne Bezug)."
+  ],
+  [
+   "Hinweis",
+   "Jedes A- und B-Item liefert einen Distraktor für den Moodle-Eingangstest bzw. die Rechenaufgaben je Zyklus (Pipeline 3)."
+  ]
+ ]
+}

@@ -1,0 +1,72 @@
+% Planzeichen für Stromlaufpläne in Industrie-Proportionen (EPLAN), Maßstab 1:1 auf A3, Raster R = 4 mm.
+% Alle Maße sind gemessen, nicht geschätzt: docs/recherche/2026-10-13_planzeichen_proportionen.md
+% (KKT cBoxX-100 S. 14/24/26/30, Festo Didactic CP-COBOT-D S. 13/15/16, ZTV-EPLAN Hamburg Wasser).
+% Zeichengestalt nach DIN EN 60617 (Nummern im Katalog werkzeug/schaltzeichen/katalog).
+% Koordinaten in mm (tikzpicture mit x=1mm,y=1mm). Jedes Kontaktzeichen: oberer Anschluss bei (#1,#2),
+% Länge 8 mm nach unten. Linienbreite überall 0,25 mm (auch PE und Wirkverbindung).
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{planzeichen}[2026/10/13 Planzeichen EPLAN-Proportionen]
+\RequirePackage{tikz}
+\usetikzlibrary{calc}
+\tikzset{
+ pz/.style={line width=0.25mm,line cap=round,line join=round},          % Zeichen und Leiter
+ wv/.style={line width=0.25mm,line cap=butt,dash pattern=on 2mm off 2mm}, % Wirkverbindung 02-12-01
+ rahmen/.style={line width=0.35mm},
+ fein/.style={line width=0.18mm},
+ bmk/.style={font=\fontsize{9}{10}\selectfont,inner sep=0.6mm},           % Betriebsmittelkennzeichen, normal
+ anr/.style={font=\fontsize{7}{8}\selectfont,inner sep=0.5mm},            % Anschlussbezeichnung
+ dat/.style={font=\fontsize{7.5}{8.5}\selectfont,inner sep=0.5mm},        % technische Daten
+}
+% Leitung
+\newcommand{\pzLtg}[2]{\draw[pz] #1 -- #2;}
+% Verbindungspunkt 03-02-01: gefüllt, Ø 1,75 mm (KKT S. 26)
+\newcommand{\pzPunkt}[1]{\fill #1 circle (0.875mm);}
+% Klemme 03-02-02: offener Kreis Ø 1,5 mm (KKT -XD2, FES -XD0)
+\newcommand{\pzKlemme}[1]{\draw[pz,fill=white] #1 circle (0.75mm);}
+% Schließer 07-02-01: Festkontakt 2 / Lücke 4 / Festkontakt 2 mm, Messer Δx 2,5 Δy 4,5 (29°), Spitze 0,5 über Festkontakt
+% Wirkpunkt #3: Messer auf halber Kontakthöhe
+\newcommand{\pzSchliesser}[3]{\draw[pz] (#1,#2) -- ++(0,-2) (#1,#2-6) -- ++(0,-2) (#1,#2-6) -- ++(-2.5,4.5);
+ \coordinate (#3) at (#1-1.111,#2-4);}
+% Öffner 07-02-03: Haken 2 mm zur Messerseite, Messer Δx 1,5 Δy 4,5 (18,4°), Spitze 0,5 über und 0,5 vor Hakenende
+\newcommand{\pzOeffner}[3]{\draw[pz] (#1,#2) -- ++(0,-2) -- ++(2,0) (#1,#2-6) -- ++(0,-2) (#1,#2-6) -- ++(1.5,4.5);
+ \coordinate (#3) at (#1+0.667,#2-4);}
+% Positionsschalter (Endschalter), Öffner 07-08-02: Öffner mit Kennzeichen 07-01-06 am Messer. Lage nach der
+% QElectroTech-Bibliothek (en_60617_07_08_02.elmt, CC-BY 3.0), auf das Messer dieses Öffners umgerechnet:
+% vom Messer (30 % der Länge) 1,75 mm senkrecht, dann waagerecht zurück an das Messer (Bibliothek 1,17 mm,
+% für den Ausdruck auf 1,5-fach vergrößert)
+\newcommand{\pzPositionsOeffner}[3]{\pzOeffner{#1}{#2}{#3}\draw[pz] (#1+0.45,#2-4.65) -- ++(0,1.75) -- (#1+1.033,#2-2.9);}
+% Öffner 07-02-03 gespiegelt (Messer und Haken nach links, Betätigung links; Regel 22 der Schaltplan-Checkliste)
+\newcommand{\pzOeffnerL}[3]{\draw[pz] (#1,#2) -- ++(0,-2) -- ++(-2,0) (#1,#2-6) -- ++(0,-2) (#1,#2-6) -- ++(-1.5,4.5);
+ \coordinate (#3) at (#1-0.667,#2-4);}
+% Schütz-Hauptkontakt 07-13-02: Schließer + Halbkreis r = 1 mm über den ganzen oberen Festkontakt, zur Messerseite
+\newcommand{\pzSchuetz}[3]{\pzSchliesser{#1}{#2}{#3}\draw[pz] (#1,#2) arc[start angle=90,delta angle=180,radius=1];}
+% Sicherung 07-21-01: Körper 2 × 5 mm mittig, Leiter durchgehend
+\newcommand{\pzSicherung}[2]{\draw[pz] (#1,#2) -- ++(0,-8); \draw[pz] (#1-1,#2-1.5) rectangle (#1+1,#2-6.5);}
+% Spule 07-15-01: Kasten 8 × 4 mm, Zuleitungen 2 mm
+\newcommand{\pzSpule}[2]{\draw[pz] (#1,#2) -- ++(0,-2) (#1,#2-6) -- ++(0,-2); \draw[pz] (#1-4,#2-2) rectangle (#1+4,#2-6);}
+% Thermorelais-Antrieb 07-15-21 je Pol: Kasten 8 × 4 mm (lückenlos bei 8 mm Polabstand), Bimetall 2 × 1,8 mm
+\newcommand{\pzThermo}[2]{\draw[pz] (#1,#2) -- ++(0,-3.1) -- ++(2,0) -- ++(0,-1.8) -- ++(-2,0) -- (#1,#2-8);
+ \draw[pz] (#1-4,#2-2) rectangle (#1+4,#2-6);}
+% Betätigung durch Drücken 02-13-05 (Bügel), Höhe 2 mm wie die Handbetätigung bei FES S. 16; offen zum Kontakt
+% \pzDruck{(x,y)}{1} = Bügel öffnet nach rechts, {-1} = nach links
+\newcommand{\pzDruck}[2]{\draw[pz] ($#1+(#2*1,1)$) -- ++(-#2*1,0) -- ++(0,-2) -- ++(#2*1,0);}
+% Thermische Betätigung 02-13-25 (Proportion nach Elementsammlung, auf 8-mm-Kontakt umgerechnet), Anschluss bei #1
+\newcommand{\pzThermBet}[2]{\draw[pz] ($#1+(#2*1.33,1.33)$) -- ++(0,-0.66) -- ++(-#2*1.33,0) -- ++(0,-1.34)
+ -- ++(#2*1.33,0) -- ++(0,-0.66);}
+% Verzögerung am Kontakt (07-05-01 anzugverzögerter Schließer, 07-05-03 anzugverzögerter Öffner, Bibliothek 1:1 auf
+% 8-mm-Kontakt umgerechnet): Halbkreis r = 1,33 mm links, Sehne zum Kontakt; Doppelstrich bis an das Schaltmesser.
+% #1, #2 = oberer Anschluss des Kontakts, #3 = x-Versatz des Messers auf halber Kontakthöhe (Schließer −1,111, Öffner 0,667)
+\newcommand{\pzVerzoegerung}[3]{\draw[pz] (#1-2.6,#2-2.67) arc[start angle=90,delta angle=180,radius=1.33];
+ \draw[pz] (#1-3.4,#2-3.85) -- (#1+#3,#2-3.85) (#1-3.4,#2-4.15) -- (#1+#3,#2-4.15);}
+% Antrieb mit Ansprechverzögerung 07-15-08: Spule wie 07-15-01, links Zusatzkasten 2 × 4 mm mit Kreuz
+\newcommand{\pzSpuleAnzug}[2]{\pzSpule{#1}{#2}\draw[pz] (#1-6,#2-2) rectangle (#1-4,#2-6) (#1-6,#2-2) -- (#1-4,#2-6)
+ (#1-6,#2-6) -- (#1-4,#2-2);}
+% Drehstrom-Asynchronmotor 06-08-01: Kreis Ø 12 mm, äußere Leiter schräg hinein (KKT S. 24/26), Mittelpunkt #1
+\newcommand{\pzMotor}[1]{\draw[pz,fill=white] #1 circle (6);
+ \node[font=\fontsize{10.5}{11}\selectfont] at ($#1+(0,1.4)$) {M};
+ \node[font=\fontsize{9}{10}\selectfont] at ($#1+(0,-2.0)$) {3\,\raisebox{0.15ex}{$\sim$}};}
+% Drehstrommotor 06-08-01 proportional vergrößert (Regel 4), Radius #2 mm – für Motoren mit seitlichen Anschlüssen
+\newcommand{\pzMotorR}[2]{\draw[pz,fill=white] #1 circle (#2);
+ \node[font=\fontsize{11}{12}\selectfont] at ($#1+(0,0.25*#2)$) {M};
+ \node[font=\fontsize{9.5}{10}\selectfont] at ($#1+(0,-0.3*#2)$) {3\,\raisebox{0.15ex}{$\sim$}};}
+\endinput

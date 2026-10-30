@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Office lock files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Temporäre Daten & Scratch
+scratch/
+.system_generated/
+*.tmp
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Pfad zum persönlichen Arbeitsbereich (je Rechner)
+.arbeitsbereich

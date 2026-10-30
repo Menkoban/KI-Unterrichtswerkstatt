@@ -1,0 +1,268 @@
+{
+ "nr": "3",
+ "titel": "Was kostet der alte Durchlauferhitzer?",
+ "lernfeld": "LF 1 Elektroniker/in EG",
+ "std": 20,
+ "std_von_bis": "Std. 21–40",
+ "fach": "Elektrotechnik",
+ "datum": "2026-10-11",
+ "stand": "Fassung 2, von der Lehrkraft freigegeben am 2026-10-11",
+ "ordner": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS03_Was_kostet_der_alte_Durchlauferhitzer",
+ "baut_auf": [
+  "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/Lernsituationen_Skizze.docx",
+  "Elektrotechnik/Elektroniker_EG/Modellbetrieb_Stromhof_Elektro.docx"
+ ],
+ "kernkompetenz": "Die Schülerinnen und Schüler verfügen über die Kompetenz, elektrische Grundgrößen, Widerstände, Leistung und Energie an Betriebsmitteln eines Wohnhauses rechnerisch und messtechnisch zu ermitteln, Kosten zu bewerten und Kundinnen und Kunden begründet zu beraten.",
+ "handlungssituation": "Familie Schütte wundert sich über die hohe Stromrechnung. Im Bad hängt am Waschbecken ein alter Kleindurchlauferhitzer (230 V, Typenschild 3,5 kW), im Gäste-WC ein Untertisch-Warmwasserspeicher (230 V, 2 kW), der rund um die Uhr warm gehalten wird. Außerdem ist Herrn Schütte aufgefallen, dass die Zuleitung zum Durchlauferhitzer spürbar warm wird, wenn die Kinder abends lange am Waschbecken stehen. „Lohnt sich ein neues Gerät, und ist das mit der warmen Leitung normal?“",
+ "auftrag": "Die Meisterin beauftragt Sie: Erstellen Sie für Familie Schütte einen Energie-Check. Ermitteln Sie Strom, Widerstand, Leistung, Energie und Kosten der beiden Geräte, erklären Sie, warum die Leitung warm wird, und geben Sie eine begründete Empfehlung.",
+ "handlungsergebnis": "Energie-Check für Familie Schütte: Kennwerte beider Geräte (berechnet und, wo möglich, am Modell gemessen), Energie und Kosten pro Jahr, Erklärung zur Erwärmung der Leitung, begründete Empfehlung.",
+ "entscheidung": "Lohnt sich der Austausch (Durchlauferhitzer, Speicher oder beides), und mit welcher Begründung empfehlen wir was?",
+ "lk": [
+  "LK-03",
+  "LK-06",
+  "LK-08",
+  "LK-12"
+ ],
+ "bewertung": "Größen und Einheiten korrekt, Rechenwege nachvollziehbar · Messungen sicher durchgeführt und plausibel · Kosten mit Annahmen offengelegt · Erklärung zur Leitungserwärmung fachlich richtig (Leiterwiderstand, Stromdichte, Wärme) · Empfehlung begründet, Varianten verglichen · für Laien verständlich.",
+ "zyklen": [
+  {
+   "nr": "1",
+   "leitfrage": "Was fließt da, und wie hängen U, I und R zusammen?",
+   "teilergebnis": "Grundgrößen-Karte und Messprotokoll mit U-I-Kennlinie",
+   "ds": "DS 1–4"
+  },
+  {
+   "nr": "2",
+   "leitfrage": "Was kosten die Geräte die Familie im Jahr?",
+   "teilergebnis": "Leistungs-, Energie- und Kostenrechnung für beide Geräte",
+   "ds": "DS 5–7"
+  },
+  {
+   "nr": "3",
+   "leitfrage": "Warum wird die Leitung warm, und was empfehlen wir?",
+   "teilergebnis": "Erklärung zur Leitung, Empfehlung, fertiger Energie-Check",
+   "ds": "DS 8–10"
+  }
+ ],
+ "doppelstunden": [
+  {
+   "ds": "1",
+   "std_nr": "21–22",
+   "zyklus": "1",
+   "leitfrage": "Was steht auf dem Typenschild?",
+   "inhalte": "Auftrag analysieren; Typenschilder lesen (U, P, f); Ladung, Strom, Spannung; Formelzeichen, Einheiten, SI-Vorsätze; Vorgehen planen",
+   "teilergebnis": "Grundgrößen-Karte (Anfang), Arbeitsplan",
+   "phasen": [
+    "Informieren",
+    "Planen"
+   ],
+   "lk": [
+    "LK-03"
+   ]
+  },
+  {
+   "ds": "2",
+   "std_nr": "23–24",
+   "zyklus": "1",
+   "leitfrage": "Was ist ein Widerstand?",
+   "inhalte": "Widerstand und Leitwert; Bauformen; Messen mit dem Multimeter (Spannung, Strom, Widerstand) an Kleinspannung; sicherer Messaufbau entscheiden",
+   "teilergebnis": "Messaufbau, erste Messwerte",
+   "phasen": [
+    "Entscheiden",
+    "Durchführen"
+   ],
+   "lk": [
+    "LK-08"
+   ]
+  },
+  {
+   "ds": "3",
+   "std_nr": "25–26",
+   "zyklus": "1",
+   "leitfrage": "Wie hängen U, I und R zusammen?",
+   "inhalte": "Ohmsches Gesetz; U-I-Kennlinie messen und zeichnen; Formel umstellen",
+   "teilergebnis": "U-I-Kennlinie, Messprotokoll",
+   "phasen": [
+    "Durchführen",
+    "Kontrollieren"
+   ],
+   "lk": [
+    "LK-08"
+   ]
+  },
+  {
+   "ds": "4",
+   "std_nr": "27–28",
+   "zyklus": "1",
+   "leitfrage": "Stimmt unsere Rechnung mit der Messung?",
+   "inhalte": "Rechnung und Messung vergleichen; Abweichungen erklären; Grundgrößen-Karte fertigstellen; Rückmeldung",
+   "teilergebnis": "Grundgrößen-Karte, geprüftes Protokoll",
+   "phasen": [
+    "Kontrollieren",
+    "Bewerten"
+   ],
+   "lk": [
+    "LK-08",
+    "LK-12"
+   ]
+  },
+  {
+   "ds": "5",
+   "std_nr": "29–30",
+   "zyklus": "2",
+   "leitfrage": "Wie viel Strom zieht der Durchlauferhitzer?",
+   "inhalte": "Leistung P = U·I; Strom und Widerstand des Heizelements aus dem Typenschild berechnen; Rechenweg planen",
+   "teilergebnis": "Kennwerte beider Geräte",
+   "phasen": [
+    "Informieren",
+    "Planen",
+    "Durchführen"
+   ],
+   "lk": [
+    "LK-03",
+    "LK-08"
+   ]
+  },
+  {
+   "ds": "6",
+   "std_nr": "31–32",
+   "zyklus": "2",
+   "leitfrage": "Was kostet das Warmwasser im Jahr?",
+   "inhalte": "Elektrische Arbeit, kWh; Nutzungsdauer schätzen und Annahmen festlegen; Energiekosten nach dem Tarif der Familie; Bereitschaftsverluste des Speichers",
+   "teilergebnis": "Energie- und Kostenrechnung",
+   "phasen": [
+    "Entscheiden",
+    "Durchführen"
+   ],
+   "lk": [
+    "LK-06",
+    "LK-08"
+   ]
+  },
+  {
+   "ds": "7",
+   "std_nr": "33–34",
+   "zyklus": "2",
+   "leitfrage": "Wie viel kommt wirklich als Wärme an?",
+   "inhalte": "Wirkungsgrad; altes und neues Gerät vergleichen; Rechnung prüfen und einschätzen",
+   "teilergebnis": "geprüfter Kostenvergleich",
+   "phasen": [
+    "Kontrollieren",
+    "Bewerten"
+   ],
+   "lk": [
+    "LK-08",
+    "LK-12"
+   ]
+  },
+  {
+   "ds": "8",
+   "std_nr": "35–36",
+   "zyklus": "3",
+   "leitfrage": "Warum wird die Leitung warm?",
+   "inhalte": "Leiterwiderstand R = ρ·l/A; Kupfer und Aluminium (Altbau); Stromdichte; Wärmewirkung; Vorgehen zur Erklärung planen; wovor schützt der Leitungsschutzschalter die Leitung (Überlast, Kurzschluss), Bezug zu LS 2",
+   "teilergebnis": "Leitungsrechnung",
+   "phasen": [
+    "Informieren",
+    "Planen",
+    "Durchführen"
+   ],
+   "lk": [
+    "LK-03",
+    "LK-08"
+   ]
+  },
+  {
+   "ds": "9",
+   "std_nr": "37–38",
+   "zyklus": "3",
+   "leitfrage": "Hängt der Widerstand von der Temperatur ab?",
+   "inhalte": "Temperaturabhängigkeit des Widerstands, Kaltleiter und Heißleiter im Überblick; Leiterwiderstand an Leitungsproben messen (Niederohmigkeit); Empfehlung entscheiden",
+   "teilergebnis": "Messprotokoll Leitung, Empfehlungsentwurf",
+   "phasen": [
+    "Entscheiden",
+    "Durchführen",
+    "Kontrollieren"
+   ],
+   "lk": [
+    "LK-06",
+    "LK-08"
+   ]
+  },
+  {
+   "ds": "10",
+   "std_nr": "39–40",
+   "zyklus": "3",
+   "leitfrage": "Was sagen wir der Familie?",
+   "inhalte": "Energie-Check fertigstellen; Präsentation vor der „Familie“; Rückmeldung; Bewertung des Handlungsergebnisses; Reflexion",
+   "teilergebnis": "Energie-Check, Bewertung",
+   "phasen": [
+    "Durchführen",
+    "Kontrollieren",
+    "Bewerten"
+   ],
+   "lk": [
+    "LK-06",
+    "LK-12"
+   ]
+  }
+ ],
+ "lk_legende": [
+  [
+   "LK-03",
+   "Informationen, auch digital, beschaffen und auswerten; fremdsprachige Dokumentationen mit Hilfsmitteln auswerten",
+   "Informieren"
+  ],
+  [
+   "LK-06",
+   "Sich auf Grundlage der Planung für einen Umsetzungsansatz entscheiden",
+   "Entscheiden"
+  ],
+  [
+   "LK-08",
+   "Elektrische Größen messtechnisch und rechnerisch zur Analyse und Prüfung von Grundschaltungen ermitteln",
+   "Ausführen"
+  ],
+  [
+   "LK-12",
+   "Gewonnene Erkenntnisse dokumentieren und bewerten",
+   "Bewerten"
+  ]
+ ],
+ "hinweise": [
+  "Material (Auftrag an Pipeline 2): Fotos der Typenschilder, Stromrechnung der Familie (fiktiv, mit Tarif), Nutzungsprofil (wer duscht wann), Leitungsproben Cu und Al, Messplätze an Kleinspannung, Grundgrößen-Karte, Mathe-Werkzeugkoffer (Einheiten, Vorsätze, Umstellen), Vorlage Energie-Check.",
+  "Mathematische Grundlagen (laut Skizze): Formelzeichen und Einheiten, SI-Vorsätze, Umrechnen, Formeln umstellen (R = U/I, P = U·I, R = ρ·l/A).",
+  "Lernort Betrieb: ARP A8 (Größen berechnen, messen, bewerten), A6 (Niederohmigkeit von Leitern ermitteln).",
+  "Moodle: Rechenaufgaben mit sofortiger Rückmeldung je Zyklus; Hilfekarten (Profil); Abgabe des Energie-Checks."
+ ],
+ "pruefbericht": [
+  [
+   "Hinweis",
+   "Fassung 2 (2026-10-11): Std. 21–40 (LS 2 ist um 2 Std. länger); Aufgabe des Leitungsschutzschalters in DS 8 ergänzt."
+  ],
+  [
+   "Hinweis",
+   "Die Lernsituation folgt der freigegebenen Skizze (LS 3, 20 Std., LK-03, 06, 08, 12); drei innere Zyklen mit 4, 3 und 3 Doppelstunden, Planen in DS 1, 5 und 8."
+  ],
+  [
+   "Warnung",
+   "Große Durchlauferhitzer (18 bis 27 kW) hängen an 400 V Drehstrom; das gehört nicht in LF 1. Deshalb ein Kleindurchlauferhitzer und ein Untertischspeicher mit 230 V. Gemessen wird nur an Kleinspannung und am Modell, nie am echten Gerät."
+  ],
+  [
+   "Warnung",
+   "Strompreis und Nutzungszeiten sind Annahmen. Im Material steht der Tarif aus der (fiktiven) Stromrechnung der Familie; die Lernenden legen ihre Annahmen offen."
+  ],
+  [
+   "Hinweis",
+   "Aluminiumleitungen kommen in Häusern dieser Zeit vor und eignen sich für den Vergleich von ρ. Dimensionierung und Austausch der Leitung gehören zu LF 2."
+  ],
+  [
+   "Hinweis",
+   "Heiß- und Kaltleiter hier nur im Überblick; der NTC wird in LS 5 vertieft."
+  ],
+  [
+   "Hinweis",
+   "Angeglichen 2026-10-11 (Lehrkraft): der Kleindurchlauferhitzer hängt im Bad am Waschbecken wie in LS 1 und im Begehungsprotokoll; „beim Duschen“ ersetzt, weil ein 3,5-kW-Gerät nur für ein Waschbecken reicht (Duschen bräuchten 18 bis 27 kW an 400 V)."
+  ]
+ ]
+}

@@ -1,0 +1,10 @@
+schluessel;name_qet;datei;mitte_x;mitte_y;breite;hoehe
+und2;UND (zwei Eingänge) (AND);20_logic/2010_logic_gates/201020_iec_60617/20102000_and_two.elmt;0.000;-0.000;1.000;1.167
+und3;UND (drei Eingänge) (AND);20_logic/2010_logic_gates/201020_iec_60617/20102001_and_three.elmt;0.000;-0.000;1.000;1.167
+oder2;ODER (zwei Eingänge) (OR);20_logic/2010_logic_gates/201020_iec_60617/20102010_or_two.elmt;0.000;-0.000;1.000;1.167
+oder3;ODER (drei Eingänge) (OR);20_logic/2010_logic_gates/201020_iec_60617/20102011_or_three.elmt;0.000;-0.000;1.000;1.167
+nand;UND NICHT (NAND);20_logic/2010_logic_gates/201020_iec_60617/20102002_nand.elmt;-0.002;-0.000;0.996;1.167
+nor;ODER NICHT (NOR);20_logic/2010_logic_gates/201020_iec_60617/20102012_nor.elmt;0.000;-0.000;1.000;1.167
+nicht;NICHT (NOT);20_logic/2010_logic_gates/201020_iec_60617/20102020_not.elmt;-0.008;-0.000;0.950;1.167
+xor;Exklusiv oder (XOR);20_logic/2010_logic_gates/201020_iec_60617/20102030_xor.elmt;0.000;-0.000;1.000;1.167
+xnor;exklusiv oder nicht (XNOR);20_logic/2010_logic_gates/201020_iec_60617/20102031_xnor.elmt;-0.017;-0.000;0.967;1.167

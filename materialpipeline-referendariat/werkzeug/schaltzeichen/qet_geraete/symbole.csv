@@ -1,0 +1,12 @@
+schluessel;name_qet;datei;mitte_x;mitte_y;breite;hoehe
+ls_1p;Motorschutzschalter;10_electric/11_singlepole/200_fuses_protective_gears/12_magneto_thermal_circuit_breakers/disjoncteur_magneto-thermique_1.elmt;0.108;0.075;0.983;1.483
+motorschutz_3p;Motorschutzschalter;10_electric/10_allpole/391_consumers_actuators/10_engines/motor_spoustec_3p.elmt;0.171;-0.000;1.442;1.333
+rcd_2p;Fehlerstromschutzschalter 2P;10_electric/10_allpole/200_fuses_protective_gears/50_residual_current_circuit_breaker/int_diff_1f-1.elmt;-0.146;-0.000;1.075;1.000
+rcd_4p;Fehlerstromschutzschalter 4P;10_electric/10_allpole/200_fuses_protective_gears/50_residual_current_circuit_breaker/int_diff_3f-1.elmt;-0.146;-0.000;1.742;1.000
+druck_s;Druckschalter Schliesser;10_electric/10_allpole/390_sensors_instruments/13_sensors_pressure/pressostat_no.elmt;-0.167;-0.000;0.333;0.667
+druck_oe;Druckschalter Öffner;10_electric/10_allpole/390_sensors_instruments/13_sensors_pressure/pressostat2.elmt;-0.075;-0.000;0.350;0.667
+fuellstand_s;Niveauschalter Schliesser;10_electric/10_allpole/390_sensors_instruments/12_sensors_level/niv_liquide_no.elmt;-0.183;-0.000;0.367;0.667
+fuellstand_oe;Niveauschalter Öffner;10_electric/10_allpole/390_sensors_instruments/12_sensors_level/niv_liquide_nf.elmt;-0.125;-0.000;0.483;0.667
+stroemung_s;Durchflussschalter Schliesser;10_electric/10_allpole/390_sensors_instruments/11_sensors_flow/debit_fluide_no.elmt;-0.167;-0.000;0.333;0.667
+stroemung_oe;Durchflussschalter Öffner;10_electric/10_allpole/390_sensors_instruments/11_sensors_flow/debit_fluide_nf.elmt;-0.108;-0.000;0.450;0.667
+stromstoss;Stromstossrelais;10_electric/10_allpole/310_relays_contactors_contacts/01_coils/telerupteur.elmt;0.000;-0.000;0.467;0.667

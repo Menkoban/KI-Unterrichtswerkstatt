@@ -1,0 +1,13 @@
+{
+ "stunde": "lf01_eg_ls01_ue02",
+ "datum": "2026-10-12",
+ "stand": "Entwurf (Beispiel, fiktiv)",
+ "rohtext": "Einstieg lief gut, aber das Sortieren hat zehn Minuten länger gedauert, die Reserve war nötig. S06 kam mit den Bildkarten gut klar, S12 hat kaum gesprochen. Das Ebenenplakat war zu klein für die hinteren Reihen. Ich habe wieder zu spät auf die Uhr geschaut.",
+ "aussagen": [
+  {"text": "Sortieren der Bildkarten dauerte 10 min länger; didaktische Reserve genutzt, Transfer entfiel", "ablage": "stunde", "status": "erledigt", "betrifft": "Verlauf"},
+  {"text": "S06 arbeitet mit Bildkarten sicher; beibehalten", "ablage": "klasse", "status": "offen", "betrifft": "S06"},
+  {"text": "S12 beteiligt sich mündlich kaum; in DS 3 eine feste Sprechrolle geben", "ablage": "klasse", "status": "offen", "betrifft": "S12"},
+  {"text": "Ebenenplakat auf A1 vergrößern, hintere Reihen konnten nicht lesen", "ablage": "lernsituation", "status": "offen", "betrifft": "DS 2, Anl. 2"},
+  {"text": "Zeitwarnung für Gruppenphasen zu spät gegeben", "ablage": "profil", "status": "offen", "muster": "Zeitführung Gruppenphase"}
+ ]
+}

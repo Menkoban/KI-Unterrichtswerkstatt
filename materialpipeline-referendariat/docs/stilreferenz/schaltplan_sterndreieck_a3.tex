@@ -1,0 +1,333 @@
+% Automatisch erzeugt von werkzeug/schaltplan/plan.py – nicht von Hand ändern.
+\documentclass{article}
+\usepackage[paperwidth=420mm,paperheight=297mm,margin=0mm]{geometry}
+\usepackage{fontspec}\setmainfont{Liberation Sans}
+\usepackage{planzeichen}
+\pagestyle{empty}\begin{document}\noindent
+\begin{tikzpicture}[x=1mm,y=1mm]
+\useasboundingbox (0,0) rectangle (420,297);
+\draw[rahmen] (10,5) rectangle (415,292); \draw[fein] (15,40) rectangle (410,282);
+\foreach \c in {0,...,9}{\draw[fein] (15+\c*39.5,282) -- ++(0,10); \node[font=\fontsize{9}{10}\selectfont] at (15+\c*39.5+19.75,287) {\c};}
+\foreach \z [count=\i from 0] in {A,B,C,D,E,F}{\pgfmathsetmacro{\yo}{282-\i*40.333} \draw[fein] (10,\yo) -- (15,\yo) (410,\yo) -- (415,\yo); \node[font=\fontsize{9}{10}\selectfont] at (12.5,\yo-20.17) {\z}; \node[font=\fontsize{9}{10}\selectfont] at (412.5,\yo-20.17) {\z};}
+\begin{scope}[shift={(15,5)}]
+\draw[fein] (0,0) rectangle (395,35) (150,0) -- (150,35) (255,0) -- (255,35) (330,0) -- (330,35) (330,17.5) -- (395,17.5) (330,26.25) -- (395,26.25) (330,8.75) -- (395,8.75) (150,17.5) -- (255,17.5);
+\node[anchor=west,font=\fontsize{12}{13}\selectfont\bfseries] at (153,27) {Brinkmann Automation};
+\node[anchor=west,font=\fontsize{7.5}{8}\selectfont] at (153,21.5) {Musterstadt (fiktiver Modellbetrieb)};
+\node[anchor=west,font=\fontsize{7.5}{8}\selectfont] at (153,11) {Erstellt: 14.10.2026};
+\node[anchor=west,font=\fontsize{7.5}{8}\selectfont] at (153,5) {Geprüft: ---};
+\node[anchor=west,font=\fontsize{12}{13}\selectfont\bfseries] at (258,27) {Stern-Dreieck-Anlauf};
+\node[anchor=west,font=\fontsize{9}{10}\selectfont] at (258,21) {Antrieb Förderband -M1};
+\node[anchor=west,font=\fontsize{9}{10}\selectfont] at (258,9) {Haupt- und Steuerstromkreis};
+\node[anchor=west,font=\fontsize{6.5}{7}\selectfont] at (332,30.6) {Anlage};\node[anchor=east,font=\fontsize{9}{10}\selectfont] at (393,30.6) {=VL2};
+\node[anchor=west,font=\fontsize{6.5}{7}\selectfont] at (332,21.9) {Ort};\node[anchor=east,font=\fontsize{9}{10}\selectfont] at (393,21.9) {+SC1};
+\node[anchor=west,font=\fontsize{6.5}{7}\selectfont] at (332,13.1) {Blatt};\node[anchor=east,font=\fontsize{9}{10}\selectfont] at (393,13.1) {1 / 1};
+\node[anchor=west,font=\fontsize{6.5}{7}\selectfont] at (332,4.4) {Norm};\node[anchor=east,font=\fontsize{9}{10}\selectfont] at (393,4.4) {DIN EN 61082};
+\end{scope}
+\draw[pz] (28.00,272.00) -- (405.00,272.00);
+\node[anchor=east,font=\fontsize{8}{9}\selectfont] at (27,272.0) {L1};
+\draw[pz] (28.00,268.00) -- (405.00,268.00);
+\node[anchor=east,font=\fontsize{8}{9}\selectfont] at (27,268.0) {L2};
+\draw[pz] (28.00,264.00) -- (405.00,264.00);
+\node[anchor=east,font=\fontsize{8}{9}\selectfont] at (27,264.0) {L3};
+\draw[pz] (28.00,260.00) -- (405.00,260.00);
+\node[anchor=east,font=\fontsize{8}{9}\selectfont] at (27,260.0) {N};
+\draw[pz] (28.00,256.00) -- (405.00,256.00);
+\node[anchor=east,font=\fontsize{8}{9}\selectfont] at (27,256.0) {PE};
+\node[anchor=west,font=\fontsize{8}{9}\selectfont] at (20,277.5) {3/N/PE AC 400/230 V 50 Hz};
+\draw[pz] (60.00,272.00) -- (60.00,248.00);
+\pzPunkt{(60.00,272.00)}
+\draw[pz] (68.00,268.00) -- (68.00,248.00);
+\pzPunkt{(68.00,268.00)}
+\draw[pz] (76.00,264.00) -- (76.00,248.00);
+\pzPunkt{(76.00,264.00)}
+\pzSicherung{60.00}{248.00}
+\pzSicherung{68.00}{248.00}
+\pzSicherung{76.00}{248.00}
+\node[anr,anchor=west] at (62.20,246.60) {1};
+\node[anr,anchor=west] at (62.20,241.40) {2};
+\node[anr,anchor=west] at (70.20,246.60) {3};
+\node[anr,anchor=west] at (70.20,241.40) {4};
+\node[anr,anchor=west] at (78.20,246.60) {5};
+\node[anr,anchor=west] at (78.20,241.40) {6};
+\node[bmk,anchor=east] at (57.00,245.40) {-F1};
+\node[dat,anchor=north east,align=right] at (57.00,243.50) {3 × 25 A gG};
+\draw[pz] (60.00,240.00) -- (60.00,236.00);
+\draw[pz] (68.00,240.00) -- (68.00,236.00);
+\draw[pz] (76.00,240.00) -- (76.00,236.00);
+\draw[pz] (60.00,232.00) -- (108.00,232.00);
+\draw[pz] (108.00,232.00) -- (108.00,220.00);
+\pzPunkt{(60.00,232.00)}
+\draw[pz] (68.00,228.00) -- (116.00,228.00);
+\draw[pz] (116.00,228.00) -- (116.00,220.00);
+\pzPunkt{(68.00,228.00)}
+\draw[pz] (76.00,224.00) -- (124.00,224.00);
+\draw[pz] (124.00,224.00) -- (124.00,220.00);
+\pzPunkt{(76.00,224.00)}
+\draw[pz] (60.00,236.00) -- (60.00,220.00);
+\draw[pz] (68.00,236.00) -- (68.00,220.00);
+\draw[pz] (76.00,236.00) -- (76.00,220.00);
+\pzSchuetz{60.00}{220.00}{w1}
+\pzSchuetz{68.00}{220.00}{w2}
+\pzSchuetz{76.00}{220.00}{w3}
+\draw[pz,line cap=butt,dash pattern=on 1.231mm off 0.615mm] (58.89,216.00) -- (74.89,216.00);
+\node[anr,anchor=west] at (61.20,218.60) {1};
+\node[anr,anchor=west] at (61.20,213.40) {2};
+\node[anr,anchor=west] at (69.20,218.60) {3};
+\node[anr,anchor=west] at (69.20,213.40) {4};
+\node[anr,anchor=west] at (77.20,218.60) {5};
+\node[anr,anchor=west] at (77.20,213.40) {6};
+\node[bmk,anchor=east] at (55.50,217.40) {-Q1};
+\node[dat,anchor=north east,align=right] at (55.50,215.50) {Netz};
+\pzSchuetz{108.00}{220.00}{w4}
+\pzSchuetz{116.00}{220.00}{w5}
+\pzSchuetz{124.00}{220.00}{w6}
+\draw[pz,line cap=butt,dash pattern=on 1.231mm off 0.615mm] (106.89,216.00) -- (122.89,216.00);
+\node[anr,anchor=west] at (109.20,218.60) {1};
+\node[anr,anchor=west] at (109.20,213.40) {2};
+\node[anr,anchor=west] at (117.20,218.60) {3};
+\node[anr,anchor=west] at (117.20,213.40) {4};
+\node[anr,anchor=west] at (125.20,218.60) {5};
+\node[anr,anchor=west] at (125.20,213.40) {6};
+\node[bmk,anchor=east] at (103.50,217.40) {-Q3};
+\node[dat,anchor=north east,align=right] at (103.50,215.50) {Dreieck};
+\pzSchuetz{156.00}{220.00}{w7}
+\pzSchuetz{164.00}{220.00}{w8}
+\pzSchuetz{172.00}{220.00}{w9}
+\draw[pz,line cap=butt,dash pattern=on 1.231mm off 0.615mm] (154.89,216.00) -- (170.89,216.00);
+\node[anr,anchor=west] at (157.20,218.60) {1};
+\node[anr,anchor=west] at (157.20,213.40) {2};
+\node[anr,anchor=west] at (165.20,218.60) {3};
+\node[anr,anchor=west] at (165.20,213.40) {4};
+\node[anr,anchor=west] at (173.20,218.60) {5};
+\node[anr,anchor=west] at (173.20,213.40) {6};
+\node[bmk,anchor=east] at (151.50,217.40) {-Q2};
+\node[dat,anchor=north east,align=right] at (151.50,215.50) {Stern};
+\draw[pz] (156.00,220.00) -- (156.00,224.00);
+\draw[pz] (164.00,220.00) -- (164.00,224.00);
+\draw[pz] (172.00,220.00) -- (172.00,224.00);
+\draw[pz] (156.00,224.00) -- (172.00,224.00);
+\pzPunkt{(164.00,224.00)}
+\node[dat,anchor=south] at (164.00,224.60) {Sternbrücke};
+\draw[pz] (60.00,212.00) -- (60.00,206.00);
+\draw[pz] (68.00,212.00) -- (68.00,206.00);
+\draw[pz] (76.00,212.00) -- (76.00,206.00);
+\pzThermo{60.00}{206.00}
+\pzThermo{68.00}{206.00}
+\pzThermo{76.00}{206.00}
+\node[anr,anchor=south west] at (60.80,204.10) {1};
+\node[anr,anchor=north west] at (60.80,199.90) {2};
+\node[anr,anchor=south west] at (68.80,204.10) {3};
+\node[anr,anchor=north west] at (68.80,199.90) {4};
+\node[anr,anchor=south west] at (76.80,204.10) {5};
+\node[anr,anchor=north west] at (76.80,199.90) {6};
+\node[bmk,anchor=east] at (55.00,203.40) {-F2};
+\node[dat,anchor=north east,align=right] at (55.00,201.50) {eingest. 8,5 A\\(0,58 · I\textsubscript{N})};
+\draw[pz] (60.00,198.00) -- (60.00,192.00);
+\draw[pz] (68.00,198.00) -- (68.00,192.00);
+\draw[pz] (76.00,198.00) -- (76.00,192.00);
+\draw[pz] (156.00,212.00) -- (156.00,206.00);
+\draw[pz] (156.00,206.00) -- (124.00,206.00);
+\pzPunkt{(124.00,206.00)}
+\draw[pz] (164.00,212.00) -- (164.00,201.00);
+\draw[pz] (164.00,201.00) -- (116.00,201.00);
+\pzPunkt{(116.00,201.00)}
+\draw[pz] (172.00,212.00) -- (172.00,196.00);
+\draw[pz] (172.00,196.00) -- (108.00,196.00);
+\pzPunkt{(108.00,196.00)}
+\node[anr,anchor=west] at (61.00,189.40) {1};
+\node[anr,anchor=west] at (69.00,189.40) {2};
+\node[anr,anchor=west] at (77.00,189.40) {3};
+\node[bmk,anchor=east] at (57.00,188.00) {-X1};
+\node[anr,anchor=west] at (109.00,189.40) {5};
+\node[anr,anchor=west] at (117.00,189.40) {6};
+\node[anr,anchor=west] at (125.00,189.40) {4};
+\node[bmk,anchor=east] at (105.00,188.00) {};
+\draw[pz] (76.00,192.00) -- (76.00,175.00);
+\draw[pz] (76.00,175.00) -- (85.76,175.00);
+\node[anr,anchor=south east] at (84.96,175.20) {W1};
+\draw[pz] (68.00,192.00) -- (68.00,170.00);
+\draw[pz] (68.00,170.00) -- (84.00,170.00);
+\node[anr,anchor=south east] at (83.20,170.20) {V1};
+\draw[pz] (60.00,192.00) -- (60.00,165.00);
+\draw[pz] (60.00,165.00) -- (85.76,165.00);
+\node[anr,anchor=south east] at (84.96,165.20) {U1};
+\draw[pz] (108.00,212.00) -- (108.00,175.00);
+\draw[pz] (108.00,175.00) -- (98.24,175.00);
+\node[anr,anchor=south west] at (99.04,175.20) {V2};
+\draw[pz] (116.00,212.00) -- (116.00,170.00);
+\draw[pz] (116.00,170.00) -- (100.00,170.00);
+\node[anr,anchor=south west] at (100.80,170.20) {W2};
+\draw[pz] (124.00,212.00) -- (124.00,165.00);
+\draw[pz] (124.00,165.00) -- (98.24,165.00);
+\node[anr,anchor=south west] at (99.04,165.20) {U2};
+\pzMotorR{(92.00,170.00)}{8.0}
+\node[bmk,anchor=east] at (57.00,170.00) {-M1};
+\node[dat,anchor=north east,align=right] at (57.00,168.10) {7,5 kW, 400 V Δ};
+\draw[pz] (190.00,256.00) -- (190.00,156.00);
+\draw[pz] (190.00,156.00) -- (92.00,156.00);
+\draw[pz] (92.00,156.00) -- (92.00,162.00);
+\pzPunkt{(190.00,256.00)}
+\node[anr,anchor=south] at (141.00,156.00) {PE};
+\draw[pz] (220.00,272.00) -- (220.00,248.00);
+\pzPunkt{(220.00,272.00)}
+\pzSicherung{220.00}{248.00}
+\node[anr,anchor=west] at (222.20,246.60) {1};
+\node[anr,anchor=west] at (222.20,241.40) {2};
+\node[bmk,anchor=east] at (217.00,245.40) {-F3};
+\node[dat,anchor=north east,align=right] at (217.00,243.50) {2 A};
+\draw[pz] (220.00,240.00) -- (220.00,236.00);
+\pzOeffner{220.00}{236.00}{w10}
+\node[anr,anchor=west] at (223.20,234.60) {95};
+\node[anr,anchor=west] at (223.20,229.40) {96};
+\draw[pz,line cap=butt,dash pattern=on 1.334mm off 0.667mm] (213.33,232.00) -- (220.67,232.00);
+\pzThermBet{(213.33,232.00)}{-1}
+\node[bmk,anchor=east] at (210.50,233.40) {-F2};
+\draw[pz] (220.00,228.00) -- (220.00,224.00);
+\pzOeffner{220.00}{224.00}{w11}
+\node[anr,anchor=west] at (223.20,222.60) {11};
+\node[anr,anchor=west] at (223.20,217.40) {12};
+\draw[pz,line cap=butt,dash pattern=on 1.238mm off 0.619mm] (212.00,220.00) -- (220.67,220.00);
+\pzDruck{(212.00,220.00)}{1}
+\node[bmk,anchor=east] at (210.50,221.40) {-S1};
+\node[dat,anchor=north east,align=right] at (210.50,219.50) {Aus};
+\draw[pz] (220.00,216.00) -- (220.00,212.00);
+\draw[pz] (220.00,212.00) -- (220.00,210.00);
+\pzSchliesser{220.00}{210.00}{w12}
+\node[anr,anchor=west] at (221.20,208.60) {13};
+\node[anr,anchor=west] at (221.20,203.40) {14};
+\draw[pz,line cap=butt,dash pattern=on 1.253mm off 0.626mm] (212.00,206.00) -- (218.89,206.00);
+\pzDruck{(212.00,206.00)}{1}
+\node[bmk,anchor=east] at (210.50,207.40) {-S2};
+\node[dat,anchor=north east,align=right] at (210.50,205.50) {Ein};
+\draw[pz] (220.00,202.00) -- (220.00,198.00);
+\draw[pz] (220.00,210.00) -- (244.00,210.00);
+\pzPunkt{(220.00,210.00)}
+\pzSchliesser{244.00}{210.00}{w13}
+\node[anr,anchor=west] at (245.20,208.60) {13};
+\node[anr,anchor=west] at (245.20,203.40) {14};
+\node[bmk,anchor=east] at (239.50,207.40) {-Q1};
+\draw[pz] (244.00,202.00) -- (244.00,198.00);
+\draw[pz] (220.00,198.00) -- (220.00,196.00);
+\draw[pz] (244.00,198.00) -- (244.00,196.00);
+\draw[pz] (244.00,196.00) -- (220.00,196.00);
+\pzPunkt{(220.00,196.00)}
+\draw[pz] (220.00,196.00) -- (358.00,196.00);
+\pzPunkt{(266.00,196.00)}
+\pzPunkt{(312.00,196.00)}
+\pzPunkt{(220.00,196.00)}
+\draw[pz] (220.00,196.00) -- (220.00,166.00);
+\pzSpuleAnzug{220.00}{166.00}
+\node[anr,anchor=south west] at (221.40,164.00) {A1};
+\node[anr,anchor=north west] at (221.40,160.00) {A2};
+\node[bmk,anchor=east] at (213.00,163.40) {-K1};
+\node[dat,anchor=north east,align=right] at (213.00,161.50) {10 s};
+\draw[pz] (220.00,158.00) -- (220.00,154.00);
+\pzOeffner{266.00}{196.00}{w14}
+\node[anr,anchor=west] at (269.20,194.60) {15};
+\node[anr,anchor=west] at (269.20,189.40) {16};
+\pzVerzoegerung{266.00}{196.00}{0.667}
+\node[bmk,anchor=east] at (261.00,193.40) {-K1};
+\draw[pz] (266.00,188.00) -- (266.00,184.00);
+\draw[pz] (266.00,184.00) -- (266.00,178.00);
+\pzOeffner{266.00}{178.00}{w15}
+\node[anr,anchor=west] at (269.20,176.60) {21};
+\node[anr,anchor=west] at (269.20,171.40) {22};
+\node[bmk,anchor=east] at (261.50,175.40) {-Q3};
+\draw[pz] (266.00,170.00) -- (266.00,166.00);
+\pzSpule{266.00}{166.00}
+\node[anr,anchor=south west] at (267.40,164.00) {A1};
+\node[anr,anchor=north west] at (267.40,160.00) {A2};
+\node[bmk,anchor=east] at (261.00,163.40) {-Q2};
+\node[dat,anchor=north east,align=right] at (261.00,161.50) {Stern};
+\draw[pz] (266.00,158.00) -- (266.00,154.00);
+\pzSchliesser{312.00}{196.00}{w16}
+\node[anr,anchor=west] at (313.20,194.60) {13};
+\node[anr,anchor=west] at (313.20,189.40) {14};
+\node[bmk,anchor=east] at (307.50,193.40) {-Q2};
+\draw[pz] (312.00,188.00) -- (312.00,184.00);
+\draw[pz] (312.00,196.00) -- (336.00,196.00);
+\pzPunkt{(336.00,196.00)}
+\pzSchliesser{336.00}{196.00}{w17}
+\node[anr,anchor=west] at (337.20,194.60) {43};
+\node[anr,anchor=west] at (337.20,189.40) {44};
+\node[bmk,anchor=east] at (331.50,193.40) {-Q1};
+\draw[pz] (336.00,188.00) -- (336.00,184.00);
+\draw[pz] (312.00,184.00) -- (312.00,182.00);
+\draw[pz] (336.00,184.00) -- (336.00,182.00);
+\draw[pz] (336.00,182.00) -- (312.00,182.00);
+\pzPunkt{(312.00,182.00)}
+\draw[pz] (312.00,182.00) -- (312.00,166.00);
+\pzSpule{312.00}{166.00}
+\node[anr,anchor=south west] at (313.40,164.00) {A1};
+\node[anr,anchor=north west] at (313.40,160.00) {A2};
+\node[bmk,anchor=east] at (307.00,163.40) {-Q1};
+\node[dat,anchor=north east,align=right] at (307.00,161.50) {Netz};
+\draw[pz] (312.00,158.00) -- (312.00,154.00);
+\pzSchliesser{358.00}{196.00}{w18}
+\node[anr,anchor=west] at (359.20,194.60) {15};
+\node[anr,anchor=west] at (359.20,189.40) {18};
+\pzVerzoegerung{358.00}{196.00}{-1.111}
+\node[bmk,anchor=east] at (353.00,193.40) {-K1};
+\draw[pz] (358.00,188.00) -- (358.00,184.00);
+\draw[pz] (358.00,184.00) -- (358.00,178.00);
+\pzOeffner{358.00}{178.00}{w19}
+\node[anr,anchor=west] at (361.20,176.60) {21};
+\node[anr,anchor=west] at (361.20,171.40) {22};
+\node[bmk,anchor=east] at (353.50,175.40) {-Q2};
+\draw[pz] (358.00,170.00) -- (358.00,166.00);
+\pzSpule{358.00}{166.00}
+\node[anr,anchor=south west] at (359.40,164.00) {A1};
+\node[anr,anchor=north west] at (359.40,160.00) {A2};
+\node[bmk,anchor=east] at (353.00,163.40) {-Q3};
+\node[dat,anchor=north east,align=right] at (353.00,161.50) {Dreieck};
+\draw[pz] (358.00,158.00) -- (358.00,154.00);
+\draw[pz] (220.00,154.00) -- (220.00,150.00);
+\draw[pz] (266.00,154.00) -- (266.00,150.00);
+\draw[pz] (312.00,154.00) -- (312.00,150.00);
+\draw[pz] (358.00,154.00) -- (358.00,150.00);
+\draw[pz] (220.00,150.00) -- (400.00,150.00);
+\pzPunkt{(266.00,150.00)}
+\pzPunkt{(312.00,150.00)}
+\pzPunkt{(358.00,150.00)}
+\draw[pz] (400.00,150.00) -- (400.00,260.00);
+\pzPunkt{(400.00,260.00)}
+\begin{scope}[shift={(220.00,142.00)}]
+\draw[fein] (-13,0) -- (13,0) (0,0.8) -- (0,-8.2);
+\node[anr] at (-6.5,-2.4) {S}; \node[anr] at (6.5,-2.4) {Ö};
+\node[anr,anchor=east] at (-4.5,-5.6) {15–18};\node[anr,anchor=east] at (-0.8,-5.6) {8};
+\node[anr,anchor=east] at (8.5,-5.6) {15–16};\node[anr,anchor=east] at (12.2,-5.6) {6};
+\end{scope}
+\begin{scope}[shift={(266.00,142.00)}]
+\draw[fein] (-13,0) -- (13,0) (0,0.8) -- (0,-17.8);
+\node[anr] at (-6.5,-2.4) {S}; \node[anr] at (6.5,-2.4) {Ö};
+\node[anr,anchor=east] at (-4.5,-5.6) {1–2};\node[anr,anchor=east] at (-0.8,-5.6) {3};
+\node[anr,anchor=east] at (-4.5,-8.8) {3–4};\node[anr,anchor=east] at (-0.8,-8.8) {3};
+\node[anr,anchor=east] at (-4.5,-12.0) {5–6};\node[anr,anchor=east] at (-0.8,-12.0) {3};
+\node[anr,anchor=east] at (-4.5,-15.2) {13–14};\node[anr,anchor=east] at (-0.8,-15.2) {7};
+\node[anr,anchor=east] at (8.5,-5.6) {21–22};\node[anr,anchor=east] at (12.2,-5.6) {8};
+\end{scope}
+\begin{scope}[shift={(312.00,142.00)}]
+\draw[fein] (-13,0) -- (13,0) (0,0.8) -- (0,-21.0);
+\node[anr] at (-6.5,-2.4) {S}; \node[anr] at (6.5,-2.4) {Ö};
+\node[anr,anchor=east] at (-4.5,-5.6) {1–2};\node[anr,anchor=east] at (-0.8,-5.6) {1};
+\node[anr,anchor=east] at (-4.5,-8.8) {3–4};\node[anr,anchor=east] at (-0.8,-8.8) {1};
+\node[anr,anchor=east] at (-4.5,-12.0) {5–6};\node[anr,anchor=east] at (-0.8,-12.0) {1};
+\node[anr,anchor=east] at (-4.5,-15.2) {13–14};\node[anr,anchor=east] at (-0.8,-15.2) {5};
+\node[anr,anchor=east] at (-4.5,-18.4) {43–44};\node[anr,anchor=east] at (-0.8,-18.4) {8};
+\end{scope}
+\begin{scope}[shift={(358.00,142.00)}]
+\draw[fein] (-13,0) -- (13,0) (0,0.8) -- (0,-14.6);
+\node[anr] at (-6.5,-2.4) {S}; \node[anr] at (6.5,-2.4) {Ö};
+\node[anr,anchor=east] at (-4.5,-5.6) {1–2};\node[anr,anchor=east] at (-0.8,-5.6) {2};
+\node[anr,anchor=east] at (-4.5,-8.8) {3–4};\node[anr,anchor=east] at (-0.8,-8.8) {2};
+\node[anr,anchor=east] at (-4.5,-12.0) {5–6};\node[anr,anchor=east] at (-0.8,-12.0) {2};
+\node[anr,anchor=east] at (8.5,-5.6) {21–22};\node[anr,anchor=east] at (12.2,-5.6) {6};
+\end{scope}
+\node[dat,anchor=west] at (220,114.0) {Kontaktspiegel: Zahl = Spalte des Kontakts};
+\pzKlemme{(60.00,188.00)}
+\pzKlemme{(68.00,188.00)}
+\pzKlemme{(76.00,188.00)}
+\pzKlemme{(108.00,188.00)}
+\pzKlemme{(116.00,188.00)}
+\pzKlemme{(124.00,188.00)}
+\end{tikzpicture}\end{document}

@@ -1,0 +1,151 @@
+{
+ "name": "Stromhof Elektro GmbH",
+ "dateiname": "Stromhof_Elektro",
+ "fach": "Elektrotechnik",
+ "ordner": "Elektrotechnik/Elektroniker_EG",
+ "beruf": "Elektroniker/in, Fachrichtung Energie- und Gebäudetechnik (Handwerk)",
+ "datum": "2026-10-11",
+ "stand": "von der Lehrkraft freigegeben am 2026-10-11",
+ "steckbrief": [
+  [
+   "Name",
+   "Stromhof Elektro GmbH (fiktiv)"
+  ],
+  [
+   "Art",
+   "Elektro-Fachbetrieb im Handwerk, inhabergeführt, Meisterbetrieb"
+  ],
+  [
+   "Standort",
+   "Region Musterstadt, Betriebshof mit Lager und kleiner Werkstatt (Vorschlag)"
+  ],
+  [
+   "Größe",
+   "rund 20 Beschäftigte: Inhaber, Meisterin, Gesellinnen und Gesellen, Azubis, Büro"
+  ],
+  [
+   "Arbeitsfelder",
+   "Elektroinstallation in Neubau und Sanierung · PV-Anlagen mit Speicher · Wallboxen · Gebäudeautomation (KNX, Smart Home) · Kundendienst und Prüfung nach DGUV Vorschrift 3"
+  ],
+  [
+   "Kunden",
+   "Privatleute, Bauträger, Landwirtschaft, Gewerbe"
+  ],
+  [
+   "Leitbild (Vorschlag)",
+   "„Wir bringen Strom auf den Hof“: modern bei PV und Gebäudeautomation, solide im Handwerk; der Betrieb modernisiert sich gerade selbst (eigene PV auf dem Lagerdach, Fuhrpark auf E-Autos)"
+  ]
+ ],
+ "personen": [
+  [
+   "Inhaber",
+   "Thomas Bökers, Elektrotechnikermeister (Vorschlag)",
+   "holt Aufträge herein, macht Angebote, entscheidet; will Ergebnisse kurz und begründet"
+  ],
+  [
+   "Meisterin",
+   "Svenja Terhorst (Vorschlag)",
+   "leitet Baustellen und Kundendienst, ist Ausbilderin; erteilt die Aufträge und nimmt Ergebnisse ab"
+  ],
+  [
+   "Geselle Kundendienst",
+   "Ole Kampmann (Vorschlag)",
+   "Fehlersuche, Messen und Prüfen nach DGUV V3; erfahrener Ansprechpartner"
+  ],
+  [
+   "Gesellin Gebäudeautomation",
+   "Mira Haddad (Vorschlag)",
+   "KNX und Smart Home, PV und Speicher; Ansprechpartnerin für neue Technik"
+  ],
+  [
+   "Geselle Baustelle",
+   "Lukas Brüning (Vorschlag)",
+   "Installation im Neubau, Arbeitssicherheit auf der Baustelle"
+  ],
+  [
+   "Büro",
+   "Anke Gerdes (Vorschlag)",
+   "Auftragsannahme, Material, Termine; leitet Kundenanrufe weiter"
+  ],
+  [
+   "Azubis",
+   "Emma (1. Jahr), Tarek (2. Jahr) (Vorschlag)",
+   "werden von den Gesellinnen und Gesellen (= den Lernenden) angeleitet; Adressaten für Erklärungen und Unterweisungen"
+  ]
+ ],
+ "rolle": [
+  "Grundsatz (Profil der Lehrkraft): Die Lernenden sind immer Gesellinnen und Gesellen bei der Stromhof Elektro GmbH, nicht Azubis. Ansprache in der Sie-Form.",
+  "Aufträge kommen von der Meisterin, vom Inhaber oder direkt vom Kunden; Ergebnisse gehen an Meisterin, Inhaber, Kunden oder an Azubis, die angeleitet werden."
+ ],
+ "kunden": [
+  [
+   "Familie Schütte (Vorschlag)",
+   "Privat, Einfamilienhaus von 1968",
+   "Altbau-Sanierung Schritt für Schritt: alte Installation prüfen, Unterverteilung, später PV und Wallbox"
+  ],
+  [
+   "Wohnbau Lindenkamp GmbH (Vorschlag)",
+   "Bauträger",
+   "Neubaugebiet mit Doppelhäusern: Installation nach Plan, Hausanschluss, Gebäudeautomation"
+  ],
+  [
+   "Hof Wübben (Vorschlag)",
+   "Landwirtschaft, Milchviehbetrieb",
+   "Stallbeleuchtung, Melktechnik-Anschluss, PV auf dem Stalldach, Prüfung der Anlage"
+  ],
+  [
+   "Bäckerei Kremer (Vorschlag)",
+   "Gewerbe, zwei Filialen",
+   "Backofen-Anschluss, Kühltechnik, Störungen im Betrieb, Prüfung ortsveränderlicher Geräte"
+  ]
+ ],
+ "wachsen": [
+  [
+   "1. Jahr",
+   "überschaubare Aufträge im Kundendienst und auf der Baustelle an Bauelementen, Leitungen und Grundschaltungen; Messen und Prüfen"
+  ],
+  [
+   "2. Jahr",
+   "Installation ganzer Stromkreise und Unterverteilungen, erste Steuerungen, Energieversorgung"
+  ],
+  [
+   "3. Jahr",
+   "PV, Speicher, Wallbox, Gebäudeautomation planen und in Betrieb nehmen, Kundengespräche"
+  ],
+  [
+   "4. Jahr",
+   "eigene Projekte von der Anfrage bis zur Übergabe und Prüfung, Verantwortung für Azubis"
+  ]
+ ],
+ "handlungssituation": [
+  "LF 1: folgt mit der Lernsituationen-Skizze für EG (nächster Schritt)."
+ ],
+ "elemente": [
+  "Werden nicht vorab festgelegt, sondern wachsen mit der Zeit (wie bei Brinkmann Automation). Was sich bewährt, wird hier nachgetragen."
+ ],
+ "regeln": [
+  "Alles fiktiv; keine echten Firmen, Personen oder Kundendaten.",
+  "Kontext berufsspezifisch (Gebäude, Energie, Kundendienst), Lerngegenstand auf dem Niveau des Lernfelds.",
+  "Je Lernfeld kommen nur neue Aufträge oder Kunden dazu; Personen und Betrieb bleiben gleich.",
+  "Die Lernenden sind immer Gesellinnen und Gesellen; Aufträge entsprechend formulieren („Sie übernehmen …“).",
+  "Die Meisterin ist der Normalfall für Auftrag und Abnahme; Inhaber und Kunden für Entscheidungen und Berichte."
+ ],
+ "pruefbericht": [
+  [
+   "Hinweis",
+   "Namensprüfung per Websuche (2026-10-11): kein Betrieb „Stromhof Elektro“, keine „Wohnbau Lindenkamp GmbH“, kein „Hof Wübben“ im Emsland gefunden. Ersetzt: „Grenzland Wohnbau“ wegen der echten Grenzland-Bau GmbH in Ahaus. „Familie Schütte“ und „Bäckerei Kremer“ sind Allerweltsnamen ohne Ortsbezug und nicht einzeln geprüft."
+  ],
+  [
+   "Hinweis",
+   "Einträge mit „(Vorschlag)“ stammen von der KI und wurden von der Lehrkraft am 2026-10-11 bestätigt."
+  ],
+  [
+   "Hinweis",
+   "Personen mit verschiedenen Namen und Geschlechtern bieten Identifikationsfiguren für eine heterogene Klasse."
+  ],
+  [
+   "Hinweis",
+   "Die Kunden decken alle vier Kundengruppen ab und tragen über mehrere Lernfelder (Sanierung → PV → Wallbox; Neubau → Gebäudeautomation)."
+  ]
+ ]
+}

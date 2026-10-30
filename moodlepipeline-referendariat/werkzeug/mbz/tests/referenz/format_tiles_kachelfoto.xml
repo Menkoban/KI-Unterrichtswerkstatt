@@ -1,0 +1,110 @@
+<!-- Gemessen 2026-10-22: Moodle 5.1.6 + format_tiles 5.1.0.2, Kachelfoto per tile_photo gesetzt, Kurs per admin/cli/backup.php gesichert. Auszug aus section.xml, inforef.xml und files.xml. -->
+<referenz>
+<section_xml>
+<section id="1266">
+  <number>1</number>
+  <name>Einstieg: Was wissen Sie schon?</name>
+  <summary>(gekürzt)</summary>
+  <summaryformat>1</summaryformat>
+  <sequence>5328,5329</sequence>
+  <visible>1</visible>
+  <availabilityjson>$@NULL@$</availabilityjson>
+  <component>$@NULL@$</component>
+  <itemid>$@NULL@$</itemid>
+  <timemodified>1792692764</timemodified>
+  <plugin_format_tiles_section sectionid="1266">
+    <optiontype>1</optiontype>
+    <optionvalue>probe_boq.png</optionvalue>
+    <tilesversion>2026012570</tilesversion>
+  </plugin_format_tiles_section>
+  <course_format_options id="1887">
+    <format>tiles</format>
+    <name>tilephoto</name>
+    <value>probe_boq.png</value>
+  </course_format_options>
+</section>
+</section_xml>
+<inforef_xml>
+<inforef>
+  <fileref>
+    <file>
+      <id>13077</id>
+    </file>
+    <file>
+      <id>13078</id>
+    </file>
+    <file>
+      <id>13079</id>
+    </file>
+  </fileref>
+</inforef>
+</inforef_xml>
+<files_xml>
+<file id="13077">
+    <contenthash>c0adf7cc6ea8b79e4a810c126f2611c01f58c7ac</contenthash>
+    <contextid>5476</contextid>
+    <component>format_tiles</component>
+    <filearea>tilephoto</filearea>
+    <itemid>1266</itemid>
+    <filepath>/tilephoto/</filepath>
+    <filename>probe_boq.png</filename>
+    <userid>2</userid>
+    <filesize>76917</filesize>
+    <mimetype>image/png</mimetype>
+    <status>0</status>
+    <timecreated>1792697406</timecreated>
+    <timemodified>1792697406</timemodified>
+    <source>$@NULL@$</source>
+    <author>$@NULL@$</author>
+    <license>$@NULL@$</license>
+    <sortorder>0</sortorder>
+    <repositorytype>$@NULL@$</repositorytype>
+    <repositoryid>$@NULL@$</repositoryid>
+    <reference>$@NULL@$</reference>
+  </file>
+<file id="13078">
+    <contenthash>da39a3ee5e6b4b0d3255bfef95601890afd80709</contenthash>
+    <contextid>5476</contextid>
+    <component>format_tiles</component>
+    <filearea>tilephoto</filearea>
+    <itemid>1266</itemid>
+    <filepath>/tilephoto/</filepath>
+    <filename>.</filename>
+    <userid>2</userid>
+    <filesize>0</filesize>
+    <mimetype>$@NULL@$</mimetype>
+    <status>0</status>
+    <timecreated>1792697407</timecreated>
+    <timemodified>1792697407</timemodified>
+    <source>$@NULL@$</source>
+    <author>$@NULL@$</author>
+    <license>$@NULL@$</license>
+    <sortorder>0</sortorder>
+    <repositorytype>$@NULL@$</repositorytype>
+    <repositoryid>$@NULL@$</repositoryid>
+    <reference>$@NULL@$</reference>
+  </file>
+<file id="13079">
+    <contenthash>da39a3ee5e6b4b0d3255bfef95601890afd80709</contenthash>
+    <contextid>5476</contextid>
+    <component>format_tiles</component>
+    <filearea>tilephoto</filearea>
+    <itemid>1266</itemid>
+    <filepath>/</filepath>
+    <filename>.</filename>
+    <userid>2</userid>
+    <filesize>0</filesize>
+    <mimetype>$@NULL@$</mimetype>
+    <status>0</status>
+    <timecreated>1792697407</timecreated>
+    <timemodified>1792697407</timemodified>
+    <source>$@NULL@$</source>
+    <author>$@NULL@$</author>
+    <license>$@NULL@$</license>
+    <sortorder>0</sortorder>
+    <repositorytype>$@NULL@$</repositorytype>
+    <repositoryid>$@NULL@$</repositoryid>
+    <reference>$@NULL@$</reference>
+  </file>
+</files_xml>
+</referenz>

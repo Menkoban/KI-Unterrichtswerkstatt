@@ -1,0 +1,275 @@
+{
+ "titel": "Lernfeld 1: Curriculare Analyse",
+ "kurztitel": "LF 1 Curriculare Analyse",
+ "fach": "Elektrotechnik",
+ "ordner": "Elektrotechnik/Elektroniker_AS/LF01_Elektrotechnische_Systeme",
+ "datum": "2026-10-11",
+ "stand": "gilt für die Fachrichtungen AS und EG; ergänzt 2026-10-11 (Schutzeinrichtungen im Überblick, Abgrenzung zu LF 2 und LF 5), von der Lehrkraft freigegeben am 2026-10-11",
+ "meta": [
+  [
+   "Ausbildungsberuf",
+   "Elektroniker/in (Handwerk), Fachrichtungen Energie- und Gebäudetechnik sowie Automatisierungs- und Systemtechnik"
+  ],
+  [
+   "Lernfeld",
+   "LF 1 — Elektrotechnische Systeme analysieren, Funktionen prüfen und Fehler beheben"
+  ],
+  [
+   "Ausbildungsjahr",
+   "1"
+  ],
+  [
+   "Zeitrichtwert",
+   "80 Std."
+  ],
+  [
+   "Quelle",
+   "Quellen/KMK_RLP_Elektroniker_Handwerk_2020.pdf (KMK-Rahmenlehrplan 2020), S. 11"
+  ],
+  [
+   "Gültig für",
+   "LF 1–8 identisch für EG und AT → diese Akte gilt für beide Fachrichtungen"
+  ],
+  [
+   "Schulisches SchuCu",
+   "nicht vorhanden (noch nicht im Ref)"
+  ]
+ ],
+ "kernkompetenz": "Die Schülerinnen und Schüler verfügen über die Kompetenz, auftragsbezogen elektrotechnische Systeme zu analysieren, Funktionen zu prüfen und Fehler zu beheben.",
+ "lk_hinweis": "Lernfeld-Kompetenzen eng am Lehrplanwortlaut, geordnet nach den Phasen der vollständigen Handlung. Der Anforderungsbereich (AFB) ist nur eine grobe Einschätzung; verbindlich wird er erst auf Stundenebene.",
+ "lk": [
+  [
+   "LK-01",
+   "Betriebliche Arbeitsaufträge analysieren und sich über Aufgaben, Tätigkeiten und Arbeitsprozesse im betrieblichen Umfeld informieren",
+   "Informieren",
+   "I–II",
+   "FK, MK"
+  ],
+  [
+   "LK-02",
+   "Elektrotechnische Systeme auf Anlagen-, Geräte-, Baugruppen- und Bauelementebene sowie Wirkungszusammenhänge zwischen den Ebenen analysieren",
+   "Informieren",
+   "II",
+   "FK"
+  ],
+  [
+   "LK-03",
+   "Informationen, auch digital, beschaffen und auswerten; fremdsprachige Dokumentationen mit Hilfsmitteln auswerten",
+   "Informieren",
+   "I–II",
+   "MK, FK"
+  ],
+  [
+   "LK-04",
+   "Umsetzung unter Beachtung des Sicherheits- und Gesundheitsschutzes (DGUV) mit Methoden der Arbeits-, Zeit- und Lernplanung planen",
+   "Planen",
+   "II",
+   "MK, SeK"
+  ],
+  [
+   "LK-05",
+   "Technische Unterlagen lesen und erstellen (Schaltpläne, Schaltzeichen)",
+   "Planen",
+   "I–II",
+   "FK"
+  ],
+  [
+   "LK-06",
+   "Sich auf Grundlage der Planung für einen Umsetzungsansatz entscheiden",
+   "Entscheiden",
+   "III",
+   "MK, SeK"
+  ],
+  [
+   "LK-07",
+   "Im Team Funktionen und Betriebsverhalten von Bauelementen und Baugruppen sowie deren Aufgaben im System bestimmen",
+   "Ausführen",
+   "II",
+   "FK, SoK"
+  ],
+  [
+   "LK-08",
+   "Elektrische Größen messtechnisch und rechnerisch zur Analyse und Prüfung von Grundschaltungen ermitteln",
+   "Ausführen",
+   "II",
+   "FK, MK"
+  ],
+  [
+   "LK-09",
+   "Sich unter Anwendung von Fachsprache über Erkenntnisse austauschen",
+   "Ausführen",
+   "I–II",
+   "MK"
+  ],
+  [
+   "LK-10",
+   "Funktion elektrischer Schaltungen und Betriebsmittel prüfen; Fehler analysieren und beheben",
+   "Kontrollieren",
+   "II–III",
+   "FK, MK"
+  ],
+  [
+   "LK-11",
+   "Verantwortungsbewusst unter Berücksichtigung sicherheitstechnischer Aspekte handeln",
+   "durchgängig",
+   "I–II",
+   "FK, SeK"
+  ],
+  [
+   "LK-12",
+   "Gewonnene Erkenntnisse dokumentieren und bewerten",
+   "Bewerten",
+   "III",
+   "MK, SeK"
+  ]
+ ],
+ "kuerzel_legende": [
+  [
+   "LK",
+   "Lernfeld-Kompetenz"
+  ],
+  [
+   "AFB",
+   "Anforderungsbereich (I Reproduktion, II Reorganisation und Transfer, III Problemlösen und Werten)"
+  ],
+  [
+   "FK",
+   "Fachkompetenz"
+  ],
+  [
+   "SoK",
+   "Sozialkompetenz"
+  ],
+  [
+   "SeK",
+   "Selbstkompetenz"
+  ],
+  [
+   "MK",
+   "Methodenkompetenz (Querschnitt)"
+  ]
+ ],
+ "inhalte_lehrplan": [
+  "Betriebliche Strukturen, Arbeitsorganisation, betriebliche Kommunikation, Produkte, Dienstleistungen",
+  "Verhalten und Kennwerte exemplarischer Bauelemente und Funktionseinheiten",
+  "Schaltpläne, Schaltzeichen",
+  "Grundschaltungen, elektrische Grundgrößen, allgemeine Gesetzmäßigkeiten der Elektrotechnik",
+  "Messverfahren, Funktionsprüfung, Fehlersuche",
+  "Gefahren des elektrischen Stromes, Sicherheitsregeln, Arbeitsschutz"
+ ],
+ "inhaltskatalog": {
+  "hinweis": "Der Lehrplan nennt nur Stichworte. Die Konkretisierung ist eigene Interpretation (Erfahrung, Fachbuch, Gesellenprüfung Teil 1) und von der Lehrkraft bestätigt.",
+  "pflicht": [
+   [
+    "Grundgrößen",
+    "Ladung, Strom, Spannung, Stromrichtung; Stromdichte; Widerstand und Leitwert; Ohmsches Gesetz"
+   ],
+   [
+    "Leiterwiderstand",
+    "spezifischer Widerstand, Länge, Querschnitt; Temperaturabhängigkeit; Heiß-/Kaltleiter (NTC/PTC)"
+   ],
+   [
+    "Leistung und Energie",
+    "elektrische Leistung, Arbeit, Wirkungsgrad, Energiekosten; Wärmewirkung"
+   ],
+   [
+    "Grundschaltungen",
+    "Reihen-, Parallel-, gemischte Schaltung; Kirchhoffsche Regeln; Spannungsteiler (unbelastet/belastet)"
+   ],
+   [
+    "Bauelemente",
+    "Widerstände (Bauformen, E-Reihen, Farbcode, Belastbarkeit); Diode/LED mit Vorwiderstand"
+   ],
+   [
+    "Messen",
+    "Spannungs-, Strom-, Widerstandsmessung mit dem Multimeter; Messfehler, Innenwiderstand des Messgeräts (qualitativ); sicherer Einsatz von Messgeräten"
+   ],
+   [
+    "Sicherheit",
+    "Wirkungen des Stromes auf den Menschen; 5 Sicherheitsregeln; persönliche Schutzausrüstung"
+   ],
+   [
+    "Schutzeinrichtungen (Überblick)",
+    "Fehlerstrom-Schutzeinrichtung (RCD), Leitungsschutzschalter, Schmelzsicherung: wer oder was wird wovor geschützt, Wirkprinzip qualitativ, erkennen in der Anlage (ergänzt 2026-10-11)"
+   ],
+   [
+    "Arbeitstechniken",
+    "Schaltpläne und Schaltzeichen; Messprotokolle; systematische Fehlersuche an Grundschaltungen"
+   ]
+  ],
+  "optional": [
+   "Kondensator und Spule qualitativ als Bauelemente („je früher RLC, desto besser\")"
+  ],
+  "verschoben": [
+   "Kondensator und Magnetismus ausführlich → 2. Ausbildungsjahr (mit Wechselstrom; Lernfeld wird dort festgelegt)",
+   "Spannungsquelle mit Innenwiderstand → nicht in LF 1 (zu viel); der Innenwiderstand des **Messgeräts** wird dagegen qualitativ behandelt"
+  ]
+ },
+ "abgrenzung": [
+  [
+   "LF 2 Elektrische Systeme planen und installieren",
+   "Installationsschaltungen, Schaltplanarten, Installationstechnik, Leitungsdimensionierung und Spannungsfall auf Leitungen (normgerecht). Der Rahmenlehrplantext nennt auch „typische Netzsysteme“ und „erforderliche Schutzmaßnahmen“; in der Praxis der Lehrkraft liegen sie in LF 5 (Abweichung ausgewiesen, 2026-10-11)"
+  ],
+  [
+   "LF 5 Elektroenergieversorgung und Sicherheit von Anlagen und Geräten konzipieren (2. Jahr)",
+   "Netzsysteme, Fehlerschleife, Schutzmaßnahmen und Schutzklassen, Auswahl und Bemessung der Schutzeinrichtungen, Prüfen ortsfester und ortsveränderlicher Betriebsmittel. Sicherheit: LF 1 legt die Grundlagen (Wirkungen des Stromes, 5 Sicherheitsregeln, Schutzeinrichtungen RCD, Leitungsschutzschalter und Schmelzsicherung nur in Aufgabe und Wirkprinzip)"
+  ],
+  [
+   "LF 3 Steuerungen und Regelungen analysieren und realisieren",
+   "Sensoren, Aktoren, Taster, logische Grundverknüpfungen, Steuerungen"
+  ]
+ ],
+ "querschnitt": "Digitale Medien · Fremdsprache · Fachsprache und Sprachbildung · Arbeits- und Gesundheitsschutz (DGUV). BNE wird in LF 1 nicht genannt.",
+ "lernort": [
+  [
+   "A1 Kommunikation/Information",
+   "Übersichts- und Stromlaufpläne lesen, zeichnen, anwenden; Vorschriften, Normen anwenden; Gespräche situationsgerecht führen; Sachverhalte darstellen, Protokolle anfertigen; Standardsoftware anwenden"
+  ],
+  [
+   "A2 Arbeit planen/organisieren",
+   "Auftragsinformationen aufnehmen und auswerten; Material, PSA, Werkzeuge, Messgeräte bereitstellen; Arbeitsschritte festlegen; Aufgaben im Team planen; Arbeitsergebnisse kontrollieren und bewerten"
+  ],
+  [
+   "A4 Kunden beraten",
+   "auf Gefahren an elektrischen Anlagen und auf Sicherheitsregeln hinweisen"
+  ],
+  [
+   "A6 Schutzmaßnahmen",
+   "Sicherheitsregeln und Unfallverhütungsvorschriften beachten; Niederohmigkeit von Leitern ermitteln und beurteilen"
+  ],
+  [
+   "A7 Technische Systeme analysieren",
+   "Systemgrenzen, -komponenten und Wechselwirkungen erfassen; Haupt- und Teilfunktionen erfassen"
+  ],
+  [
+   "A8 Messen und Analysieren",
+   "Messverfahren und Messgeräte auswählen; elektrische Größen berechnen, messen, bewerten; Kenndaten und Funktion von Bauteilen prüfen"
+  ],
+  [
+   "A9 Fehler analysieren/beheben",
+   "Systematik der Fehlersuche anwenden"
+  ],
+  [
+   "A10 Montieren/Installieren",
+   "Verteiler, Schalter, Steckvorrichtungen und Leitungsverlegesysteme auswählen und montieren"
+  ],
+  [
+   "D1 Ausbildungsbetrieb",
+   "Aufbau und grundlegende Arbeits- und Geschäftsprozesse des Ausbildungsbetriebes erläutern"
+  ]
+ ],
+ "pruefbericht": [
+  [
+   "Hinweis",
+   "Umgestellt 2026-10-11 von Markdown auf DOCX aus Daten (Umbau der Skills); Inhalt unverändert."
+  ],
+  [
+   "Hinweis",
+   "Gilt für beide Fachrichtungen (LF 1–8 im Rahmenlehrplan identisch); die Lernsituationen werden je Fachrichtung skizziert."
+  ],
+  [
+   "Hinweis",
+   "Abweichung vom Rahmenlehrplantext LF 2 ausgewiesen: Netzsysteme und Schutzmaßnahmen in der Praxis der Lehrkraft in LF 5."
+  ]
+ ]
+}

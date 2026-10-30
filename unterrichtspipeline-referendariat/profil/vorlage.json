@@ -1,0 +1,1294 @@
+{
+  "version": 1,
+  "stand": "2026-11",
+  "einstellungen": [
+    {
+      "id": "interview.eine_frage",
+      "gruppe": "Arbeitsweise",
+      "titel": "Eine Frage nach der anderen",
+      "erklaerung": "Das System stellt nie mehrere Fragen auf einmal.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "interview.kontext_vor_frage",
+      "gruppe": "Arbeitsweise",
+      "titel": "Kontext vor jeder Frage",
+      "erklaerung": "Vor jeder Frage steht kurz, worum es geht, damit nichts nachgeschlagen werden muss.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "interview.vorschlaege",
+      "gruppe": "Arbeitsweise",
+      "titel": "Vorschläge je Frage",
+      "erklaerung": "Anzahl konkreter Vorschläge; der empfohlene steht zuerst, dazu immer eine freie Antwort.",
+      "typ": "zahl",
+      "standard": 3
+    },
+    {
+      "id": "freigabe.alltag",
+      "gruppe": "Arbeitsweise",
+      "titel": "Freigabe bei Alltagsstunden",
+      "erklaerung": "Wann die Lehrkraft freigibt.",
+      "typ": "auswahl",
+      "standard": "einmal_am_ende",
+      "optionen": [
+        "einmal_am_ende",
+        "schritt_fuer_schritt"
+      ]
+    },
+    {
+      "id": "freigabe.besuch",
+      "gruppe": "Arbeitsweise",
+      "titel": "Freigabe bei Besuchsstunden",
+      "erklaerung": "Wann die Lehrkraft bei EUB, KUB, FLB, GUB und PU freigibt.",
+      "typ": "auswahl",
+      "standard": "schritt_fuer_schritt",
+      "optionen": [
+        "einmal_am_ende",
+        "schritt_fuer_schritt"
+      ]
+    },
+    {
+      "id": "pruefbericht",
+      "gruppe": "Arbeitsweise",
+      "titel": "Prüfbericht vor jeder Freigabe",
+      "erklaerung": "Befunde als Fehler, Warnung, Hinweis.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "ausgabe.format",
+      "gruppe": "Arbeitsweise",
+      "titel": "Ausgabeformat",
+      "erklaerung": "Format aller Dokumente für die Lehrkraft.",
+      "typ": "auswahl",
+      "standard": "docx",
+      "optionen": [
+        "docx",
+        "pdf"
+      ]
+    },
+    {
+      "id": "ausgabe.pdf_nur_auf_wunsch",
+      "gruppe": "Arbeitsweise",
+      "titel": "PDF nur auf Wunsch",
+      "erklaerung": "PDF entsteht nur, wenn die Lehrkraft ausdrücklich danach fragt.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "ausgabe.feinformat_von_hand",
+      "gruppe": "Arbeitsweise",
+      "titel": "Feinformatierung von Hand",
+      "erklaerung": "Letzte Layoutkorrekturen macht die Lehrkraft in Word statt in weiteren Erzeugungsrunden.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "rolle_lernende",
+      "gruppe": "Didaktik",
+      "titel": "Rolle der Lernenden in Lernsituationen",
+      "erklaerung": "In welche Rolle die Lernenden im Modellbetrieb versetzt werden.",
+      "typ": "auswahl",
+      "standard": "auszubildende",
+      "optionen": [
+        "auszubildende",
+        "facharbeiter"
+      ]
+    },
+    {
+      "id": "ansprache",
+      "gruppe": "Didaktik",
+      "titel": "Ansprache in Aufträgen",
+      "erklaerung": "Anrede der Lernenden im Material.",
+      "typ": "auswahl",
+      "standard": "sie",
+      "optionen": [
+        "sie",
+        "du"
+      ]
+    },
+    {
+      "id": "ruesten.aufbau_minuten",
+      "gruppe": "Didaktik",
+      "titel": "Aufbau beim ersten Mal",
+      "erklaerung": "Minuten für Einweisung, Suchen und Aufbau, wenn eine Klasse einen Aufbau zum ersten Mal macht.",
+      "typ": "zahl",
+      "standard": 10
+    },
+    {
+      "id": "ruesten.erster_aufbau",
+      "gruppe": "Didaktik",
+      "titel": "Erster Aufbau einer Klasse",
+      "erklaerung": "Wie ein Aufbau beim ersten Mal entsteht. „gemeinsam_vorn“: die Lehrkraft baut vorn auf, die ganze Klasse steht drumherum oder sieht über Dokumentenkamera und Beamer zu; die Lernenden sagen an, welcher Baustein wohin kommt und warum, die Lehrkraft leitet und erklärt. „selbst“: Lernende bauen nach Einweisung selbst. „vorher“: Lehrkraft baut vor der Stunde auf. „fragen“: je Stunde entscheiden.",
+      "typ": "auswahl",
+      "optionen": ["fragen", "gemeinsam_vorn", "selbst", "vorher"],
+      "standard": "fragen"
+    },
+    {
+      "id": "ruesten.weitere_aufbauten",
+      "gruppe": "Didaktik",
+      "titel": "Aufbauen nach dem ersten Mal",
+      "erklaerung": "Wer Schaltungen und Messaufbauten ab dem zweiten Mal aufbaut. „selbst“: die Lernenden bauen nach eigenem Schaltplan selbst auf und wieder ab, Aufbauen ist Teil der Aufgabe und braucht Zeit im Plan (ruesten.aufbau_minuten, ruesten.abbau_minuten). „vorher“: die Lehrkraft baut vor der Stunde auf. „fragen“: je Lernsituation entscheiden.",
+      "typ": "auswahl",
+      "optionen": ["fragen", "selbst", "vorher"],
+      "standard": "fragen"
+    },
+    {
+      "id": "ruesten.freigabe_einschalten",
+      "gruppe": "Didaktik",
+      "titel": "Freigabe vor dem Einschalten",
+      "erklaerung": "Wer einen Aufbau der Lernenden prüft, bevor Spannung angelegt wird. „jeder_aufbau“: die Lehrkraft sieht jeden Aufbau vor dem Einschalten an (Wartezeit im Plan mit einer Aufgabe überbrücken). „jeder_aufbau_jahr_1_2“: so im 1. und 2. Ausbildungsjahr, ab dem 3. je Lernsituation fragen. „erster_aufbau“: nur den ersten eigenen Aufbau, danach Selbstprüfung mit Checkliste. „selbst“: Selbstprüfung mit Checkliste von Anfang an. „fragen“: je Lernsituation entscheiden.",
+      "typ": "auswahl",
+      "optionen": ["fragen", "jeder_aufbau", "jeder_aufbau_jahr_1_2", "erster_aufbau", "selbst"],
+      "standard": "fragen"
+    },
+    {
+      "id": "material.freigabefeld_auf_blatt",
+      "gruppe": "Material",
+      "titel": "Freigabefeld auf dem Arbeitsblatt",
+      "erklaerung": "Ob vor einer Messung ein Feld „Aufbau freigegeben (Lehrkraft)“ mit Kürzel auf dem Blatt steht. Aus (false): die Freigabe nach ruesten.freigabe_einschalten erfolgt mündlich; auf dem Blatt steht nur die Aufgabe vor dem Messen, die Regel „vor dem Einschalten melden“ einmal bei den Regeln am Laborplatz.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "material.schaltplaene_zeichnen",
+      "gruppe": "Material",
+      "titel": "Schaltpläne zeichnen die Lernenden",
+      "erklaerung": "Wie Lernende eigene Schaltpläne zeichnen. „von_hand“: immer selbst von Hand gezeichnet, normgerecht nach DIN EN 60617, auf Papier mit Lineal und Schaltzeichenkarte im karierten Feld des Arbeitsblatts oder mit Stift auf dem Tablet in einer Notiz- oder Mal-App (das Handwerkliche zählt, nicht das Papier); im Kurs als Foto oder Bild abgegeben; kein Schaltplan-Editor mit fertigen Symbolen; ein Zeichenprogramm nur, wenn die Lehrkraft es für eine Aufgabe ausdrücklich zulässt. „digital“: mit einem Zeichenprogramm. „fragen“: je Lernsituation entscheiden.",
+      "typ": "auswahl",
+      "optionen": ["fragen", "von_hand", "digital"],
+      "standard": "fragen"
+    },
+    {
+      "id": "material.messprotokoll_geruest",
+      "gruppe": "Material",
+      "titel": "Gerüst der Messprotokolle",
+      "erklaerung": "Wie viel ein Messprotokoll vorgibt. „abnehmend“: im ersten Zyklus Vorlage mit Kopf, Schaltplanfeld und Tabelle, deren Spalten die Lernenden selbst festlegen; im zweiten nur der Kopf; im dritten Messplan und Protokoll ganz selbst mit Checkliste der Inhalte. „fest“: immer dieselbe Vorlage mit vorgegebenen Spalten. „selbst“: von Anfang an selbst erstellt mit Checkliste. „fragen“: je Lernsituation entscheiden.",
+      "typ": "auswahl",
+      "optionen": ["fragen", "abnehmend", "fest", "selbst"],
+      "standard": "fragen"
+    },
+    {
+      "id": "ruesten.abbau_minuten",
+      "gruppe": "Didaktik",
+      "titel": "Abbau beim ersten Mal",
+      "erklaerung": "Minuten für Abbau und Wegräumen, wenn eine Klasse einen Aufbau zum ersten Mal abbaut.",
+      "typ": "zahl",
+      "standard": 5
+    },
+    {
+      "id": "methoden.vielfalt",
+      "gruppe": "Didaktik",
+      "titel": "Methodenvielfalt",
+      "erklaerung": "„gering“: wenige, wiederkehrende, zur Klasse passende Methoden (Einzel-, Partner-, Teamarbeit, Plenum, Vorführen vorn); keine aufwendigen Formen wie Gruppenpuzzle, Kreuz- oder Rotationsgruppen, Galerie; eine neue Methode nur mit Begründung aus der Klasse. Gilt für Alltagsstunden; Besuchsstunden folgen `besuch.gestaltung`. „mittel“: bewährte Formen, gelegentlich eine neue. „hoch“: bewusst wechselnde Methoden.",
+      "typ": "auswahl",
+      "optionen": ["gering", "mittel", "hoch"],
+      "standard": "mittel"
+    },
+    {
+      "id": "methoden.grundform",
+      "gruppe": "Didaktik",
+      "titel": "Grundform des Unterrichts",
+      "erklaerung": "„selbststaendig“: klassisch handlungsorientiert; die Lernenden bekommen Auftrag, Zeitrahmen und Kriterien und organisieren die Arbeit im Team selbst (wer was wann macht); die Lehrkraft berät und beobachtet, kaum vorgegebene Wechsel, Rotationen oder Vorführungen. „gemischt“: gelenkte und selbstständige Phasen im Wechsel.",
+      "typ": "auswahl",
+      "optionen": ["gemischt", "selbststaendig"],
+      "standard": "gemischt"
+    },
+    {
+      "id": "lernsituation.form",
+      "gruppe": "Didaktik",
+      "titel": "Form der Lernsituation",
+      "erklaerung": "„gelenkt“: jede Doppelstunde wird in Phasen durchgeplant. „selbststaendig_mit_geruest“: Handlungssituation zu Beginn, Arbeitsplan mit Meilensteinen, je DS kurze Orientierung und Blick auf die Teilergebnisse, dazwischen selbstständige Teamarbeit; sicherheitskritische Teile angeleitet. „selbststaendig“: nur Situation, Informationspool und Abgabetermin.",
+      "typ": "auswahl",
+      "optionen": ["gelenkt", "selbststaendig_mit_geruest", "selbststaendig"],
+      "standard": "gelenkt"
+    },
+    {
+      "id": "feedback.lernende",
+      "gruppe": "Didaktik",
+      "titel": "Feedback der Lernenden an die Lehrkraft",
+      "erklaerung": "Wann die Lernenden Rückmeldung zum Unterricht geben: „ende_ls“ nur als Gesamtfeedback am Ende einer Lernsituation, nicht in einzelnen Stunden (in der letzten Stunde eine offene Runde von 5 bis 10 min, der Evaluationsbogen liegt anonym im Moodle-Rückblick und wird außerhalb der Unterrichtszeit ausgefüllt); „je_stunde“ kurz am Ende jeder Doppelstunde; „keins“ nicht eingeplant.",
+      "typ": "auswahl",
+      "optionen": ["keins", "ende_ls", "je_stunde"],
+      "standard": "keins"
+    },
+    {
+      "id": "bewertung.wer",
+      "gruppe": "Didaktik",
+      "titel": "Wer bewertet das Handlungsergebnis",
+      "erklaerung": "„lehrkraft“: die Lehrkraft bewertet mit dem Raster, Rückmeldung in der nächsten Stunde; „team_und_lehrkraft“: Selbsteinschätzung der Teams mit demselben Raster, dann Lehrkraft; „person_und_lehrkraft“: Selbsteinschätzung jeder Person ohne Note, Lehrkraft bewertet das Teamergebnis.",
+      "typ": "auswahl",
+      "optionen": ["lehrkraft", "team_und_lehrkraft", "person_und_lehrkraft"],
+      "standard": "team_und_lehrkraft"
+    },
+    {
+      "id": "besuch.gestaltung",
+      "gruppe": "Didaktik",
+      "titel": "Gestaltung von Besuchsstunden",
+      "erklaerung": "„aktiv“: Besuchsstunden (EUB, KUB, FLB, GUB, PU) laufen aktiver als Alltagsstunden: Methoden, Realobjekte aus der Elektrotechnik, Live-Demonstration, bewusst inszeniert; die Grenzen aus `methoden.vielfalt` gelten dort nicht. „wie_alltag“: wie Alltagsstunden.",
+      "typ": "auswahl",
+      "optionen": ["wie_alltag", "aktiv"],
+      "standard": "wie_alltag"
+    },
+    {
+      "id": "alltag.vorgabe",
+      "gruppe": "Didaktik",
+      "titel": "Vorgaben für Alltagsstunden",
+      "erklaerung": "„ausbildungslehrkraft“: Alltagsstunden enthalten nur, was die Ausbildungslehrkraft oder Ansprechperson verlangt (Form der Planung, Abgaben); die Stundenplanung fragt danach, bevor sie mehr plant. „pipeline“: Umfang nach Pipeline-Standard.",
+      "typ": "auswahl",
+      "optionen": ["pipeline", "ausbildungslehrkraft"],
+      "standard": "pipeline"
+    },
+    {
+      "id": "lernsituation.planungstiefe",
+      "gruppe": "Didaktik",
+      "titel": "Planungstiefe einer selbstständigen Lernsituation",
+      "erklaerung": "„arbeitsplan_kurzskizze“: Arbeitsplan der LS für die Lernenden (Meilensteine mit spätestem Termin, Material, angeleitete Teile, Kriterien) und je Doppelstunde eine kurze Verlaufsplanung (eine Seite, Seminarspalten: Phase, Zeit, Inhalt, Sozialform, Medien; die selbstständige Teamarbeit als ein Block mit Beratungspunkten), die auch die Ausbildungslehrkraft bekommt, zusammen mit dem Material; volle Verlaufsskizzen mit allen Begründungen nur für Besuchsstunden. „voll“: Verlaufsskizze je Doppelstunde.",
+      "typ": "auswahl",
+      "optionen": ["voll", "arbeitsplan_kurzskizze", "nur_arbeitsplan"],
+      "standard": "voll"
+    },
+    {
+      "id": "einstieg.realobjekt",
+      "gruppe": "Material",
+      "titel": "Echtes Objekt im Einstieg",
+      "erklaerung": "„wenn_vorhanden_sonst_foto“: Kommt im Einstieg ein Gerät vor, bringt die Lehrkraft das echte Gerät mit, wenn die Schule es hat; sonst zeigt sie ein echtes Foto (mit Typenschild vergrößert) am Beamer zusammen mit der Handlungssituation. Pipeline 2 sucht dafür ein echtes Gerät und gleicht die Daten im Material daran an. „foto“: immer Foto.",
+      "typ": "auswahl",
+      "optionen": ["foto", "wenn_vorhanden_sonst_foto"],
+      "standard": "foto"
+    },
+    {
+      "id": "lernsituation.sozialform",
+      "gruppe": "Didaktik",
+      "titel": "Sozialform in selbstständigen Lernsituationen",
+      "erklaerung": "„einzel_partner_frei“: jede Person arbeitet den Lernpfad allein ab, Partnerarbeit und Absprechen ergeben sich frei; Arbeitsplan und Ergebnis je Person. „team“: feste Teams mit gemeinsamem Arbeitsplan und Teamergebnis.",
+      "typ": "auswahl",
+      "optionen": ["team", "einzel_partner_frei"],
+      "standard": "team"
+    },
+    {
+      "id": "moodle.sternebuch",
+      "gruppe": "Moodle",
+      "titel": "Sternebuch (Sterne eintauschen und verschenken)",
+      "erklaerung": "An: ganz oben eine Datenbank-Aktivität mit Skript. Lernende tauschen Sterne gegen Belohnungen der Preisliste, verschenken sie an Mitschüler (halbiert: 10 ab, 5 kommen an) oder buchen ihren Anteil an einer Klassenbelohnung; jede Buchung gilt erst nach Freigabe der Lehrkraft. Die Medaille richtet sich weiter nach den verdienten Sternen. Aus: Sterne nur als Zähler und für die Medaille.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.sterne_konto",
+      "gruppe": "Moodle",
+      "titel": "Sternekonto über einen Kurs oder das ganze Lernfeld",
+      "erklaerung": "„kurs“: jeder Themenkurs hat sein eigenes Konto. „lernfeld“: ein Konto über alle Themenkurse des Lernfelds, das Sternebuch liegt im Lernfeldkurs und zählt die eigenen Bewertungen aller Themenkurse zusammen.",
+      "typ": "auswahl",
+      "optionen": ["kurs", "lernfeld"],
+      "standard": "kurs"
+    },
+    {
+      "id": "moodle.helferstern",
+      "gruppe": "Moodle",
+      "titel": "Helfer-Stern",
+      "erklaerung": "Die Lehrkraft kann im Sternebuch einen Stern buchen, wenn jemand einer Mitschülerin oder einem Mitschüler etwas erklärt hat (belohnt Kooperation).",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.klassenbalken",
+      "gruppe": "Moodle",
+      "titel": "Klassenbalken statt Rangliste",
+      "erklaerung": "Ein gemeinsamer Balken zeigt, wie viele Sterne die Klasse zusammen hat und wie weit es bis zur nächsten Klassenbelohnung ist; keine Rangliste einzelner Lernender.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.sterne_verfall",
+      "gruppe": "Moodle",
+      "titel": "Verfall der Sterne",
+      "erklaerung": "„nie“: Sterne bleiben stehen. „schuljahresende“: nicht eingelöste Sterne verfallen am Ende des Schuljahres.",
+      "typ": "auswahl",
+      "optionen": ["nie", "schuljahresende"],
+      "standard": "nie"
+    },
+    {
+      "id": "moodle.im_unterricht",
+      "gruppe": "Moodle",
+      "titel": "Rolle des Kurses im Unterricht",
+      "erklaerung": "„begleiter“: die Lernenden arbeiten auf Papier, der Kurs enthält Auftrag, Infoseiten, Selbsttests und die Abgabe als Foto. „arbeitsort“: die Lernenden arbeiten im Unterricht am Gerät im Kurs, jede Aufgabe ist eine Aktivität; Teile im Raum (Messen, Rollenspiel) stehen als Schritt mit Anleitung. „nachbereitung“: kein Moodle im Unterricht, der Kurs dient zum Nacharbeiten und Üben.",
+      "typ": "auswahl",
+      "optionen": ["begleiter", "arbeitsort", "nachbereitung"],
+      "standard": "begleiter"
+    },
+    {
+      "id": "moodle.abschlusstest_zeitpunkt",
+      "gruppe": "Moodle",
+      "titel": "Zeitpunkt des Abschlusstests",
+      "erklaerung": "„beginn_naechste_ls“: die ersten 25 Minuten der nächsten Lernsituation. „ende_letzte_ds“: die letzten 25 Minuten der letzten Doppelstunde (ist sie eine Besuchsstunde, in der nächsten Alltagsstunde). „ohne_feste_zeit“: freigeschaltet bis zu einem Termin, ohne feste Unterrichtszeit.",
+      "typ": "auswahl",
+      "optionen": ["beginn_naechste_ls", "ende_letzte_ds", "ohne_feste_zeit"],
+      "standard": "beginn_naechste_ls"
+    },
+    {
+      "id": "lernsituation.sicherung_merkkasten",
+      "gruppe": "Didaktik",
+      "titel": "Sicherung der Merkkästen in selbstständigen Lernsituationen",
+      "erklaerung": "Wie sichergestellt wird, dass in den selbst ausgefüllten Merkkästen die richtige Formel steht. „keine“: keine eigene Sicherung. „abhaken“: die Lehrkraft hakt jeden Kasten beim Rundgang ab. „moodle“: Selbstkontrolle mit aufklappbarer Lösung im Kurs. „tafel_ende_ds“: am Ende jeder Doppelstunde sammelt die Lehrkraft die neuen Formeln an der Tafel (etwa 5 Minuten), alle verbessern ihren Kasten.",
+      "typ": "auswahl",
+      "optionen": ["keine", "abhaken", "moodle", "tafel_ende_ds"],
+      "standard": "keine"
+    },
+    {
+      "id": "lernsituation.kontrolle",
+      "gruppe": "Didaktik",
+      "titel": "Kontrolle in selbstständigen Lernsituationen",
+      "erklaerung": "„lehrkraft_ende_ds“: die Lehrkraft kontrolliert am Ende jeder Doppelstunde den Stand jeder Person und sieht Ergebnisse stichprobenartig nach; kein Kontrollblatt. „kontrollblatt“: Kontrollblatt mit Endwerten am Pult nach jedem Arbeitsblatt.",
+      "typ": "auswahl",
+      "optionen": ["kontrollblatt", "lehrkraft_ende_ds"],
+      "standard": "kontrollblatt"
+    },
+    {
+      "id": "freigabe.leseseite",
+      "gruppe": "Arbeitsweise",
+      "titel": "Leseseite vor jeder Freigabe",
+      "erklaerung": "Vor jeder Freigabe steht eine Leseseite (höchstens eine Seite): was neu ist, was die KI selbst entschieden hat, wo sie unsicher ist, je mit Verweis auf die Stelle. Die Lehrkraft liest nur diese Stellen. Dazu zählt die KI die grundsätzlichen Korrekturen je Freigabe (.daten/freigaben.json); nach zwei Freigaben derselben Art ohne grundsätzliche Korrektur reicht dort ein Gesamtblick.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "lernsituation.zeitplan_lernende",
+      "gruppe": "Didaktik",
+      "titel": "Lernende planen ihre Zeit selbst",
+      "erklaerung": "Ja: im Arbeitsplan tragen die Lernenden ein, bis wann sie welches Blatt schaffen. Nein: die Zeitplanung ist Aufgabe der Lehrkraft; der Arbeitsplan zeigt nur Meilensteine, Arbeitsblätter, Abgaben und Felder zum Abhaken.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "material.merkkasten",
+      "gruppe": "Material",
+      "titel": "Farbe des Merkkastens",
+      "erklaerung": "Neu eingeführte Formeln und Einheitengleichungen stehen in einem Merkkasten (Kennwort MERKE, Formeln groß und zentriert). Farbe des Rands: blau (Schulfarbe) oder rot.",
+      "typ": "auswahl",
+      "optionen": ["blau", "rot"],
+      "standard": "blau"
+    },
+    {
+      "id": "material.merkkasten_schueler",
+      "gruppe": "Material",
+      "titel": "Merkkasten in der Schülerfassung",
+      "erklaerung": "Wie ein Merkkasten auf dem Papier für die Lernenden aussieht. Lückenformel: die Formel steht mit Kästchen, die Lernenden ergänzen sie. Leer mit Auftrag: der Kasten ist kariert und leer, darüber steht, was einzutragen ist (zum Beispiel das ohmsche Gesetz in allen drei Formen und die Einheitengleichung). Ausgefüllt: Kästen mit Formeln stehen fertig da wie in der Gesamtfassung, Kästen ohne Formeln bleiben leer mit Auftrag.",
+      "typ": "auswahl",
+      "optionen": ["lueckenformel", "leer_mit_auftrag", "ausgefuellt"],
+      "standard": "lueckenformel"
+    },
+    {
+      "id": "material.formeln_als_bruch",
+      "gruppe": "Material",
+      "titel": "Formeln mit echtem Bruchstrich",
+      "erklaerung": "Divisionen in Formeln stehen als echter Bruch (Zähler über Nenner, Word-Formel), nicht mit Schrägstrich, damit die Lernenden früh mit Brüchen arbeiten: I = Q über t. Gilt in Arbeitsblättern, Merkkästen und Erwartungshorizonten.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "reserve_minuten",
+      "gruppe": "Didaktik",
+      "titel": "Didaktische Reserve je Stunde",
+      "erklaerung": "Minuten Reserve in jeder Stunde; passt sich über Nachbereitungen an.",
+      "typ": "zahl",
+      "standard": 5
+    },
+    {
+      "id": "hausaufgaben",
+      "gruppe": "Didaktik",
+      "titel": "Hausaufgaben",
+      "erklaerung": "Ob Hausaufgaben eingeplant werden.",
+      "typ": "auswahl",
+      "standard": "nach_bedarf",
+      "optionen": [
+        "nach_bedarf",
+        "keine"
+      ]
+    },
+    {
+      "id": "innerer_zyklus",
+      "gruppe": "Didaktik",
+      "titel": "Innere vollständige Handlung",
+      "erklaerung": "Ob es innerhalb einer Lernsituation eigene kleine Handlungszyklen gibt (informieren, planen, entscheiden, durchführen, kontrollieren, bewerten; Planen wird nie übersprungen).",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "innerer_zyklus.umfang",
+      "gruppe": "Didaktik",
+      "titel": "Umfang eines inneren Zyklus",
+      "erklaerung": "je Stunde: jede Doppelstunde ist ein Zyklus · je Arbeitsschritt: ein Zyklus umfasst 1 bis 3 Doppelstunden, eine Lernsituation hat 2 bis 3 Zyklen.",
+      "typ": "auswahl",
+      "standard": "je_stunde",
+      "optionen": [
+        "je_stunde",
+        "je_arbeitsschritt"
+      ]
+    },
+    {
+      "id": "handlungsprodukt_praktisch",
+      "gruppe": "Didaktik",
+      "titel": "Praktisches Handlungsprodukt",
+      "erklaerung": "Lernende stellen in jeder Lernsituation möglichst etwas her, nicht nur Berichte.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "differenzierung.niveaustufen",
+      "gruppe": "Didaktik",
+      "titel": "Niveaustufen",
+      "erklaerung": "Bezeichnungen der Stufen; freie Wahl, zählt nicht für die Note.",
+      "typ": "liste",
+      "standard": [
+        "Beginner",
+        "Könner",
+        "Experte"
+      ]
+    },
+    {
+      "id": "differenzierung.hilfekarten_stufen",
+      "gruppe": "Didaktik",
+      "titel": "Hilfekarten je Aufgabe",
+      "erklaerung": "Anzahl gestufter Hilfekarten (Tipp, Ansatz, Lösungsweg).",
+      "typ": "zahl",
+      "standard": 3
+    },
+    {
+      "id": "differenzierung.je_stunde_waehlen",
+      "gruppe": "Didaktik",
+      "titel": "Differenzierung je Stunde neu wählen",
+      "erklaerung": "Nichts gilt automatisch; das System schlägt vor, die Lehrkraft wählt.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "moodle_endprodukt",
+      "gruppe": "Didaktik",
+      "titel": "Moodle als Endprodukt",
+      "erklaerung": "Arbeitsphasen so planen, dass sie später selbstgesteuert in Moodle laufen.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "rlc_ausblick",
+      "gruppe": "Didaktik",
+      "titel": "RLC früh als Ausblick",
+      "erklaerung": "Früh an das Thema RLC heranführen (als Additum).",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "form.schrift",
+      "gruppe": "Form",
+      "titel": "Schrift im Entwurf",
+      "erklaerung": "Seminarvorgabe: Arial 11 oder Times New Roman 12.",
+      "typ": "auswahl",
+      "standard": "Arial 11",
+      "optionen": [
+        "Arial 11",
+        "Times New Roman 12"
+      ]
+    },
+    {
+      "id": "form.blocksatz",
+      "gruppe": "Form",
+      "titel": "Blocksatz im Fließtext",
+      "erklaerung": "",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "form.keine_gedankenstriche",
+      "gruppe": "Form",
+      "titel": "Keine Gedankenstriche",
+      "erklaerung": "Keine Gedankenstriche im Fließtext, kurze klare Sätze. Gilt für Planung und Material (auch Beschriftungen und Tabellen); Pipeline 2 prüft es automatisch.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "form.absatzstil",
+      "gruppe": "Form",
+      "titel": "Absatzstil",
+      "erklaerung": "Viele kurze oder wenige längere Absätze.",
+      "typ": "auswahl",
+      "standard": "normal",
+      "optionen": [
+        "normal",
+        "wenige_lange"
+      ]
+    },
+    {
+      "id": "form.literatur",
+      "gruppe": "Form",
+      "titel": "Zitierstil",
+      "erklaerung": "",
+      "typ": "auswahl",
+      "standard": "APA 7",
+      "optionen": [
+        "APA 7"
+      ]
+    },
+    {
+      "id": "form.literatur_umfang",
+      "gruppe": "Form",
+      "titel": "Umfang der Literatur",
+      "erklaerung": "Wie umfangreich zitiert wird.",
+      "typ": "auswahl",
+      "standard": "normal",
+      "optionen": [
+        "normal",
+        "ausfuehrlich"
+      ]
+    },
+    {
+      "id": "form.verlaufsskizze",
+      "gruppe": "Form",
+      "titel": "Format der Verlaufsskizze",
+      "erklaerung": "",
+      "typ": "auswahl",
+      "standard": "quer",
+      "optionen": [
+        "quer",
+        "hoch"
+      ]
+    },
+    {
+      "id": "form.sequenzierung",
+      "gruppe": "Form",
+      "titel": "Format der Sequenzierung",
+      "erklaerung": "",
+      "typ": "auswahl",
+      "standard": "quer",
+      "optionen": [
+        "quer",
+        "hoch",
+        "hoch_getauscht"
+      ]
+    },
+    {
+      "id": "seminar",
+      "gruppe": "Seminar",
+      "titel": "Studienseminar",
+      "erklaerung": "Seminarprofil mit Vorgaben, Besuchsformen, Versicherung, KI-Fußnote und Seitenbudget (Ordner seminare/<id>/ im Werkzeug von Pipeline 1). „keins“: noch nicht gewählt; Entwürfe für Besuche brauchen ein Seminarprofil.",
+      "typ": "auswahl",
+      "standard": "keins",
+      "optionen": [
+        "keins",
+        "osnabrueck-bbs"
+      ]
+    },
+    {
+      "id": "seminar.fehlvorstellungen_im_entwurf",
+      "gruppe": "Seminar",
+      "titel": "Fehlvorstellungen im Entwurf",
+      "erklaerung": "Ob Fehlvorstellungen im abgegebenen Entwurf erscheinen.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "seminar.afb_im_entwurf",
+      "gruppe": "Seminar",
+      "titel": "Anforderungsbereiche im Entwurf",
+      "erklaerung": "Ob AFB in der Kompetenztabelle stehen.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "schule.name",
+      "gruppe": "Schule",
+      "titel": "Name der Schule",
+      "erklaerung": "So steht die Schule im Kopf jedes Materials (Eigenname, auch mit Gedankenstrich); genau in dieser Schreibweise.",
+      "typ": "text",
+      "standard": "BBS Musterstadt"
+    },
+    {
+      "id": "schule.ort",
+      "gruppe": "Schule",
+      "titel": "Ort der Schule",
+      "erklaerung": "Schulort; Region für Modellbetrieb und Kunden in Handlungssituationen.",
+      "typ": "text",
+      "standard": "Musterstadt"
+    },
+    {
+      "id": "schule.logo",
+      "gruppe": "Schule",
+      "titel": "Schullogo im Material",
+      "erklaerung": "Bilddatei im Arbeitsbereich (Pfad relativ dazu) für Materialköpfe, Karten, Folien und Simulationen. Leer = neutrales Platzhalter-Logo des Werkzeugs.",
+      "typ": "text",
+      "standard": ""
+    },
+    {
+      "id": "fach.elektrotechnik",
+      "gruppe": "Fach und Quellen",
+      "titel": "Fachpaket Elektrotechnik",
+      "erklaerung": "Schaltet die Elektro-Werkzeuge und -Prüfer ein (Stromlauf-, Installations- und Übersichtspläne, Technologieschema, Simulationen, Rüst- und Laborprüfung der Verlaufsskizze, Normen wie DIN EN 60617). Aus: diese Skills und Prüfungen bleiben stumm.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "modellbetrieb.name",
+      "gruppe": "Fach und Quellen",
+      "titel": "Name des Modellbetriebs",
+      "erklaerung": "Fiktiver Betrieb in Betriebsformularen und Chat-Köpfen des Materials (optional; ohne eigenen Modellbetrieb ein neutraler Musterbetrieb).",
+      "typ": "text",
+      "standard": "Musterbetrieb GmbH"
+    },
+    {
+      "id": "faecher",
+      "gruppe": "Fach und Quellen",
+      "titel": "Fächer",
+      "erklaerung": "Berufliche Fachrichtung und Unterrichtsfach.",
+      "typ": "liste",
+      "standard": []
+    },
+    {
+      "id": "modellbetrieb",
+      "gruppe": "Fach und Quellen",
+      "titel": "Modellbetrieb",
+      "erklaerung": "Pfad zum Modellbetrieb im Arbeitsbereich, je Beruf.",
+      "typ": "text",
+      "standard": ""
+    },
+    {
+      "id": "quellen.standard",
+      "gruppe": "Fach und Quellen",
+      "titel": "Standardquellen",
+      "erklaerung": "Eigene Literatur, in der zuerst gesucht wird.",
+      "typ": "liste",
+      "standard": []
+    },
+    {
+      "id": "quellen.web",
+      "gruppe": "Fach und Quellen",
+      "titel": "Webquellen",
+      "erklaerung": "Welche Internetquellen erlaubt sind.",
+      "typ": "auswahl",
+      "standard": "nur_anerkannt",
+      "optionen": [
+        "nur_anerkannt",
+        "alle_mit_pruefung"
+      ]
+    },
+    {
+      "id": "material.ein_niveau",
+      "gruppe": "Material",
+      "titel": "Ein Niveau statt Niveaustufen",
+      "erklaerung": "Material in einer Fassung für alle; Unterstützung über gestufte Hilfekarten zum Holen und freiwillige Zusatzaufgaben statt Beginner/Könner/Experte-Fassungen.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.problemorientiert",
+      "gruppe": "Material",
+      "titel": "Problemorientierter Einstieg",
+      "erklaerung": "Material nimmt nichts vorweg: erst das Problem, dann informieren und planen die Lernenden selbst; keine Anweisung, die Methode oder Lösungsweg vorgibt.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "material.effektive_lernzeit",
+      "gruppe": "Material",
+      "titel": "Effektive Lernzeit je Doppelstunde (min)",
+      "erklaerung": "Von 90 min nutzbare Lernzeit nach Ankommen und Einstieg, Abschluss und didaktischer Reserve; die Stundenplanung plant diese Puffer im Verlauf ein, der Lesebericht von Pipeline 2 warnt, wenn das Material die Zeit überlädt. Keine feste Obergrenze für Anlagen.",
+      "typ": "zahl",
+      "standard": 80
+    },
+    {
+      "id": "material.fotos_aktuell",
+      "gruppe": "Material",
+      "titel": "Fotos zeigen aktuelle Geräte",
+      "erklaerung": "Betriebsmittel auf Fotos ganz und erkennbar, als aktuelle Modelle aus dem Handel; Altbestand nur auf ausdrücklichen Wunsch.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "material.fotos_ab_baujahr",
+      "gruppe": "Material",
+      "titel": "Fotos ab Baujahr",
+      "erklaerung": "Ungefähres Mindestbaujahr der gezeigten Geräte.",
+      "typ": "zahl",
+      "standard": 2015
+    },
+    {
+      "id": "material.produktfotos",
+      "gruppe": "Material",
+      "titel": "Produktfotos von Hersteller und Handel",
+      "erklaerung": "Ob Hersteller- und Händlerfotos mit Quelle genutzt werden dürfen (nur im geschlossenen Kurs, § 60a UrhG) oder nur frei lizenzierte Bilder.",
+      "typ": "auswahl",
+      "standard": "nur_frei",
+      "optionen": [
+        "nur_frei",
+        "mit_quelle_geschlossen"
+      ]
+    },
+    {
+      "id": "material.abbildungen_aus_fachbuechern",
+      "gruppe": "Material",
+      "titel": "Abbildungen aus Fachbüchern übernehmen",
+      "erklaerung": "Abbildungen und Schemata aus Fachbüchern dürfen übernommen, nachgebessert oder nachgezeichnet werden; die Quelle steht immer an der Abbildung und im Literaturverzeichnis.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.sprachaufnahmen",
+      "gruppe": "Material",
+      "titel": "Sprachnachrichten und Sprachaufnahmen",
+      "erklaerung": "Ob Aufträge als Sprachnachricht (Sprachausgabe) kommen dürfen oder schriftlich (Messenger, Notiz, E-Mail).",
+      "typ": "auswahl",
+      "standard": "erlaubt",
+      "optionen": [
+        "erlaubt",
+        "vermeiden"
+      ]
+    },
+    {
+      "id": "material.positiv_formulieren",
+      "gruppe": "Material",
+      "titel": "Keine doppelte Verneinung",
+      "erklaerung": "Fragen und Aufträge positiv formulieren, auch gegen den Wortlaut des Auftrags.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "material.rollenspiel_team_am_tisch",
+      "gruppe": "Material",
+      "titel": "Rollenspiel: ganzes Team am Tisch",
+      "erklaerung": "Ein Team mit Rolle sitzt vollständig am Tisch; nur Beobachter sitzen außen.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "material.schrift_min_pt",
+      "gruppe": "Material",
+      "titel": "Kleinste Schrift (pt)",
+      "erklaerung": "Kleinste Schriftgröße im Material außer Fuß- und Quellenzeilen.",
+      "typ": "zahl",
+      "standard": 10
+    },
+    {
+      "id": "material.notenschluessel",
+      "gruppe": "Material",
+      "titel": "Notenschlüssel für Bewertungsbögen",
+      "erklaerung": "Ob die Pipeline zu Bewertungsbögen einen Notenschlüssel als XLSX für die Lehrkraft baut.",
+      "typ": "auswahl",
+      "standard": "keiner",
+      "optionen": [
+        "keiner",
+        "ihk"
+      ]
+    },
+    {
+      "id": "material.notenschluessel_punkte",
+      "gruppe": "Material",
+      "titel": "Punkte je Kriterium",
+      "erklaerung": "Wie Stufen eines vierstufigen Rasters in Punkte umgerechnet werden.",
+      "typ": "auswahl",
+      "standard": "stufe_minus_1",
+      "optionen": [
+        "stufe_minus_1",
+        "stufe"
+      ]
+    },
+    {
+      "id": "material.ki_fussnote",
+      "gruppe": "Material",
+      "titel": "KI-Fußnote auf jedem Material",
+      "erklaerung": "Hinweis auf KI-Unterstützung auf jedem KI-gestützten Material (je nach Seminarvorgabe).",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "material.kopf_zentriert",
+      "gruppe": "Material",
+      "titel": "Schulkopf zentriert",
+      "erklaerung": "Schule, Lernfeld und Lernsituation im Kopf jedes Materials zentriert statt linksbündig.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.infoblatt_wozu",
+      "gruppe": "Material",
+      "titel": "Infoblatt mit Zeile „Wozu?“",
+      "erklaerung": "Unter dem Titel des Infoblatts steht, wozu es dient. Ohne die Zeile ist das Infoblatt ein reiner Nachschlagetext.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "material.abbildungen_zentriert",
+      "gruppe": "Material",
+      "titel": "Abbildungen und Tabellen mittig",
+      "erklaerung": "Abbildungen und Tabellen, die allein in einem Abschnitt stehen, samt Beschriftung mittig statt linksbündig.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.modellbezeichnungen_verboten",
+      "gruppe": "Material",
+      "titel": "Keine Modellbezeichnungen in Dateien",
+      "erklaerung": "Keine Namen von KI-Modellen in Dateien, die gespeichert oder geteilt werden.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "lehrkraft.name",
+      "gruppe": "Arbeitsweise",
+      "titel": "Name der Lehrkraft",
+      "erklaerung": "So steht der Name in Hinweisen wie „Erstellt von … mit Hilfe von künstlicher Intelligenz“; genau in dieser Schreibweise.",
+      "typ": "text",
+      "standard": ""
+    },
+    {
+      "id": "lehrkraft.anrede",
+      "gruppe": "Arbeitsweise",
+      "titel": "Anrede als Ansprechpartner",
+      "erklaerung": "So stehen Sie als Ansprechpartner im Kurs-Steckbrief, z. B. „Frau Muster“; genau in dieser Schreibweise.",
+      "typ": "text",
+      "standard": ""
+    },
+    {
+      "id": "lehrkraft.email",
+      "gruppe": "Arbeitsweise",
+      "titel": "Dienstliche E-Mail-Adresse",
+      "erklaerung": "Kontaktweg im Kurs-Steckbrief; nur die dienstliche Adresse der Schule.",
+      "typ": "text",
+      "standard": ""
+    },
+    {
+      "id": "moodle.kachelformat",
+      "gruppe": "Moodle",
+      "titel": "Kachelformat",
+      "erklaerung": "Themenkurse im Kachelformat (Plugin format_tiles), wenn die Schule es hat; sonst Themenformat.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.schulfarben",
+      "gruppe": "Moodle",
+      "titel": "Schulfarben",
+      "erklaerung": "Hauptfarben als Hexwerte (erste = Akzent, zweite = Zweitfarbe) für Seiten, Infoblätter, Simulationen.",
+      "typ": "liste",
+      "standard": []
+    },
+    {
+      "id": "moodle.kurstexte",
+      "gruppe": "Moodle",
+      "titel": "Kurstexte",
+      "erklaerung": "Wie viel die Kurstexte führen.",
+      "typ": "auswahl",
+      "standard": "knapp",
+      "optionen": [
+        "knapp",
+        "lernpfad",
+        "modellbetrieb"
+      ]
+    },
+    {
+      "id": "moodle.freischaltung",
+      "gruppe": "Moodle",
+      "titel": "Freischaltung der Abschnitte",
+      "erklaerung": "Wer Abschnitte öffnet: die Lehrkraft, automatisch nach Abschluss des vorigen, oder alles offen.",
+      "typ": "auswahl",
+      "standard": "lehrkraft",
+      "optionen": [
+        "lehrkraft",
+        "automatisch",
+        "offen"
+      ]
+    },
+    {
+      "id": "moodle.eingangsdiagnose",
+      "gruppe": "Moodle",
+      "titel": "Eingangsdiagnose",
+      "erklaerung": "Am Anfang jeder Lernsituation Selbsteinschätzung und kurzer Eingangstest mit Fehlvorstellungen.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "moodle.generalprobe",
+      "gruppe": "Moodle",
+      "titel": "Generalprobe vor dem Abschlusstest",
+      "erklaerung": "Übungsfassung des Abschlusstests mit beliebig vielen Versuchen.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "moodle.abschlusstest_versuche",
+      "gruppe": "Moodle",
+      "titel": "Versuche im bewerteten Abschlusstest",
+      "erklaerung": "Anzahl der Versuche im bewerteten Abschlusstest.",
+      "typ": "zahl",
+      "standard": 1
+    },
+    {
+      "id": "moodle.medaillen",
+      "gruppe": "Moodle",
+      "titel": "Medaillen und Abzeichen",
+      "erklaerung": "Medaillen Grün/Bronze/Silber/Gold mit genau einem automatischen Abzeichen aus dem bewerteten Abschlusstest.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "moodle.medaillen_grenzen",
+      "gruppe": "Moodle",
+      "titel": "Medaillen-Grenzen in Prozent",
+      "erklaerung": "Untergrenzen für Grün, Bronze, Silber, Gold.",
+      "typ": "liste",
+      "standard": [
+        1,
+        50,
+        81,
+        92
+      ]
+    },
+    {
+      "id": "moodle.tests_ohne_glossar",
+      "gruppe": "Moodle",
+      "titel": "Tests ohne Glossar",
+      "erklaerung": "Glossar-Verlinkung in allen Tests abschalten.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "moodle.gruppenabgabe",
+      "gruppe": "Moodle",
+      "titel": "Gruppenabgaben",
+      "erklaerung": "Wann eine Abgabe als Gruppenabgabe gebaut wird.",
+      "typ": "auswahl",
+      "standard": "nur_gemeinsames_ergebnis",
+      "optionen": [
+        "nur_gemeinsames_ergebnis",
+        "nie",
+        "immer"
+      ]
+    },
+    {
+      "id": "moodle.videos",
+      "gruppe": "Moodle",
+      "titel": "Erklärvideos",
+      "erklaerung": "Ob Erklärvideos gesucht und im Grilling zur Auswahl gestellt werden.",
+      "typ": "auswahl",
+      "standard": "auswahl_im_grilling",
+      "optionen": [
+        "auswahl_im_grilling",
+        "keine"
+      ]
+    },
+    {
+      "id": "moodle.lernstand_dashboard",
+      "gruppe": "Moodle",
+      "titel": "Lernstand-Dashboard",
+      "erklaerung": "Dashboard für die Lehrkraft im verborgenen Lehrkraftbereich.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "moodle.schullogo",
+      "gruppe": "Moodle",
+      "titel": "Schullogo",
+      "erklaerung": "Bilddatei im Arbeitsbereich (Pfad relativ dazu); steht unten im Abschnitt „Allgemein“ neben dem KI-Hinweis. Leer = kein Logo.",
+      "typ": "text",
+      "standard": ""
+    },
+    {
+      "id": "moodle.ki_hinweis",
+      "gruppe": "Moodle",
+      "titel": "KI-Hinweis im Kurs",
+      "erklaerung": "Einmal unten im Abschnitt „Allgemein“ ein Satz für Lernende: „Dieser Kurs wurde von <Anrede> mit Hilfe von künstlicher Intelligenz erstellt und geprüft.“ Werkzeug, Version und Datum im Material für Lehrkräfte.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.steckbrief",
+      "gruppe": "Moodle",
+      "titel": "Steckbrief im Abschnitt „Allgemein“",
+      "erklaerung": "Vier Zeilen: Lernfeld, Umfang, Ergebnis, Ansprechpartner (Anrede und E-Mail aus dem Profil).",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.handlungssituation",
+      "gruppe": "Moodle",
+      "titel": "Ort der Handlungssituation",
+      "erklaerung": "kurz_in_allgemein: zwei Sätze im Abschnitt „Allgemein“, Einstieg ohne Situation (bisheriges Verhalten). einstiegskachel: ganze Situation oben in Kachel 1, danach Selbsteinschätzung und Eingangstest; in „Allgemein“ nur ein bis zwei Sätze. allgemein: ganze Situation im Abschnitt „Allgemein“.",
+      "typ": "auswahl",
+      "standard": "kurz_in_allgemein",
+      "optionen": [
+        "kurz_in_allgemein",
+        "einstiegskachel",
+        "allgemein"
+      ]
+    },
+    {
+      "id": "moodle.kachelnummern",
+      "gruppe": "Moodle",
+      "titel": "Kacheln nummerieren",
+      "erklaerung": "Kacheln 1, 2, 3 … vor dem Titel; „Material für Lehrkräfte“ ohne Nummer, danach lückenlos weiter.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.kachelbilder",
+      "gruppe": "Moodle",
+      "titel": "Kachelbilder",
+      "erklaerung": "Herkunft des Bildes je Kachel: KI-Illustration, freie Fotos mit Quelle, eigene Fotos sonst Symbole, oder keine (Standardsymbol).",
+      "typ": "auswahl",
+      "standard": "keine",
+      "optionen": [
+        "ki_illustration",
+        "freie_fotos",
+        "eigene_fotos_sonst_symbole",
+        "keine"
+      ]
+    },
+    {
+      "id": "moodle.kachelbilder_stil",
+      "gruppe": "Moodle",
+      "titel": "Stil der Kachelbilder",
+      "erklaerung": "Zeichenstil bei KI-Illustrationen, einheitlich je Kurs; Technik nur angedeutet, keine Schaltpläne.",
+      "typ": "auswahl",
+      "standard": "flach",
+      "optionen": [
+        "flach",
+        "fotorealistisch",
+        "skizze"
+      ]
+    },
+    {
+      "id": "moodle.schrittnummern",
+      "gruppe": "Moodle",
+      "titel": "Schrittnummern an den Aktivitäten",
+      "erklaerung": "Jede Aktivität trägt die Nummer ihres Arbeitsschritts aus dem Auftrag („Schritt 2 · …“), ein Schritt = eine Hauptaktivität; Hilfen heißen „Hilfe zu Schritt n“ und stehen unter ihrem Schritt.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.infoblaetter_popup",
+      "gruppe": "Moodle",
+      "titel": "Infoblätter als Pop-up",
+      "erklaerung": "Infoseiten (auch aus Word), Infoblätter und Hilfekarten öffnen sich in einem eigenen Fenster mit Download-Knopf, damit sie neben der Aufgabe liegen können.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.allgemein_stil",
+      "gruppe": "Moodle",
+      "titel": "Aussehen des Abschnitts „Allgemein“",
+      "erklaerung": "schlicht: Text untereinander, Logo und KI-Hinweis als einfache Zeilen (bisheriges Verhalten). schulfarben: oben ein Begrüßungskasten in der ersten Schulfarbe mit der Kurzbeschreibung, unten Logo und KI-Hinweis zusammen in einer Karte vor zwei Farbflächen.",
+      "typ": "auswahl",
+      "standard": "schlicht",
+      "optionen": [
+        "schlicht",
+        "schulfarben"
+      ]
+    },
+    {
+      "id": "moodle.schrittnummern_mit_kachel",
+      "gruppe": "Moodle",
+      "titel": "Schrittnummern mit Kachelnummer",
+      "erklaerung": "Schritte heißen „Schritt 2.1 · …“ (Kachel 2, Schritt 1) statt „Schritt 1 · …“; Hilfen „Hilfe zu 2.1 · …“.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.tests_zwei_versuche",
+      "gruppe": "Moodle",
+      "titel": "Tests mit zweitem Versuch",
+      "erklaerung": "Zu jedem Test mit Sternen entsteht ein zweiter Test „…, zweiter Versuch“; Hilfen öffnen sich nach einem Fehlversuch.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.bestehen_prozent",
+      "gruppe": "Moodle",
+      "titel": "Bestehensgrenze der Tests in Prozent",
+      "erklaerung": "Ab diesem Anteil gilt ein Test als bestanden. 0 = keine Bestehensgrenze (bisheriges Verhalten).",
+      "typ": "zahl",
+      "standard": 0
+    },
+    {
+      "id": "moodle.sterne_schluessel",
+      "gruppe": "Moodle",
+      "titel": "Sterne nach Notenschlüssel",
+      "erklaerung": "Untergrenzen in Prozent für einen, zwei und drei Sterne je Test (z. B. 50, 67, 92 wie der IHK-Schlüssel). Leer = Sterne wie bisher.",
+      "typ": "liste",
+      "standard": []
+    },
+    {
+      "id": "moodle.schilder",
+      "gruppe": "Moodle",
+      "titel": "Schilder an den Aktivitäten",
+      "erklaerung": "Kleine Schilder unter Tests (Sterne, Versuche, Bestehensgrenze) und Aufgaben (Gruppen- oder Partnerarbeit); Einzelarbeit ohne Schild.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.pdf_formular",
+      "gruppe": "Moodle",
+      "titel": "Word-Seiten als ausfüllbares PDF",
+      "erklaerung": "Word-Seiten mit Schreibzeilen bekommen Knöpfe „Als PDF herunterladen“ (ausfüllbar) und „Als Word herunterladen“.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.infoseiten_wie_heft",
+      "gruppe": "Moodle",
+      "titel": "Infoseiten wie im Arbeitsblatt",
+      "erklaerung": "Infoseiten zeigen den Infokasten so, wie er im Arbeitsblatt steht (Auszug aus der Gesamtfassung: Farben, Rahmen, gefüllte Merkkästen, Formeln, 680 px breit, mittig); „AB n“ heißt im Kurs „Kachel k“. Aus: Infoseiten als eigenes HTML.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.infoseiten_downloads",
+      "gruppe": "Moodle",
+      "titel": "Downloads auf Infoseiten",
+      "erklaerung": "word: Knopf „Als Word herunterladen“. word_pdf: dazu „Als PDF herunterladen“; Word und PDF sind der Auszug des Infokastens aus der Gesamtfassung und sehen aus wie im Arbeitsblatt.",
+      "typ": "auswahl",
+      "standard": "word",
+      "optionen": [
+        "word",
+        "word_pdf"
+      ]
+    },
+    {
+      "id": "moodle.sternzaehler",
+      "gruppe": "Moodle",
+      "titel": "Sternzähler in Allgemein",
+      "erklaerung": "Oben in Allgemein ein gelber Kasten „⭐ n von N Sternen“ mit Kursname und Fortschrittsbalken, nur für diesen Kurs (je Sternzahl ein Textfeld, sichtbar nur im passenden Kursgesamt-Bereich).",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "moodle.lernpfad_anzeige",
+      "gruppe": "Moodle",
+      "titel": "„Mein Lernpfad“ in Allgemein",
+      "erklaerung": "An: In Kursen mit Übungsinseln (individueller Lernpfad) steht in Allgemein unter dem Sternzähler die Aktivität „Mein Lernpfad“. Sie zeigt jeder Person ihren Weg durch die Inseln als Linie über die Stufen Grundlagen, Standard und Vertiefung und als Text: Einstiegsstufe, Kurztest, erreichte Stufe, geübte Stufen. Aus: keine solche Aktivität; die Inseln selbst bleiben.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.arbeitsblaetter_fortlaufend",
+      "gruppe": "Material",
+      "titel": "Arbeitsblätter fortlaufend mit Einstieg",
+      "erklaerung": "Alles, womit die Lernenden arbeiten, steht chronologisch in einem fortlaufenden Dokument je Lernsituation wie in einem Fachkundebuch (AB-Nummern laufen über alle Doppelstunden): Themen gehen mit Zwischenüberschriften (AB 1, AB 2, …) ineinander über, die Seiten laufen weiter, ohne festen Umbruch je Blatt; wie viele Seiten es werden, ergibt sich aus dem Inhalt. Oben steht einmal „Arbeitsblätter · Lernsituation n“ mit Namensfeld, danach Zwischenüberschriften ohne AB-Nummer (die Nummern gibt es nur in der Planung). Der Einstieg (Nachricht, Situation, Auftrag) steht darin. Alles wird zu Beginn ausgeteilt, der Beamer zeigt dasselbe. Anlagen (Infotexte, Karten, Diagramme, Hilfen, Folien, Tafelbilder) sind eigenständige Einheiten mit eigener chronologischer Nummer. Aus: jedes Material ist eine Anlage.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.zeit_auf_arbeitsblatt",
+      "gruppe": "Material",
+      "titel": "Zeitangaben auf dem Arbeitsblatt",
+      "erklaerung": "Bearbeitungszeit je Aufgabe auf dem Arbeitsblatt zeigen. Aus: Zeiten nur im Erwartungshorizont und in der Planung für die Lehrkraft, damit Lernende nicht verunsichert werden.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "material.aufgaben_kaestchen",
+      "gruppe": "Material",
+      "titel": "Aufgaben als Kästchen",
+      "erklaerung": "Jede Aufgabe im Arbeitsblatt als eigenes blaues Kästchen mit Nummer und Symbol der Sozialform rechts. Aus: fette Nummer und Text, Sozialform in Klammern dahinter.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.flattersatz",
+      "gruppe": "Material",
+      "titel": "Fließtext linksbündig",
+      "erklaerung": "Fließtext in Infoblättern linksbündig (Flattersatz) statt im Blocksatz; vermeidet große Wortlücken und liest sich leichter, besonders bei Lese-Rechtschreib-Schwierigkeit und Deutsch als Zweitsprache.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.beamer_zeigt_arbeitsblatt",
+      "gruppe": "Material",
+      "titel": "Beamer zeigt das Arbeitsblatt",
+      "erklaerung": "Die Lehrkraft zeigt das Arbeitsblatt selbst am Beamer und füllt Tabellen dort aus. Folien oder Tafelbilder, die nur wiederholen, was auf dem Arbeitsblatt steht, werden nicht geplant und nicht gebaut; eine Folie nur für Neues (z. B. Strichlisten einer Abstimmung). Aus: Tafelbilder und Folien als eigene Anlagen.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.karten_ins_arbeitsblatt",
+      "gruppe": "Material",
+      "titel": "Fall- und Infokarten ins Arbeitsblatt",
+      "erklaerung": "Fallbeschreibungen und kurze Informationen stehen als Teil einer Aufgabe im Arbeitsblatt (z. B. Fall A bis F in gemischter Reihenfolge) statt auf getrennten Karten zum Ausschneiden.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.wortspeicher_als_anlage",
+      "gruppe": "Material",
+      "titel": "Wortspeicher als gedruckte Anlage",
+      "erklaerung": "Fachwörter mit Bild, Artikel und Erklärung als eigene Anlage zur Stunde. Aus: keine gedruckte Anlage; die Wörter gehen nur als Glossar in den Moodle-Kurs.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "form.ansicht_als_pdf",
+      "gruppe": "Form",
+      "titel": "Zum Ansehen als PDF",
+      "erklaerung": "Wenn die KI Arbeitsblätter oder anderes Material zum Ansehen oder zur Freigabe vorlegt, schickt sie es als PDF (sieht auf dem Tablet aus wie gedruckt); die Fassung zum Herunterladen und Weiterarbeiten bleibt Word. Aus: Vorlage als Word.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.auftrag_form",
+      "gruppe": "Material",
+      "titel": "Auftrag am Anfang der Lernsituation",
+      "erklaerung": "Wie die Lernenden ihren Auftrag zu Beginn einer Lernsituation bekommen. Arbeitsauftrag: eine geschilderte Situation und ein klassischer Arbeitsauftrag des Betriebs, den die Lernenden selbst fertig bekommen müssen (Auftragsblatt); keine Gesprächsnotiz und keine Chat-Nachricht als Form. Frei: die Planung wählt die Form (Arbeitsauftrag, Gesprächsnotiz, Chat-Nachricht, Sprachnachricht). Das Abwechseln der Einstiegsformen (material.einstieg_abwechseln) betrifft dann nur den Aufhänger einer Doppelstunde, nicht die Form des Auftrags.",
+      "typ": "auswahl",
+      "optionen": ["frei", "arbeitsauftrag"],
+      "standard": "frei"
+    },
+    {
+      "id": "material.einstieg_abwechseln",
+      "gruppe": "Material",
+      "titel": "Einstiegsformen abwechseln",
+      "erklaerung": "Der Einstieg wechselt von Doppelstunde zu Doppelstunde die Form (z. B. Gegenstand, Foto, Fall, Unfallmeldung, Video, Demonstration, Behauptung zum Abstimmen) statt jedes Mal mit einer Chat-Nachricht aus dem Modellbetrieb. Die Stundenplanung schlägt dann keinen Einstieg in derselben Form wie in der vorigen DS vor. Aus: Chat-Nachricht als Standard.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.quellen_der_lernenden",
+      "gruppe": "Material",
+      "titel": "Quellen, mit denen sich die Lernenden informieren",
+      "erklaerung": "Was die Lernenden im Unterricht zum Selbst-Informieren nutzen können (z. B. Infotext, Tabellenbuch, Fachkundebuch, Internet am Handy). Material gibt dann keine Antworten vor, die sich die Lernenden dort selbst beschaffen können, und nennt die Quellen in der Aufgabe. Leer: nur das ausgegebene Material.",
+      "typ": "text",
+      "standard": ""
+    },
+    {
+      "id": "material.echte_geraetefotos",
+      "gruppe": "Material",
+      "titel": "Echte Gerätefotos statt Zeichnungen",
+      "erklaerung": "Wo es um ein bestimmtes Gerät geht (Gerätekarten, Aufdruck, Typenschild, Anschluss- und Schaltbild eines Geräts), nimmt das Papiermaterial echte Fotos und die echten Herstellerdarstellungen aus dem Internet, mit Quelle direkt am Bild (Commons mit Lizenz oder Herstellerfoto nach material.produktfotos); Aufdruck vergrößert, Angaben so, wie sie auf dem Foto stehen. Simulationen bleiben gezeichnet. Aus: eigene Zeichnungen sind erlaubt.",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "material.schriftliche_hilfen",
+      "gruppe": "Material",
+      "titel": "Schriftliche Hilfen im Material",
+      "erklaerung": "Gestufte Hilfen auf Papier (Hilfekarten, Hinweise auf dem Arbeitsblatt) werden geplant und gebaut. Aus: keine schriftlichen Hilfen; die Lehrkraft hilft persönlich als Lernbegleitung, die Impulse dafür stehen im Erwartungshorizont unter „Reaktion“. Digitale Hilfen in Moodle (Pipeline 3) bleiben davon unberührt.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "form.seminar_zeiten",
+      "gruppe": "Form",
+      "titel": "Zeiten in der Seminarfassung",
+      "erklaerung": "Minutenangaben je Phase in der Verlaufsskizze, die Seminarleitung und Fachleitung sehen (Seminarfassung der Verlaufsskizze, Entwurf). Aus: ohne Zeiten; die interne Verlaufsskizze behält sie.",
+      "typ": "ja_nein",
+      "standard": true
+    },
+    {
+      "id": "form.seminar_lernende_einzeln",
+      "gruppe": "Form",
+      "titel": "Einzelne Lernende im Verlauf der Seminarfassung",
+      "erklaerung": "Hinweise zu einzelnen Lernenden (Kürzel wie S12) in den Aktivitäten der Seminarfassung. Aus: diese Zeilen entfallen, die Differenzierung steht nur in der Heterogenitätstabelle bzw. intern.",
+      "typ": "ja_nein",
+      "standard": true
+    }
+  ]
+}

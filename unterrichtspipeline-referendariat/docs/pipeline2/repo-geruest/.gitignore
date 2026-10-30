@@ -1,0 +1,7 @@
+# Testausgaben und Zwischenstände
+*.out
+__pycache__/
+.~lock.*
+~$*
+# Rohausgaben der OCR (die Karte in quellen/_karte wird committet)
+quellen/**/_tmp/

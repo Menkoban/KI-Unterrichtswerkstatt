@@ -1,0 +1,92 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Pipeline 1</title>
+<link rel="stylesheet" href="stil.css">
+<style>
+ .cols{grid-template-columns:1fr 1fr 1.15fr .95fr}
+ .mak .colhead{background:var(--p1s)} .mak .life,.mak h2{color:var(--p1)} .mak .n{background:var(--p1)}
+ .mes .colhead{background:#e6f0fb} .mes .life,.mes h2{color:#1e40af} .mes .n{background:#1e40af}
+ .mik .colhead{background:#eaf2ff} .mik .life,.mik h2{color:#1d4ed8} .mik .n{background:#2563eb}
+ .nach .colhead{background:var(--refs)} .nach .life,.nach h2{color:var(--ref)} .nach .n{background:var(--ref)}
+ .band{grid-template-columns:1.5fr 1fr 1fr}
+ .io{font-size:15.2px;grid-template-columns:70px 1fr;row-gap:4px} .io .k{font-size:11.5px}
+ .st h3{font-size:17.5px;margin-bottom:6px} .f{font-size:12.8px}
+ .steps{gap:9px;padding:10px 12px} .st{flex:1;display:flex;flex-direction:column;justify-content:center;padding:9px 12px}
+ .colhead h2{font-size:22px} .colhead .life{font-size:14px} .note{font-size:13.5px}
+ .panel p{font-size:15px} .panel h4{font-size:16px}
+ .sk{font-family:"DejaVu Sans Mono",monospace;font-size:12px;font-weight:600;color:var(--muted);margin-left:auto;white-space:nowrap}
+ .types{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;font-size:14.5px;line-height:1.3}
+ .gate{display:inline-block;font-size:11px;font-weight:800;color:#15803d;background:#e8f6ed;border:1px solid #b9e3c7;border-radius:6px;padding:0 6px;margin-left:4px;vertical-align:1px}
+</style></head><body>
+<header>
+ <div><h1>Pipeline 1 · Unterrichtsplanung</h1>
+ <div class="sub">Vom Rahmenlehrplan bis zur nachbereiteten Stunde · zwölf Skills · Ergebnisse im persönlichen Arbeitsbereich · Stand 25.10.2026</div></div>
+ <div class="badges"><span class="badge b-draft">Übungsphase</span><span class="badge b-ok">erprobt an LF 1, LS 1 bis 3</span></div>
+</header>
+<div class="cols">
+ <section class="col mak"><div class="colhead"><h2>Einstieg · Makro-Ebene</h2><div class="life">je Lernfeld, Beruf bzw. Schuljahr · wiederverwendbar</div></div>
+  <div class="steps">
+   <div class="st"><h3><span class="n">00</span>Was steht an?<span class="sk">einstieg</span></h3><div class="io">
+    <span class="k">braucht</span><span>Ihre Ansage (auch als Sprachnachricht), Profil, Steckbriefe der Akten</span>
+    <span class="k out">liefert</span><span>vorhanden, fehlt, veraltet · Reihenfolge der fehlenden Schritte, jeder mit eigener Freigabe</span></div></div>
+   <div class="st"><h3><span class="n">01</span>Curriculare Analyse<span class="sk">curriculare-analyse</span></h3><div class="io">
+    <span class="k">braucht</span><span>Rahmenlehrplan (Wortlaut), Ihre Erfahrung</span>
+    <span class="k out">liefert</span><span>LK-01 … nach vollständiger Handlung, Inhalte Pflicht · Optional · Verschoben, Lernort Betrieb · <span class="f">Curriculare_Analyse.docx</span></span></div></div>
+   <div class="st"><h3><span class="n">02</span>Skizze<span class="sk">lernsituationen-skizze, modellbetrieb</span></h3><div class="io">
+    <span class="k">braucht</span><span>Ergebnis 01, Beruf und Fachrichtung</span>
+    <span class="k out">liefert</span><span>je LS Handlungsergebnis, echte Entscheidung, Stunden; Modellbetrieb je Beruf · <span class="f">Lernsituationen_Skizze.docx</span></span></div></div>
+   <div class="st"><h3><span class="n">03</span>Jahresplanung<span class="sk">jahresplanung</span></h3><div class="io">
+    <span class="k">braucht</span><span>Schulplanung, Stundenplan, amtlicher Kalender</span>
+    <span class="k out">liefert</span><span>Lernfelder des Jahres mit Zeitrichtwert, Wochen, Organisationsform · <span class="f">Jahresplanung.docx</span></span></div></div>
+  </div></section>
+
+ <section class="col mes"><div class="colhead"><h2>Meso-Ebene</h2><div class="life">je Lernsituation bzw. Klasse</div></div>
+  <div class="steps">
+   <div class="st"><h3><span class="n">04</span>Lernsituation<span class="sk">lernsituation</span></h3><div class="io">
+    <span class="k">braucht</span><span>Skizze, Modellbetrieb, Profil</span>
+    <span class="k out">liefert</span><span>Handlungssituation, Auftrag, Zyklen über Doppelstunden, je DS Leitfrage und Teilergebnis · <span class="f">Lernsituation.docx</span></span></div></div>
+   <div class="st"><h3><span class="n">LS</span>Arbeitsplan<span class="sk">lernsituation</span></h3><div class="io">
+    <span class="k">braucht</span><span>selbstständige LS: Lernsituation, Profil <span class="f">lernsituation.form</span></span>
+    <span class="k out">liefert</span><span>Meilensteine mit spätestem Termin, fester Lernpfad, Kriterien; Materialauftrag der ganzen LS · <span class="f">Arbeitsplan_Planung.docx</span></span></div></div>
+   <div class="st"><h3><span class="n">05–06</span>Klassen-Akte<span class="sk">klassenakte</span></h3><div class="io">
+    <span class="k">braucht</span><span>Angaben zur Klasse (nur Kürzel), sonst Musterklasse</span>
+    <span class="k out">liefert</span><span>Bedingungsfeld 1.1 bis 1.5 mit Konsequenzen, drei Personas, Lernausgangslage, Sitzplan · <span class="f">Bedingungsfeld.docx</span></span></div></div>
+   <div class="st"><h3><span class="n">06</span>Fehlvorstellungen<span class="sk">fehlvorstellungen</span></h3><div class="io">
+    <span class="k">braucht</span><span>Inhalte der LS, Literatur</span>
+    <span class="k out">liefert</span><span>je Fehlvorstellung Herkunft, Priorität, Diagnose-Item, Aufgreifen · <span class="f">Fehlvorstellungen.docx</span></span></div></div>
+  </div></section>
+
+ <section class="col mik"><div class="colhead"><h2>Mikro-Ebene · die Doppelstunde</h2><div class="life">Tiefe nach Stundentyp, der zuerst geklärt wird</div></div>
+  <div class="steps">
+   <div class="st"><h3><span class="n">→</span>Stundentyp</h3>
+    <div class="types"><span><b>Alltag, gelenkt</b> · Verlaufsskizze</span><span><b>Alltag, selbstständige LS</b> · Kurzskizze</span><span><b>EUB · KUB · FLB</b> · Kurzentwurf</span><span><b>GUB · PU</b> · voller Entwurf</span></div></div>
+   <div class="st"><h3><span class="n">13–14</span>Verlaufsskizze · Materialauftrag<span class="sk">stundenplanung</span></h3><div class="io">
+    <span class="k">braucht</span><span>LS, Klassen-Akte, offene Punkte der letzten Nachbereitung</span>
+    <span class="k out">liefert</span><span><span class="f">Verlaufsskizze.docx</span> <span class="f">Verlaufsskizze_Seminar.docx</span> <span class="f">Materialauftrag.docx</span></span></div></div>
+   <div class="st"><h3><span class="n">KS</span>Kurzskizze je DS<span class="sk">stundenplanung</span></h3><div class="io">
+    <span class="k">braucht</span><span>Arbeitsplan der LS (Feld <span class="f">arbeitsplan</span>)</span>
+    <span class="k out">liefert</span><span>Verlaufsplanung auf einer Seite in Seminarspalten, Abgleich mit dem Lernpfad, kein eigener Materialauftrag</span></div></div>
+   <div class="st"><h3><span class="n">07–16</span>Besuchsstunde<span class="sk">besuchsstunde</span></h3><div class="io">
+    <span class="k">braucht</span><span>Besuchsart, Klasse, LS, Material aus Pipeline 2</span>
+    <span class="k out">liefert</span><span>Entwurf nach Seminar-Muster, GUB und PU mit Seitenbudget; KUB mit Protokoll · <span class="f">Entwurf_&lt;Art&gt;.docx</span></span></div></div>
+  </div></section>
+
+ <section class="col nach"><div class="colhead"><h2>Nach der Stunde · Zeigen</h2><div class="life">laufend und auf Abruf</div></div>
+  <div class="steps">
+   <div class="st"><h3><span class="n">17</span>Nachbereitung<span class="sk">nachbereitung</span></h3><div class="io">
+    <span class="k">braucht</span><span>Ihre freie Rückmeldung, gern als Sprachnachricht</span>
+    <span class="k out">liefert</span><span>Aussagen abgelegt nach Reichweite (Stunde, Klasse, LS, Profil) · <span class="f">Nachbereitung.docx</span></span></div>
+    <div class="note">Offene Punkte stehen am Anfang der nächsten Stundenplanung.</div></div>
+   <div class="st"><h3><span class="n">M</span>Planungsmappe<span class="sk">planungsmappe</span></h3><div class="io">
+    <span class="k">braucht</span><span>Akten einer Planung</span>
+    <span class="k out">liefert</span><span>ein Dokument mit Einführung für Schule, Mentor oder Seminar und Stand je Teil</span></div></div>
+   <div class="st"><h3><span class="n">W</span>Stand · Werkbank</h3><div class="io">
+    <span class="k">braucht</span><span>Akten, Profil, Freigaben</span>
+    <span class="k out">liefert</span><span>Planungsstand je LS, Ansicht-PDFs, Freigabe-Knöpfe, Chat · <span class="f">akten/stand.py</span> <span class="f">akten/app.py</span></span></div></div>
+  </div></section>
+</div>
+<div class="band">
+ <div class="panel"><h4>Vor jeder Freigabe: Prüfbericht und Leseseite <span class="gate">Freigabe</span></h4>
+  <p><span class="dot" style="background:#dc2626"></span><b>Fehler</b> · <span class="dot" style="background:#d97706"></span><b>Warnung</b> · <span class="dot" style="background:#2563eb"></span><b>Hinweis</b>. Die Leseseite nennt, was neu ist, was die KI selbst entschieden hat und wo sie unsicher ist. Jede Freigabe zählt die grundsätzlichen Korrekturen in <span class="f">.daten/freigaben.json</span>; zweimal ohne Korrektur: künftig Gesamtblick.</p></div>
+ <div class="panel"><h4>Ablage im Arbeitsbereich</h4><p><b>&lt;Fach&gt;/&lt;Beruf&gt;/&lt;LF&gt;/&lt;LS&gt;/</b> wiederverwendbare Planung<br><b>Unterricht/&lt;Fach&gt;/&lt;Schuljahr_Klasse&gt;/</b> LF › LS › Stunde<br><b>.daten/</b> Daten der Generatoren</p></div>
+ <div class="panel dark"><h4>Weiter an Pipeline 2</h4><p>Der Materialauftrag je Stunde oder je selbstständiger LS beschreibt jede Anlage so genau, dass Pipeline 2 sie allein daraus baut.</p></div>
+</div>
+</body></html>

@@ -1,0 +1,913 @@
+nummer;name_de;datei;mitte_x;mitte_y;breite;hoehe
+02-01-01;Objekt, Betriebsmittel, z.B.:: - Gerät - Einrichtung - Funktionseinheit - Komponente - Funktion;91_en_60617/en_60617_02/en_60617_02_01/en_60617_02_01_01.elmt;-0.167;0.117;0.667;0.567
+02-01-02;Objekt, Betriebsmittel, z.B.:: - Gerät - Einrichtung - Funktionseinheit - Komponente - Funktion;91_en_60617/en_60617_02/en_60617_02_01/en_60617_02_01_02.elmt;-0.125;0.170;0.750;0.674
+02-01-03;Objekt, Betriebsmittel, z.B.:: - Gerät - Einrichtung - Funktionseinheit - Komponente - Funktion;91_en_60617/en_60617_02/en_60617_02_01/en_60617_02_01_03.elmt;-0.167;0.129;0.667;0.591
+02-01-04;Hülle (Kolben, Kessel);91_en_60617/en_60617_02/en_60617_02_01/en_60617_02_01_04.elmt;-0.167;0.129;0.667;0.591
+02-01-05;Gehäuse;91_en_60617/en_60617_02/en_60617_02_01/en_60617_02_01_05.elmt;-0.083;0.170;0.833;0.674
+02-01-06;Begrenzungslinie;91_en_60617/en_60617_02/en_60617_02_01/en_60617_02_01_06.elmt;0.000;-0.000;0.667;0.000
+02-01-07;Abschirmung Schirm;91_en_60617/en_60617_02/en_60617_02_01/en_60617_02_01_07.elmt;0.000;-0.000;0.667;0.333
+02-01-08;Schutz gegen direkten Kontakt, nicht beabsichtigt;91_en_60617/en_60617_02/en_60617_02_01/en_60617_02_01_08.elmt;0.000;-0.000;0.333;0.533
+02-02-03;Gleichstrom und -Spannung;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_03.elmt;0.000;0.083;0.333;0.167
+02-02-04;04- Wechselstrom und Spannung;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_04.elmt;0.000;-0.000;0.250;0.083
+02-02-05;Wechselstrom und Spannung;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_05.elmt;0.250;0.025;0.750;0.150
+02-02-06;Wechselstrom und Spannung;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_06.elmt;0.617;0.025;1.483;0.150
+02-02-07;Wechselstrom und Spannung;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_07.elmt;0.596;0.025;1.892;0.150
+02-02-09;Wechselstrom, verschiedene Frequenzbereiche;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_09.elmt;0.000;-0.000;0.317;0.083
+02-02-10;Wechselstrom, verschiedene Frequenzbereiche;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_10.elmt;0.000;0.058;0.317;0.200
+02-02-11;Wechselstrom, verschiedene Frequenzbereiche;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_11.elmt;0.000;0.117;0.317;0.317
+02-02-12;gleichgerichteter Strom;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_12.elmt;0.000;0.017;0.300;0.100
+02-02-13;positive Polarität;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_13.elmt;0.000;-0.000;0.133;0.133
+02-02-14;negative Polarität;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_14.elmt;0.000;-0.000;0.133;0.000
+02-02-15;Neutralleiter;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_15.elmt;-0.004;-0.025;0.092;0.150
+02-02-16;Mittelleiter;91_en_60617/en_60617_02/en_60617_02_02/en_60617_02_02_16.elmt;-0.004;-0.025;0.092;0.150
+02-03-03;Veränderbarkeit, inhärent;91_en_60617/en_60617_02/en_60617_02_03/en_60617_02_03_03.elmt;0.083;0.083;0.500;0.500
+02-04-01;einfachgerichtete Kraft einfachgerichtete, geradlinige Bewegung;91_en_60617/en_60617_02/en_60617_02_04/en_60617_02_04_01.elmt;0.000;-0.000;0.167;0.000
+02-04-02;bidirektionale Kraft bidirektionale geradlinige Bewegung;91_en_60617/en_60617_02/en_60617_02_04/en_60617_02_04_02.elmt;0.000;-0.000;0.167;0.000
+02-04-03;einfachgerichtete kreisförmige Bewegung einfachgerichtete Drehung einfachgerichtetes Drehmoment;91_en_60617/en_60617_02/en_60617_02_04/en_60617_02_04_03.elmt;0.008;-0.167;0.183;0.167
+02-04-04;bidirektionale kreisförmige Bewegung bidirektionale Drehung bidirektionales Drehmoment;91_en_60617/en_60617_02/en_60617_02_04/en_60617_02_04_04.elmt;0.000;-0.167;0.200;0.167
+02-04-05;bidirektionale kreisförmige Bewegung bidirektionale Drehung bidirektionales Drehmoment;91_en_60617/en_60617_02/en_60617_02_04/en_60617_02_04_05.elmt;0.000;-0.000;0.267;0.167
+02-05-01;Ausbreitung in einer Richtung (simplex) Fluß in einer Richtung (simplex) (Energie-, Signal-, Information-);91_en_60617/en_60617_02/en_60617_02_05/en_60617_02_05_01.elmt;0.000;-0.000;0.333;0.000
+02-05-02;gleichzeitige Ausbreitung in beide Richtungen gleichzeitiges Senden und Empfangen (vollduplex);91_en_60617/en_60617_02/en_60617_02_05/en_60617_02_05_02.elmt;0.000;-0.000;0.333;0.000
+02-05-03;Ausbreitung in beide Richtungen, nicht gleichzeitig abwechselnd Senden und Empfangen (halbduplex);91_en_60617/en_60617_02/en_60617_02_05/en_60617_02_05_03.elmt;0.000;-0.000;0.333;0.000
+02-05-04;Senden;91_en_60617/en_60617_02/en_60617_02_05/en_60617_02_05_04.elmt;0.000;-0.000;0.333;0.050
+02-05-05;Empfangen;91_en_60617/en_60617_02/en_60617_02_05/en_60617_02_05_05.elmt;0.000;-0.000;0.333;0.050
+02-05-06;Energiefluß von der Sammelschiene weg;91_en_60617/en_60617_02/en_60617_02_05/en_60617_02_05_06.elmt;0.058;-0.000;0.217;0.067
+02-05-07;Energiefluß zur Sammelschiene hin;91_en_60617/en_60617_02/en_60617_02_05/en_60617_02_05_07.elmt;0.058;-0.000;0.217;0.067
+02-05-08;Energiefluß, bidirektional;91_en_60617/en_60617_02/en_60617_02_05/en_60617_02_05_08.elmt;0.008;-0.000;0.217;0.067
+02-06-01;auslösend, wenn die charakteristische Größe höher als der eingestellte Wert ist;91_en_60617/en_60617_02/en_60617_02_06/en_60617_02_06_01.elmt;0.000;-0.000;0.033;0.067
+02-06-02;auslösend, wenn die charakteristische Größe niedriger als der eingestellte Wert ist;91_en_60617/en_60617_02/en_60617_02_06/en_60617_02_06_02.elmt;0.000;-0.000;0.033;0.067
+02-06-03;auslösend, wenn die charakteristische Größe entweder höher als ein gegebener oberer eingestellter Wert oder niedriger als ein gegebener unterer eingestellter Wert ist;91_en_60617/en_60617_02/en_60617_02_06/en_60617_02_06_03.elmt;0.000;-0.000;0.033;0.167
+02-06-04;auslösend, wenn der Wert der charakteristischen Größe gleich Null ist;91_en_60617/en_60617_02/en_60617_02_06/en_60617_02_06_04.elmt;0.054;0.025;0.275;0.150
+02-06-05;auslösend, wenn der Wert der charakteristischen Größe annähernd Null ist;91_en_60617/en_60617_02/en_60617_02_06/en_60617_02_06_05.elmt;0.062;0.021;0.258;0.158
+02-07-01;Materie, allgemein;91_en_60617/en_60617_02/en_60617_02_07/en_60617_02_07_01.elmt;0.000;-0.000;0.667;0.333
+02-07-02;feste Materie;91_en_60617/en_60617_02/en_60617_02_07/en_60617_02_07_02.elmt;0.000;-0.000;0.667;0.333
+02-07-03;flüssige Materie;91_en_60617/en_60617_02/en_60617_02_07/en_60617_02_07_03.elmt;0.000;-0.000;0.667;0.333
+02-07-04;gasförmige Materie;91_en_60617/en_60617_02/en_60617_02_07/en_60617_02_07_04.elmt;0.000;-0.000;0.667;0.333
+02-07-05;Elektret;91_en_60617/en_60617_02/en_60617_02_07/en_60617_02_07_05.elmt;0.000;-0.000;0.667;0.333
+02-07-06;Halbleiter;91_en_60617/en_60617_02/en_60617_02_07/en_60617_02_07_06.elmt;0.000;-0.000;0.667;0.333
+02-07-07;Isolierstoff oder Dielektrikum;91_en_60617/en_60617_02/en_60617_02_07/en_60617_02_07_07.elmt;0.000;-0.000;0.667;0.333
+02-08-01;thermische Wirkung;91_en_60617/en_60617_02/en_60617_02_08/en_60617_02_08_01.elmt;0.067;-0.000;0.133;0.333
+02-08-02;elektromagnetische Wirkung;91_en_60617/en_60617_02/en_60617_02_08/en_60617_02_08_02.elmt;0.000;-0.000;0.133;0.333
+02-08-03;magnetostriktive Wirkung;91_en_60617/en_60617_02/en_60617_02_08/en_60617_02_08_03.elmt;0.000;0.033;0.333;0.167
+02-08-04;Magnetfeld-Wirkung oder -Abhängigkeit;91_en_60617/en_60617_02/en_60617_02_08/en_60617_02_08_04.elmt;0.000;-0.000;0.167;0.167
+02-08-05;Verzögerung;91_en_60617/en_60617_02/en_60617_02_08/en_60617_02_08_05.elmt;0.008;-0.000;0.350;0.100
+02-08-06;Halbleitereffekt;91_en_60617/en_60617_02/en_60617_02_08/en_60617_02_08_06.elmt;0.000;-0.000;0.333;0.333
+02-08-07;Koppeleffekt mit elektrischer Schutztrennung;91_en_60617/en_60617_02/en_60617_02_08/en_60617_02_08_07.elmt;0.000;0.083;0.167;0.167
+02-09-01;elektromagnetische Strahlung, nicht ionisierend, z.B.:: Radiowellen oder sichtbares Licht;91_en_60617/en_60617_02/en_60617_02_09/en_60617_02_09_01.elmt;-0.125;0.125;0.250;0.250
+02-09-02;kohärente Strahlung, nicht ionisierend, z.B.:: kohärentes Licht;91_en_60617/en_60617_02/en_60617_02_09/en_60617_02_09_02.elmt;0.108;-0.025;0.283;0.283
+02-09-03;ionisierende Strahlung;91_en_60617/en_60617_02/en_60617_02_09/en_60617_02_09_03.elmt;0.125;-0.042;0.250;0.250
+02-09-04;elektromagnetische Strahlung, nicht ionisierend, bidirektional, z.B.:: Rada;91_en_60617/en_60617_02/en_60617_02_09/en_60617_02_09_04.elmt;0.000;0.083;0.667;0.233
+02-09-05;kohärente Strahlung, nicht ionisierend, bidirektional;91_en_60617/en_60617_02/en_60617_02_09/en_60617_02_09_05.elmt;0.000;0.083;0.667;0.333
+02-10-01;positiver Impuls;91_en_60617/en_60617_02/en_60617_02_10/en_60617_02_10_01.elmt;-0.083;0.167;0.500;0.333
+02-10-02;negativer Impuls;91_en_60617/en_60617_02/en_60617_02_10/en_60617_02_10_02.elmt;-0.083;-0.167;0.500;0.333
+02-10-03;Wechselstrom-Impuls;91_en_60617/en_60617_02/en_60617_02_10/en_60617_02_10_03.elmt;0.000;-0.000;0.667;0.333
+02-10-04;positive Schrittfunktion;91_en_60617/en_60617_02/en_60617_02_10/en_60617_02_10_04.elmt;0.000;-0.000;0.333;0.333
+02-10-05;negative Schrittfunktion;91_en_60617/en_60617_02/en_60617_02_10/en_60617_02_10_05.elmt;0.000;-0.000;0.333;0.333
+02-10-06;Sägezahn-Impuls;91_en_60617/en_60617_02/en_60617_02_10/en_60617_02_10_06.elmt;0.000;0.083;0.667;0.167
+02-11-01;Drucken auf einen Streifen;91_en_60617/en_60617_02/en_60617_02_11/en_60617_02_11_01.elmt;0.000;-0.000;0.333;0.000
+02-11-02;Lochen von Streifen oder Verwendung von Lochstreifen;91_en_60617/en_60617_02/en_60617_02_11/en_60617_02_11_02.elmt;0.000;-0.000;0.333;0.000
+02-11-03;gleichzeitiges Bedrucken und Lochen von Streifen;91_en_60617/en_60617_02/en_60617_02_11/en_60617_02_11_03.elmt;0.000;-0.000;0.333;0.067
+02-11-04;Drucken auf Blatt;91_en_60617/en_60617_02/en_60617_02_11/en_60617_02_11_04.elmt;0.000;-0.000;0.667;0.333
+02-11-05;Tastatur;91_en_60617/en_60617_02/en_60617_02_11/en_60617_02_11_05.elmt;0.000;-0.000;0.467;0.133
+02-11-06;Fernkopieren;91_en_60617/en_60617_02/en_60617_02_11/en_60617_02_11_06.elmt;0.000;-0.000;0.667;0.333
+02-12-01;Wirkverbindung, z.B.: - mechanische - pneumatische - hydraulische - optische - funktionelle;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_01.elmt;0.000;-0.000;0.667;0.000
+02-12-02;Wirkverbindung, z.B.: - mechanische - pneumatische - hydraulische - optische - funktionelle;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_02.elmt;0.000;0.083;0.667;0.167
+02-12-03;Wirkverbindung, z.B.: - mechanische - pneumatische - hydraulische - optische - funktionelle;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_03.elmt;0.000;-0.000;0.667;0.333
+02-12-04;Wirkverbindung, z.B.: - mechanische - pneumatische - hydraulische - optische - funktionelle;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_04.elmt;0.000;-0.000;0.667;0.133
+02-12-05;verzögerte Wirkung;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_05.elmt;0.000;-0.000;0.333;0.333
+02-12-06;verzögerte Wirkung;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_06.elmt;0.167;-0.000;0.667;0.333
+02-12-07;selbsttätiger Rückgang;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_07.elmt;0.000;-0.000;0.667;0.167
+02-12-08;Raste nicht selbsttätiger Rückgang Einrichtung zum Beibehalten einer gegebenen Stellung;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_08.elmt;0.000;-0.042;0.667;0.083
+02-12-09;Raste, nicht eingerastet;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_09.elmt;0.000;0.042;0.667;0.250
+02-12-10;Raste, eingerastet;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_10.elmt;0.000;0.042;0.667;0.250
+02-12-11;mechanische Verriegelung zweier Einrichtungen;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_11.elmt;0.000;-0.017;0.667;0.133
+02-12-12;Sperre, nicht verklinkt;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_12.elmt;0.000;0.083;0.667;0.167
+02-12-13;Sperre, verklinkt;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_13.elmt;0.000;0.083;0.667;0.167
+02-12-14;Blockiereinrichtung;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_14.elmt;0.000;0.042;0.667;0.083
+02-12-15;Blockiereinrichtung, verklinkt;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_15.elmt;0.000;0.083;0.667;0.167
+02-12-16;Kupplung;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_16.elmt;0.000;0.058;0.667;0.117
+02-12-17;Kupplung, gelöst;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_17.elmt;0.000;0.083;0.667;0.167
+02-12-18;Kupplung, gekuppelt;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_18.elmt;0.000;0.058;0.667;0.117
+02-12-19;Kupplung, gekuppelt;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_19.elmt;0.000;-0.000;1.000;0.333
+02-12-20;Bremse;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_20.elmt;0.000;0.067;0.333;0.133
+02-12-21;Bremse eingelegt;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_21.elmt;-0.167;-0.000;1.000;0.333
+02-12-22;Bremse gelöst;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_22.elmt;-0.167;-0.000;1.000;0.333
+02-12-23;Getriebe;91_en_60617/en_60617_02/en_60617_02_12/en_60617_02_12_23.elmt;-0.083;-0.083;0.833;0.500
+02-13-01;Handantrieb;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_01.elmt;-0.117;-0.000;0.500;0.167
+02-13-02;Handantrieb mit beschränktem Zugriff;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_02.elmt;-0.117;-0.000;0.500;0.333
+02-13-03;Betätigung durch Ziehen;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_03.elmt;-0.117;-0.000;0.500;0.167
+02-13-04;Betätigung durch Drehen;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_04.elmt;-0.117;-0.000;0.500;0.167
+02-13-05;Betätigung durch Drücken;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_05.elmt;-0.117;-0.000;0.500;0.167
+02-13-06;Betätigung durch Annähern;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_06.elmt;-0.150;-0.000;0.500;0.167
+02-13-07;Betätigung durch Berühren;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_07.elmt;-0.150;-0.000;0.500;0.167
+02-13-08;"Notschalter, Typ ""Pilz-Notdrucktaster""";91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_08.elmt;-0.150;-0.000;0.500;0.167
+02-13-09;Betätigung durch Handrad;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_09.elmt;-0.150;-0.000;0.500;0.167
+02-13-10;Betätigung durch Pedal;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_10.elmt;-0.117;-0.000;0.500;0.167
+02-13-11;Betätigung durch Hebel;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_11.elmt;-0.150;-0.017;0.500;0.200
+02-13-12;Betätigung durch abnehmbaren Griff;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_12.elmt;-0.142;-0.000;0.517;0.233
+02-13-13;Betätigung durch Schlüssel;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_13.elmt;-0.150;-0.000;0.500;0.333
+02-13-14;Betätigung durch Kurbel;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_14.elmt;-0.150;-0.083;0.500;0.167
+02-13-15;Betätigung durch Rolle;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_15.elmt;-0.192;-0.000;0.583;0.300
+02-13-16;Betätigung durch Nocken;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_16.elmt;-0.175;-0.000;0.583;0.300
+02-13-17;Nockenprofil;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_17.elmt;0.067;0.004;0.333;0.242
+02-13-18;Profilplatte;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_18.elmt;-0.150;-0.017;0.500;0.200
+02-13-19;Betätigung durch Nocken und Rolle;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_19.elmt;-0.242;0.013;0.750;0.258
+02-13-20;Betätigung durch gespeicherte mechanische Energie;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_20.elmt;-0.150;-0.000;0.500;0.167
+02-13-21;ausgelöst durch pneumatische oder hydraulische Kraft in Pfeilrichtung;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_21.elmt;-0.200;0.042;0.667;0.250
+02-13-22;ausgelöst durch pneumatische oder hydraulische Kraft in beiden Richtungen;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_22.elmt;-0.200;0.042;0.667;0.250
+02-13-23;ausgelöst durch elektromagnetischen Effekt;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_23.elmt;-0.233;-0.000;0.667;0.333
+02-13-24;ausgelöst durch elektromagnetischen Effekt z.B.: Überstromschutz;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_24.elmt;-0.192;-0.000;0.583;0.333
+02-13-25;ausgelöst durch thermischen Effekt z.B.: Überstromschutz;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_25.elmt;-0.150;-0.000;0.500;0.333
+02-13-26;Betätigung durch elektrischen Motor;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_26.elmt;-0.150;0.008;0.500;0.183
+02-13-27;Betätigung durch Uhr;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_27.elmt;-0.150;-0.000;0.500;0.167
+02-13-28;Halbleiterantrieb;91_en_60617/en_60617_02/en_60617_02_13/en_60617_02_13_28.elmt;-0.233;-0.000;0.667;0.167
+02-14-01;ausgelöst durch Flüssigkeitspegel;91_en_60617/en_60617_02/en_60617_02_14/en_60617_02_14_01.elmt;-0.233;0.042;0.667;0.250
+02-14-02;ausgelöst durch einen Zähler;91_en_60617/en_60617_02/en_60617_02_14/en_60617_02_14_02.elmt;-0.233;-0.000;0.667;0.333
+02-14-03;ausgelöst durch Strömung;91_en_60617/en_60617_02/en_60617_02_14/en_60617_02_14_03.elmt;-0.233;-0.000;0.667;0.333
+02-14-04;ausgelöst durch Gasströmung;91_en_60617/en_60617_02/en_60617_02_14/en_60617_02_14_04.elmt;-0.233;-0.000;0.667;0.333
+02-14-05;ausgelöst durch relative Feuchte;91_en_60617/en_60617_02/en_60617_02_14/en_60617_02_14_05.elmt;-0.317;-0.000;0.833;0.333
+02-15-01;Erde;91_en_60617/en_60617_02/en_60617_02_15/en_60617_02_15_01.elmt;0.000;-0.000;0.333;0.500
+02-15-02;fremdspannungsarme Erde;91_en_60617/en_60617_02/en_60617_02_15/en_60617_02_15_02.elmt;0.000;-0.167;0.667;0.833
+02-15-03;Schutzerde;91_en_60617/en_60617_02/en_60617_02_15/en_60617_02_15_03.elmt;0.000;-0.167;0.667;0.833
+02-15-04;Masse, Gehäuse;91_en_60617/en_60617_02/en_60617_02_15/en_60617_02_15_04.elmt;-0.083;-0.000;0.500;0.500
+02-15-05;Äquipotential;91_en_60617/en_60617_02/en_60617_02_15/en_60617_02_15_05.elmt;0.000;-0.000;0.333;0.500
+02-16-01;ideale Stromquelle;91_en_60617/en_60617_02/en_60617_02_16/en_60617_02_16_01.elmt;0.000;-0.000;0.333;0.667
+02-16-02;ideale Spannungsquelle;91_en_60617/en_60617_02/en_60617_02_16/en_60617_02_16_02.elmt;0.000;-0.000;0.333;0.667
+02-16-03;idealer Gyrator;91_en_60617/en_60617_02/en_60617_02_16/en_60617_02_16_03.elmt;0.000;-0.000;0.667;0.333
+02-17-01;Fehler (Anzeige eines angenommenen Fehlerorts);91_en_60617/en_60617_02/en_60617_02_17/en_60617_02_17_01.elmt;0.000;0.083;0.200;0.500
+02-17-02;Isolationsfehler Überschlag;91_en_60617/en_60617_02/en_60617_02_17/en_60617_02_17_02.elmt;0.000;0.083;0.333;0.500
+02-17-03;Dauermagnet;91_en_60617/en_60617_02/en_60617_02_17/en_60617_02_17_03.elmt;0.000;0.083;0.333;0.167
+02-17-04;bewegbarer Kontakt (z.B.: Schleifkontakt);91_en_60617/en_60617_02/en_60617_02_17/en_60617_02_17_04.elmt;0.083;-0.000;0.500;0.200
+02-17-05;Prüfpunkthinweis;91_en_60617/en_60617_02/en_60617_02_17/en_60617_02_17_05.elmt;0.000;-0.000;0.000;0.333
+02-17-06;Umformer, Umsetzer, Umrichter, z.B.: - Leistungsumformer - Signalumformer - Meßwertumformer;91_en_60617/en_60617_02/en_60617_02_17/en_60617_02_17_06.elmt;0.000;-0.000;0.667;0.667
+02-17-08;analog;91_en_60617/en_60617_02/en_60617_02_17/en_60617_02_17_08.elmt;0.000;0.083;0.167;0.167
+02-17-09;digital;91_en_60617/en_60617_02/en_60617_02_17/en_60617_02_17_09.elmt;0.000;-0.000;0.167;0.167
+03-01-01;Verbindung, z.B.: - Leiter - Kabel - Leitung - Übertragungsweg;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_01.elmt;0.000;-0.000;1.333;0.000
+03-01-02;Gruppe von Verbindungen, z.B. drei;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_02.elmt;0.000;-0.000;1.333;0.333
+03-01-03;Gruppe von Verbindungen, z.B. drei;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_03.elmt;0.000;-0.000;1.333;0.333
+03-01-04;Gleichstromkreis;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_04.elmt;0.000;0.058;1.333;0.117
+03-01-05;Dreiphasen-Vierleitersystem;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_05.elmt;0.000;0.250;1.333;0.500
+03-01-06;bewegbare Verbindung;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_06.elmt;0.000;-0.000;1.333;0.167
+03-01-07;Leiter, geschirmt;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_07.elmt;0.000;-0.000;1.333;0.333
+03-01-08;verdrillte Verbindung;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_08.elmt;0.000;0.083;1.333;0.500
+03-01-09;Leiter in einem Kabel;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_09.elmt;0.000;-0.000;1.333;0.667
+03-01-10;Leiter in einem Kabel;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_10.elmt;0.000;1.000;1.333;2.000
+03-01-11;Koaxialkabel;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_11.elmt;0.000;-0.000;1.333;0.167
+03-01-12;koaxiale Leitung auf Anschlußstellen geführt;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_12.elmt;0.000;-0.042;1.333;0.250
+03-01-13;Koaxialkabel, geschirmt;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_13.elmt;0.000;-0.000;1.333;0.333
+03-01-14;Leitung, nicht angeschlossen;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_14.elmt;0.000;0.167;1.333;0.333
+03-01-15;Leitung, nicht angeschlossen, besonders isoliert;91_en_60617/en_60617_03/en_60617_03_01/en_60617_03_01_15.elmt;0.000;0.167;1.333;0.333
+03-02-01;Kreuzungspunkt Verbindungspunkt;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_01.elmt;0.000;-0.000;0.083;0.083
+03-02-02;Anschluß, z. B. Klemme;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_02.elmt;0.000;-0.000;0.083;0.083
+03-02-03;Anschlußleiste;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_03.elmt;0.000;0.250;2.000;0.500
+03-02-04;T-Verbindung, Abzweigung;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_04.elmt;0.000;0.167;0.667;0.333
+03-02-05;T-Verbindung, Abzweigung;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_05.elmt;0.000;0.188;0.667;0.375
+03-02-06;Doppelabzweig von Leitern;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_06.elmt;0.000;0.333;1.000;0.667
+03-02-07;Doppelabzweig von Leitern;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_07.elmt;0.000;0.333;0.667;0.667
+03-02-09;Verzweigung;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_09.elmt;0.000;0.263;1.333;0.608
+03-02-11;Leiterverbindungen, Tausch von Leitern Wechsel von Phasenfolge;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_11.elmt;0.000;0.117;1.333;0.567
+03-02-12;Leiterverbindungen, Tausch von Leitern Wechsel von Polarität;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_12.elmt;0.167;-0.008;1.667;0.650
+03-02-13;Neutralpunkt in einem Mehrphasensystem;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_13.elmt;-0.417;0.333;0.833;0.667
+03-02-14;Drehstrom-Synchrongenerator;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_14.elmt;0.000;1.017;1.667;2.033
+03-02-15;Drehstrom-Synchrongenerator mehrpolig dargestellt;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_15.elmt;0.000;1.083;1.667;2.167
+03-02-16;Abzweigung, bei der der Leiter nicht unterbrochen werden darf;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_16.elmt;0.000;-0.125;0.667;0.417
+03-02-174;Anschluß, der spezielle Werkzeuge benötigt;91_en_60617/en_60617_03/en_60617_03_02/en_60617_03_02_174.elmt;0.000;0.042;0.667;0.750
+03-03-01;Pol einer Steckbuchse Buchse;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_01.elmt;-0.208;-0.000;0.583;0.167
+03-03-03;Pol eines Steckers Stecker;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_03.elmt;-0.333;-0.000;0.667;0.100
+03-03-05;Stecker und Buchse;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_05.elmt;0.167;-0.000;1.000;0.167
+03-03-07;Verbinder, Buchse und Stecker, allpolige Darstellung;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_07.elmt;0.083;0.833;1.167;1.933
+03-03-08;Buchse und Stecker vielpolig, in einpoliger Darstellung;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_08.elmt;0.175;-0.000;0.983;0.333
+03-03-09;Steckverbinder, festes Teil;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_09.elmt;-0.167;0.333;0.667;0.667
+03-03-10;Steckverbinder, bewegliches Teil;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_10.elmt;-0.167;0.333;0.667;0.667
+03-03-11;Steckverbindung;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_11.elmt;0.167;0.333;1.333;0.667
+03-03-12;Stecker und Klinke, zweipolig;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_12.elmt;-0.646;0.167;1.375;0.417
+03-03-13;Stecker und Klinke mit Öffnerkontakt;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_13.elmt;-0.646;0.333;1.375;0.750
+03-03-14;Schalt-oder Trennklinke;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_14.elmt;-0.396;0.167;0.875;0.417
+03-03-15;Buchse und Stecker, koaxial;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_15.elmt;0.250;-0.000;2.167;0.333
+03-03-16;Stirnkontaktverbindung;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_16.elmt;-0.083;-0.000;1.500;0.100
+03-03-17;Trennstelle, Lasche geschlossen;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_17.elmt;-0.167;-0.000;0.667;0.100
+03-03-18;Trennstelle, Lasche geschlossen;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_18.elmt;-0.167;-0.000;0.667;0.100
+03-03-19;Trennstelle, Lasche offen;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_19.elmt;-0.167;0.083;0.667;0.267
+03-03-20;Steckverbindung, zwei Buchsen durch einen;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_20.elmt;0.167;-0.000;1.000;0.167
+03-03-21;Stecker verbunden, z. B. U-Stecker: - mit Adapter;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_21.elmt;0.250;-0.000;1.167;0.167
+03-03-22;Stecker verbunden, z. B. U-Stecker: - mit Abzweigbuchse;91_en_60617/en_60617_03/en_60617_03_03/en_60617_03_03_22.elmt;0.167;0.167;0.833;0.500
+03-04-01;Kabelendverschluß mit einem dreiadrigen Kabel;91_en_60617/en_60617_03/en_60617_03_04/en_60617_03_04_01.elmt;-0.333;0.333;2.000;0.667
+03-04-02;Kabelendverschluß mit drei einadrigen Kabel;91_en_60617/en_60617_03/en_60617_03_04/en_60617_03_04_02.elmt;-0.333;0.333;2.000;0.667
+03-04-03;Verbindungsmuffe;91_en_60617/en_60617_03/en_60617_03_04/en_60617_03_04_03.elmt;-0.667;0.292;2.000;0.917
+03-04-04;Kabelendverschluß mit einem dreiadrigen Kabel;91_en_60617/en_60617_03/en_60617_03_04/en_60617_03_04_04.elmt;0.167;-0.075;2.000;0.517
+03-04-05;Abzweigmuffe;91_en_60617/en_60617_03/en_60617_03_04/en_60617_03_04_05.elmt;-0.167;0.125;2.000;1.250
+03-04-06;Abzweigmuffe, einpolige Darstellung;91_en_60617/en_60617_03/en_60617_03_04/en_60617_03_04_06.elmt;0.046;-0.242;2.092;1.183
+03-04-07;druckfeste Kabeldurchführung;91_en_60617/en_60617_03/en_60617_03_04/en_60617_03_04_07.elmt;-0.333;0.333;2.000;1.333
+04-01-01;Widerstand Dämpfungsglied;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_01.elmt;0.083;-0.000;0.833;0.167
+04-01-03;Widerstand, veränderbar;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_03.elmt;0.083;0.025;0.833;0.383
+04-01-04;Widerstand, spannungsabhängig Varistor;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_04.elmt;0.083;-0.083;0.833;0.667
+04-01-05;Widerstand mit beweglichem Kontakt;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_05.elmt;0.000;0.125;0.667;0.417
+04-01-06;"Widerstand mit beweglichem Kontakt und ""Aus""-Stellung";91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_06.elmt;0.083;0.125;0.833;0.417
+04-01-07;Potentiometer, einstellbar Widerstand mit beweglichem Kontakt;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_07.elmt;0.083;0.125;0.833;0.417
+04-01-08;einstellbares Potentiometer;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_08.elmt;0.083;0.083;0.833;0.500
+04-01-09;Widerstand mit festen Anzapfungen;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_09.elmt;0.000;0.125;1.000;0.417
+04-01-10;Shunt Widerstand mit getrennten Strom- und Spannungsanschlüssen;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_10.elmt;0.083;0.125;0.833;0.417
+04-01-11;Kohle-Säulen-Widerstand;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_11.elmt;0.083;0.008;0.833;0.517
+04-01-12;Heizelement;91_en_60617/en_60617_04/en_60617_04_01/en_60617_04_01_12.elmt;0.083;-0.000;0.833;0.167
+04-02-01;Kondensator;91_en_60617/en_60617_04/en_60617_04_02/en_60617_04_02_01.elmt;0.000;-0.125;0.667;0.750
+04-02-03;Durchführungskondensator;91_en_60617/en_60617_04/en_60617_04_02/en_60617_04_02_03.elmt;0.000;-0.125;1.000;0.417
+04-02-05;gepolter Kondensator, z.B. Elektrolyt- Kondensator;91_en_60617/en_60617_04/en_60617_04_02/en_60617_04_02_05.elmt;0.000;-0.125;0.667;0.750
+04-02-07;veränderbarer Kondensator;91_en_60617/en_60617_04/en_60617_04_02/en_60617_04_02_07.elmt;0.017;-0.125;0.700;0.750
+04-02-09;Kondensator mit Voreinstellung;91_en_60617/en_60617_04/en_60617_04_02/en_60617_04_02_09.elmt;0.025;-0.125;0.717;0.750
+04-02-11;Differential-Kondensator;91_en_60617/en_60617_04/en_60617_04_02/en_60617_04_02_11.elmt;0.000;-0.125;1.000;0.750
+04-02-13;Kondensator mit einstellbarem Elektrodenabstand;91_en_60617/en_60617_04/en_60617_04_02/en_60617_04_02_13.elmt;-0.083;0.167;0.833;1.333
+04-02-15;gepolter Kondensator, temperaturabhängig, z.B. Keramik-Kondensator;91_en_60617/en_60617_04/en_60617_04_02/en_60617_04_02_15.elmt;-0.033;-0.183;0.733;0.866
+04-02-16;gepolter Kondensator, spannungsabhängig, z.B. Halbleiter-Kondensator;91_en_60617/en_60617_04/en_60617_04_02/en_60617_04_02_16.elmt;-0.042;-0.150;0.750;0.800
+04-03-01;Induktivität Spule Wicklung Drossel;91_en_60617/en_60617_04/en_60617_04_03/en_60617_04_03_01.elmt;0.167;-0.083;0.667;0.167
+04-03-03;Induktivität mit Magnetkern;91_en_60617/en_60617_04/en_60617_04_03/en_60617_04_03_03.elmt;-0.333;0.167;0.667;0.333
+04-03-04;Induktivität mit Luftspalt im Magnetkern;91_en_60617/en_60617_04/en_60617_04_03/en_60617_04_03_04.elmt;-0.333;0.167;0.667;0.333
+04-03-05;Induktivität, stetig veränderbar mit Magnetkern;91_en_60617/en_60617_04/en_60617_04_03/en_60617_04_03_05.elmt;-0.333;0.250;0.667;0.500
+04-03-06;Induktivität mit festen Anzapfungen;91_en_60617/en_60617_04/en_60617_04_03/en_60617_04_03_06.elmt;-0.333;0.042;0.667;0.417
+04-03-07;Induktivität mit bewegbarem Kontakt, stufig veränderbar;91_en_60617/en_60617_04/en_60617_04_03/en_60617_04_03_07.elmt;-0.292;0.042;0.750;0.417
+04-03-08;Variometer;91_en_60617/en_60617_04/en_60617_04_03/en_60617_04_03_08.elmt;-0.333;0.258;1.000;0.850
+04-03-09;koaxiale Drossel mit Magnetkern;91_en_60617/en_60617_04/en_60617_04_03/en_60617_04_03_09.elmt;-0.333;0.125;2.000;0.417
+04-03-10;Ferrit-Perle auf einem Leiter;91_en_60617/en_60617_04/en_60617_04_03/en_60617_04_03_10.elmt;-0.500;-0.000;1.000;0.167
+04-04-01;Magnetkern;91_en_60617/en_60617_04/en_60617_04_04/en_60617_04_04_01.elmt;0.000;-0.167;0.000;0.333
+04-04-02;Fluß-Strom-Richtungskennzeichen;91_en_60617/en_60617_04/en_60617_04_04/en_60617_04_04_02.elmt;0.000;0.250;0.667;0.500
+04-04-03;Magnetkern mit einer Wicklung;91_en_60617/en_60617_04/en_60617_04_04/en_60617_04_04_03.elmt;0.000;0.167;0.667;0.333
+04-05-01;Magnetkern mit fünf Wicklungen;91_en_60617/en_60617_04/en_60617_04_05/en_60617_04_05_01.elmt;0.000;0.833;0.667;1.667
+04-05-02;Magnetkern, eine Wicklung mit n Windungen;91_en_60617/en_60617_04/en_60617_04_05/en_60617_04_05_02.elmt;0.000;0.167;0.667;0.333
+04-06-01;Magnetspeicher-Matrix;91_en_60617/en_60617_04/en_60617_04_06/en_60617_04_06_01.elmt;-0.333;0.833;1.667;1.667
+04-06-02;Magnetkern-Matrix aus magnetischen Schichten;91_en_60617/en_60617_04/en_60617_04_06/en_60617_04_06_02.elmt;-0.167;0.750;2.000;1.500
+04-07-01;piezoelektrischer Kristall mit zwei Elektroden;91_en_60617/en_60617_04/en_60617_04_07/en_60617_04_07_01.elmt;0.000;-0.000;0.667;1.000
+04-07-02;piezoelektrischer Kristall mit drei Elektroden;91_en_60617/en_60617_04/en_60617_04_07/en_60617_04_07_02.elmt;0.000;-0.000;1.000;1.000
+04-07-03;piezoelektrischer Kristall mit zwei Elektroden;91_en_60617/en_60617_04/en_60617_04_07/en_60617_04_07_03.elmt;0.000;-0.000;0.667;1.000
+04-07-04;piezoelektrischer Kristall mit zwei Elektroden;91_en_60617/en_60617_04/en_60617_04_07/en_60617_04_07_04.elmt;0.000;-0.000;0.667;1.000
+04-08-01;magnetostriktive Verzögerungsleitung mit Wicklungen in Zusammenbaudarstellung;91_en_60617/en_60617_04/en_60617_04_08/en_60617_04_08_01.elmt;-0.667;0.208;1.333;0.750
+04-08-02;magnetostriktive Verzögerungsleitung mit Wicklungen, aufgelöste Darstellung;91_en_60617/en_60617_04/en_60617_04_08/en_60617_04_08_02.elmt;-0.642;1.167;2.050;2.833
+04-08-03;koaxiale Verzögerungsleitung;91_en_60617/en_60617_04/en_60617_04_08/en_60617_04_08_03.elmt;-0.667;0.292;2.000;0.583
+04-08-04;Festkörper-Verzögerungsleitung mit piezoelektrischen Wandlern;91_en_60617/en_60617_04/en_60617_04_08/en_60617_04_08_04.elmt;-0.667;0.375;1.667;0.917
+04-09-01;Verzögerungsleitung, allgemein;91_en_60617/en_60617_04/en_60617_04_09/en_60617_04_09_01.elmt;0.000;0.333;0.667;0.667
+04-09-02;Verzögerungsleitung, magnetostriktiv;91_en_60617/en_60617_04/en_60617_04_09/en_60617_04_09_02.elmt;0.333;0.500;1.667;1.000
+04-09-03;Verzögerungsleitung, koaxial;91_en_60617/en_60617_04/en_60617_04_09/en_60617_04_09_03.elmt;0.000;0.333;1.000;0.667
+04-09-04;Quecksilber-Verzögerungsleitung mit piezoelektrischen Wandlern;91_en_60617/en_60617_04/en_60617_04_09/en_60617_04_09_04.elmt;0.000;0.333;1.000;0.667
+04-09-05;Verzögerungsleitung als Leitungsnachbildung;91_en_60617/en_60617_04/en_60617_04_09/en_60617_04_09_05.elmt;0.000;0.333;1.000;0.667
+05-01-01;Halbleiterzone mit einem ohmschen Anschluß;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_01.elmt;-0.167;0.167;0.333;0.333
+05-01-02;Halbleiterzone mit mehreren ohmschen Anschlüssen;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_02.elmt;-0.083;0.325;0.833;0.650
+05-01-03;Halbleiterzone mit mehreren ohmschen Anschlüssen;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_03.elmt;-0.075;-0.133;0.817;0.567
+05-01-04;Halbleiterzone mit mehreren ohmschen Anschlüssen;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_04.elmt;-0.075;0.283;0.817;0.567
+05-01-05;leitender Kanal für Elemente vom Verarmungstyp;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_05.elmt;0.000;-0.167;0.333;0.500
+05-01-06;leitender Kanal für Elemente vom Anreicherungstyp;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_06.elmt;0.000;-0.167;0.333;0.500
+05-01-07;gleichrichtender Übergang;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_07.elmt;-0.167;0.333;0.333;0.667
+05-01-09;Sperrschicht, die mit einem elektrischen Feld eine Halbleiterzone beeinflußt, z. B. in einem Feldeffekt-Transistor: - P-Gebiet, das eine N-Zone beeinflußt;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_09.elmt;0.000;-0.000;0.333;0.167
+05-01-10;Sperrschicht, die mit einem elektrischen Feld eine Halbleiterzone beeinflußt, z. B. in einem Feldeffekt-Transistor: - N-Gebiet, das eine P-Zone beeinflußt;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_10.elmt;0.000;-0.000;0.333;0.167
+05-01-11;IGFET, Kennzeichnung der Art des Substrats: - N-leitender Kanal auf einem P-Substrat;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_11.elmt;-0.167;0.167;0.333;0.500
+05-01-12;IGFET, Kennzeichnung der Art des Substrats: - P-leitender Kanal auf einem N-Substrat;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_12.elmt;-0.167;0.167;0.333;0.500
+05-01-13;Gate, isoliert;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_13.elmt;0.167;-0.042;0.333;0.250
+05-01-14;P-Emitter auf einer N-Zone;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_14.elmt;-0.167;0.167;0.333;0.333
+05-01-15;Mehrere P-Emitter auf einer N-Zone;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_15.elmt;-0.333;0.333;0.667;1.000
+05-01-16;N-Emitter auf einer P-Zone;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_16.elmt;-0.167;0.167;0.333;0.333
+05-01-17;Mehrere N-Emitter auf einer P-Zone;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_17.elmt;-0.333;0.333;0.667;1.000
+05-01-18;Kollektor auf einer Zone entgegengesetzten Leitertyps;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_18.elmt;-0.167;0.167;0.333;0.333
+05-01-19;Mehrere Kollektoren auf einer Zone entgegengesetzten Leitertyps;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_19.elmt;0.000;0.333;0.667;1.000
+05-01-20;Übergang zwischen Zonen verschiedenen Leitertyps, entweder P auf N oder N auf P;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_20.elmt;-0.167;0.167;0.333;0.333
+05-01-21;Transition entre régions de types de conductivité différentes: - de P à N, ou de N à P;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_21.elmt;0.067;-0.167;0.133;0.667
+05-01-22;Eigenleitende Zone zwischen Gebieten gleichen Leitertyps, PIP oder NIP Struktur;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_22.elmt;-0.058;0.333;0.217;0.667
+05-01-23;Eigenleitende Zone zwischen einem Kollektor und einem Gebiet anderen Leitertyps, PIP oder NIP Struktur;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_23.elmt;-0.033;0.292;0.267;0.750
+05-01-24;Eigenleitende Zone zwischen einem Kollektor und einem Gebiet gleichen Leitertyps, PIP oder NIP Struktur;91_en_60617/en_60617_05/en_60617_05_01/en_60617_05_01_24.elmt;-0.033;0.292;0.267;0.750
+05-02-01;Schottky-Effekt;91_en_60617/en_60617_05/en_60617_05_02/en_60617_05_02_01.elmt;0.000;0.167;0.167;0.333
+05-02-02;Tunnel-Effekt;91_en_60617/en_60617_05/en_60617_05_02/en_60617_05_02_02.elmt;-0.042;0.167;0.083;0.333
+05-02-03;Durchbruch-Effekt, in einer Richtung (unidirektional) Zener-Effekt;91_en_60617/en_60617_05/en_60617_05_02/en_60617_05_02_03.elmt;-0.042;0.167;0.083;0.333
+05-02-04;Durchbruch-Effekt, in beiden Richtungen (bidirektional);91_en_60617/en_60617_05/en_60617_05_02/en_60617_05_02_04.elmt;0.000;0.167;0.167;0.333
+05-02-05;Rückwärts-Effekt (Unitunnel-Effekt);91_en_60617/en_60617_05/en_60617_05_02/en_60617_05_02_05.elmt;0.000;0.167;0.133;0.333
+05-03-01;Halbleiterdiode, allgemein;91_en_60617/en_60617_05/en_60617_05_03/en_60617_05_03_01.elmt;0.000;0.333;0.333;0.667
+05-03-02;Leuchtdiode (LED);91_en_60617/en_60617_05/en_60617_05_03/en_60617_05_03_02.elmt;0.125;0.333;0.583;0.667
+05-03-03;Halbleiterdiode, allgemein;91_en_60617/en_60617_05/en_60617_05_03/en_60617_05_03_03.elmt;0.000;0.333;0.333;0.667
+05-03-04;Kapazitätsdiode;91_en_60617/en_60617_05/en_60617_05_03/en_60617_05_03_04.elmt;0.083;0.333;0.500;0.667
+05-03-05;Tunneldiode Esaki-Diode;91_en_60617/en_60617_05/en_60617_05_03/en_60617_05_03_05.elmt;0.000;0.333;0.333;0.667
+05-03-06;Durchbruch-Diode, unidirektional Spannungsbegrenzer-Diode Z-Diode;91_en_60617/en_60617_05/en_60617_05_03/en_60617_05_03_06.elmt;0.000;0.333;0.333;0.667
+05-03-07;Durchbruch-Diode, bidirektional;91_en_60617/en_60617_05/en_60617_05_03/en_60617_05_03_07.elmt;0.000;0.500;0.333;1.000
+05-03-08;Unitunnel-Diode;91_en_60617/en_60617_05/en_60617_05_03/en_60617_05_03_08.elmt;0.000;0.333;0.333;0.667
+05-03-09;bidirektionale Diode;91_en_60617/en_60617_05/en_60617_05_03/en_60617_05_03_09.elmt;0.000;0.333;0.667;0.667
+05-04-01;Thyristordiode, rückwärts sperrend;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_01.elmt;0.000;0.333;0.333;0.667
+05-04-02;Thyristordiode, rückwärts leitend;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_02.elmt;0.000;0.333;0.333;0.667
+05-04-03;Thyristordiode, bidirektional Diac;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_03.elmt;0.000;0.333;0.667;0.667
+05-04-04;Thyristortriode, allgemein;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_04.elmt;-0.042;0.333;0.417;0.667
+05-04-05;rückwärts sperrende Thyristortriode, N-Gate (Anode gesteuert);91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_05.elmt;-0.083;0.333;0.500;0.667
+05-04-06;Thyristordiode, rückwärts sperrend;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_06.elmt;-0.083;0.333;0.500;0.667
+05-04-07;Abschalt-Thyristortriode, allgemein;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_07.elmt;-0.042;0.333;0.417;0.667
+05-04-08;Abschalt-Thyristortriode, N-Gate (Anode gesteuert);91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_08.elmt;-0.083;0.367;0.500;0.733
+05-04-09;Abschalt-Thyristortriode, P-Gate (Kathode gesteuert);91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_09.elmt;-0.083;0.300;0.500;0.733
+05-04-10;rückwärts sperrende Thyristortetriode;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_10.elmt;0.083;0.300;0.500;0.733
+05-04-11;Thyristortriode, bidirektional Triac;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_11.elmt;0.000;0.333;0.667;0.667
+05-04-12;rückwärts leitende Thyristortriode, allgemein;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_12.elmt;-0.083;0.333;0.500;0.667
+05-04-13;rückwärts leitende Thyristortriode, allgemein;91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_13.elmt;-0.083;0.333;0.500;0.667
+05-04-14;rückwärts leitende Thyristortriode, P-Gate (Kathode gesteuert);91_en_60617/en_60617_05/en_60617_05_04/en_60617_05_04_14.elmt;0.083;0.333;0.500;0.667
+05-05-01;PNP-Transistor;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_01.elmt;-0.167;0.333;0.667;0.667
+05-05-02;NPN-Transistor, Kollektor mit dem Gehäuse verbunden;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_02.elmt;-0.167;0.333;0.667;0.667
+05-05-03;NPN-Avalanche-Transistor;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_03.elmt;0.000;0.333;1.000;0.667
+05-05-04;Unijunction-Transistor mit Basis vom P-Typ;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_04.elmt;0.167;-0.167;0.667;0.500
+05-05-05;Unijunction-Transistor mit Basis vom N-Typ;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_05.elmt;0.167;-0.167;0.667;0.500
+05-05-06;NPN-Transistor mit zwei Basis-Anschlüsse;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_06.elmt;-0.167;0.500;0.667;1.000
+05-05-07;PNIP-Transistor mit Anschluss zur eigenleitenden Zone;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_07.elmt;-0.167;0.500;0.667;1.000
+05-05-08;PNIN-Transistor mit Anschluss zur eigenleitenden Zone;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_08.elmt;-0.167;0.500;0.667;1.000
+05-05-09;Sperrschicht-Feldeffekt-Transistor (JFET) mit N-Kana;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_09.elmt;0.167;-0.167;0.667;0.500
+05-05-10;Sperrschicht-Feldeffekt-Transistor (JFET) mit P-Kanal;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_10.elmt;0.167;-0.167;0.667;0.500
+05-05-11;IGFET-Transistor, Anreicherungstyp, ein Gate, P-Kanal, ohne Substratanschluß;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_11.elmt;0.000;-0.167;0.667;0.500
+05-05-12;IGFET-Transistor, Anreicherungstyp, ein Gate, N-Kanal, ohne Substratanschluß;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_12.elmt;0.000;-0.167;0.667;0.500
+05-05-13;IGFET-Transistor, Anreicherungstyp, ein Gate, P-Kanal, mit Substratanschluß;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_13.elmt;0.000;-0.167;0.667;0.667
+05-05-14;IGFET-Transisstor, Anreicherungstyp, ein Gate, N-Kanal, Substrat intern mit Source verbunden;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_14.elmt;0.000;-0.167;0.667;0.500
+05-05-15;IGFET-Transistor, Verarmungstyp, ein Gate, N- Kanal, ohne Substratanschluß;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_15.elmt;0.000;-0.167;0.667;0.500
+05-05-16;IGFET-Transistor, Verarmungstyp, ein Gate, P- Kanal, ohne Substratanschluß;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_16.elmt;0.000;-0.167;0.667;0.500
+05-05-17;IGFET-Transistor, Verarmungstyp, zwei Gates, N-Kanal mit Substratanschluß;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_17.elmt;0.000;-0.000;0.667;0.833
+05-05-18;bipolarer Isolierschicht-Transistor (IGBT), Anreicherungstyp, P-Kanal;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_18.elmt;-0.087;-0.058;1.092;1.350
+05-05-19;IGBT-Transistor, Anreicherungstyp, N-Kanal;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_19.elmt;-0.083;-0.083;0.833;1.167
+05-05-20;IGBT-Transistor, Verarmungstyp, P-Kanal;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_20.elmt;-0.083;-0.083;0.833;1.167
+05-05-21;IGBT-Transistor, Verarmungstyp, N-Kana;91_en_60617/en_60617_05/en_60617_05_05/en_60617_05_05_21.elmt;-0.083;-0.083;0.833;1.167
+05-06-01;Photowiderstand lichtempfindliche Zelle lichtempfindliches Element mit symmetrischer Leitfähigkeit;91_en_60617/en_60617_05/en_60617_05_06/en_60617_05_06_01.elmt;-0.167;0.417;0.500;0.833
+05-06-02;Photodiode lichtempfindliches Element mit unsymmetrischer Leitfähigkeit;91_en_60617/en_60617_05/en_60617_05_06/en_60617_05_06_02.elmt;-0.167;0.417;0.667;0.833
+05-06-03;Photozelle;91_en_60617/en_60617_05/en_60617_05_06/en_60617_05_06_03.elmt;-0.125;0.417;0.583;0.833
+05-06-04;Phototransistor PNP;91_en_60617/en_60617_05/en_60617_05_06/en_60617_05_06_04.elmt;-0.125;0.417;0.583;0.833
+05-06-05;Hall-Generator;91_en_60617/en_60617_05/en_60617_05_06/en_60617_05_06_05.elmt;0.000;0.417;0.667;0.833
+05-06-06;magnetfeldempfindlicher Widerstand;91_en_60617/en_60617_05/en_60617_05_06/en_60617_05_06_06.elmt;0.000;0.417;0.500;0.833
+05-06-07;magnetischer Koppler magnetischer Isolator;91_en_60617/en_60617_05/en_60617_05_06/en_60617_05_06_07.elmt;-0.500;0.583;2.000;1.167
+05-06-08;Optokoppler Photokoppler optischer Isolator, mit Leuchdiode und Phototransisto;91_en_60617/en_60617_05/en_60617_05_06/en_60617_05_06_08.elmt;-0.500;0.583;2.000;1.167
+05-06-09;Optokoppler Photokoppler optischer Isolator, mit Leuchdiode und Phototransisto;91_en_60617/en_60617_05/en_60617_05_06/en_60617_05_06_09.elmt;-0.667;0.833;2.333;1.667
+05-07-01;gasgefüllter Röhrenkolben;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_01.elmt;-0.667;0.667;1.333;1.333
+05-07-02;Röhrenkolben mit externem Schirm;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_02.elmt;-0.542;0.667;1.750;1.500
+05-07-03;Röhrenkolben mit leitendem Belag auf der Innenseite;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_03.elmt;-0.583;1.500;2.500;3.000
+05-07-04;heiße Kathode, indirekt geheizt;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_04.elmt;-0.333;0.583;0.667;1.167
+05-07-05;heiße Kathode, indirekt geheizt;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_05.elmt;-0.333;0.500;0.667;1.000
+05-07-06;heiße Kathode, direkt geheizt;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_06.elmt;-0.333;0.583;0.667;1.167
+05-07-07;Heizer einer indirekt geheizten heißen Kathode Heizer für ein Thermoelement;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_07.elmt;-0.333;0.583;0.667;1.167
+05-07-08;photoelektrische Kathode;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_08.elmt;-0.333;0.750;0.667;1.500
+05-07-09;kalte Kathode ionenbeheizte Kathode;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_09.elmt;0.000;0.500;0.333;1.000
+05-07-10;Elektrode, die als Anode und/oder als kalte Kathode dient;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_10.elmt;0.000;0.500;0.333;1.000
+05-07-11;Anode Kollektor für Mikrowellenröhren;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_11.elmt;0.000;0.333;0.667;0.667
+05-07-12;Leuchtanode;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_12.elmt;0.000;0.383;0.333;0.900
+05-07-13;Gitter;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_13.elmt;0.000;-0.000;1.333;0.000
+05-07-14;Ionen-Diffusions-Sperre;91_en_60617/en_60617_05/en_60617_05_07/en_60617_05_07_14.elmt;0.042;-0.000;1.083;0.333
+05-08-01;Ablenkelektroden;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_01.elmt;-0.667;0.167;1.333;0.333
+05-08-02;Ablenkelektroden;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_02.elmt;-0.667;0.167;1.333;0.333
+05-08-03;Intensitätsmodulier-Elektrode (Wehneltzylinder;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_03.elmt;0.167;-0.167;1.000;0.333
+05-08-04;Fokussierelektrode Strahlformungs-Elektrode;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_04.elmt;0.000;-0.000;1.667;0.167
+05-08-05;strahlteilende Elektrode;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_05.elmt;0.167;0.208;1.667;0.917
+05-08-06;zylindrische Fokussierelektrode elektronische Linse;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_06.elmt;0.167;-0.167;1.000;0.667
+05-08-07;zylindrische Fokussierelektrode, mit Gitter;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_07.elmt;-0.500;0.333;1.000;0.667
+05-08-08;zylindrische Fokussierelektrode, mit Gitter;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_08.elmt;-0.417;0.167;0.833;0.333
+05-08-09;Mehrfachelektrode;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_09.elmt;0.100;-0.000;1.200;0.067
+05-08-10;radiale Ablenkelektrode;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_10.elmt;-0.667;0.167;1.333;0.667
+05-08-11;radiale Ablenkelektrode;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_11.elmt;-1.000;0.167;2.000;0.667
+05-08-12;Anode mit Sekundäremission Dynode;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_12.elmt;-0.417;0.333;0.833;1.000
+05-08-13;Photoemissionselektrode;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_13.elmt;0.083;-0.083;1.167;0.167
+05-08-14;Speicherelektrode;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_14.elmt;0.083;-0.083;1.167;0.167
+05-08-15;Speicherelektrode mit Photoemission;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_15.elmt;0.083;-0.083;1.167;0.167
+05-08-16;Speicherelektrode mit Sekundäremission;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_16.elmt;0.083;0.083;1.167;0.500
+05-08-17;Speicherelektrode mit innerem Photoeffekt;91_en_60617/en_60617_05/en_60617_05_08/en_60617_05_08_17.elmt;0.083;-0.083;1.167;0.167
+05-09-01;Elektronenstrahlerzeuger (Elektronenkanone);91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_01.elmt;-0.500;0.500;1.000;1.000
+05-09-02;Reflektor;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_02.elmt;-0.500;0.583;1.000;1.167
+05-09-03;Sohle, nicht emittierend, für offene Verzögerungsleitung;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_03.elmt;-0.333;0.667;0.667;1.333
+05-09-04;Sohle, nicht emittierend, für geschlossene Verzögerungsleitung;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_04.elmt;0.167;-0.167;0.667;1.333
+05-09-05;Sohle, emittierend;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_05.elmt;-0.250;0.667;0.833;1.333
+05-09-06;Verzögerungsleitung, offen;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_06.elmt;-0.208;0.667;0.417;1.333
+05-09-07;Elektrode zur elektrostatischen Fokussierung;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_07.elmt;0.125;0.667;1.083;1.333
+05-09-08;Verzögerungsleitung, geschlossen;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_08.elmt;-0.500;0.500;1.000;1.000
+05-09-09;Hohlraumresonator;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_09.elmt;-0.750;2.000;2.500;4.000
+05-09-10;Hohlraumresonator, teilweise oder ganz außerhalb der Röhre;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_10.elmt;-0.400;2.000;3.200;4.000
+05-09-11;Permanentmagnet, der ein Querfeld erzeugt;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_11.elmt;-1.500;2.000;3.000;4.000
+05-09-12;Elektromagnet, der ein Querfeld erzeugt;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_12.elmt;-1.500;2.000;3.000;4.000
+05-09-13;Quadrupol;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_13.elmt;-0.917;0.750;1.833;1.500
+05-09-14;Quadrupol mit Schleifenkoppler;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_14.elmt;-0.725;0.500;1.717;1.267
+05-09-15;Verzögerungsleitungs-Koppler;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_15.elmt;-0.417;0.167;0.833;0.333
+05-09-16;Kupplung Spirale;91_en_60617/en_60617_05/en_60617_05_09/en_60617_05_09_16.elmt;-0.292;0.258;0.583;0.517
+05-10-01;Röntgenanode;91_en_60617/en_60617_05/en_60617_05_10/en_60617_05_10_01.elmt;0.167;-0.042;0.500;0.917
+05-10-02;Triggerelektrode Zündelektrode;91_en_60617/en_60617_05/en_60617_05_10/en_60617_05_10_02.elmt;-0.083;-0.250;1.167;0.500
+05-10-03;Flüssigkathode;91_en_60617/en_60617_05/en_60617_05_10/en_60617_05_10_03.elmt;0.000;0.667;2.000;2.667
+05-10-04;Flüssigkathode, isoliert;91_en_60617/en_60617_05/en_60617_05_10/en_60617_05_10_04.elmt;0.000;0.667;2.000;2.667
+05-11-01;Triode, Kathode direkt geheizt;91_en_60617/en_60617_05/en_60617_05_11/en_60617_05_11_01.elmt;-0.167;1.000;2.333;2.667
+05-11-02;Thyratron Triode, gasgefüllt, Kathode indirekt geheizt;91_en_60617/en_60617_05/en_60617_05_11/en_60617_05_11_02.elmt;-0.167;-0.750;2.333;3.833
+05-11-03;Pentode;91_en_60617/en_60617_05/en_60617_05_11/en_60617_05_11_03.elmt;-0.167;-0.583;2.333;4.167
+05-11-04;Triode/Hexode;91_en_60617/en_60617_05/en_60617_05_11/en_60617_05_11_04.elmt;0.667;-0.500;3.667;3.667
+05-11-05;Abstimm-Anzeigeröhre magisches Auge;91_en_60617/en_60617_05/en_60617_05_11/en_60617_05_11_05.elmt;-0.167;-0.667;3.000;4.000
+05-13-01;Reflexklystron, diverse Formen und Ausführungen;91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_01.elmt;-0.167;1.917;4.333;5.167
+05-13-02;Reflexklystron, diverse Formen und Ausführungen;91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_02.elmt;-0.325;2.250;3.350;4.500
+05-13-03;Reflexklystron, diverse Formen und Ausführungen;91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_03.elmt;-0.325;2.250;3.350;4.500
+05-13-04;Reflexklystron, diverse Formen und Ausführungen;91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_04.elmt;-1.000;2.000;4.333;4.667
+05-13-08;Vorwärtswellen-Verstärkerröhre, O-Typ Wanderfeldröhre, diverse Formen und Ausführungen;91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_08.elmt;-1.000;2.000;2.000;5.333
+05-13-10;Vorwärtswellen-Verstärkerröhre, M-Typ;91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_10.elmt;-1.000;2.000;3.667;4.000
+05-13-11;Rückwärtswellen-Verstärkerröhre, M-Typ;91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_11.elmt;-0.917;1.667;3.833;3.333
+05-13-12;Rückwärtswellen-Verstärkerröhre, M-Typ;91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_12.elmt;-0.583;1.675;2.833;3.350
+05-13-14;Rückwärtswellen-Oszillatorröhre, M-Typ (05-13-14, vereinfachte Form);91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_14.elmt;-1.083;1.417;2.167;4.500
+05-13-15;Magnetron;91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_15.elmt;-0.167;0.417;3.333;3.833
+05-13-16;Magnetron (05-13-16, vereinfachte Form);91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_16.elmt;-0.083;0.500;2.500;1.667
+05-13-18;Magnetron mit Spannungsabstimmung (05-13-18, vereinfachte Form);91_en_60617/en_60617_05/en_60617_05_13/en_60617_05_13_18.elmt;-0.167;0.517;2.667;1.700
+05-16-01;Ladungs-Akkumulator;91_en_60617/en_60617_05/en_60617_05_16/en_60617_05_16_01.elmt;-0.667;1.333;1.333;3.000
+05-16-02;Soliondiode;91_en_60617/en_60617_05/en_60617_05_16/en_60617_05_16_02.elmt;-0.667;1.333;1.333;3.000
+05-16-03;Soliontetrode;91_en_60617/en_60617_05/en_60617_05_16/en_60617_05_16_03.elmt;-0.667;1.658;2.000;3.817
+05-16-04;Leitfähigkeits-Zelle;91_en_60617/en_60617_05/en_60617_05_16/en_60617_05_16_04.elmt;0.000;-0.042;1.333;0.750
+06-01-01;Wicklung;91_en_60617/en_60617_06/en_60617_06_01/en_60617_06_01_01.elmt;0.000;-0.000;0.000;0.333
+06-01-02;drei getrennte Wicklungen;91_en_60617/en_60617_06/en_60617_06_01/en_60617_06_01_02.elmt;-0.083;-0.167;0.167;0.333
+06-01-03;sechs getrennte Wicklungen;91_en_60617/en_60617_06/en_60617_06_01/en_60617_06_01_03.elmt;0.087;-0.000;0.175;0.333
+06-01-04;drei getrennte Wicklungen, Dreiphasen-System;91_en_60617/en_60617_06/en_60617_06_01/en_60617_06_01_04.elmt;0.208;-0.167;0.750;0.333
+06-01-05;m getrennte Wicklungen, m-Phasensystem;91_en_60617/en_60617_06/en_60617_06_01/en_60617_06_01_05.elmt;0.375;-0.167;0.750;0.333
+06-01-06;zwei getrennte Wicklungen, Vierleitersystem;91_en_60617/en_60617_06/en_60617_06_01/en_60617_06_01_06.elmt;0.125;-0.125;0.250;0.250
+06-02-01;Zweiphasenwicklung, L-Schaltung;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_01.elmt;-0.083;0.083;0.167;0.167
+06-02-02;Dreiphasenwicklung, V-Schaltung (60°);91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_02.elmt;-0.167;0.125;0.333;0.250
+06-02-03;Vierphasenwicklung, Neutralleiter;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_03.elmt;-0.167;0.167;0.333;0.333
+06-02-04;Dreiphasenwicklung, T-Schaltung;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_04.elmt;0.000;-0.083;0.167;0.167
+06-02-05;Dreiphasenwicklung, Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_05.elmt;-0.167;0.125;0.333;0.250
+06-02-06;Dreiphasenwicklung, offene Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_06.elmt;-0.167;0.083;0.333;0.167
+06-02-07;Dreiphasenwicklung, Sternschaltung;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_07.elmt;-0.167;0.125;0.333;0.250
+06-02-08;Dreiphasenwicklung, Sternschaltung, Neutralleiter herausgeführt;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_08.elmt;-0.167;0.125;0.333;0.250
+06-02-09;Dreiphasenwicklung, Zickzackschaltung;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_09.elmt;0.125;-0.017;0.250;0.300
+06-02-10;Sechsphasenwicklung, Doppeldreieckschaltung;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_10.elmt;0.000;0.167;0.333;0.333
+06-02-11;Sechsphasenwicklung, Polygonschaltung;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_11.elmt;-0.167;0.167;0.333;0.333
+06-02-12;Sechsphasenwicklung, Sternschaltung;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_12.elmt;-0.083;0.167;0.333;0.333
+06-02-13;Sechsphasenwicklung, Gabelschaltung, Neutralleiter herausgeführt;91_en_60617/en_60617_06/en_60617_06_02/en_60617_06_02_13.elmt;-0.167;0.167;0.333;0.333
+06-03-01;Kompensationswicklung;91_en_60617/en_60617_06/en_60617_06_03/en_60617_06_03_01.elmt;-0.167;-0.000;0.333;0.167
+06-03-02;Reihenschlußwicklung;91_en_60617/en_60617_06/en_60617_06_03/en_60617_06_03_02.elmt;-0.250;-0.000;0.500;0.167
+06-03-03;Nebenschlußwicklung oder fremderregte Wicklung;91_en_60617/en_60617_06/en_60617_06_03/en_60617_06_03_03.elmt;-0.333;-0.000;0.667;0.167
+06-03-04;Bürste;91_en_60617/en_60617_06/en_60617_06_03/en_60617_06_03_04.elmt;-0.042;0.167;0.417;0.333
+06-04-01;"Maschine, allgemein (Asterisk ""*"" ersetzen durch): C Rotierender Umformer G Generator GS Synchrongenerator M Motor MG Motor/Generator MS Synchronmotor";91_en_60617/en_60617_06/en_60617_06_04/en_60617_06_04_01.elmt;-0.500;0.500;1.000;1.000
+06-04-02;Linearmotor;91_en_60617/en_60617_06/en_60617_06_04/en_60617_06_04_02.elmt;-0.500;0.500;1.000;1.000
+06-04-03;Schrittmotor;91_en_60617/en_60617_06/en_60617_06_04/en_60617_06_04_03.elmt;-0.500;0.500;1.000;1.000
+06-04-04;Handgenerator Kurbelinduktor;91_en_60617/en_60617_06/en_60617_06_04/en_60617_06_04_04.elmt;-0.250;0.500;1.500;1.000
+06-05-01;Gleichstrom-Reihenschlußmotor;91_en_60617/en_60617_06/en_60617_06_05/en_60617_06_05_01.elmt;-0.458;0.667;1.417;1.333
+06-05-02;Gleichstrom-Nebenschlußmotor;91_en_60617/en_60617_06/en_60617_06_05/en_60617_06_05_02.elmt;-0.500;0.542;1.333;1.583
+06-05-03;Gleichstrom-Doppelschlußgenerator;91_en_60617/en_60617_06/en_60617_06_05/en_60617_06_05_03.elmt;-0.458;0.542;1.417;1.583
+06-05-04;Gleichstrom-Umformer, rotierend, mit gemeinsamer Dauermagneterregung (Einankerumformer);91_en_60617/en_60617_06/en_60617_06_05/en_60617_06_05_04.elmt;-1.000;0.667;3.000;1.333
+06-05-05;Gleichstrom-Umformer, rotierend, mit gemeinsamer Feldwicklung (Einankerumformer);91_en_60617/en_60617_06/en_60617_06_05/en_60617_06_05_05.elmt;-1.167;0.792;3.000;1.583
+06-06-01;Reihenschlußmotor, einphasig;91_en_60617/en_60617_06/en_60617_06_06/en_60617_06_06_01.elmt;-0.458;0.667;1.417;1.333
+06-06-02;Repulsionsmotor, einphasig;91_en_60617/en_60617_06/en_60617_06_06/en_60617_06_06_02.elmt;-0.500;0.583;1.333;1.500
+06-06-03;Drehstrom-Reihenschlußmotor;91_en_60617/en_60617_06/en_60617_06_06/en_60617_06_06_03.elmt;-0.500;0.750;1.500;1.833
+06-07-01;Drehstrom-Synchrongenerator mit Dauermagneterregung;91_en_60617/en_60617_06/en_60617_06_07/en_60617_06_07_01.elmt;-0.500;0.500;1.000;1.667
+06-07-02;Synchronmotor, einphasig;91_en_60617/en_60617_06/en_60617_06_07/en_60617_06_07_02.elmt;-0.500;0.417;1.000;1.833
+06-07-03;Drehstrom-Synchrongenerator, Sternschaltung, Neutralleiter herausgeführt;91_en_60617/en_60617_06/en_60617_06_07/en_60617_06_07_03.elmt;-0.417;0.417;1.167;1.833
+06-07-04;Drehstrom-Synchrongenerator, beide Enden jeder Wicklung herausgeführt;91_en_60617/en_60617_06/en_60617_06_07/en_60617_06_07_04.elmt;-0.167;0.500;1.667;1.667
+06-07-05;Drehstrom-Umformer mit Nebenschlußerregung;91_en_60617/en_60617_06/en_60617_06_07/en_60617_06_07_05.elmt;-0.667;0.833;1.333;1.667
+06-08-01;Drehstrom-Asynchronmotor mit Käfigläufer;91_en_60617/en_60617_06/en_60617_06_08/en_60617_06_08_01.elmt;-0.500;0.667;1.000;1.333
+06-08-02;Asynchronmotor, einphasig, mit Käfigläufer, Enden für eine Anlaufwicklung herausgeführt;91_en_60617/en_60617_06/en_60617_06_08/en_60617_06_08_02.elmt;-0.333;0.667;1.333;1.333
+06-08-03;Drehstrom-Asynchronmotor mit Schleifringläufer;91_en_60617/en_60617_06/en_60617_06_08/en_60617_06_08_03.elmt;-0.500;0.667;1.333;2.000
+06-08-04;Drehstrom-Asynchronmotor in Sternschaltung mit Anlaufwicklung im Läufer;91_en_60617/en_60617_06/en_60617_06_08/en_60617_06_08_04.elmt;-0.500;0.667;1.000;1.333
+06-08-05;Drehstrom-Linearmotor, Bewegung nur in einer Richtung;91_en_60617/en_60617_06/en_60617_06_08/en_60617_06_08_05.elmt;-0.500;0.667;1.000;1.333
+06-09-01;Transformator mit zwei Wicklungen;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_01.elmt;-0.617;1.325;1.233;2.650
+06-09-02;Transformator mit zwei Wicklungen;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_02.elmt;-0.117;-0.092;1.233;1.483
+06-09-03;Transformator mit zwei Wicklungen, dargestellt mit Kennzeichnung gleicher Phasenlagen;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_03.elmt;-0.117;-0.092;1.233;1.483
+06-09-04;Transformator mit drei Wicklungen;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_04.elmt;-0.417;1.242;1.833;2.483
+06-09-05;Transformator mit drei Wicklungen;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_05.elmt;0.133;-0.092;1.733;1.483
+06-09-06;Spartransformator;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_06.elmt;-0.617;0.825;1.233;2.650
+06-09-07;Spartransformator;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_07.elmt;-0.617;0.658;1.233;1.317
+06-09-08;Drossel;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_08.elmt;-0.617;0.658;1.233;1.983
+06-09-09;Induktivität, Spule, ...;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_09.elmt;-0.200;0.158;1.067;0.650
+06-09-10;Stromwandler, Impulstransformator;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_10.elmt;-0.533;0.825;1.400;1.650
+06-09-11;Stromwandler, Impulstransformator;91_en_60617/en_60617_06/en_60617_06_09/en_60617_06_09_11.elmt;-0.700;0.825;1.067;1.650
+06-10-01;Einphasentransformator mit zwei Wicklungen und Schirm;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_01.elmt;-0.617;1.325;1.233;2.983
+06-10-02;Einphasentransformator mit zwei Wicklungen und Schirm;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_02.elmt;-0.117;-0.092;1.233;1.483
+06-10-03;Transformator mit Mittenanzapfung an einer Wicklung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_03.elmt;-0.450;1.325;1.567;2.983
+06-10-04;Transformator mit Mittenanzapfung an einer Wicklung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_04.elmt;-0.117;-0.092;1.233;1.483
+06-10-05;Transformator mit veränderbarer Kopplung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_05.elmt;-0.483;1.325;1.500;2.983
+06-10-06;Transformator mit veränderbarer Kopplung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_06.elmt;-0.117;-0.092;1.233;1.483
+06-10-07;Drehstromtransformator, Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_07.elmt;-0.617;1.325;1.233;2.983
+06-10-08;Drehstromtransformator, Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_08.elmt;-0.875;1.742;1.917;3.483
+06-10-09;Drehstromtransformator mit vier Anzapfungen, Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_09.elmt;-0.571;1.325;1.325;2.983
+06-10-10;Drehstromtransformator mit vier Anzapfungen, Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_10.elmt;-0.958;1.575;2.083;3.150
+06-10-11;Drehstromeinheit aus Einphasentransformatoren, Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_11.elmt;-0.367;1.325;1.733;2.983
+06-10-12;Drehstromeinheit aus Einphasentransformatoren, Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_12.elmt;-0.083;-0.175;1.833;1.650
+06-10-13;Drehstromtransformator mit Last- Stufenschalter, Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_13.elmt;-0.408;1.325;1.650;2.983
+06-10-14;Drehstromtransformator mit Last- Stufenschalter, Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_14.elmt;-0.708;1.742;2.417;3.483
+06-10-15;Drehstromtransformator, Stern/Zickzackschaltung, Zickzackschaltung mit Neutralleiter;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_15.elmt;-0.617;1.325;1.233;2.983
+06-10-16;Drehstromtransformator, Stern/Zickzackschaltung, Zickzackschaltung mit Neutralleiter;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_16.elmt;-0.583;1.658;2.167;3.650
+06-10-17;Drehstromtransformator, Stern/Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_17.elmt;-0.492;1.325;1.683;2.983
+06-10-18;Drehstromtransformator, Stern/Dreieckschaltung;91_en_60617/en_60617_06/en_60617_06_10/en_60617_06_10_18.elmt;0.167;-0.258;2.500;2.483
+06-11-01;Spartransformator, einphasig;91_en_60617/en_60617_06/en_60617_06_11/en_60617_06_11_01.elmt;-0.617;0.825;1.233;2.650
+06-11-02;Spartransformator, einphasig;91_en_60617/en_60617_06/en_60617_06_11/en_60617_06_11_02.elmt;-0.617;0.658;1.233;1.317
+06-11-03;Drehstrom-Spartransformator, Sternschaltung;91_en_60617/en_60617_06/en_60617_06_11/en_60617_06_11_03.elmt;-0.617;0.867;1.233;2.733
+06-11-04;Drehstrom-Spartransformator, Sternschaltung;91_en_60617/en_60617_06/en_60617_06_11/en_60617_06_11_04.elmt;-0.625;0.575;1.750;1.483
+06-11-05;Spartransformator, einphasig, mit Spannungssteller;91_en_60617/en_60617_06/en_60617_06_11/en_60617_06_11_05.elmt;-0.433;0.825;1.600;2.650
+06-11-06;Spartransformator, einphasig, mit Spannungssteller;91_en_60617/en_60617_06/en_60617_06_11/en_60617_06_11_06.elmt;-0.617;0.658;1.233;1.317
+06-12-01;Drehstrom-Induktionssteller, (Drehtransformator);91_en_60617/en_60617_06/en_60617_06_12/en_60617_06_12_01.elmt;-0.458;0.992;1.550;2.317
+06-12-02;Drehstrom-Induktionssteller, (Drehtransformator);91_en_60617/en_60617_06/en_60617_06_12/en_60617_06_12_02.elmt;-0.092;0.492;2.283;1.650
+06-13-01A;Spannungswandler;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_01A.elmt;-0.200;-0.100;1.067;2.167
+06-13-01B;Spannungswandler;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_01B.elmt;-0.783;0.575;0.900;1.483
+06-13-02;Stromwandler mit zwei Kernen und einer Sekundärwicklung auf jedem Kern;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_02.elmt;-0.200;-0.100;1.067;2.167
+06-13-03;Stromwandler mit zwei Kernen und einer Sekundärwicklung auf jedem Kern;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_03.elmt;-0.700;0.221;1.067;2.192
+06-13-04;Stromwandler mit zwei Sekundärwickungen auf einem Kern;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_04.elmt;0.133;-0.092;1.733;2.150
+06-13-05;Stromwandler mit zwei Sekundärwickungen auf einem Kern;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_05.elmt;-0.700;0.267;1.067;2.100
+06-13-06;Stromwandler mit einer Sekundärwicklung. Die Sekundärwicklung hat eine Anzapfung.;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_06.elmt;0.133;0.158;1.733;1.650
+06-13-07;Stromwandler mit einer Sekundärwicklung. Die Sekundärwicklung hat eine Anzapfung.;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_07.elmt;-0.700;0.408;1.067;1.817
+06-13-08;Stromwandler mit 5-fach durchgefädeltem Leiter als Primärwicklung;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_08.elmt;0.133;0.158;1.733;1.650
+06-13-09;Stromwandler mit zwei Kernen und einer Sekundärwicklung auf jedem Kern;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_09.elmt;-0.700;0.492;1.067;1.650
+06-13-10;Stromwandler oder Impulstransformator mit drei durchgefädelten Primär-Wicklungen (z. B. Summenstromwandler);91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_10.elmt;0.133;0.158;1.733;1.650
+06-13-11;Stromwandler oder Impulstransformator mit drei durchgefädelten Primär-Wicklungen (z. B. Summenstromwandler);91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_11.elmt;-0.533;0.575;1.400;1.483
+06-13-12;Stromwandler oder Impulstransformator mit zwei Sekundärwicklungen auf einem Kern und neun durchgefädelten Primär-Wicklungen;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_12.elmt;0.217;-0.092;1.900;2.150
+06-13-13;Stromwandler oder Impulstransformator mit zwei Sekundärwicklungen auf einem Kern und neun durchgefädelten Primär-Wicklungen;91_en_60617/en_60617_06/en_60617_06_13/en_60617_06_13_13.elmt;-0.700;0.242;1.067;2.150
+06-14-01;Umrichter;91_en_60617/en_60617_06/en_60617_06_14/en_60617_06_14_01.elmt;-0.333;0.333;0.667;0.667
+06-14-02;Gleichstrom-Umrichter;91_en_60617/en_60617_06/en_60617_06_14/en_60617_06_14_02.elmt;-0.333;0.333;0.667;0.667
+06-14-03;Gleichrichter;91_en_60617/en_60617_06/en_60617_06_14/en_60617_06_14_03.elmt;-0.333;0.333;0.667;0.667
+06-14-04;Gleichrichter in Brückenschaltung;91_en_60617/en_60617_06/en_60617_06_14/en_60617_06_14_04.elmt;-0.333;0.333;0.667;0.667
+06-14-05;Wechselrichter;91_en_60617/en_60617_06/en_60617_06_14/en_60617_06_14_05.elmt;-0.333;0.333;0.667;0.667
+06-14-06;Gleichrichter/Wechselrichter (umschaltbar);91_en_60617/en_60617_06/en_60617_06_14/en_60617_06_14_06.elmt;-0.333;0.300;0.667;0.733
+06-15-01;Primärzelle, -element, Sekundärzelle, -element, Batterie von Primär- oder Sekundärzellen, Akkumulator;91_en_60617/en_60617_06/en_60617_06_15/en_60617_06_15_01.elmt;0.042;-0.000;0.417;0.333
+06-16-01;Generator;91_en_60617/en_60617_06/en_60617_06_16/en_60617_06_16_01.elmt;-0.333;0.333;0.667;0.667
+06-17-01;Heizquelle;91_en_60617/en_60617_06/en_60617_06_17/en_60617_06_17_01.elmt;-0.333;0.333;1.000;0.667
+06-17-02;Radioisotopen-Heizquelle;91_en_60617/en_60617_06/en_60617_06_17/en_60617_06_17_02.elmt;-0.333;0.333;1.000;0.667
+06-17-03;Verbrennungs-Heizquelle;91_en_60617/en_60617_06/en_60617_06_17/en_60617_06_17_03.elmt;-0.333;0.333;1.000;0.667
+06-18-01;Thermoelektrischer Generator, betrieben durch Verbrennungswärme;91_en_60617/en_60617_06/en_60617_06_18/en_60617_06_18_01.elmt;-0.333;0.833;1.000;1.667
+06-18-02;Thermoelektrischer Generator, betrieben durch nichtionisierende Strahlungswärme;91_en_60617/en_60617_06/en_60617_06_18/en_60617_06_18_02.elmt;-0.500;0.833;1.333;1.667
+06-18-03;Thermoelektrischer Generator, betrieben durch Radioisotopen-Heizquelle;91_en_60617/en_60617_06/en_60617_06_18/en_60617_06_18_03.elmt;-0.333;0.833;1.000;1.667
+06-18-04;Thermodiodengenerator, betrieben durch nichtionisierende Strahlungswärme;91_en_60617/en_60617_06/en_60617_06_18/en_60617_06_18_04.elmt;-0.500;0.833;1.333;1.667
+06-18-05;Thermodiodengenerator, betrieben durch Radioisotopen-Heizquelle;91_en_60617/en_60617_06/en_60617_06_18/en_60617_06_18_05.elmt;-0.333;0.833;1.000;1.667
+06-18-06;Photoelektrischer Generator;91_en_60617/en_60617_06/en_60617_06_18/en_60617_06_18_06.elmt;0.158;-0.167;1.350;1.000
+06-19-01;Regler;91_en_60617/en_60617_06/en_60617_06_19/en_60617_06_19_01.elmt;0.167;-0.167;1.000;1.000
+07-01-01;Schütz-Funktion;91_en_60617/en_60617_07/en_60617_07_01/en_60617_07_01_01.elmt;0.000;0.083;0.167;0.167
+07-01-02;Leistungsschalter-Funktion;91_en_60617/en_60617_07/en_60617_07_01/en_60617_07_01_02.elmt;0.000;-0.000;0.167;0.167
+07-01-03;Trennschalter-Funktion;91_en_60617/en_60617_07/en_60617_07_01/en_60617_07_01_03.elmt;0.000;-0.000;0.167;0.000
+07-01-04;Lasttrennschalter-Funktion;91_en_60617/en_60617_07/en_60617_07_01/en_60617_07_01_04.elmt;0.000;-0.000;0.167;0.167
+07-01-05;selbsttätige Ausschaltung-Funktion;91_en_60617/en_60617_07/en_60617_07_01/en_60617_07_01_05.elmt;0.000;-0.000;0.167;0.167
+07-01-06;Endschalter-Funktion;91_en_60617/en_60617_07/en_60617_07_01/en_60617_07_01_06.elmt;-0.042;-0.000;0.083;0.167
+07-01-07;"Funktion ""selbsttätiger Rückgang""";91_en_60617/en_60617_07/en_60617_07_01/en_60617_07_01_07.elmt;-0.042;-0.000;0.083;0.167
+07-01-08;"Funktion ""nicht selbsttätiger Rückgang""";91_en_60617/en_60617_07/en_60617_07_01/en_60617_07_01_08.elmt;0.000;-0.000;0.167;0.167
+07-01-09;zwangsläufige Betätigung eines Schalters;91_en_60617/en_60617_07/en_60617_07_01/en_60617_07_01_09.elmt;0.000;-0.000;0.700;0.667
+07-02-01;Schalter;91_en_60617/en_60617_07/en_60617_07_02/en_60617_07_02_01.elmt;-0.067;0.167;0.133;1.000
+07-02-02;Schließer;91_en_60617/en_60617_07/en_60617_07_02/en_60617_07_02_02.elmt;-0.050;0.167;0.167;1.000
+07-02-03;Öffner;91_en_60617/en_60617_07/en_60617_07_02/en_60617_07_02_03.elmt;0.083;0.167;0.167;1.000
+07-02-04;Wechsler mit Unterbrechung,;91_en_60617/en_60617_07/en_60617_07_02/en_60617_07_02_04.elmt;-0.167;0.167;0.333;1.000
+07-02-05;"Wechsler mit Mittelstellung ""Aus""";91_en_60617/en_60617_07/en_60617_07_02/en_60617_07_02_05.elmt;0.000;0.167;0.333;1.000
+07-02-06;Wechsler ohne Unterbrechung, Folgeumschaltglied;91_en_60617/en_60617_07/en_60617_07_02/en_60617_07_02_06.elmt;-0.167;0.167;0.333;1.000
+07-02-07;Wechsler ohne Unterbrechung, Folgeumschaltglied;91_en_60617/en_60617_07/en_60617_07_02/en_60617_07_02_07.elmt;-0.133;0.167;0.400;1.000
+07-02-08;Zwillingsschließer;91_en_60617/en_60617_07/en_60617_07_02/en_60617_07_02_08.elmt;0.017;0.167;0.300;1.000
+07-02-09;Zwillingsöffner;91_en_60617/en_60617_07/en_60617_07_02/en_60617_07_02_09.elmt;0.000;0.167;0.333;1.000
+07-03-01;Wischer mit Kontaktgabe bei Betätigung;91_en_60617/en_60617_07/en_60617_07_03/en_60617_07_03_01.elmt;-0.067;0.167;0.133;1.000
+07-03-02;Wischer mit Kontaktgabe bei Rückfall;91_en_60617/en_60617_07/en_60617_07_03/en_60617_07_03_02.elmt;-0.050;0.167;0.167;1.000
+07-03-03;Wischer mit Kontaktgabe bei Betätigung und Rückfall;91_en_60617/en_60617_07/en_60617_07_03/en_60617_07_03_03.elmt;-0.050;0.167;0.167;1.000
+07-04-01;voreilender Schließer;91_en_60617/en_60617_07/en_60617_07_04/en_60617_07_04_01.elmt;-0.067;0.167;0.133;1.000
+07-04-02;nacheilender Schließer;91_en_60617/en_60617_07/en_60617_07_04/en_60617_07_04_02.elmt;-0.083;0.167;0.167;1.000
+07-04-03;nacheilender Öffner;91_en_60617/en_60617_07/en_60617_07_04/en_60617_07_04_03.elmt;0.100;0.167;0.200;1.000
+07-04-04;voreilender Öffner;91_en_60617/en_60617_07/en_60617_07_04/en_60617_07_04_04.elmt;0.083;0.167;0.167;1.000
+07-05-01;anzugverzögerter Schließer;91_en_60617/en_60617_07/en_60617_07_05/en_60617_07_05_01.elmt;-0.208;0.167;0.417;1.000
+07-05-02;abfallverzögerter Schließer;91_en_60617/en_60617_07/en_60617_07_05/en_60617_07_05_02.elmt;-0.375;0.167;0.750;1.000
+07-05-03;anzugverzögerter Öffner;91_en_60617/en_60617_07/en_60617_07_05/en_60617_07_05_03.elmt;-0.125;0.167;0.583;1.000
+07-05-04;abfallverzögerter Öffner;91_en_60617/en_60617_07/en_60617_07_05/en_60617_07_05_04.elmt;-0.292;0.167;0.917;1.000
+07-05-05;anzug- und abfallverzögerter Schließer;91_en_60617/en_60617_07/en_60617_07_05/en_60617_07_05_05.elmt;-0.375;0.167;0.750;1.000
+07-06-01;Schließer mit selbsttätigem Rückgang;91_en_60617/en_60617_07/en_60617_07_06/en_60617_07_06_01.elmt;-0.067;0.167;0.133;1.000
+07-06-02;Schließer mit nicht selbsttätigem Rückgang;91_en_60617/en_60617_07/en_60617_07_06/en_60617_07_06_02.elmt;-0.046;0.167;0.175;1.000
+07-06-03;Öffner mit selbsttätigem Rückgang;91_en_60617/en_60617_07/en_60617_07_06/en_60617_07_06_03.elmt;0.083;0.167;0.167;1.000
+07-06-04;Zweiwegeschließer;91_en_60617/en_60617_07/en_60617_07_06/en_60617_07_06_04.elmt;0.021;0.167;0.375;1.000
+07-07-01;handbetätigter Schalter, allgemein;91_en_60617/en_60617_07/en_60617_07_07/en_60617_07_07_01.elmt;-0.292;0.167;0.583;1.000
+07-07-02;Druckschalter;91_en_60617/en_60617_07/en_60617_07_07/en_60617_07_07_02.elmt;-0.292;0.167;0.583;1.000
+07-07-03;Zugschalter;91_en_60617/en_60617_07/en_60617_07_07/en_60617_07_07_03.elmt;-0.292;0.167;0.583;1.000
+07-07-04;handbetätigter Schalter, allgemein;91_en_60617/en_60617_07/en_60617_07_07/en_60617_07_07_04.elmt;-0.267;0.167;0.533;1.000
+07-07-05;Taster mit zwangsläufiger Betätigung des Schließers;91_en_60617/en_60617_07/en_60617_07_07/en_60617_07_07_05.elmt;-0.292;0.167;0.583;1.000
+07-07-06;Pilz-Notdrucktaster;91_en_60617/en_60617_07/en_60617_07_07/en_60617_07_07_06.elmt;-0.292;0.167;0.917;1.000
+07-08-01;Endschalter, Schließer;91_en_60617/en_60617_07/en_60617_07_08/en_60617_07_08_01.elmt;-0.067;0.167;0.133;1.000
+07-08-02;Endschalter, Öffner;91_en_60617/en_60617_07/en_60617_07_08/en_60617_07_08_02.elmt;0.083;0.167;0.167;1.000
+07-08-03;Endschalter, zwei Richtungen, getrennte Stromkreise;91_en_60617/en_60617_07/en_60617_07_08/en_60617_07_08_03.elmt;-0.583;0.167;1.167;1.000
+07-08-04;Endschalter mit zwangsläufiger Betätigung des Öffners;91_en_60617/en_60617_07/en_60617_07_08/en_60617_07_08_04.elmt;-0.062;0.167;0.458;1.000
+07-09-01;Schließer, temperaturabhängig;91_en_60617/en_60617_07/en_60617_07_09/en_60617_07_09_01.elmt;0.133;0.167;0.533;1.000
+07-09-02;Temperaturabhängige Schalter;91_en_60617/en_60617_07/en_60617_07_09/en_60617_07_09_02.elmt;0.083;0.167;0.167;1.000
+07-09-03;Öffner mit selbsttätiger thermischer Betätigung;91_en_60617/en_60617_07/en_60617_07_09/en_60617_07_09_03.elmt;-0.167;0.167;0.667;1.000
+07-09-04;Gasentladungsröhre mit Thermokontakt Starter für Leuchtstofflampe;91_en_60617/en_60617_07/en_60617_07_09/en_60617_07_09_04.elmt;0.000;0.167;0.667;1.000
+07-11-01;Schalter mit drei Schaltstellungen;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_01.elmt;0.667;3.292;2.667;6.583
+07-11-02;Druck-Dreh-Schalter, durch Drücken und Drehen betätigt;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_02.elmt;0.000;2.958;1.333;5.917
+07-11-03;Druck-Dreh-Schalter, durch Drücken oder Drehen betätigt;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_03.elmt;-0.750;1.417;1.500;2.833
+07-11-04;Mehrstellungsschalter;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_04.elmt;-1.000;0.500;2.000;1.000
+07-11-05;Mehrstellungsschalter (geringe Anzahl von Schaltstellungen;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_05.elmt;-0.500;0.500;1.000;1.000
+07-11-06;Mehrstellungsschalter, Beispiel mit Schaltstellungsdiagramm;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_06.elmt;-1.267;0.500;2.533;1.000
+07-11-06a;Mehrstellungsschalter (geringe Anzahl von Schaltstellungen;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_06a.elmt;-0.483;0.210;1.075;0.653
+07-11-06b;Mehrstellungsschalter (geringe Anzahl von Schaltstellungen;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_06b.elmt;-0.483;0.143;1.075;0.787
+07-11-06c;Mehrstellungsschalter (geringe Anzahl von Schaltstellungen;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_06c.elmt;-0.483;0.110;1.075;0.853
+07-11-07;Handbetätigter Schalter mit vier Schaltstellungen und vier unabhängigen Kontaktpaaren;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_07.elmt;-0.750;0.500;1.500;1.000
+07-11-08;Mehrstellungsschalter mit vier Schaltstellungen;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_08.elmt;-0.500;0.500;1.000;1.000
+07-11-09;Mehrstellungsschalter mit sechs Schaltstellungen, gebrückt;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_09.elmt;-0.971;0.617;2.058;1.233
+07-11-10;Mehrstellungsschalter, gebrückt;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_10.elmt;-0.637;0.617;2.725;1.233
+07-11-11;Mehrstellungsschalter, gebrückt, ein Anschluss frei;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_11.elmt;-0.637;0.617;2.725;1.233
+07-11-12;Mehrstellungsschalter für zunehmende Parallelschaltung der Anschlüsse;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_12.elmt;-1.304;0.617;2.725;1.233
+07-11-13;Mehrstellungsschalter mit sechs Schaltstellungen, gebrückt;91_en_60617/en_60617_07/en_60617_07_11/en_60617_07_11_13.elmt;-0.971;0.617;2.058;1.233
+07-12-01;komplexer Schalter, allgemein;91_en_60617/en_60617_07/en_60617_07_12/en_60617_07_12_01.elmt;-0.833;0.667;1.667;1.333
+07-12-02;Stufendrehschalter mit 18 Schaltstellungen;91_en_60617/en_60617_07/en_60617_07_12/en_60617_07_12_02.elmt;-0.833;0.667;2.333;2.000
+07-12-02_2;Drehschalter (18 Schaltstellungen);91_en_60617/en_60617_07/en_60617_07_12/en_60617_07_12_02_2.elmt;-0.779;0.850;1.775;1.933
+07-12-03;Steuerwalzenschalter mit sechs Stellungen;91_en_60617/en_60617_07/en_60617_07_12/en_60617_07_12_03.elmt;-0.833;0.667;2.333;2.000
+07-12-03_1;Steuerwalzenschalter mit sechs Stellungen;91_en_60617/en_60617_07/en_60617_07_12/en_60617_07_12_03_1.elmt;0.733;-0.167;4.800;3.667
+07-12-03_2;Steuerwalzenschalter mit sechs Stellungen;91_en_60617/en_60617_07/en_60617_07_12/en_60617_07_12_03_2.elmt;0.167;-0.125;3.667;3.583
+07-13-01;Schalter;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_01.elmt;-0.067;0.167;0.133;1.000
+07-13-02;Schütz, Leistungskontakt eines Schützes (Kontakt geöffnet);91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_02.elmt;-0.046;0.167;0.175;1.000
+07-13-03;Schütz mit selbsttätiger Auslösung;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_03.elmt;-0.046;0.167;0.175;1.000
+07-13-04;Schütz, Leistungskontakt eines Schützes (Kontakt geschlossen);91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_04.elmt;0.062;0.167;0.208;1.000
+07-13-05;Leistungsschalter;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_05.elmt;-0.050;0.167;0.167;1.000
+07-13-06;Trennschalter;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_06.elmt;-0.042;0.167;0.183;1.000
+07-13-07;Zweiwege-Trennschalter;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_07.elmt;0.000;0.167;0.800;1.000
+07-13-08;Lasttrennschalter;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_08.elmt;-0.050;0.167;0.167;1.000
+07-13-09;Lasttrennschalter mit selbsttätiger Auslösung;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_09.elmt;-0.050;0.167;0.167;1.000
+07-13-10;Trennschalter mit Blockiereinrichtung, handbetätigt;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_10.elmt;-0.300;0.167;0.733;1.000
+07-13-11;Auslöseeinrichtung;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_11.elmt;0.000;-0.000;0.500;0.500
+07-13-12;Motor- oder handbetätigtes 3poliges Schaltgerät mit selbsttätiger Auslöseeinrichtung;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_12.elmt;-0.958;-0.267;2.250;1.867
+07-13-13;3poliges Schaltgerät mit Motorantrieb und Federspeicher;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_13.elmt;-1.500;-0.267;3.333;1.867
+07-13-14;Schalter mit zwangsläufiger Öffnung der Hauptkontakte;91_en_60617/en_60617_07/en_60617_07_13/en_60617_07_13_14.elmt;-1.000;0.167;2.000;1.000
+07-14-01;Anlasser, allgemein;91_en_60617/en_60617_07/en_60617_07_14/en_60617_07_14_01.elmt;0.000;-0.000;0.667;0.667
+07-14-02;Anlasser, Betätigung stufenweise;91_en_60617/en_60617_07/en_60617_07_14/en_60617_07_14_02.elmt;0.000;-0.000;0.667;0.667
+07-14-03;Anlasser (Blocksymbol), stetig veränderbar;91_en_60617/en_60617_07/en_60617_07_14/en_60617_07_14_03.elmt;0.000;0.083;0.667;0.833
+07-14-05;Anlasser für Direktanlauf, mit Schütz zur Drehrichtungsumkehr, Nennspannungsanlasser;91_en_60617/en_60617_07/en_60617_07_14/en_60617_07_14_05.elmt;0.000;-0.000;0.667;0.667
+07-14-06;Anlasser für Stern-Dreieck-Schaltung;91_en_60617/en_60617_07/en_60617_07_14/en_60617_07_14_06.elmt;0.000;-0.000;0.667;0.667
+07-14-07;Anlasser mit Spartransformator;91_en_60617/en_60617_07/en_60617_07_14/en_60617_07_14_07.elmt;0.000;-0.000;0.667;0.667
+07-14-08;Anlasser mit Thyristoren, stetig veränderbar;91_en_60617/en_60617_07/en_60617_07_14/en_60617_07_14_08.elmt;0.000;0.083;0.667;0.833
+07-15-01;elektromechanischer Antrieb, Relaisspule, allgemein;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_01.elmt;0.000;-0.000;0.667;0.667
+07-15-02;elektromechanischer Antrieb, Relaisspule, allgemein;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_02.elmt;0.000;0.083;0.667;0.500
+07-15-03;Antrieb mit zwei getrennten Wicklungen, zusammenhängende Darstellung;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_03.elmt;-0.333;-0.000;1.333;0.667
+07-15-04;Antrieb mit zwei getrennten Wicklungen, zusammenhängende Darstellung;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_04.elmt;0.000;-0.000;0.667;0.667
+07-15-05;Antrieb mit zwei getrennten Wicklungen, aufgelöste Darstellung;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_05.elmt;-0.500;-0.000;1.667;0.667
+07-15-06;Antrieb mit zwei getrennten Wicklungen, aufgelöste Darstellung;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_06.elmt;-0.500;-0.000;1.667;0.667
+07-15-07;elektromechanischer Antrieb mit Rückfallverzögerungelektromechanischer Antrieb, Relaisspule, allgemein;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_07.elmt;-0.083;-0.000;0.833;0.667
+07-15-08;elektromechanischer Antrieb mit Ansprechverzögerung;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_08.elmt;-0.083;-0.000;0.833;0.667
+07-15-09;elektromechanischer Antrieb mit Ansprech- und Rückfallverzögerung;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_09.elmt;-0.183;-0.000;1.033;0.667
+07-15-10;elektromechanischer Antrieb eines sehr schnell schaltenden Relais (schnell ansprechend und schnell rückfallend;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_10.elmt;-0.083;-0.000;0.833;0.667
+07-15-11;elektromagnetischer Antrieb, gegen Wechselstrom unempfindlich;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_11.elmt;0.000;-0.000;0.667;0.667
+07-15-12;elektromechanischer Antrieb eines Wechselstromrelais;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_12.elmt;-0.167;-0.000;1.000;0.667
+07-15-13;elektromechanischer Antrieb eines Resonanzrelais;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_13.elmt;0.333;-0.000;1.333;0.667
+07-15-14;elektromechanischer Antrieb eines Stützrelais;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_14.elmt;-0.125;-0.000;0.917;0.667
+07-15-15;elektromechanischer Antrieb eines polarisierten Relais;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_15.elmt;-0.083;-0.000;0.833;0.667
+07-15-16;polarisiertes Relais, selbsttätig rückstellend, arbeitet nur bei der angegebenen Stromrichtung;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_16.elmt;0.183;-0.000;1.367;0.667
+07-15-17;polarisiertes Relais mit neutraler Mittelstellung, selbsttätig rückstellend, arbeitet bei beiden Stromrichtungen;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_17.elmt;0.225;-0.000;1.450;0.667
+07-15-18;polarisiertes Relais, bistabil;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_18.elmt;0.225;-0.000;1.450;0.667
+07-15-19;elektromechanischer Antrieb eines Remanenzrelais;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_19.elmt;-0.083;-0.000;0.833;0.667
+07-15-20;elektromechanischer Antrieb eines Remanenzrelais;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_20.elmt;-0.083;-0.000;0.833;0.667
+07-15-21;elektromechanischer Antrieb eines Thermorelais;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_21.elmt;0.000;-0.000;0.667;0.667
+07-15-22;elektromechanischer Antrieb eines elektronischen Relais;91_en_60617/en_60617_07/en_60617_07_15/en_60617_07_15_22.elmt;0.000;-0.000;0.667;0.667
+07-16-01;Meßrelais und verwandte Einrichtungen;91_en_60617/en_60617_07/en_60617_07_16/en_60617_07_16_01.elmt;0.000;0.333;1.000;0.667
+07-17-01;Nullspannungsrelais;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_01.elmt;-0.500;0.333;1.000;0.667
+07-17-02;Rückstromrelais;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_02.elmt;-0.500;0.333;1.000;0.667
+07-17-03;Minimalwirkleistungsrelais;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_03.elmt;-0.500;0.333;1.000;0.667
+07-17-04;Überstromrelais, verzögert;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_04.elmt;-0.500;0.500;1.000;1.000
+07-17-05;Überstromrelais mit zwei Meßgliedern;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_05.elmt;-0.500;0.500;1.000;1.000
+07-17-06;Nullspannungsrelais;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_06.elmt;-0.500;1.250;1.000;2.500
+07-17-07;Unterspannungsrelais;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_07.elmt;-0.500;0.667;1.000;1.333
+07-17-08;Stromrelais mit einstellbarem Höchst- und Tiefstwert;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_08.elmt;-0.500;0.500;1.000;1.000
+07-17-09;Unterimpedanzrelais;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_09.elmt;-0.500;0.333;1.000;0.667
+07-17-10;Meßrelais zum Erfassen von Windungsschlüssen;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_10.elmt;-0.500;0.500;1.000;1.000
+07-17-11;Meßrelais zum Erfassen von Windungsbrüche;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_11.elmt;-0.500;0.333;1.000;0.667
+07-17-12;Phasenausfallrelais;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_12.elmt;-0.500;0.333;1.000;0.667
+07-17-13;Meßrelais zum Erkennen der Rotorblockierung;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_13.elmt;-0.500;0.500;1.000;1.000
+07-17-14;Überstromrelais mit zwei Ausgängen;91_en_60617/en_60617_07/en_60617_07_17/en_60617_07_17_14.elmt;-0.500;0.833;1.667;1.667
+07-18-01;Buchholzschutz;91_en_60617/en_60617_07/en_60617_07_18/en_60617_07_18_01.elmt;0.000;0.500;0.667;1.000
+07-18-02;selbsttätige Wiedereinschalt-Einrichtung, KU-Relais;91_en_60617/en_60617_07/en_60617_07_18/en_60617_07_18_02.elmt;0.000;-0.000;0.667;0.667
+07-19-01;Näherungssensor;91_en_60617/en_60617_07/en_60617_07_19/en_60617_07_19_01.elmt;0.000;-0.000;0.333;1.000
+07-19-02;näherungsempfindliche Einrichtung, Blocksymbol;91_en_60617/en_60617_07/en_60617_07_19/en_60617_07_19_02.elmt;0.167;0.333;1.333;1.000
+07-19-03;näherungsempfindliche Einrichtung, kapazitiv;91_en_60617/en_60617_07/en_60617_07_19/en_60617_07_19_03.elmt;0.000;0.333;1.667;1.000
+07-19-04;Berührungssensor;91_en_60617/en_60617_07/en_60617_07_19/en_60617_07_19_04.elmt;0.167;-0.000;0.667;1.000
+07-20-01;berührungsempfindlicher Schalter, (Schließer);91_en_60617/en_60617_07/en_60617_07_20/en_60617_07_20_01.elmt;-0.333;-0.000;0.667;1.000
+07-20-02;näherungsempfindlicher Schalter, (Schließer);91_en_60617/en_60617_07/en_60617_07_20/en_60617_07_20_02.elmt;-0.333;-0.000;0.667;1.000
+07-20-03;"näherungsempfindlicher Schalter, (Schließer); betätigt durch die Annäherung von Magnet";91_en_60617/en_60617_07/en_60617_07_20/en_60617_07_20_03.elmt;-0.417;-0.000;0.833;1.000
+07-20-04;näherungsempfindlicher Schalter, (Öffner), betätigt durch die Annäherung von Eisen;91_en_60617/en_60617_07/en_60617_07_20/en_60617_07_20_04.elmt;-0.417;-0.000;0.833;1.000
+07-21-01;Sicherung, allgemein;91_en_60617/en_60617_07/en_60617_07_21/en_60617_07_21_01.elmt;0.000;-0.000;0.167;1.000
+07-21-02;Sicherung, der Anschluss unter Spannung gekennzeichnet;91_en_60617/en_60617_07/en_60617_07_21/en_60617_07_21_02.elmt;0.000;-0.000;0.167;1.000
+07-21-03;Sicherung mit mechanischer Auslösemeldung (Schlagbolzensicherung);91_en_60617/en_60617_07/en_60617_07_21/en_60617_07_21_03.elmt;0.208;-0.000;0.583;1.000
+07-21-04;Sicherung mit Meldekontakt und drei Anschlüssen;91_en_60617/en_60617_07/en_60617_07_21/en_60617_07_21_04.elmt;0.292;-0.000;0.750;1.000
+07-21-05;Sicherung mit getrenntem Meldekontakt;91_en_60617/en_60617_07/en_60617_07_21/en_60617_07_21_05.elmt;-0.375;-0.000;0.750;1.000
+07-21-06;dreipoliger Schalter mit selbsttätiger Auslösung durch den Schlagbolzen jeder einzelnen Sicherung;91_en_60617/en_60617_07/en_60617_07_21/en_60617_07_21_06.elmt;-0.583;0.833;1.833;1.667
+07-21-07;Sicherungsschalter;91_en_60617/en_60617_07/en_60617_07_21/en_60617_07_21_07.elmt;-0.042;-0.000;0.117;1.000
+07-21-08;Sicherungstrennschalter;91_en_60617/en_60617_07/en_60617_07_21/en_60617_07_21_08.elmt;-0.033;-0.000;0.133;1.000
+07-21-09;Sicherungs-Lasttrennschalter;91_en_60617/en_60617_07/en_60617_07_21/en_60617_07_21_09.elmt;-0.033;-0.000;0.133;1.000
+07-22-01;Funkenstrecke;91_en_60617/en_60617_07/en_60617_07_22/en_60617_07_22_01.elmt;0.000;-0.000;0.067;0.667
+07-22-02;Doppel-Funkenstrecke;91_en_60617/en_60617_07/en_60617_07_22/en_60617_07_22_02.elmt;-0.150;-0.000;0.367;0.667
+07-22-03;Überspannungsableiter;91_en_60617/en_60617_07/en_60617_07_22/en_60617_07_22_03.elmt;0.000;-0.000;0.167;0.667
+07-22-04;Überspannungsableiter in einer Gasentladungsröhre;91_en_60617/en_60617_07/en_60617_07_22/en_60617_07_22_04.elmt;0.000;-0.000;0.333;0.667
+07-22-05;Überspannungsableiter in einer Gasentladungsröhre, symmetrisch;91_en_60617/en_60617_07/en_60617_07_22/en_60617_07_22_05.elmt;-0.083;-0.000;0.500;0.667
+07-25-01;elektronischer Schalter, allgemein;91_en_60617/en_60617_07/en_60617_07_25/en_60617_07_25_01.elmt;0.000;-0.000;0.333;0.667
+07-25-02;elektronisches Schütz (Halbleiter);91_en_60617/en_60617_07/en_60617_07_25/en_60617_07_25_02.elmt;0.000;-0.000;0.333;0.667
+07-25-03;elektronischer Schalter, nur in einer Richtung stromdurchlässig;91_en_60617/en_60617_07/en_60617_07_25/en_60617_07_25_03.elmt;-0.417;0.083;1.167;0.833
+07-26-01;elektronisches Relais, allgemein;91_en_60617/en_60617_07/en_60617_07_26/en_60617_07_26_01.elmt;0.417;-0.000;1.500;0.667
+07-26-02;elektronisches Relais, betätigt durch LED;91_en_60617/en_60617_07/en_60617_07_26/en_60617_07_26_02.elmt;0.250;-0.000;1.833;0.667
+07-26-03;3 poliges thermisches Überlastrelais;91_en_60617/en_60617_07/en_60617_07_26/en_60617_07_26_03.elmt;0.350;-0.000;2.700;1.000
+07-26-04;elektronische Schalteinrichtung mit Schließer als Halbleiter;91_en_60617/en_60617_07/en_60617_07_26/en_60617_07_26_04.elmt;0.417;-0.000;1.500;0.667
+07-27-01;Koppler mit galvanischer Trennung;91_en_60617/en_60617_07/en_60617_07_27/en_60617_07_27_01.elmt;0.000;-0.000;0.667;1.000
+07-27-02;Koppler mit galvanischer Trennung;91_en_60617/en_60617_07/en_60617_07_27/en_60617_07_27_02.elmt;0.000;-0.000;0.667;1.000
+08-01-01;Meßgerät, anzeigend, allgemein;91_en_60617/en_60617_08/en_60617_08_01/en_60617_08_01_01.elmt;0.000;0.333;0.667;0.667
+08-01-02;Meßgerät, aufzeichnend;91_en_60617/en_60617_08/en_60617_08_01/en_60617_08_01_02.elmt;0.000;0.333;0.667;0.667
+08-01-03;Meßgerät, integrierend zB. Elektrizitätszähler;91_en_60617/en_60617_08/en_60617_08_01/en_60617_08_01_03.elmt;0.000;0.500;0.667;1.000
+08-02-01;Spannungsmeßgerät, anzeigend Voltmeter;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_01.elmt;0.000;0.333;0.667;0.667
+08-02-02;Blindstrommeßgerät, anzeigend Amperemeter für Blindstrom;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_02.elmt;0.000;0.333;0.667;0.667
+08-02-03;Blindstrommeßgerät, anzeigend Amperemeter für Blindstrom;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_03.elmt;-0.167;0.333;1.000;0.667
+08-02-04;Blindleistungsmeßgerät, anzeigend;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_04.elmt;0.000;0.333;0.667;0.667
+08-02-05;Leistungsfaktormeßgerät, anzeigend;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_05.elmt;0.000;0.333;0.667;0.667
+08-02-06;Phasenwinkelmeßgerät, anzeigend;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_06.elmt;0.000;0.333;0.667;0.667
+08-02-07;Frequenzmeßgerät, anzeigend;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_07.elmt;0.000;0.333;0.667;0.667
+08-02-08;Synchronoskop;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_08.elmt;0.000;0.333;0.667;0.667
+08-02-09;Wellenlängemeßgerät, anzeigend;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_09.elmt;0.000;0.333;0.667;0.667
+08-02-10;Oszilloskop;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_10.elmt;0.000;0.333;0.667;0.667
+08-02-11;Differentialspannungsmeßgerät, anzeigend;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_11.elmt;0.000;0.333;0.667;0.667
+08-02-12;Galvanometer;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_12.elmt;0.000;0.333;0.667;0.667
+08-02-13;Solekonzentrationsmeßgerät;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_13.elmt;0.000;0.333;0.667;0.667
+08-02-14;Thermometer Pyrometer;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_14.elmt;0.000;0.333;0.667;0.667
+08-02-15;Drehzahlmeßgerät, anzeigend;91_en_60617/en_60617_08/en_60617_08_02/en_60617_08_02_15.elmt;0.000;0.333;0.667;0.667
+08-03-01;Wirkleistungsschreiber;91_en_60617/en_60617_08/en_60617_08_03/en_60617_08_03_01.elmt;0.000;0.333;0.667;0.667
+08-03-02;Wirk- und Blindleistungsschreiber, kombiniert;91_en_60617/en_60617_08/en_60617_08_03/en_60617_08_03_02.elmt;-0.333;0.333;1.333;0.667
+08-03-03;Kurvenschreiber;91_en_60617/en_60617_08/en_60617_08_03/en_60617_08_03_03.elmt;0.000;0.333;0.667;0.667
+08-04-01;Betriebsstundenzähler;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_01.elmt;0.000;0.500;0.667;1.000
+08-04-02;Amperestundenzähler;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_02.elmt;0.000;0.500;0.667;1.000
+08-04-03;Wattstundenzähler, Elektrizitätszähler;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_03.elmt;0.000;0.500;0.667;1.000
+08-04-04;Wattstundenzähler, der nur die in eine Richtung fließende Energie zählt;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_04.elmt;0.000;0.500;0.667;1.000
+08-04-05;Wattstundenzähler, der nur die von der Sammelschiene abgegebene Energie zählt;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_05.elmt;0.000;0.500;0.667;1.000
+08-04-06;Wattstundenzähler, der nur die zur Sammelschiene fließende Energie zählt;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_06.elmt;0.000;0.500;0.667;1.000
+08-04-07;Wattstundenzähler, der die Energie in beiden Energieflußrichtungen zählt (zur und von der Sammelschiene;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_07.elmt;0.000;0.500;0.667;1.000
+08-04-08;Mehrtarif-Wattstundenzähler;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_08.elmt;0.000;0.667;0.667;1.333
+08-04-09;Überverbrauchszähler, Spitzenzähler;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_09.elmt;0.000;0.500;0.667;1.000
+08-04-10;Wattstundenzähler mit Übertragungseinrichtung;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_10.elmt;0.250;0.500;1.167;1.000
+08-04-11;Slave-Wattstundenzähler;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_11.elmt;-0.250;0.500;1.167;1.000
+08-04-12;Slave-Wattstundenzähler mit Drucker;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_12.elmt;-0.250;0.500;1.167;1.000
+08-04-13;Wattstundenzähler mit Maximumanzeiger, Maximumzähle;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_13.elmt;0.000;0.500;0.667;1.000
+08-04-14;Wattstundenzähler mit Maximumaufzeichnung;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_14.elmt;0.000;-0.167;0.667;1.667
+08-04-15;Blindverbrauchszähler;91_en_60617/en_60617_08/en_60617_08_04/en_60617_08_04_15.elmt;0.000;0.500;0.667;1.000
+08-05-01;Zählfunktion, Kennzeichen;91_en_60617/en_60617_08/en_60617_08_05/en_60617_08_05_01.elmt;0.167;0.167;1.000;0.333
+08-05-02;Impulszähler, elektrisch betätigt;91_en_60617/en_60617_08/en_60617_08_05/en_60617_08_05_02.elmt;-0.500;0.167;1.000;1.000
+08-05-03;Impulszähler mit manueller Voreinstellung auf n;91_en_60617/en_60617_08/en_60617_08_05/en_60617_08_05_03.elmt;-0.500;0.267;1.000;1.200
+08-05-04;Impulszähler mit elektrischer Rückstellung auf Null;91_en_60617/en_60617_08/en_60617_08_05/en_60617_08_05_04.elmt;-0.304;0.208;1.392;1.083
+08-05-05;Impulszähler mit Vielfach-Kontaktgeber;91_en_60617/en_60617_08/en_60617_08_05/en_60617_08_05_05.elmt;0.833;0.200;3.667;1.067
+08-05-06;Zähleinrichtung, betätigt durch Nocke;91_en_60617/en_60617_08/en_60617_08_05/en_60617_08_05_06.elmt;-0.583;0.167;1.167;1.000
+08-06-01;Thermoelement;91_en_60617/en_60617_08/en_60617_08_06/en_60617_08_06_01.elmt;0.000;0.317;0.800;0.700
+08-06-02;Thermoelement;91_en_60617/en_60617_08/en_60617_08_06/en_60617_08_06_02.elmt;0.000;0.317;0.333;0.700
+08-06-03;Thermoelement mit nicht isoliertem Heizelement;91_en_60617/en_60617_08/en_60617_08_06/en_60617_08_06_03.elmt;0.000;0.667;0.333;1.333
+08-06-04;Thermoelement mit nicht isoliertem Heizelement;91_en_60617/en_60617_08/en_60617_08_06/en_60617_08_06_04.elmt;0.000;0.317;1.050;0.700
+08-06-05;Thermoelement mit isoliertem Heizelement;91_en_60617/en_60617_08/en_60617_08_06/en_60617_08_06_05.elmt;0.000;0.667;0.333;1.333
+08-06-06;Thermoelement mit isoliertem Heizelement;91_en_60617/en_60617_08/en_60617_08_06/en_60617_08_06_06.elmt;0.000;0.417;1.050;0.833
+08-07-01;Signalumformer, allgemein;91_en_60617/en_60617_08/en_60617_08_07/en_60617_08_07_01.elmt;0.000;0.333;0.667;0.667
+08-08-01;Uhr, allgemein Nebenuh;91_en_60617/en_60617_08/en_60617_08_08/en_60617_08_08_01.elmt;0.000;0.333;0.667;0.667
+08-08-02;Hauptuhr;91_en_60617/en_60617_08/en_60617_08_08/en_60617_08_08_02.elmt;0.000;0.333;0.667;0.667
+08-08-03;Uhr mit Kontaktgebe;91_en_60617/en_60617_08/en_60617_08_08/en_60617_08_08_03.elmt;0.000;0.333;0.667;0.667
+08-09-02;Drehmelder;91_en_60617/en_60617_08/en_60617_08_09/en_60617_08_09_02.elmt;0.000;0.333;0.667;0.667
+08-09-03;Drehwinkelgeber;91_en_60617/en_60617_08/en_60617_08_09/en_60617_08_09_03.elmt;0.000;0.333;1.000;0.667
+08-09-04;Kreisel;91_en_60617/en_60617_08/en_60617_08_09/en_60617_08_09_04.elmt;0.000;0.333;1.000;1.000
+08-10-01;Lampe. Leuchtmelder, allgemein;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_01.elmt;0.000;0.167;0.333;0.333
+08-10-02;Sichtmelder, elektromechanisch, Schauzeichen, Fallklappe;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_02.elmt;0.000;0.283;0.667;0.567
+08-10-03;Stellungsanzeiger, elektromechanisch;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_03.elmt;0.000;0.167;0.333;0.333
+08-10-04;Stellungsanzeiger, elektromechanisch;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_04.elmt;0.000;0.167;0.333;1.000
+08-10-05;Horn, Huppe;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_05.elmt;0.125;0.333;0.750;1.000
+08-10-06;Wecker, Klingel;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_06.elmt;-0.167;0.167;0.667;0.667
+08-10-08;Gong, Einschlagwecker;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_08.elmt;-0.167;0.167;0.667;0.667
+08-10-09;Sirene;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_09.elmt;-0.167;0.250;0.667;0.833
+08-10-10;Schnarre, Summer;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_10.elmt;-0.167;0.333;0.667;1.000
+08-10-12;Pfeife, elektrisch betätigt;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_12.elmt;-0.083;0.417;0.500;1.167
+08-10-13;Leuchtmelder, versorgt durch eingebauten Transformator;91_en_60617/en_60617_08/en_60617_08_10/en_60617_08_10_13.elmt;-0.183;0.167;0.633;1.000
+11-01-01;Kraftwerk, allgemein (in Planung);91_en_60617/en_60617_11/en_60617_11_01/en_60617_11_01_01.elmt;-0.333;0.333;0.667;0.667
+11-01-02;Kraftwerk, allgemein (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_01/en_60617_11_01_02.elmt;-0.333;0.333;0.667;0.667
+11-01-03;Heizkraftwerk (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_01/en_60617_11_01_03.elmt;-0.500;0.333;1.000;0.667
+11-01-04;Heizkraftwerk (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_01/en_60617_11_01_04.elmt;-0.500;0.333;1.000;0.667
+11-01-05;Station, Umspannstation, Schaltstation, allgemein (in Planung);91_en_60617/en_60617_11/en_60617_11_01/en_60617_11_01_05.elmt;-0.333;0.333;0.667;0.667
+11-01-06;Station, Umspannstation, Schaltstation, allgemein (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_01/en_60617_11_01_06.elmt;-0.333;0.333;0.667;0.667
+11-02-01;Kraftwerk mit Wasserkraft betrieben, Wasserkraftwerk (in Planung);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_01.elmt;-0.333;0.333;0.667;0.667
+11-02-02;Kraftwerk mit Wasserkraft betrieben, Wasserkraftwerk (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_02.elmt;-0.333;0.333;0.667;0.667
+11-02-03;Kraftwerk mit Brennstoffen betrieben, Wärmekraftwerk (Verbrennungskraftwerk) (in Planung);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_03.elmt;-0.333;0.333;0.667;0.667
+11-02-04;Kraftwerk mit Brennstoffen betrieben, Wärmekraftwerk (Verbrennungskraftwerk) (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_04.elmt;-0.333;0.333;0.667;0.667
+11-02-05;Kraftwerk mit Kernenergie betrieben, Kernkraftwerk (in Planung);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_05.elmt;-0.333;0.333;0.667;0.667
+11-02-06;Kraftwerk mit Kernenergie betrieben, Kernkraftwerk (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_06.elmt;-0.333;0.333;0.667;0.667
+11-02-07;Kraftwerk mit Erdwärme betrieben, geothermisches Kraftwerk (in Planung);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_07.elmt;-0.333;0.333;0.667;0.667
+11-02-08;Kraftwerk mit Erdwärme betrieben, geothermisches Kraftwerk (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_08.elmt;-0.333;0.333;0.667;0.667
+11-02-09;Kraftwerk mit Sonnenenergie betrieben, Sonnenkraftwerk (in Planung);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_09.elmt;-0.333;0.333;0.667;0.667
+11-02-10;Kraftwerk mit Sonnenenergie betrieben, Sonnenkraftwerk (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_10.elmt;-0.333;0.333;0.667;0.667
+11-02-11;Kraftwerk mit Windenergie betrieben, Windkraftwerk (in Planung);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_11.elmt;-0.333;0.333;0.667;0.667
+11-02-12;Kraftwerk mit Windenergie betrieben, Windkraftwerk (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_12.elmt;-0.333;0.333;0.667;0.667
+11-02-13;Kraftwerk nach dem MHD-Verfahren, Magnetohydrodynamisches Kraftwerk (Plasmakraftwerk) (in Planung);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_13.elmt;-0.333;0.333;0.667;0.667
+11-02-14;Kraftwerk nach dem MHD-Verfahren, Magnetohydrodynamisches Kraftwerk (Plasmakraftwerk) (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_14.elmt;-0.333;0.333;0.667;0.667
+11-02-15;Umrichterstation (in Planung);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_15.elmt;-0.317;0.458;0.700;0.917
+11-02-16;Umrichterstation (in Betrieb oder undefiniert);91_en_60617/en_60617_11/en_60617_11_02/en_60617_11_02_16.elmt;-0.317;0.458;0.700;0.917
+11-03-01;Leiter im Erdreich, Erdkabel;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_01.elmt;-1.167;0.167;2.333;0.333
+11-03-02;Leiter im Gewässer, Seekabe;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_02.elmt;-1.167;0.104;2.333;0.208
+11-03-03;Leiter, oberirdisch, Freileitung;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_03.elmt;-1.167;-0.000;2.333;0.333
+11-03-04;Leiter in einem Kabelkanal, Leiter in einer Trasse;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_04.elmt;-1.167;0.250;2.333;0.500
+11-03-05;Leiter in einem sechsfachen Kabelkanal;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_05.elmt;-1.167;0.250;2.333;0.500
+11-03-06;Leiter der einen Einstiegschacht kreuzt;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_06.elmt;-1.167;-0.000;2.333;0.667
+11-03-07;Erdkabel mit Verbindungsstelle;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_07.elmt;-1.167;0.146;2.333;0.375
+11-03-08;Leiter gegen Gas oder Öl abgeschottet;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_08.elmt;-1.167;-0.000;2.333;0.333
+11-03-09;Leiter mi Absperrventil für Öl oder Gas;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_09.elmt;-1.167;-0.000;2.333;0.333
+11-03-10;Leiter mit Umgehung der Abschottung von Gas oder Öl;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_10.elmt;-1.167;-0.000;2.333;0.500
+11-03-11;Fernmeldeleitung mit Wechselstrom- Fernspeisung;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_11.elmt;-1.167;0.192;2.333;0.383
+11-03-12;Fernmeldeleitung mit Gleichstrom- Fernspeisung;91_en_60617/en_60617_11/en_60617_11_03/en_60617_11_03_12.elmt;-1.167;0.233;2.333;0.467
+11-04-01;Gehäuse, oberirdisch, wetterfest, allgemein;91_en_60617/en_60617_11/en_60617_11_04/en_60617_11_04_01.elmt;-0.333;0.417;1.000;0.833
+11-04-02;Verstärkerpunkt in wetterfestem Gehäuse;91_en_60617/en_60617_11/en_60617_11_04/en_60617_11_04_02.elmt;-0.333;0.417;1.000;0.833
+11-04-03;Querverbindungspunkt;91_en_60617/en_60617_11/en_60617_11_04/en_60617_11_04_03.elmt;-0.167;0.333;1.000;0.667
+11-04-04;Leitungskonzentrator;91_en_60617/en_60617_11/en_60617_11_04/en_60617_11_04_04.elmt;0.167;-0.167;0.333;0.333
+11-04-05;Leitungskonzentrator an einem Mast;91_en_60617/en_60617_11/en_60617_11_04/en_60617_11_04_05.elmt;-0.833;0.167;1.667;0.500
+11-04-06;Anti-Kriechstromgerät für Kabel;91_en_60617/en_60617_11/en_60617_11_04/en_60617_11_04_06.elmt;-0.163;-0.000;0.342;0.167
+11-04-07;Einstiegschacht mit einem Kabel mit Kriechstromkompensator;91_en_60617/en_60617_11/en_60617_11_04/en_60617_11_04_07.elmt;-0.833;-0.000;1.667;0.667
+11-04-08;Schutzanode;91_en_60617/en_60617_11/en_60617_11_04/en_60617_11_04_08.elmt;-0.333;0.375;0.667;0.750
+11-04-09;Magnesium-Schutzanode;91_en_60617/en_60617_11/en_60617_11_04/en_60617_11_04_09.elmt;-0.325;0.375;0.683;0.750
+11-05-01;Kabelkopf (Empfangsstelle) mit Ortsantenne;91_en_60617/en_60617_11/en_60617_11_05/en_60617_11_05_01.elmt;-0.167;0.583;1.000;1.167
+11-05-02;Kabelkopf (Empfangsstelle) ohne Ortsantenne;91_en_60617/en_60617_11/en_60617_11_05/en_60617_11_05_02.elmt;-0.333;0.833;0.667;1.667
+11-06-01;Abzweigverstärker;91_en_60617/en_60617_11/en_60617_11_06/en_60617_11_06_01.elmt;-0.667;0.208;1.333;0.417
+11-06-02;Durchgangs- und Abzweigverstärker;91_en_60617/en_60617_11/en_60617_11_06/en_60617_11_06_02.elmt;-0.750;0.483;1.500;0.967
+11-06-03;Endverstärker;91_en_60617/en_60617_11/en_60617_11_06/en_60617_11_06_03.elmt;0.125;-0.083;0.917;0.667
+11-06-04;Verstärker mit Rückwärtskanal;91_en_60617/en_60617_11/en_60617_11_06/en_60617_11_06_04.elmt;0.083;-0.167;1.500;0.500
+11-07-01;Zweiwegverteiler;91_en_60617/en_60617_11/en_60617_11_07/en_60617_11_07_01.elmt;-0.500;0.333;1.000;0.667
+11-07-02;Dreiwegverteiler;91_en_60617/en_60617_11/en_60617_11_07/en_60617_11_07_02.elmt;-0.500;0.333;1.000;0.667
+11-07-03;Richtungskoppler;91_en_60617/en_60617_11/en_60617_11_07/en_60617_11_07_03.elmt;-0.833;0.583;1.667;1.167
+11-08-02;Stichdose;91_en_60617/en_60617_11/en_60617_11_08/en_60617_11_08_02.elmt;0.167;-0.167;1.000;0.333
+11-08-03;Durchschleifdose;91_en_60617/en_60617_11/en_60617_11_08/en_60617_11_08_03.elmt;0.167;-0.167;1.667;0.333
+11-09-01;Entzerrer;91_en_60617/en_60617_11/en_60617_11_09/en_60617_11_09_01.elmt;0.167;-0.150;1.667;0.333
+11-09-02;Entzerrer, veränderbar;91_en_60617/en_60617_11/en_60617_11_09/en_60617_11_09_02.elmt;0.167;-0.158;1.667;0.517
+11-09-03;Dämpfungsglied (zur Darstellung auf einem topographischen Plan);91_en_60617/en_60617_11/en_60617_11_09/en_60617_11_09_03.elmt;0.167;-0.167;1.667;0.667
+11-10-01;Fernspeise-Netzgerät;91_en_60617/en_60617_11/en_60617_11_10/en_60617_11_10_01.elmt;-0.333;0.667;0.667;1.333
+11-10-02;Trennstelle;91_en_60617/en_60617_11/en_60617_11_10/en_60617_11_10_02.elmt;-0.833;0.333;1.667;0.667
+11-10-03;Einspeisepunkt;91_en_60617/en_60617_11/en_60617_11_10/en_60617_11_10_03.elmt;-0.833;0.083;1.667;1.167
+11-11-01;Neutralleiter (N), Mittelleite;91_en_60617/en_60617_11/en_60617_11_11/en_60617_11_11_01.elmt;-0.833;0.338;1.667;0.675
+11-11-02;Schutzleiter (PE);91_en_60617/en_60617_11/en_60617_11_11/en_60617_11_11_02.elmt;-0.833;0.333;1.667;0.667
+11-11-03;Neutralleiter mit Schutzfunktion (PEN);91_en_60617/en_60617_11/en_60617_11_11/en_60617_11_11_03.elmt;-0.833;0.333;1.667;0.667
+11-11-04;Drei Leiter, ein Neutralleiter, ein Schutzleiter;91_en_60617/en_60617_11/en_60617_11_11/en_60617_11_11_04.elmt;-0.833;0.346;1.667;0.692
+11-12-01;Leitung, nach oben führend;91_en_60617/en_60617_11/en_60617_11_12/en_60617_11_12_01.elmt;-0.842;0.175;1.683;0.383
+11-12-02;Leitung, nach unten führend;91_en_60617/en_60617_11/en_60617_11_12/en_60617_11_12_02.elmt;-0.650;0.175;1.367;0.383
+11-12-03;Leitung, nach unten und oben durchführend;91_en_60617/en_60617_11/en_60617_11_12/en_60617_11_12_03.elmt;-0.250;0.250;0.567;0.567
+11-12-04;Dose, Leerdose, allgemein;91_en_60617/en_60617_11/en_60617_11_12/en_60617_11_12_04.elmt;-0.167;0.167;0.333;0.333
+11-12-05;Anschlußdose, Verbindungsdose;91_en_60617/en_60617_11/en_60617_11_12/en_60617_11_12_05.elmt;-0.167;0.167;0.333;0.333
+11-12-06;Hausanschlußkasten, allgemein, dargestellt mit Leitung;91_en_60617/en_60617_11/en_60617_11_12/en_60617_11_12_06.elmt;-0.167;0.500;0.333;1.000
+11-12-07;Verteiler;91_en_60617/en_60617_11/en_60617_11_12/en_60617_11_12_07.elmt;-0.417;0.500;0.833;1.000
+11-13-01;Steckdose, allgemein;91_en_60617/en_60617_11/en_60617_11_13/en_60617_11_13_01.elmt;-0.167;0.167;0.333;0.667
+11-13-02;Mehrfachsteckdose;91_en_60617/en_60617_11/en_60617_11_13/en_60617_11_13_02.elmt;-0.333;0.167;0.667;0.667
+11-13-03;Mehrfachsteckdose;91_en_60617/en_60617_11/en_60617_11_13/en_60617_11_13_03.elmt;-0.333;0.333;0.667;1.000
+11-13-04;Schutzkontaktsteckdose;91_en_60617/en_60617_11/en_60617_11_13/en_60617_11_13_04.elmt;-0.167;0.167;0.333;0.667
+11-13-05;Steckdose mit Abdeckung;91_en_60617/en_60617_11/en_60617_11_13/en_60617_11_13_05.elmt;-0.167;0.167;0.667;0.667
+11-13-06;Steckdose, abschaltbar;91_en_60617/en_60617_11/en_60617_11_13/en_60617_11_13_06.elmt;-0.292;0.167;0.750;0.667
+11-13-07;Steckdose mit verriegeltem Schalter;91_en_60617/en_60617_11/en_60617_11_13/en_60617_11_13_07.elmt;-0.292;0.167;0.750;0.667
+11-13-08;Steckdose mit Trenntrafo;91_en_60617/en_60617_11/en_60617_11_13/en_60617_11_13_08.elmt;-0.333;0.250;0.667;0.833
+11-13-09;Fernmeldesteckdose, allgemein;91_en_60617/en_60617_11/en_60617_11_13/en_60617_11_13_09.elmt;-0.167;0.250;0.333;0.500
+11-14-01;Schalter, allgemein;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_01.elmt;-0.083;0.375;0.500;0.750
+11-14-02;Schalter mit Kontrolleuchte;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_02.elmt;-0.083;0.375;0.500;0.750
+11-14-03;Zeitschalter, einpolig;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_03.elmt;0.004;0.375;0.675;0.750
+11-14-04;Schalter, zweipolig;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_04.elmt;0.000;0.375;0.667;0.750
+11-14-05;Serienschalter, einpolig;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_05.elmt;-0.167;0.375;1.000;0.750
+11-14-06;Wechselschalter, einpolig;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_06.elmt;-0.167;0.167;1.000;1.167
+11-14-07;Kreuzschalter;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_07.elmt;-0.167;0.167;1.000;1.167
+11-14-07ex;Kreuzschalter;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_07ex.elmt;-0.750;0.350;1.500;0.700
+11-14-08;Dimmer;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_08.elmt;-0.042;0.375;0.583;0.750
+11-14-09;Schalter mit Zugschnur;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_09.elmt;0.000;0.375;0.667;0.750
+11-14-10;Taster;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_10.elmt;-0.167;0.167;0.333;0.333
+11-14-11;Taster mit Leuchte;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_11.elmt;-0.167;0.167;0.333;0.333
+11-14-12;Schalter, allgemein;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_12.elmt;-0.125;0.167;0.417;0.667
+11-14-13;Schalter, allgemein;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_13.elmt;-0.333;0.167;0.667;0.333
+11-14-14;Schaltuhr;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_14.elmt;-0.583;0.333;1.167;0.667
+11-14-15;Schlüsselschalter, Wächtermelder;91_en_60617/en_60617_11/en_60617_11_14/en_60617_11_14_15.elmt;-0.333;0.417;0.667;0.833
+11-15-01;Leuchtenauslaß;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_01.elmt;-0.417;0.167;0.833;0.333
+11-15-02;Leuchtenauslaß auf Putz;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_02.elmt;-0.417;0.167;0.833;0.500
+11-15-03;Leuchte, allgemein;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_03.elmt;-0.167;0.167;0.333;0.333
+11-15-04;Leuchte für Leuchtstofflampe, allgemein;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_04.elmt;0.083;-0.000;0.833;0.167
+11-15-05;Leuchte mit drei Leuchtstofflampen;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_05.elmt;0.083;-0.167;0.833;0.500
+11-15-06;Leuchte mit fünf Leuchtstofflampen;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_06.elmt;0.083;-0.000;0.833;0.167
+11-15-07;Scheinwerfer, allgemein;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_07.elmt;-0.167;0.167;0.333;0.333
+11-15-08;Punktleuchte;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_08.elmt;-0.033;0.167;0.600;0.333
+11-15-09;Flutlichtleuchte;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_09.elmt;-0.100;0.167;0.467;0.433
+11-15-10;Vorschaltgerät für Entladungslampen;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_10.elmt;-0.333;0.167;0.667;0.333
+11-15-11;Sicherheitsleuchte, Notleuchte mit getrenntem Stromkreis, Rettungszeichenleuchte;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_11.elmt;-0.167;0.167;0.333;0.333
+11-15-12;Sicherheitsleuchte mit eingebauter Stromversorgung;91_en_60617/en_60617_11/en_60617_11_15/en_60617_11_15_12.elmt;-0.167;0.167;0.333;0.333
+11-16-01;Heißwassergerät;91_en_60617/en_60617_11/en_60617_11_16/en_60617_11_16_01.elmt;-0.583;0.333;1.167;0.667
+11-16-02;Ventilator;91_en_60617/en_60617_11/en_60617_11_16/en_60617_11_16_02.elmt;-0.583;0.333;1.167;0.667
+11-16-03;Zeiterfassungsgerät;91_en_60617/en_60617_11/en_60617_11_16/en_60617_11_16_03.elmt;-0.333;0.417;0.667;0.833
+11-16-04;Türöffner;91_en_60617/en_60617_11/en_60617_11_16/en_60617_11_16_04.elmt;-0.500;0.167;1.000;0.333
+11-16-05;Wechselsprechstelle, z.B. Haus- oder Torsprechstelle;91_en_60617/en_60617_11/en_60617_11_16/en_60617_11_16_05.elmt;-0.267;0.250;0.800;0.500
+11-17-01;Elektro-Installationskanal, allgemein;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_01.elmt;0.000;-0.000;0.667;0.167
+11-17-02;Elektro-Installationskanäle, zusammengesetzt;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_02.elmt;0.167;-0.000;1.333;0.167
+11-17-03;Endabdeckung;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_03.elmt;-0.250;-0.167;0.500;0.333
+11-17-04;Winkelabzweig;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_04.elmt;-0.208;0.208;0.417;0.417
+11-17-05;T-Abzweig;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_05.elmt;-0.333;0.208;0.667;0.417
+11-17-06;Kreuzabzweig;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_06.elmt;-0.333;0.333;0.667;0.667
+11-17-07;Kreuzung von zwei Verteilsystemen ohne Verbindung;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_07.elmt;-0.333;0.333;0.667;0.667
+11-17-08;Kreuzung zweier unabhängiger Verteilsysteme;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_08.elmt;-0.333;0.333;0.667;0.667
+11-17-09;Ausgleichsstück, Länge einstellbar;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_09.elmt;-0.667;0.083;1.333;0.167
+11-17-10;Elktro-Installationskanal mit interner Blockierung;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_10.elmt;0.167;-0.083;1.333;0.333
+11-17-11;Ausdehnungsstück für Gehäuse;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_11.elmt;0.083;-0.029;1.500;0.442
+11-17-12;Ausdehnungsstück für Leiter;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_12.elmt;0.083;-0.113;1.500;0.608
+11-17-13;Ausdehnungsstück für Gehäuse und Leiter;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_13.elmt;0.083;-0.000;1.500;0.667
+11-17-14;Flexibler Elektro-Installationskanal;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_14.elmt;-0.667;0.167;1.333;0.333
+11-17-15;Reduzierstück;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_15.elmt;0.083;-0.167;1.500;0.500
+11-17-16;Gerader Elektro-Installationskanal mit innerer Drucktrennwand;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_16.elmt;-0.750;0.167;1.500;1.000
+11-17-17;Phasenwender;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_17.elmt;0.000;-0.000;1.333;0.167
+11-17-18;Geräte-Einbaukasten;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_18.elmt;-0.500;0.167;1.000;0.333
+11-17-19;Gerader Elektro-Installationskanal mit Brandabschottung;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_19.elmt;-0.667;0.167;1.333;1.000
+11-17-20;Endeinspeisung;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_20.elmt;0.000;-0.000;1.000;0.333
+11-17-21;Mitteneinspeisung;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_21.elmt;0.167;-0.042;0.667;1.083
+11-17-22;Endeispeisung mit Geräte-Einbaukasten;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_22.elmt;-0.833;0.167;1.667;0.333
+11-17-23;Mitteneinspeisung mit Gräte-Einbaukasten;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_23.elmt;0.167;-0.125;1.000;1.583
+11-17-24;Gerader Elektro-Installationskanal mit festem Abzweig;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_24.elmt;0.000;-0.083;1.333;0.500
+11-17-25;Gerader Elektro-Installationskanal mit mehreren Abzweigen;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_25.elmt;-0.750;-0.333;3.167;0.667
+11-17-26;Gerader Elektro-Installationskanal mit beweglichem Abzweig;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_26.elmt;0.000;0.017;1.333;0.700
+11-17-27;Gerader Elektro-Installationskanal mit stufig (1 m) einstellbarem Abzweig;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_27.elmt;0.000;0.042;1.333;0.750
+11-17-28;Reduzierstück;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_28.elmt;0.083;-0.167;1.500;0.500
+11-17-29;Gerader Elektro-Installationskanal mit festem Abzweig und Geräte-Einbaukasten;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_29.elmt;0.000;-0.500;1.333;1.333
+11-17-30;Gerader Elektro-Installationskanal mit verstellbarem Abzweig und Geräte- Einbaukasten;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_30.elmt;0.000;-0.542;1.333;1.250
+11-17-31;Gerader Elektro-Installationskanal mit festem Abzweig und Geräte-Steckdose mit Schutzkontakt;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_31.elmt;0.000;-0.333;1.333;1.000
+11-17-32;Gerader Elektro-Installationskanal, bestehend aus zwei Verdrahtungskanal-Systemen, A und B;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_32.elmt;0.083;-0.200;1.500;0.433
+11-17-33;Gerader Elektro-Installationskanal, bestehend aus zwei Verdrahtungskanal-Systemen, A und B;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_33.elmt;0.083;0.012;1.500;0.476
+11-17-34;Gerader Elektro-Installationskanal, bestehend aus drei getrennten Kammern;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_34.elmt;0.083;0.117;1.500;1.067
+11-17-35;Gerader Elektro-Installationskanal, bestehend aus drei getrennten Kammern;91_en_60617/en_60617_11/en_60617_11_17/en_60617_11_17_35.elmt;0.083;-0.167;1.500;1.000
+11-18-01;Flugplatzfeuer, Überflur, allgemein;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_01.elmt;-0.333;0.333;0.667;0.667
+11-18-02;Flugplatzfeuer, Unterflur, allgemein;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_02.elmt;-0.333;0.333;0.667;0.667
+11-18-03;Flugplatzfeuer, weiss, einseitig strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_03.elmt;-0.333;0.333;0.667;0.667
+11-18-04;Flugplatzfeuer, weiss, einseitig strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_04.elmt;-0.333;0.333;0.667;0.667
+11-18-05;Flugplatzfeuer,weiss/weiss, zweiseitig strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_05.elmt;-0.333;0.333;0.667;0.667
+11-18-06;Flugplatzfeuer,weiss/weiss, zweiseitig strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_06.elmt;-0.333;0.333;0.667;0.667
+11-18-07;Flugplatzfeuer, weiss, rundstrahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_07.elmt;-0.333;0.333;0.667;0.667
+11-18-08;Flugplatzfeuer, weiss, rundstrahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_08.elmt;0.167;-0.167;0.667;0.633
+11-18-09;Kurvenfeuer, grün/grün, zweiseitig strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_09.elmt;-0.292;0.333;0.750;0.667
+11-18-10;Kurvenfeuer, weiss, einseitig strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_10.elmt;-0.292;0.333;0.750;0.667
+11-18-11;Flugplatzfeuer, oben weisses rundstrahlendes Licht, unten weisses einseitig strahlendes Licht;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_11.elmt;-0.333;0.667;0.667;1.333
+11-18-12;Flugplatzfeuer, oben weisses rundstrahlendes Licht, unten weiss/weisses zweiseitig strahlendes Licht;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_12.elmt;-0.333;0.667;0.667;1.333
+11-18-13;Flugplatzfeuer, weiss blitzend, einseitig strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_13.elmt;-0.125;0.333;1.083;0.667
+11-18-14;Flugplatzfeuer, weiss blitzend, einseitig strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_14.elmt;-0.125;0.333;1.083;0.667
+11-18-15;Anfluggleitwinkelfeuer, weiss/rot, einseitig strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_15.elmt;-0.333;0.333;0.667;0.667
+11-18-16;Windrichtungsanzeiger;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_16.elmt;-0.333;0.333;0.667;0.667
+11-18-17;Landerichtungsanzeiger;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_17.elmt;-0.333;0.333;0.667;0.667
+11-18-18;Hindernisfeuer, Gefahrenfeuer, rot blitzend, rund strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_18.elmt;-0.125;0.333;1.083;0.667
+11-18-19;Flugplatzfeuer, weiss blitzend, rund strahlend;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_19.elmt;-0.125;0.333;1.083;0.667
+11-18-20;Verkehrszeichen, Wegweiser, allgemein;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_20.elmt;-1.000;0.333;2.000;0.667
+11-18-21;Verkehrszeichen, Wegweiser, 4000/9000 feet;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_21.elmt;-0.667;0.333;1.333;0.667
+11-18-22;Verkehrszeichen, Wegweiser, RAMP;91_en_60617/en_60617_11/en_60617_11_18/en_60617_11_18_22.elmt;-1.333;0.333;2.667;0.667

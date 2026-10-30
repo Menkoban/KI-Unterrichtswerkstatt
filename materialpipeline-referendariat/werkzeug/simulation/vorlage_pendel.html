@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>@@TITEL@@ – Simulation</title>
+<style>
+  :root { --dunkel:#08349C; --gruen:#7DDE78; --spannung:#E4572E; --an:#2E7D32; --grau:#5f6670; --nok:#C62828; }
+  * { box-sizing:border-box; }
+  .taste, #ein, #aus { touch-action:none; }
+  body { margin:0; font-family: Arial, "Liberation Sans", sans-serif; color:#1b1f24; background:#eef1f4; }
+  header { background:var(--dunkel); border-bottom:5px solid var(--gruen); color:#fff; padding:8px 16px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+  header b { font-size:15px; } header span { font-size:12px; opacity:.85; }
+  header .logo { background:#fff; border-radius:4px; padding:3px 6px; height:40px; display:block; }
+  header .links { display:flex; align-items:center; gap:12px; }
+  main { max-width:1400px; margin:0 auto; padding:12px 16px 24px; }
+  .karte { background:#fff; border:1px solid #d5dae0; border-radius:6px; padding:10px 12px; margin-bottom:12px; }
+  .karte h2 { font-size:14px; margin:0 0 6px; color:var(--dunkel); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+  .knopf button { border:2px solid var(--dunkel); color:var(--dunkel); background:#fff; padding:5px 10px; font:inherit; font-size:13px; font-weight:bold; cursor:pointer; border-radius:4px; }
+  .knopf button.aktiv { background:var(--dunkel); color:#fff; }
+  #status { font-weight:normal; font-size:13px; color:#1b1f24; }
+  .bild svg { width:100%; height:auto; display:block; touch-action:manipulation; user-select:none; -webkit-user-select:none; }
+  .hl { stroke:var(--spannung); stroke-width:2.6; stroke-linecap:round; opacity:.55; fill:none; }
+  .betaetigt { fill:var(--an); fill-opacity:.10; stroke:var(--an); stroke-width:.9; }
+  .spule-an { fill:var(--gruen); fill-opacity:.7; stroke:var(--an); stroke-width:1.2; }
+  .hakt { fill:none; stroke:#E08A00; stroke-width:1.4; stroke-dasharray:3 2; }
+  .taste, .klick { cursor:pointer; }
+  rect.taste { fill:#1565C0; fill-opacity:0; } rect.taste:hover { fill-opacity:.08; }
+  g.taste .druck { fill:#000; fill-opacity:0; } g.taste.gedrueckt .druck { fill-opacity:.35; }
+  .regler { display:flex; align-items:center; gap:10px; font-size:13px; flex-wrap:wrap; margin-top:6px; }
+  .regler input[type=range]{ flex:1 1 200px; accent-color:var(--dunkel); }
+  #meldung { min-height:20px; font-size:13px; font-weight:bold; color:var(--nok); margin-top:6px; }
+  body.plan #schemakarte, body.schema #plankarte { display:none; }
+  footer { font-size:11px; color:var(--grau); margin-top:4px; line-height:1.45; }
+</style>
+</head>
+<body class="@@MODUS@@">
+<header><span class="links"><img class="logo" src="@@LOGO@@" alt="Schullogo"><b>@@BETRIEB@@ · @@TITEL@@</b></span><span>@@UNTERTITEL@@ · @@ART@@</span></header>
+<main>
+  <div class="karte">
+    <h2><span>@@ART@@ (live) <span id="status"></span></span>
+      <span class="knopf"><button id="pause">⏸ Pause</button> <button id="tempo">Zeitlupe</button> <button id="neu">↺ Neustart</button></span></h2>
+    <div class="regler"><span>Beladung (Lastmoment)</span><input type="range" id="last" min="10" max="90" step="5"><b id="lastw"></b></div>
+    <div id="meldung"></div>
+  </div>
+  <div class="karte" id="plankarte">
+    <h2><span>Stromlaufplan</span><span class="knopf ansicht"><button data-v="ganz" class="aktiv">Ganzer Plan</button> <button data-v="haupt">Hauptstromkreis</button> <button data-v="steuer">Steuerstromkreis</button></span></h2>
+    <div class="bild" id="plan">@@PLAN@@</div>
+  </div>
+  <div class="karte" id="schemakarte">
+    <h2><span>Technologieschema</span></h2>
+    <div class="bild" id="schema">@@SCHEMA@@</div>
+  </div>
+  <footer>@@FUSS@@</footer>
+</main>
+<script>
+@@KERN@@
+@@PENDEL@@
+@@KONTAKTE@@
+const NETZ = @@NETZ@@;
+const LAGE = @@LAGE@@;
+const SCH = @@SCH@@;
+const MOTOR = @@MOTOR@@;
+const BED = @@BED@@;
+</script>
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const komma = (x, n) => x.toFixed(n).replace('.', ',');
+const NS = "http://www.w3.org/2000/svg";
+const gedrueckt = new Set();
+// Tastendruck zählt mindestens zwei Rechenschritte (0,2 s Simulationszeit), auch bei kurzem Antippen am Tablet
+let schritte = 0;
+const halteStart = {}, losgelassen = new Set();
+function freigeben() {
+  for (const b of [...losgelassen]) if (schritte - halteStart[b] >= 2) { gedrueckt.delete(b); losgelassen.delete(b); }
+}
+function halten(e, bmk, merk) {
+  const ab = ev => { ev.preventDefault(); if (e.setPointerCapture && ev.pointerId !== undefined) try { e.setPointerCapture(ev.pointerId); } catch (_) {}
+    gedrueckt.add(bmk); halteStart[bmk] = schritte; losgelassen.delete(bmk); if (merk) merk.classList.add("gedrueckt"); };
+  const auf = () => { if (!gedrueckt.has(bmk)) return; losgelassen.add(bmk); if (merk) merk.classList.remove("gedrueckt"); freigeben(); };
+  e.addEventListener("pointerdown", ab);
+  ["pointerup", "pointercancel", "lostpointercapture"].forEach(n => e.addEventListener(n, auf));
+}
+function el(svg, tag, attr, eltern) { const e = document.createElementNS(NS, tag); for (const k in attr) e.setAttribute(k, attr[k]); (eltern || svg).appendChild(e); return e; }
+function titel(e, t) { e.appendChild(Object.assign(document.createElementNS(NS, "title"), { textContent: t })); }
+
+// ------------------------------------------------------------ Stromlaufplan: Überlagerung auf dem gezeichneten Plan
+const psvg = document.querySelector("#plan svg");
+psvg.removeAttribute("width"); psvg.removeAttribute("height");
+const ANSICHT = { ganz: psvg.getAttribute("viewBox"), haupt: BED.ansicht_haupt, steuer: BED.ansicht_steuer };
+const kg = el(psvg, "g", {});      // Kontakte in Arbeitsstellung (unter den Markierungen)
+const pg = el(psvg, "g", {});
+const MM = 72 / 25.4;
+const linien = NETZ.kanten.map(k => {
+  if (k.typ !== "ltg" && k.typ !== "kontakt" && k.typ !== "fest") return null;
+  const [x1, y1] = LAGE[k.a], [x2, y2] = LAGE[k.b];
+  return el(psvg, "line", { x1, y1, x2, y2, class: "hl", style: "display:none" }, pg);
+});
+const rahmen = NETZ.kanten.map(k => {
+  if (k.typ !== "kontakt" && k.typ !== "spule") return null;
+  const [x, y] = LAGE[k.a];
+  return k.typ === "kontakt"
+    ? el(psvg, "rect", { x: x - 3.2 * MM, y, width: 4.0 * MM, height: 8 * MM, rx: 1.5, class: "betaetigt", style: "display:none" }, pg)
+    : el(psvg, "rect", { x: x - 2.6 * MM, y: y + 1.6 * MM, width: 5.2 * MM, height: 4.8 * MM, class: "spule-an", style: "display:none" }, pg);
+});
+const haken = NETZ.kanten.map(k => {
+  if (k.typ !== "kontakt") return null;
+  const [x, y] = LAGE[k.a];          // schmale Ellipse links der Anschlussnummern (nichts verdecken)
+  return el(psvg, "ellipse", { cx: x - 1.0 * MM, cy: y + 4 * MM, rx: 2.1 * MM, ry: 5.0 * MM, class: "hakt", style: "display:none" }, pg);
+});
+const handEndlage = new Set();      // Endschalter von Hand betätigt (im Plan oder am Schema)
+for (const k of NETZ.kanten) {
+  if (k.typ !== "kontakt" || !["druck", "position", "thermisch"].includes(k.bet)) continue;
+  const [x, y] = LAGE[k.a];
+  const r = el(psvg, "rect", { x: x - 11 * MM, y: y - 1 * MM, width: 13 * MM, height: 10 * MM, class: "taste", "data-bmk": k.bmk }, pg);
+  if (k.bet === "druck") { titel(r, k.bmk + " drücken"); halten(r, k.bmk); }
+  if (k.bet === "position") { titel(r, k.bmk + " von Hand betätigen"); halten(r, k.bmk); }
+  if (k.bet === "thermisch") { titel(r, k.bmk + " auslösen / zurücksetzen"); r.onclick = f2klick; }
+}
+const stellung = Kontakte.anlegen(psvg, kg, NETZ, LAGE);
+document.querySelectorAll(".ansicht button").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".ansicht button").forEach(c => c.classList.toggle("aktiv", c === b));
+  psvg.setAttribute("viewBox", ANSICHT[b.dataset.v]);
+});
+
+// ------------------------------------------------------------ Technologieschema: bewegte und bedienbare Teile
+const ssvg = document.querySelector("#schema svg");
+ssvg.removeAttribute("width"); ssvg.removeAttribute("height");
+const K = 72 / 2.54, BX0 = SCH.box[0], BY1 = SCH.box[3];
+const P = (x, y) => [(x - BX0) * K, (BY1 - y) * K];
+const pts = a => a.map(([x, y]) => P(x, y).map(v => v.toFixed(2)).join(",")).join(" ");
+const B = SCH.band, ex = B.tiefe * B.dx, ey = B.tiefe * B.dy;
+const clip = el(ssvg, "clipPath", { id: "gurt" }, el(ssvg, "defs", {}));
+el(ssvg, "polygon", { points: pts([[B.x0, B.y], [B.x0 + ex, B.y + ey], [B.x1 + ex, B.y + ey], [B.x1, B.y]]) }, clip);
+const gurt = el(ssvg, "g", { "clip-path": "url(#gurt)" });
+const gurtlinien = Array.from({ length: 20 }, () => el(ssvg, "line", { stroke: "#9a9da2", "stroke-width": 0.6 }, gurt));
+const speichen = ["umlenk", "antrieb"].map(n => {
+  const [x, y, r] = SCH[n];
+  return [el(ssvg, "line", { stroke: "#1b1f24", "stroke-width": 1 }), el(ssvg, "line", { stroke: "#1b1f24", "stroke-width": 1 }), x, y, r * 0.8];
+});
+const KI = SCH.kiste, kiste = {
+  seite: el(ssvg, "polygon", { fill: "#96714a", stroke: "#000", "stroke-width": 0.8, "stroke-linejoin": "round" }),
+  deckel: el(ssvg, "polygon", { fill: "#e3cbad", stroke: "#000", "stroke-width": 0.8, "stroke-linejoin": "round" }),
+  vorn: el(ssvg, "polygon", { fill: "#C8975A", stroke: "#000", "stroke-width": 0.8, "stroke-linejoin": "round" }) };
+const hebel = Object.entries(SCH.endschalter).map(([bmk, e]) => {
+  const g = el(ssvg, "g", { class: "klick" });
+  const arm = el(ssvg, "line", { stroke: "#4b5058", "stroke-width": 2, "stroke-linecap": "round" }, g);
+  const rolle = el(ssvg, "circle", { r: SCH.hebel.r * K, fill: "#333", stroke: "#000", "stroke-width": 0.8 }, g);
+  const [hx, hy] = P(e.dreh[0] - 0.28, e.dreh[1] + 0.6);
+  const gehaeuse = el(ssvg, "rect", { x: hx, y: hy, width: 0.56 * K, height: 0.6 * K, fill: "transparent", rx: 2 }, g);
+  titel(g, bmk + " von Hand betätigen");
+  halten(g, bmk);
+  const laenge = Math.hypot(e.rolle[0] - e.dreh[0], e.rolle[1] - e.dreh[1]);
+  const ruhe = Math.atan2(e.rolle[1] - e.dreh[1], e.rolle[0] - e.dreh[0]);
+  return { bmk, e, arm, rolle, gehaeuse, laenge, ruhe };
+});
+for (const [bmk, [x, y]] of Object.entries(SCH.taster)) {
+  const g = el(ssvg, "g", { class: "taste", "data-bmk": bmk });
+  const [px, py] = P(x, y);
+  el(ssvg, "circle", { cx: px, cy: py, r: 0.18 * K, class: "druck" }, g);
+  el(ssvg, "circle", { cx: px, cy: py, r: 0.3 * K, fill: "transparent" }, g);
+  titel(g, bmk + " drücken");
+  halten(g, bmk, g);
+}
+const geraete = {};
+for (const [bmk, [x, y, b, h]] of Object.entries(SCH.geraete)) {
+  const [px, py] = P(x, y + h);
+  geraete[bmk] = el(ssvg, "rect", { x: px, y: py, width: b * K, height: h * K, rx: 2, fill: "transparent" });
+  titel(geraete[bmk], bmk);
+}
+geraete[BED.f2].classList.add("klick"); geraete[BED.f2].onclick = f2klick;
+geraete[BED.f1].classList.add("klick"); geraete[BED.f1].onclick = () => { z.ausgeloest.delete(BED.f1); meldung(""); };
+const [mx, my] = SCH.anzeige;
+const schild = el(ssvg, "rect", { rx: 4, height: 0.62 * K, width: 3.0 * K, x: P(mx, my)[0] - 1.5 * K, y: P(mx, my)[1] - 0.31 * K });
+const schildText = el(ssvg, "text", { x: P(mx, my)[0], y: P(mx, my)[1] + 2.7, "text-anchor": "middle", fill: "#fff", "font-size": 7.5, "font-weight": "bold", "font-family": "Arial" });
+
+// ------------------------------------------------------------ Zustand und Rechnung
+let z, h, mot, kiste_z, endlage = {}, weg, f2aus, laeuft = true, tempo = 1;
+const last = $("last");
+last.value = BED.last;
+function meldung(t) { $("meldung").textContent = t; }
+function f2klick() { if (!f2aus) { f2aus = true; meldung(BED.f2 + " von Hand ausgelöst (Prüftaste)."); } else if (mot.theta < 1) { f2aus = false; meldung(""); } }
+function start() {
+  z = Kern.neu(NETZ, {});
+  mot = { n: 0, theta: 0 }; kiste_z = Pendel.neu(SCH); endlage = Pendel.schritt(kiste_z, SCH, 0, 0); weg = 0; f2aus = false;
+  h = Kern.schritt(z); zeigen();
+}
+function rechnen(dt) {
+  z.betaetigt = new Set([...gedrueckt, ...Object.keys(endlage)]);
+  if (f2aus) z.betaetigt.add(BED.f2);
+  h = Kern.schritt(z);
+  if (h.kurzschluss) meldung("Kurzschluss " + h.kurzschluss + ": " + BED.f1 + " hat ausgelöst.");
+  for (let i = 0; i < 10; i++) {
+    Kern.motor(MOTOR, mot, h.modus, +last.value / 100, dt / 10);
+    const v = MOTOR.v_N * mot.n / MOTOR.nN;
+    endlage = Pendel.schritt(kiste_z, SCH, v, dt / 10);
+    weg += v * SCH.massstab * dt / 10;
+  }
+  if (kiste_z.anschlag) meldung("Kiste am Bandende angeschlagen.");
+  if (mot.theta >= MOTOR.theta_aus && !f2aus) { f2aus = true; meldung(BED.f2 + " hat ausgelöst (Überlast)."); }
+  z.t = Math.round((z.t + dt) * 10) / 10;
+  schritte++; freigeben();
+}
+function setze(e, a) { for (const k in a) e.setAttribute(k, a[k]); }
+function zeigen() {
+  // Plan
+  const g = h.gruppen, q = NETZ.quellen;
+  const phasen = new Set(["L1", "L2", "L3"].map(l => g[q[l]]));
+  NETZ.kanten.forEach((k, i) => {
+    if (linien[i]) linien[i].style.display = Kern.leitet(z, k) && phasen.has(g[k.a]) ? "" : "none";
+    if (rahmen[i]) rahmen[i].style.display = (k.typ === "kontakt" ? Kern.betaetigt(z, k) : z.an[k.bmk]) ? "" : "none";
+    if (haken[i]) haken[i].style.display = !Kern.leitet(z, k) && (phasen.has(g[k.a]) !== phasen.has(g[k.b])) ? "" : "none";
+  });
+  stellung(k => Kern.betaetigt(z, k));
+  // Schema: Gurt, Trommeln, Kiste, Hebel, Schaltschrank, Schild
+  gurtlinien.forEach((l, i) => {
+    const x = B.x0 + ((((i * 0.8 + weg) % 16) + 16) % 16) - 0.8;
+    const [x1, y1] = P(x, B.y), [x2, y2] = P(x + ex, B.y + ey);
+    setze(l, { x1, y1, x2, y2 });
+  });
+  speichen.forEach(([l1, l2, x, y, r]) => {
+    const w = -weg / SCH.antrieb[2];
+    [[l1, w], [l2, w + Math.PI / 2]].forEach(([l, a]) => {
+      const [x1, y1] = P(x - r * Math.cos(a), y - r * Math.sin(a)), [x2, y2] = P(x + r * Math.cos(a), y + r * Math.sin(a));
+      setze(l, { x1, y1, x2, y2 });
+    });
+  });
+  const x = kiste_z.x, y = KI.y, tx = KI.t * B.dx, ty = KI.t * B.dy;
+  kiste.vorn.setAttribute("points", pts([[x, y], [x + KI.b, y], [x + KI.b, y + KI.h], [x, y + KI.h]]));
+  kiste.seite.setAttribute("points", pts([[x + KI.b, y], [x + KI.b + tx, y + ty], [x + KI.b + tx, y + KI.h + ty], [x + KI.b, y + KI.h]]));
+  kiste.deckel.setAttribute("points", pts([[x, y + KI.h], [x + tx, y + KI.h + ty], [x + KI.b + tx, y + KI.h + ty], [x + KI.b, y + KI.h]]));
+  for (const hb of hebel) {
+    const aus = endlage[hb.bmk] !== undefined ? Math.min(0.9, endlage[hb.bmk] / hb.laenge + 0.12) : gedrueckt.has(hb.bmk) ? 0.35 : 0;
+    const w = hb.ruhe + hb.e.seite * aus;            // Kiste drückt die Rolle in Fahrtrichtung weg
+    const [dx, dy] = P(hb.e.dreh[0], hb.e.dreh[1]);
+    const [rx, ry] = P(hb.e.dreh[0] + hb.laenge * Math.cos(w), hb.e.dreh[1] + hb.laenge * Math.sin(w));
+    setze(hb.arm, { x1: dx, y1: dy, x2: rx, y2: ry }); setze(hb.rolle, { cx: rx, cy: ry });
+    const an = z.betaetigt.has(hb.bmk);
+    setze(hb.gehaeuse, { fill: an ? "rgba(125,222,120,.6)" : "transparent" });
+  }
+  for (const [bmk, r] of Object.entries(geraete)) {
+    let farbe = "transparent";
+    if (bmk in z.an && z.an[bmk]) farbe = "rgba(125,222,120,.6)";
+    if ((bmk === BED.f2 && f2aus) || z.ausgeloest.has(bmk)) farbe = "rgba(198,40,40,.45)";
+    r.setAttribute("fill", farbe);
+  }
+  schild.setAttribute("fill", { Rechtslauf: "#08349C", Linkslauf: "#E08A00", Aus: "#5f6670" }[h.modus] || "#C62828");
+  schildText.textContent = h.modus + " · " + Math.round(Math.abs(mot.n)) + " 1/min";
+  const es = Object.keys(endlage).concat([...gedrueckt].filter(b => b in SCH.endschalter));
+  $("status").textContent = "· Motor " + h.modus + " · t = " + komma(z.t, 1) + " s · Band " +
+    komma(MOTOR.v_N * mot.n / MOTOR.nN, 2) + " m/s" + (es.length ? " · betätigt: " + [...new Set(es)].join(", ") : "");
+  $("lastw").textContent = last.value + " % von M_N";
+}
+let alt = null, rest = 0;
+function lauf(jetzt) {
+  if (alt !== null && laeuft) {
+    rest += Math.min(0.25, (jetzt - alt) / 1000) * tempo;
+    while (rest >= 0.1) { rechnen(0.1); rest -= 0.1; }
+    zeigen();
+  }
+  alt = jetzt; requestAnimationFrame(lauf);
+}
+$("pause").onclick = () => { laeuft = !laeuft; $("pause").textContent = laeuft ? "⏸ Pause" : "▶ Weiter"; };
+$("tempo").onclick = () => { tempo = tempo === 1 ? 0.25 : 1; $("tempo").classList.toggle("aktiv", tempo < 1); };
+$("neu").onclick = () => { meldung(""); start(); };
+last.oninput = () => zeigen();
+// Für Vorschau und Prüfung: Zeit vorspulen mit einem Taster am Anfang (0,5 s gedrückt)
+window.vorspulen = (bis, taster) => { start(); taster = taster || BED.rechts;
+  while (z.t < bis - 1e-9) { if (z.t < 0.5) gedrueckt.add(taster); else gedrueckt.delete(taster); rechnen(0.1); }
+  zeigen(); laeuft = false; };
+window.modus = () => h.modus;
+window.rechneSchritte = n => { for (let i = 0; i < n; i++) rechnen(0.1); zeigen(); };
+window.arbeitsstellung = () => [...kg.children].filter(g => g.style.display !== "none").length;
+window.kiste = () => kiste_z.x;
+start();
+requestAnimationFrame(lauf);
+</script>
+</body>
+</html>

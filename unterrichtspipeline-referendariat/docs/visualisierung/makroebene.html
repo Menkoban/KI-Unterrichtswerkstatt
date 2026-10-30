@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Makro-Ebene</title>
+<style>
+  :root{
+    --ink:#14213d; --muted:#5b6578; --line:#d9dee7; --bg:#f6f7fb; --card:#ffffff;
+    --c1:#1d4ed8; --c1s:#e8efff; --c2:#0f766e; --c2s:#e3f5f2; --c3:#7c3aed; --c3s:#f1eafe;
+    --red:#dc2626; --yellow:#d97706; --blue:#2563eb;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1920px;height:1080px;background:var(--bg);font-family:"Inter",sans-serif;color:var(--ink)}
+  body{padding:34px 44px 28px;display:flex;flex-direction:column;gap:18px}
+  header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--line);padding-bottom:14px}
+  h1{font-family:"Inter Display","Inter",sans-serif;font-weight:800;font-size:40px;letter-spacing:-.5px}
+  h1 span{color:var(--c1)}
+  .sub{color:var(--muted);font-size:17px;margin-top:6px}
+  .tag{font-size:14px;font-weight:600;color:var(--c1);background:var(--c1s);border:1px solid #c7d6ff;border-radius:999px;padding:7px 16px}
+  .flow{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;gap:0;flex:1;min-height:0}
+  .arrow{display:flex;align-items:center;justify-content:center}
+  .arrow svg{width:36px;height:36px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 2px 6px rgba(20,33,61,.05)}
+  .step .top{padding:16px 20px 14px;border-bottom:1px solid var(--line)}
+  .num{display:inline-block;font-weight:800;font-size:15px;color:#fff;border-radius:8px;padding:3px 10px;margin-right:10px}
+  .step h2{display:inline;font-size:24px;font-weight:800;vertical-align:middle}
+  .life{margin-top:8px;font-size:14px;font-weight:600}
+  .s1 .num{background:var(--c1)} .s1 .life{color:var(--c1)} .s1 .top{background:var(--c1s)}
+  .s2 .num{background:var(--c2)} .s2 .life{color:var(--c2)} .s2 .top{background:var(--c2s)}
+  .s3 .num{background:var(--c3)} .s3 .life{color:var(--c3)} .s3 .top{background:var(--c3s)}
+  .blk{padding:18px 22px 6px}
+  .lbl{font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  ul{list-style:none}
+  li{font-size:18px;line-height:1.42;padding-left:18px;position:relative;margin-bottom:6px}
+  li:before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border-radius:50%;background:#9aa4b5}
+  .s1 .out li:before{background:var(--c1)} .s2 .out li:before{background:var(--c2)} .s3 .out li:before{background:var(--c3)}
+  b{font-weight:700}
+  .out{margin-top:auto;border-top:1px dashed var(--line);padding:12px 20px 14px;background:#fbfcfe}
+  .file{font-family:"DejaVu Sans Mono",monospace;font-size:14.5px;color:#334155;background:#eef1f6;border-radius:6px;padding:2px 7px;display:inline-block;margin:2px 0}
+  .ex{margin-top:8px;font-size:16px;color:var(--muted);line-height:1.4}
+  .ex b{color:var(--ink)}
+  footer{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:18px}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 18px}
+  .panel h3{font-size:15px;font-weight:800;margin-bottom:7px}
+  .chk{display:flex;gap:14px;font-size:15px;line-height:1.35}
+  .chk div{flex:1}
+  .dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .tree{font-family:"DejaVu Sans Mono",monospace;font-size:12.5px;line-height:1.5;color:#334155;white-space:pre}
+  .next{background:var(--ink);color:#fff;border:none}
+  .next h3{color:#fff}
+  .next p{font-size:14.5px;line-height:1.45;color:#dbe3f1}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Makro-Ebene: <span>vom Lehrplan zur Jahresplanung</span></h1>
+    <div class="sub">Pipeline 1 · Schritte 01 bis 03 · Skills curriculare-analyse, lernsituationen-skizze, modellbetrieb, jahresplanung · Ergebnisse im Arbeitsbereich</div>
+  </div>
+  <div class="tag">Stand 25.10.2026</div>
+</header>
+
+<div class="flow">
+  <section class="step s1">
+    <div class="top"><span class="num">01</span><h2>Curriculare Analyse</h2>
+      <div class="life">einmal je Lernfeld · für alle Fachrichtungen mit diesem Lernfeld</div></div>
+    <div class="blk"><div class="lbl">Was wir brauchen</div><ul>
+      <li><b>Rahmenlehrplan</b> im Wortlaut (im Werkzeug unter <span class="file">Quellen/</span>)</li>
+      <li>Ihre Erfahrung, um die Inhalte zu konkretisieren</li>
+      <li>im Echtbetrieb: schulisches Curriculum und gängige Lehrwerke zum Abgleich</li></ul></div>
+    <div class="blk"><div class="lbl">Was passiert</div><ul>
+      <li>Lernfeldtext → <b>Lernfeld-Kompetenzen LK-01 …</b>, eng am Wortlaut, nach Phasen der vollständigen Handlung</li>
+      <li><b>Inhalte</b> konkretisiert: Pflicht · Optional · Verschoben</li>
+      <li><b>Abgrenzung</b> zu Nachbar-Lernfeldern, Spalte <b>Lernort Betrieb</b></li></ul></div>
+    <div class="out"><div class="lbl">Ergebnis</div><ul>
+      <li><span class="file">Curriculare_Analyse.docx</span> mit Prüfbericht</li></ul>
+      <div class="ex">Generator <b>lernfeld/curriculare_analyse.py</b> aus <span class="file">.daten/curriculare_analyse/</span></div></div>
+  </section>
+
+  <div class="arrow"><svg viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+  <section class="step s2">
+    <div class="top"><span class="num">02</span><h2>Skizze und Modellbetrieb</h2>
+      <div class="life">je Lernfeld und Fachrichtung · ohne Kalender</div></div>
+    <div class="blk"><div class="lbl">Was wir brauchen</div><ul>
+      <li>LK und Inhalte aus 01</li>
+      <li><b>Beruf und Fachrichtung</b></li>
+      <li>einen <b>Modellbetrieb</b> je Beruf (fiktiv; im Echtbetrieb optional)</li></ul></div>
+    <div class="blk"><div class="lbl">Was passiert</div><ul>
+      <li><b>Übergeordnete Handlungssituation</b> im Modellbetrieb über alle Lernsituationen</li>
+      <li>je LS: Titel, Handlungssituation, Handlungsergebnis, <b>echte Entscheidung</b>, LK mit Legende, Inhalte, Stunden</li>
+      <li><b>Summe gleich Zeitrichtwert</b></li>
+      <li>Modellbetrieb: Steckbrief, Personen, Kunden; Lernende als Gesellinnen und Gesellen</li></ul></div>
+    <div class="out"><div class="lbl">Ergebnis</div><ul>
+      <li><span class="file">Lernsituationen_Skizze.docx</span></li>
+      <li><span class="file">Modellbetrieb_&lt;Name&gt;.docx</span> je Beruf</li></ul>
+      <div class="ex">Generatoren <b>lernfeld/ls_skizze.py</b> und <b>modellbetrieb/modellbetrieb.py</b></div></div>
+  </section>
+
+  <div class="arrow"><svg viewBox="0 0 24 24"><path d="M4 12h14M13 6l6 6-6 6" fill="none" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+  <section class="step s3">
+    <div class="top"><span class="num">03</span><h2>Jahresplanung</h2>
+      <div class="life">Schuljahres-Akte je Klasse · Bildungsgang, Ausbildungsjahr, Schuljahr</div></div>
+    <div class="blk"><div class="lbl">Was wir brauchen</div><ul>
+      <li><b>Schulplanung</b>, wenn vorhanden: übernehmen und abgleichen</li>
+      <li><b>Ferien aus amtlicher Quelle</b> mit Abrufdatum, nie aus dem Gedächtnis</li>
+      <li>Organisationsform als Einstellung (Teilzeit oder Block, Berufsschultage)</li>
+      <li><b>Stundenplan</b>, jederzeit nachreichbar (Foto, PDF, Excel)</li></ul></div>
+    <div class="blk"><div class="lbl">Was passiert</div><ul>
+      <li>Lernfelder des Jahres mit <b>Zeitrichtwert</b> aus dem Rahmenlehrplan</li>
+      <li>erst mit Stundenplan: jede Stunde mit Datum, verfügbare Stunden gegen Zeitrichtwert</li>
+      <li>eigene Lernfelder werden bis auf die Lernsituationen vorbereitet</li></ul></div>
+    <div class="out"><div class="lbl">Ergebnis</div><ul>
+      <li><span class="file">Jahresplanung.docx</span> im Klassenordner unter <span class="file">Unterricht/</span></li></ul>
+      <div class="ex">Generator <b>jahresplanung/jahresplanung.py</b>, Feiertage aus <b>kalender.py</b></div></div>
+  </section>
+</div>
+
+<footer>
+  <div class="panel">
+    <h3>Vor jeder Freigabe: Prüfbericht und Leseseite, dann entscheiden Sie</h3>
+    <div class="chk">
+      <div><span class="dot" style="background:var(--red)"></span><b>Fehler</b>: Stundensumme falsch, LK nicht abgedeckt, Inhalt gehört in ein anderes Lernfeld</div>
+      <div><span class="dot" style="background:var(--yellow)"></span><b>Warnung</b>: Überlast, Doppelung mit Nachbar-Lernfeld, offene Annahme</div>
+      <div><span class="dot" style="background:var(--blue)"></span><b>Hinweis</b>: Idee, Bezug zu anderen Fächern, wiederverwendbares Material</div>
+    </div>
+  </div>
+  <div class="panel">
+    <h3>Wo es landet (Arbeitsbereich)</h3>
+<div class="tree">&lt;Fach&gt;/&lt;Beruf&gt;/Modellbetrieb_&lt;Name&gt;.docx
+&lt;Fach&gt;/&lt;Beruf&gt;/&lt;LFnn_Titel&gt;/
+   Curriculare_Analyse.docx · Lernsituationen_Skizze.docx
+Unterricht/&lt;Fach&gt;/&lt;Schuljahr&gt;_&lt;Klasse&gt;/Jahresplanung.docx</div>
+  </div>
+  <div class="panel next">
+    <h3>Danach: Meso-Ebene</h3>
+    <p>Lernsituation ausarbeiten, bei selbstständiger LS mit Arbeitsplan · Klassen-Akte · Fehlvorstellungen. Grundsatz: alle Lernfelder kennen (Analyse und Skizze), Stunden erst kurz vor dem Unterricht planen.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,400 @@
+{
+ "ls": "lf01_eg_ls01",
+ "ds": "1",
+ "std_nr": "Std. 1–2",
+ "titel": "Erstbegehung bei Familie Schütte",
+ "typ": "Alltagsstunde",
+ "dauer": 90,
+ "datum": "2026-10-11",
+ "stand": "von der Lehrkraft freigegeben am 2026-10-11",
+ "ordner": "Unterricht/Elektrotechnik/2026-27_EG1/LF01/LS01/UE01_Erstbegehung",
+ "leitfrage": "Was hat die Meisterin bei Schüttes gesehen?",
+ "teilergebnis": "Begehungsprotokoll, Auftragsanalyse, Begriffswand (Anfang); der Arbeitsplan wird in DS 2 fertig",
+ "kompetenzen": [
+  "TK 1: Die Lernenden benennen die Betriebsmittel auf den Fotos der Erstbegehung mit Fachbegriff und Aufgabe, indem sie das Begehungsprotokoll des Stromhofs ausfüllen (LK-03).",
+  "TK 2: Die Lernenden analysieren den Auftrag der Meisterin (Kunde, Wunsch, Zweck, Termin, Ergebnis), indem sie im Team die Auftragsanalyse ausfüllen (LK-01).",
+  "TK 3: Die Lernenden unterscheiden Fachbegriff und Alltagswort, indem sie Begriffe aus ihrem Protokoll an der Begriffswand erklären (LK-03).",
+  "Experte: ordnen die Betriebsmittel einer Systemebene zu (Anlage, Gerät, Baugruppe, Bauelement) und begründen Auffälligkeiten (Vorbereitung DS 2)."
+ ],
+ "fehlvorstellungen": [
+  "FV-02 „Strom“ für alles (A): Begriffswand ab heute, Spalte Strom, Spannung, Leistung, Energie",
+  "FV-05 „Die Sicherung schützt den Menschen“ (B): bei den Fotos nur benennen, Merkzettel „klären wir in LS 2“"
+ ],
+ "annahmen": "Keine Klassen-Akte (Planung ohne echte Klasse). Annahmen: Teilzeitklasse, 1. Ausbildungsjahr, erster Schultag, etwa 22 Lernende, gemischte Vorbildung (Haupt- und Realschulabschluss, einzelne mit Abitur), noch keine Teams und noch kein Moodle-Zugang. Differenzierung über die Niveaus Beginner, Könner, Experte (Profil).",
+ "verlauf": [
+  {
+   "phase": "Ankommen und Kennenlernen I",
+   "zeit": "0–10 min",
+   "handlungsphase": "",
+   "tk": "",
+   "inhalte": [
+    "- Vorstellung der Lehrkraft",
+    "- Organisation des ersten Tages"
+   ],
+   "aktivitaeten": [
+    "- L. begrüßt die S. und stellt die Anwesenheit fest,",
+    "- L. stellt sich selbst vor (Name, Weg in den Beruf, Fächer),",
+    "- L. nennt kurz Regeln und Materialien und kündigt den Moodle-Kurs an,",
+    "- L. erklärt das Partnerinterview und teilt die Interviewkarte aus."
+   ],
+   "sozial": [
+    "L-Vortrag",
+    "Plenum"
+   ],
+   "medien": [
+    "Anl. 2: Interviewkarte",
+    "Namensschilder"
+   ]
+  },
+  {
+   "phase": "Kennenlernen II",
+   "zeit": "10–30 min",
+   "handlungsphase": "",
+   "tk": "",
+   "inhalte": [
+    "- Partnerinterview: Name, Ausbildungsbetrieb, „Warum Elektroniker/in?“",
+    "- Liste der Ausbildungsbetriebe (für DS 3)"
+   ],
+   "aktivitaeten": [
+    "- S. befragen sich am Platz gegenseitig mit drei Fragen (5 min),",
+    "- S. stellen ihre Partnerin oder ihren Partner in zwei Sätzen vor,",
+    "- L. notiert die Ausbildungsbetriebe an der Tafel (bleibt für DS 3 stehen)."
+   ],
+   "sozial": [
+    "PA",
+    "Plenum"
+   ],
+   "medien": [
+    "Anl. 2: Interviewkarte",
+    "Tafel"
+   ]
+  },
+  {
+   "phase": "Einstieg und Auftrag",
+   "zeit": "30–35 min",
+   "handlungsphase": "Informieren",
+   "tk": "TK 2",
+   "inhalte": [
+    "- Sprachnachricht der Meisterin: neuer Kunde Familie Schütte, Haus von 1968, Erstbegehung",
+    "- Leitfrage der Stunde"
+   ],
+   "aktivitaeten": [
+    "- L. stellt den Stromhof als Ausbildungsbetrieb der Klasse vor („Sie sind Gesellinnen und Gesellen“),",
+    "- L. spielt die Sprachnachricht ab,",
+    "- S. nennen, was die Meisterin will,",
+    "- L. hält die Leitfrage fest: „Was hat die Meisterin bei Schüttes gesehen?“"
+   ],
+   "sozial": [
+    "L-S-Gespräch",
+    "Plenum"
+   ],
+   "medien": [
+    "Anl. 1: Sprachnachricht der Meisterin",
+    "Lautsprecher, Tafel"
+   ]
+  },
+  {
+   "phase": "Erarbeitung I: Begehungsprotokoll",
+   "zeit": "35–55 min",
+   "handlungsphase": "Informieren",
+   "tk": "TK 1",
+   "inhalte": [
+    "- Fotos der Erstbegehung (Zählerplatz, Unterverteilung, Steckdose, Leuchte, Durchlauferhitzer, Saunaofen)",
+    "- Fachbegriff, Aufgabe, Auffälligkeit",
+    "- Experte: Systemebene"
+   ],
+   "aktivitaeten": [
+    "- S. füllen das Begehungsprotokoll allein aus,",
+    "- S. ziehen bei Bedarf Hilfekarten (Beginner: Begriffskasten, Könner: Hilfekarte mit Erklärungen),",
+    "- schnelle S. bearbeiten die Expertenspalte Systemebene,",
+    "- L. geht herum, beobachtet, wer welche Hilfe nimmt, und notiert Begriffe für die Begriffswand."
+   ],
+   "sozial": [
+    "EA",
+    "L. beratend"
+   ],
+   "medien": [
+    "Anl. 3: Begehungsprotokoll",
+    "Anl. 5: Hilfekarten (gestuft)"
+   ]
+  },
+  {
+   "phase": "Erarbeitung II: Abgleich",
+   "zeit": "55–65 min",
+   "handlungsphase": "Informieren",
+   "tk": "TK 1",
+   "inhalte": [
+    "- Protokoll vergleichen und ergänzen"
+   ],
+   "aktivitaeten": [
+    "- S. vergleichen mit der Partnerin oder dem Partner aus dem Interview,",
+    "- S. ergänzen in anderer Farbe,",
+    "- offene Begriffe kommen auf einen Haftzettel für die Begriffswand."
+   ],
+   "sozial": [
+    "PA"
+   ],
+   "medien": [
+    "Anl. 3",
+    "Haftzettel, Farbstifte"
+   ]
+  },
+  {
+   "phase": "Erarbeitung III: Auftragsanalyse",
+   "zeit": "65–75 min",
+   "handlungsphase": "Planen",
+   "tk": "TK 2",
+   "inhalte": [
+    "- Wer will was, wozu, bis wann, was liefern wir?",
+    "- erste Schritte des Arbeitsplans"
+   ],
+   "aktivitaeten": [
+    "- je zwei Paare bilden ein Team (vier Lernende) für LS 1,",
+    "- Teams füllen die Auftragsanalyse aus,",
+    "- Teams notieren erste Schritte des Arbeitsplans (Fortsetzung in DS 2),",
+    "- L. berät die Teams."
+   ],
+   "sozial": [
+    "GA (4)",
+    "L. beratend"
+   ],
+   "medien": [
+    "Anl. 4: Auftragsanalyse und Arbeitsplan",
+    "Anl. 1 (Transkript)"
+   ]
+  },
+  {
+   "phase": "Sicherung: Begriffswand",
+   "zeit": "75–88 min",
+   "handlungsphase": "Informieren, Planen",
+   "tk": "TK 3",
+   "inhalte": [
+    "- Fachbegriff und Alltagswort",
+    "- Spalte Strom, Spannung, Leistung, Energie",
+    "- Merkzettel „klären wir in LS 2“ (Sicherung, RCD)"
+   ],
+   "aktivitaeten": [
+    "- reihum nennt jedes Team einen Fachbegriff mit Alltagswort,",
+    "- L. schreibt beides an die Begriffswand (Plakat, bleibt im Lernfeld hängen),",
+    "- Beginner nennen Begriffe aus dem Begriffskasten, Könner eigene, Experten ergänzen die Systemebene,",
+    "- ein Team liest seine Auftragsanalyse vor, die anderen ergänzen."
+   ],
+   "sozial": [
+    "Plenum",
+    "L-S-Gespräch"
+   ],
+   "medien": [
+    "Anl. 6: Begriffswand (Plakat)",
+    "Haftzettel aus der Abgleichphase"
+   ]
+  },
+  {
+   "phase": "Ausblick",
+   "zeit": "88–90 min",
+   "handlungsphase": "",
+   "tk": "",
+   "inhalte": [
+    "- DS 2: Arbeitsplan fertigstellen, „Wie hängt das alles zusammen?“"
+   ],
+   "aktivitaeten": [
+    "- L. nennt die Frage für DS 2 und bittet die S., im Betrieb auf den Zählerplatz zu achten."
+   ],
+   "sozial": [
+    "L-Vortrag"
+   ],
+   "medien": [
+    "Tafel"
+   ]
+  }
+ ],
+ "reserve": {
+  "phase": "Didaktische Reserve",
+  "zeit": "variabel",
+  "handlungsphase": "",
+  "tk": "",
+  "inhalte": [
+   "- Zeitüberschuss: Expertenspalte für alle",
+   "- Zeitnot: Auftragsanalyse zu Beginn von DS 2"
+  ],
+  "aktivitaeten": [
+   "- Zeitüberschuss: Teams ordnen gemeinsam die Systemebenen zu (Vorgriff auf DS 2),",
+   "**Alternatives Stundenende:**",
+   "- Zeitnot (Kennenlernen länger): Die Auftragsanalyse beginnt in DS 2; die Sicherung an der Begriffswand findet trotzdem statt."
+  ],
+  "sozial": [
+   "GA",
+   "Plenum"
+  ],
+  "medien": [
+   "Anl. 3, Anl. 4"
+  ]
+ },
+ "anlagen": [
+  {
+   "nr": 1,
+   "titel": "Sprachnachricht der Meisterin",
+   "felder": [
+    [
+     "Zweck, Phase",
+     "Einstieg (30–35 min); setzt den Auftrag und die Rolle (Gesellinnen und Gesellen beim Stromhof)"
+    ],
+    [
+     "Inhalt",
+     "Meisterin Svenja Terhorst, etwa 60 Sekunden: „Moin zusammen, hier ist Svenja. Wir haben einen neuen Kunden: Familie Schütte hat ein Haus von 1968 gekauft und will es nach und nach sanieren. Ich war heute zur Erstbegehung da und habe Fotos gemacht. Herr und Frau Schütte wollen wissen, was eigentlich alles in ihrem Haus steckt und wer wir sind, die da bei ihnen arbeiten. Schauen Sie sich bitte die Fotos an, schreiben Sie auf, was Sie sehen, und überlegen Sie im Team, wie wir vorgehen. Bevor wir dort anfangen, brauche ich eine Info-Mappe für die Familie. Vielen Dank!“"
+    ],
+    [
+     "Format",
+     "Audiodatei (MP3, etwa 60 s), gesprochen oder mit Sprachausgabe; dazu ein Transkript als halbe Seite A4 im Stil einer Nachricht aus dem Betriebs-Messenger (Name, Uhrzeit, Text). In Moodle als Audio mit Transkript darunter."
+    ],
+    [
+     "Hinweis",
+     "Wenn Sprachausgabe: als KI-gestützt kennzeichnen (KI-Fußnote). Keine echte Stimme einer realen Person nachbilden."
+    ]
+   ],
+   "erwartungshorizont": "Die Lernenden nennen: neuer Kunde Familie Schütte, Haus von 1968, Erstbegehung mit Fotos, Familie will wissen, was im Haus steckt und wer der Betrieb ist, Ergebnis ist eine Info-Mappe, Termin: bevor die Arbeiten beginnen."
+  },
+  {
+   "nr": 2,
+   "titel": "Interviewkarte",
+   "felder": [
+    [
+     "Zweck, Phase",
+     "Kennenlernen (0–30 min); liefert die Liste der Ausbildungsbetriebe für DS 3"
+    ],
+    [
+     "Inhalt",
+     "Drei Fragen: 1 Wie heißen Sie? 2 In welchem Betrieb lernen Sie, und was macht der Betrieb hauptsächlich? 3 Warum sind Sie Elektronikerin oder Elektroniker geworden? Darunter: „Stellen Sie Ihre Partnerin oder Ihren Partner in zwei Sätzen vor.“"
+    ],
+    [
+     "Format",
+     "Karte A6 quer, je drei Fragen mit Schreibzeilen; zwei Karten je A4-Blatt zum Schneiden. In Moodle nicht nötig (nur Präsenz)."
+    ]
+   ],
+   "erwartungshorizont": "keiner nötig (Kennenlernen); Ergebnis ist die Liste der Ausbildungsbetriebe an der Tafel."
+  },
+  {
+   "nr": 3,
+   "titel": "Begehungsprotokoll des Stromhofs",
+   "felder": [
+    [
+     "Zweck, Phase",
+     "Erarbeitung I und II (35–65 min); TK 1"
+    ],
+    [
+     "Inhalt",
+     "Kopf wie ein Formular des Betriebs: Stromhof Elektro GmbH, Begehungsprotokoll, Kunde Familie Schütte, Objekt Einfamilienhaus (Baujahr 1968), Datum, Begehung durch Meisterin Terhorst, Protokoll durch (Name). Darunter sechs nummerierte Fotos: 1 Zählerplatz mit alten Schraubsicherungen (Hausanschlussraum), 2 Unterverteilung im Flur, 3 Steckdose im Wohnzimmer, 4 Deckenleuchte in der Küche, 5 Kleindurchlauferhitzer im Bad am Waschbecken, 6 Saunaofen im Keller. Protokolltabelle mit Spalten: Nr. · Raum · Betriebsmittel (Fachbegriff) · Aufgabe (wozu ist es da?) · Auffälligkeit · Systemebene (nur Experte, grau hinterlegt)."
+    ],
+    [
+     "Format",
+     "2 Seiten A4 hoch: Seite 1 Kopf und Fotos (je etwa 6 × 4,5 cm, mit Nummer), Seite 2 Protokolltabelle mit sechs Zeilen, je etwa 2,5 cm hoch. Fotos: eigene Aufnahmen oder lizenzfreie Bilder mit Quellenangabe; keine KI-erzeugten Fotos von Anlagen. In Moodle später als Formular bzw. Zuordnungsaufgabe (Pipeline 3)."
+    ]
+   ],
+   "erwartungshorizont": "1 Zählerplatz mit Zähler und Schraubsicherungen (Hausanschlussraum): misst die bezogene Energie, Sicherungen schützen die Leitungen; Auffälligkeit alte Schraubsicherungen, kein RCD erkennbar; Ebene Anlage bzw. Gerät. 2 Unterverteilung: verteilt auf die Stromkreise, Leitungsschutz; Auffälligkeit Beschriftung fehlt oder unleserlich; Gerät. 3 Steckdose: Anschluss für Geräte; Auffälligkeit alt, ggf. lose; Gerät (Baugruppen: Kontakte, Schutzkontakt). 4 Leuchte: Licht; Gerät. 5 Durchlauferhitzer: erwärmt Wasser beim Zapfen; Auffälligkeit alt, hohe Leistung; Gerät (Baugruppe Heizelement). 6 Saunaofen: Wärme für die Sauna; Gerät (Baugruppe Heizstäbe). Fachbegriffe richtig (Zählerplatz, Unterverteilung, Leitungsschutzschalter bzw. Schmelzsicherung, Steckdose mit Schutzkontakt, Durchlauferhitzer). Bewertung des Altbaus nur benennen, nicht beurteilen (LF 5)."
+  },
+  {
+   "nr": 4,
+   "titel": "Auftragsanalyse und Arbeitsplan",
+   "felder": [
+    [
+     "Zweck, Phase",
+     "Erarbeitung III (65–75 min), Fortsetzung in DS 2; TK 2"
+    ],
+    [
+     "Inhalt",
+     "Teil A Auftragsanalyse mit fünf Feldern: Wer ist der Kunde? Was will er? Wozu braucht er es? Bis wann? Was liefern wir (Ergebnis)? Teil B Arbeitsplan als Tabelle: Schritt · Was tun wir? · Wer? · Bis wann? · erledigt. Erste Zeile als Beispiel vorgegeben („Fotos auswerten · alle · DS 1 · ✓“)."
+    ],
+    [
+     "Format",
+     "1 Seite A4 hoch, je Team ein Blatt; Teil A als Kastenformular, Teil B mit sechs leeren Zeilen. In Moodle später als Teamabgabe (Pipeline 3)."
+    ]
+   ],
+   "erwartungshorizont": "Kunde Familie Schütte; will wissen, was im Haus steckt und wer bei ihnen arbeitet; Zweck: Überblick vor der Sanierung, Vertrauen in den Betrieb; Termin bevor die Arbeiten beginnen (Ende LS 1, DS 4); Ergebnis Info-Mappe mit Systemübersicht und Betriebssteckbrief. Arbeitsplan mit sinnvoller Reihenfolge: Fotos auswerten, Zusammenhänge darstellen (DS 2), Betrieb vorstellen und vergleichen (DS 3), Mappe fertigstellen und präsentieren (DS 4); Verantwortliche und Termine eingetragen."
+  },
+  {
+   "nr": 5,
+   "titel": "Hilfekarten (gestuft)",
+   "felder": [
+    [
+     "Zweck, Phase",
+     "Erarbeitung I (35–55 min); Differenzierung"
+    ],
+    [
+     "Inhalt",
+     "Beginner (grün): Begriffskasten mit den sechs Fachbegriffen und je einem Bildsymbol zum Zuordnen. Könner (blau): Hilfekarte mit kurzen Erklärungen („Die Unterverteilung verteilt die Energie auf die einzelnen Stromkreise …“), ohne Zuordnung. Experte (violett): Karte Systemebenen mit Definition von Anlage, Gerät, Baugruppe, Bauelement und je einem Beispiel aus einem anderen Haus."
+    ],
+    [
+     "Format",
+     "Drei Karten A6, Farbband nach Niveau, doppelseitig druckbar; in Moodle später als gestufte Hinweise."
+    ]
+   ],
+   "erwartungshorizont": "keiner nötig (Hilfe); die Lösungen stehen im Erwartungshorizont von Anl. 3."
+  },
+  {
+   "nr": 6,
+   "titel": "Begriffswand (Plakat)",
+   "felder": [
+    [
+     "Zweck, Phase",
+     "Sicherung (75–88 min), bleibt das ganze Lernfeld hängen; Anker für FV-02"
+    ],
+    [
+     "Inhalt",
+     "Plakat mit drei Spalten: Fachbegriff · Alltagswort · Erklärung in einem Satz. Eigener Bereich rechts: Strom (Stromstärke) · Spannung · Leistung · Energie, je mit Formelzeichen und Einheit, zunächst leer. Fußzeile: „Klären wir in LS 2“ (Sicherung, RCD)."
+    ],
+    [
+     "Format",
+     "Vorlage A1 bzw. A0 zum Ausdrucken oder als Tafelbild; dazu eine A4-Fassung für die Mappe der Lernenden. In Moodle später als Glossar (Pipeline 3)."
+    ]
+   ],
+   "erwartungshorizont": "Mindestens sechs Einträge, z. B. Unterverteilung – Sicherungskasten; Leitungsschutzschalter – Sicherung; Schmelzsicherung – Schraubsicherung; Zählerplatz – Zählerkasten; Steckdose mit Schutzkontakt – Steckdose; Durchlauferhitzer – Boiler (falsches Alltagswort, Unterschied klären). Bereich Strom, Spannung, Leistung, Energie: Formelzeichen und Einheiten, soweit bekannt."
+  }
+ ],
+ "material_allgemein": [
+  [
+   "Ansprache",
+   "Die Lernenden sind Gesellinnen und Gesellen der Stromhof Elektro GmbH (fiktiv); Aufträge in der Sie-Form von Meisterin Svenja Terhorst."
+  ],
+  [
+   "Sprache",
+   "Kurze Sätze, Fachbegriff immer mit Erklärung; erstes Ausbildungsjahr, erster Schultag."
+  ],
+  [
+   "Gestaltung",
+   "A4 hoch, Arial 11 pt, Kopfzeile „Stromhof Elektro GmbH“ (schlichte Wortmarke, fiktiv), Titel der Anlage, LF 1 · LS 1 · DS 1; Niveaus Beginner (grün), Könner (blau), Experte (violett) als Farbband und Wort."
+  ],
+  [
+   "Quellen",
+   "Fotos und Abbildungen mit Quelle an der Abbildung und im Literaturverzeichnis; keine KI-erzeugten Fotos von Anlagen."
+  ],
+  [
+   "KI-Fußnote",
+   "auf jedem KI-gestützten Material (Seminarvorgabe Osnabrück)."
+  ],
+  [
+   "Weg",
+   "Pipeline 2 baut die Anlagen als Arbeitsblätter (DOCX); Pipeline 3 wandelt sie in den Moodle-Kurs um."
+  ]
+ ],
+ "pruefbericht": [
+  [
+   "Hinweis",
+   "Alltagsstunde: Verlaufsskizze und Materialauftrag mit einer gemeinsamen Freigabe; Sachanalyse und Reduktion ohne eigenes Dokument (KONZEPT, Planungstiefe je Stundentyp)."
+  ],
+  [
+   "Hinweis",
+   "Kein Datum im Ordnernamen (UE01_Erstbegehung): geplant wird ohne Kalender; das Datum kommt bei der zeitlichen Zuordnung dazu."
+  ],
+  [
+   "Warnung",
+   "Das Kennenlernen braucht 30 Minuten; bei 22 Lernenden ist die Vorstellungsrunde mit zwei Sätzen je Person knapp. Didaktische Reserve: Auftragsanalyse notfalls in DS 2."
+  ],
+  [
+   "Hinweis",
+   "LS 1 angepasst (Ansage der Lehrkraft): Arbeitsplan wird in DS 2 fertiggestellt."
+  ],
+  [
+   "Hinweis",
+   "Ort des Durchlauferhitzers in LS 1, LS 3 und Begehungsprotokoll einheitlich: Bad, am Waschbecken (Lehrkraft 2026-10-11)."
+  ]
+ ]
+}

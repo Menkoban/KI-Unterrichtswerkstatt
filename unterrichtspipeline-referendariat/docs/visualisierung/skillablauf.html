@@ -1,0 +1,379 @@
+<title>Skill-Fahrplan Pipeline 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: Ebenen als waagerechte Bahnen wie Strompfade, links die Akte, rechts die Skills als anklickbare Klemmen; Detail als Dialog */
+:root{
+  --bg:#f3f5f9; --panel:#ffffff; --ink:#152238; --muted:#5a6680; --line:#d6dce8; --soft:#e9eef7;
+  --accent:#1d4ed8; --accent-soft:#e6edff;
+  --hand:#b45309; --hand-soft:#fff3e0; --hand-line:#f2c98a;
+  --doc:#15803d; --doc-soft:#e3f4e8; --bg-step:#64748b; --bg-soft:#eef1f6;
+  --makro:#1d4ed8; --meso:#0f766e; --mikro:#6d28d9; --aus:#be185d; --nach:#b45309; --start:#334155;
+  --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1522; --panel:#171f30; --ink:#e6ebf5; --muted:#9aa6bd; --line:#2b3650; --soft:#1e2840;
+  --accent:#7aa2ff; --accent-soft:#1c2a4d;
+  --hand:#f5a94a; --hand-soft:#33240f; --hand-line:#6b4a1b;
+  --doc:#4ade80; --doc-soft:#123222; --bg-step:#94a3b8; --bg-soft:#222c40;
+  --makro:#7aa2ff; --meso:#2dd4bf; --mikro:#b69cff; --aus:#f472b6; --nach:#f5a94a; --start:#a8b3c7;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1522; --panel:#171f30; --ink:#e6ebf5; --muted:#9aa6bd; --line:#2b3650; --soft:#1e2840;
+  --accent:#7aa2ff; --accent-soft:#1c2a4d;
+  --hand:#f5a94a; --hand-soft:#33240f; --hand-line:#6b4a1b;
+  --doc:#4ade80; --doc-soft:#123222; --bg-step:#94a3b8; --bg-soft:#222c40;
+  --makro:#7aa2ff; --meso:#2dd4bf; --mikro:#b69cff; --aus:#f472b6; --nach:#f5a94a; --start:#a8b3c7;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.45;padding-inline:clamp(16px,3vw,40px);padding-block:28px 48px}
+.wrap{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:flex-end;border-bottom:2px solid var(--line);padding-bottom:14px}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(30px,4.4vw,46px);line-height:1;letter-spacing:.2px;margin:0;text-wrap:balance}
+.lead{color:var(--muted);margin:6px 0 0;max-width:68ch}
+.controls{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.ctl-label{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font:600 14px var(--f-body);border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+.seg button:focus-visible,.node:focus-visible,.side:focus-visible,.close:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:14px;color:var(--muted);align-items:center}
+.lg{display:inline-flex;align-items:center;gap:6px}
+.pip{width:10px;height:10px;border-radius:50%;display:inline-block}
+.pip.doc{background:var(--doc)} .pip.bgs{background:var(--bg-step)} .pip.no{background:transparent;border:1.5px solid var(--bg-step)}
+.hand-mark{display:inline-flex;align-items:center;gap:5px;font-weight:700;color:var(--hand)}
+.hand-dot{width:12px;height:12px;border-radius:3px;background:var(--hand-soft);border:1.5px solid var(--hand)}
+
+.lanes{display:flex;flex-direction:column;gap:0}
+.lane{display:grid;grid-template-columns:220px 1fr;gap:18px;position:relative;padding-block:14px}
+.lane + .lane{border-top:1px dashed var(--line)}
+.lane-head{display:flex;flex-direction:column;gap:4px;padding-left:14px;border-left:4px solid var(--c)}
+.lane-head .lv{font-family:var(--f-display);font-weight:700;font-size:24px;line-height:1;color:var(--c)}
+.lane-head .akte{font-weight:700;font-size:14px}
+.lane-head .wie{font-size:13.5px;color:var(--muted)}
+.nodes{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;min-width:0}
+.node{all:unset;box-sizing:border-box;cursor:pointer;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px 10px;display:flex;flex-direction:column;gap:6px;position:relative;transition:transform .12s ease,border-color .12s ease,opacity .15s}
+.node:hover{border-color:var(--c);transform:translateY(-1px)}
+.node .top{display:flex;align-items:center;gap:8px}
+.nr{font-family:var(--f-display);font-weight:700;font-size:15px;color:var(--panel);background:var(--c);border-radius:5px;padding:1px 7px;min-width:34px;text-align:center;font-variant-numeric:tabular-nums}
+.node h3{margin:0;font-size:16.5px;font-weight:700;line-height:1.2}
+.skill{font-family:var(--f-mono);font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.does{font-size:14px;color:var(--ink);opacity:.86;line-height:1.35}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:4px}
+.types{display:flex;gap:4px}
+.types span{font-size:11px;font-weight:700;letter-spacing:.4px;border-radius:4px;padding:1px 5px}
+.t-doc{background:var(--doc-soft);color:var(--doc)}
+.t-bg{background:var(--bg-soft);color:var(--bg-step)}
+.t-no{color:var(--bg-step);border:1px dashed var(--line)}
+.hcount{font-size:12px;font-weight:700;color:var(--hand);background:var(--hand-soft);border:1px solid var(--hand-line);border-radius:999px;padding:1px 8px;white-space:nowrap}
+.node.dim{opacity:.38}
+.arrow{position:absolute;left:226px;top:-11px;color:var(--line);font-size:16px;line-height:1}
+
+.block{display:flex;flex-direction:column;gap:10px}
+.sides{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.side{all:unset;box-sizing:border-box;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--soft);display:flex;flex-direction:column;gap:4px}
+.side b{font-size:16px}.side span{font-size:14px;color:var(--muted)}
+.side:hover{border-color:var(--accent)}
+.sec-title{font-family:var(--f-display);font-weight:700;font-size:22px;margin:0}
+.handoff{display:flex;flex-wrap:wrap;gap:10px;font-size:14.5px;color:var(--muted)}
+.handoff b{color:var(--ink)}
+
+dialog{border:none;padding:0;border-radius:14px;max-width:min(720px,calc(100vw - 24px));width:100%;background:var(--panel);color:var(--ink);box-shadow:0 20px 60px rgba(10,20,40,.35)}
+dialog::backdrop{background:rgba(10,18,34,.5)}
+.dh{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;padding:18px 20px 12px;border-bottom:1px solid var(--line);border-top:5px solid var(--c);border-radius:14px 14px 0 0}
+.dh h2{font-family:var(--f-display);font-size:30px;line-height:1.05;margin:2px 0 4px}
+.dh .meta{font-size:13.5px;color:var(--muted)}
+.close{all:unset;cursor:pointer;font-size:22px;line-height:1;padding:4px 8px;border-radius:6px;color:var(--muted)}
+.db{padding:16px 20px 20px;display:flex;flex-direction:column;gap:16px;max-height:min(70vh,720px);overflow:auto}
+.when{background:var(--soft);border-radius:8px;padding:9px 12px;font-size:15px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.box h4{margin:0 0 6px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.box ul{margin:0;padding-left:18px;font-size:15px}
+.box li{margin-bottom:3px}
+.box.out h4{color:var(--doc)}
+.hand{background:var(--hand-soft);border:1px solid var(--hand-line);border-radius:10px;padding:12px 14px}
+.hand h4{margin:0 0 8px;color:var(--hand);font-size:13px;letter-spacing:1px;text-transform:uppercase}
+.hand ul{margin:0;padding-left:18px;font-size:15px}
+.hand li{margin-bottom:5px}
+.trow{display:flex;flex-wrap:wrap;gap:8px;font-size:14px}
+.trow span{border-radius:6px;padding:3px 8px}
+.ex a{color:var(--accent);font-weight:600;overflow-wrap:anywhere}
+.ex{font-size:14.5px}
+@media (max-width:760px){
+  .lane{grid-template-columns:1fr;gap:10px}
+  .arrow{display:none}
+  .cols{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){.node{transition:none}.node:hover{transform:none}}
+</style>
+
+<div class="wrap">
+<header>
+  <div>
+    <h1>Skill-Fahrplan Pipeline 1</h1>
+    <p class="lead">Welcher Skill wann läuft, was er braucht und liefert und welche Profilwerte er liest. Tippen Sie auf einen Skill. Stand 25.10.2026: zwölf Skills, erprobt an LF 1 mit Alltagsstunde, selbstständiger LS, EUB, KUB, GUB und PU.</p>
+  </div>
+  <div class="controls">
+    <span class="ctl-label">Stundentyp</span>
+    <div class="seg" role="group" aria-label="Stundentyp">
+      <button type="button" data-t="all" aria-pressed="true">Alle</button>
+      <button type="button" data-t="a" aria-pressed="false">Alltag, gelenkt</button>
+      <button type="button" data-t="s" aria-pressed="false">Alltag, selbstständige LS</button>
+      <button type="button" data-t="e" aria-pressed="false">EUB/KUB/FLB</button>
+      <button type="button" data-t="g" aria-pressed="false">GUB/PU</button>
+    </div>
+  </div>
+</header>
+
+<div class="legend">
+  <span class="lg"><span class="pip doc"></span>entsteht als Dokument</span>
+  <span class="lg"><span class="pip bgs"></span>läuft im Hintergrund</span>
+  <span class="lg"><span class="pip no"></span>entfällt</span>
+  <span class="lg">A · S · E · G = Alltag gelenkt · Alltag selbstständige LS · EUB/KUB/FLB · GUB/PU</span>
+  <span class="hand-mark"><span class="hand-dot"></span>Profilwerte und Regeln</span>
+</div>
+
+<div class="lanes" id="lanes"></div>
+
+<section class="block">
+  <h2 class="sec-title">Läuft immer mit</h2>
+  <div class="sides" id="sides"></div>
+</section>
+
+<section class="block">
+  <h2 class="sec-title">Übergabe</h2>
+  <div class="handoff">
+    <span><b>Pipeline 2</b> materialpipeline-referendariat: bekommt den Materialauftrag je Stunde oder je selbstständiger LS (Skill materialauftrag)</span>
+    <span><b>Pipeline 3</b> moodlepipeline-referendariat: bekommt Planung und Material der ganzen LS und baut den Themenkurs (Skill themenkurs)</span>
+  </div>
+</section>
+</div>
+
+<dialog id="dlg" aria-labelledby="d-title">
+  <div class="dh" id="d-head">
+    <div><div class="meta" id="d-meta"></div><h2 id="d-title"></h2><div class="meta" id="d-skill"></div></div>
+    <button class="close" type="button" id="d-close" aria-label="Schließen">✕</button>
+  </div>
+  <div class="db">
+    <div class="when" id="d-when"></div>
+    <div class="cols">
+      <div class="box"><h4>Was er macht</h4><ul id="d-does"></ul></div>
+      <div class="box"><h4>Braucht</h4><ul id="d-needs"></ul></div>
+    </div>
+    <div class="box out"><h4>Liefert</h4><ul id="d-gives"></ul></div>
+    <div class="hand"><h4>Profilwerte und Regeln</h4><ul id="d-hand"></ul></div>
+    <div class="trow" id="d-types"></div>
+    <div class="ex" id="d-ex"></div>
+  </div>
+</dialog>
+
+<script>
+const GH="../unterrichtspipeline-referendariat/blob/main/docs/beispiel-et-lf01/";
+const LANES=[
+ {id:"start",lv:"Einstieg",akte:"jede neue Planung",wie:"Sie sagen nur, was ansteht",c:"--start"},
+ {id:"makro",lv:"Makro",akte:"Lernfeld- und Schuljahres-Akte",wie:"einmal je Lernfeld bzw. Schuljahr",c:"--makro"},
+ {id:"meso",lv:"Meso",akte:"Lernsituations- und Klassen-Akte",wie:"je Lernsituation bzw. Klasse",c:"--meso"},
+ {id:"mikro",lv:"Mikro",akte:"Stunden-Akte",wie:"je Doppelstunde, Stundentyp zuerst",c:"--mikro"},
+ {id:"aus",lv:"Besuch",akte:"Entwurf",wie:"Schritte 07 bis 12, nur bei Besuchen",c:"--aus"},
+ {id:"nach",lv:"Danach",akte:"alle Akten",wie:"nach jeder Stunde und auf Abruf",c:"--nach"}
+];
+// typ: d = Dokument, b = Hintergrund, n = entfällt (Alltag gelenkt, Alltag selbstständige LS, EUB/KUB/FLB, GUB/PU)
+const S=[
+ {lane:"start",nr:"00",name:"Was steht an?",skill:"einstieg",
+  kurz:"prüft die Akten und startet nur, was fehlt",
+  wann:"Bei jedem Planungsbeginn. Sie sagen frei, was ansteht (auch als Sprachnachricht): eine Stunde, eine Lernsituation, ein Lernfeld, einen Besuch, eine Abgabe.",
+  macht:["findet den Arbeitsbereich und lädt das Lehrkraft-Profil","prüft die Steckbriefe der Akten: vorhanden, fehlt, veraltet","schlägt die Reihenfolge der fehlenden Schritte vor","startet nur diese, jeden mit eigener Freigabe"],
+  braucht:["Ihre Ansage","Steckbriefe in .daten/akten/","Profil"],
+  liefert:["Meldung „das habe ich, das fehlt, das ist veraltet“","Reihenfolge der nächsten Schritte"],
+  hand:["interview.eine_frage, interview.kontext_vor_frage, interview.vorschlaege","freigabe.alltag, freigabe.besuch","Rangfolge: Ansage der Lehrkraft, Seminarvorgaben, Material der Schule, Vorgabe der Pipeline","begründet widersprechen, immer mit Alternative"],
+  t:"dddd"},
+ {lane:"makro",nr:"01",name:"Curriculare Analyse",skill:"curriculare-analyse",
+  kurz:"Lernfeld in Lernfeld-Kompetenzen und Inhalte zerlegen",
+  wann:"Einmal je Lernfeld; gilt für alle Fachrichtungen mit diesem Lernfeld.",
+  macht:["zerlegt den Lernfeldtext eng am Wortlaut in LK-01 … nach Phasen der vollständigen Handlung","konkretisiert die Inhalte: Pflicht, Optional, Verschoben","grenzt gegen Nachbar-Lernfelder ab und ordnet den Lernort Betrieb zu"],
+  braucht:["Rahmenlehrplan im Wortlaut","Ihre Erfahrung; im Echtbetrieb Schulcurriculum und Lehrwerke"],
+  liefert:["Curriculare_Analyse.docx mit Prüfbericht"],
+  hand:["Begriff LK auf dieser Ebene, Teilkompetenz bleibt der Stunde vorbehalten","Querschnittsthemen nur, wenn im Lehrplan genannt"],
+  t:"dddd",ex:["01_curriculare_analyse.md"]},
+ {lane:"makro",nr:"02",name:"Skizze und Modellbetrieb",skill:"lernsituationen-skizze · modellbetrieb",
+  kurz:"Lernsituationen eines Lernfelds und der Modellbetrieb",
+  wann:"Je Lernfeld und Fachrichtung, ohne Kalender. Der Modellbetrieb entsteht einmal je Beruf.",
+  macht:["übergeordnete Handlungssituation im Modellbetrieb","je LS: Titel, Handlungssituation, Handlungsergebnis, echte Entscheidung, LK mit Legende, Inhalte, Stunden","Summe gleich Zeitrichtwert","Modellbetrieb: Steckbrief, Personen, Kunden, Rolle der Lernenden"],
+  braucht:["LK und Inhalte (01)","Beruf und Fachrichtung"],
+  liefert:["Lernsituationen_Skizze.docx","Modellbetrieb_<Name>.docx"],
+  hand:["rolle_lernende, ansprache","modellbetrieb","handlungsprodukt_praktisch","im Echtbetrieb ist ein Modellbetrieb optional"],
+  t:"dddd",ex:["02_lernsituationen_skizze.md","00_Modellbetrieb_Musterbetrieb.docx"]},
+ {lane:"makro",nr:"03",name:"Jahresplanung",skill:"jahresplanung",
+  kurz:"Schuljahres-Akte je Klasse",
+  wann:"Je Bildungsgang, Ausbildungsjahr und Schuljahr; der Stundenplan kann jederzeit nachkommen.",
+  macht:["Lernfelder des Jahres mit Zeitrichtwert","mit Stundenplan: jede Stunde mit Datum, verfügbare Stunden gegen Zeitrichtwert","eigene Lernfelder bis auf die Lernsituationen vorbereiten"],
+  braucht:["Schulplanung, wenn vorhanden","Ferien aus amtlicher Quelle","Stundenplan (Foto, PDF, Excel)"],
+  liefert:["Jahresplanung.docx im Klassenordner"],
+  hand:["Kalender nie aus dem Gedächtnis","Organisationsform als Einstellung (Teilzeit oder Block, Berufsschultage)"],
+  t:"dddd"},
+ {lane:"meso",nr:"04",name:"Lernsituation ausarbeiten",skill:"lernsituation",
+  kurz:"die Lernsituation unterrichtsfertig machen",
+  wann:"Wenn die Skizze freigegeben ist und die LS unterrichtet wird.",
+  macht:["Handlungssituation, Auftrag der Meisterin in der Sie-Form, Handlungsergebnis, Bewertung","Zyklen: innere vollständige Handlungen über Doppelstunden","Doppelstunden mit Leitfrage, Inhalten, Teilergebnis, Phasen und LK"],
+  braucht:["Skizze (02)","Modellbetrieb","Profil"],
+  liefert:["Lernsituation.docx"],
+  hand:["innerer_zyklus, innerer_zyklus.umfang","lernsituation.form (gelenkt oder selbstständig mit Gerüst)","Prüfung: Stunden der DS gleich Stunden der LS, Planen in jedem Zyklus"],
+  t:"dddd",ex:["04_LS03_lernsituation.md"]},
+ {lane:"meso",nr:"LS",name:"Arbeitsplan",skill:"lernsituation (arbeitsplan.py)",
+  kurz:"Gerüst einer selbstständigen Lernsituation",
+  wann:"Nur bei selbstständiger LS (Profil lernsituation.form), nach der Lernsituation.",
+  macht:["eine Seite: Auftrag, Meilensteine mit spätestem Termin, Abgabe, bereitliegendes Material, angeleitete Teile","fester Lernpfad aus Arbeitsblättern, Feld „Mein Zeitplan: bis wann“","Bewertungskriterien am Ende","sobald der Lernpfad Steckbriefe hat: Materialauftrag der ganzen LS"],
+  braucht:["Lernsituation (04)",".daten/arbeitsplan/<ls>.json"],
+  liefert:["Arbeitsplan_Planung.docx","Materialauftrag.docx der LS für Pipeline 2"],
+  hand:["lernsituation.form, lernsituation.planungstiefe","lernsituation.sozialform, lernsituation.kontrolle, lernsituation.zeitplan_lernende","den Arbeitsplan für die Lernenden baut Pipeline 2"],
+  t:"ndnn"},
+ {lane:"meso",nr:"05–06",name:"Klassen-Akte",skill:"klassenakte",
+  kurz:"Bedingungsfeld, Personas, Sitzplan",
+  wann:"Wenn für eine Stunde oder einen Besuch die Klasse fehlt oder sich geändert hat.",
+  macht:["Bedingungsfeld nach Seminar-Leitfaden 1.1 bis 1.5, Konsequenz je Bedingung","drei Personas und allgemeine Lernausgangslage","kommentierter Sitzplan: Bild aus dem Sitzplan-Studio, darunter die Kommentartabelle mit Noten","ohne echte Klasse eine gekennzeichnete Musterklasse"],
+  braucht:["Ihre Erzählung zur Klasse","Sitzplan-Studio"],
+  liefert:["Bedingungsfeld.docx","Lernausgangslage.docx","Sitzplan.docx"],
+  hand:["erst frei erzählen, dann nur Lücken","Lernende nur als Kürzel S01 …, nie mit Namen","Änderungen aus der Nachbereitung, Sie bestätigen"],
+  t:"bbdd"},
+ {lane:"meso",nr:"06",name:"Fehlvorstellungen",skill:"fehlvorstellungen",
+  kurz:"Lernausgangslage je Inhalt und Fehlvorstellungen",
+  wann:"Wenn eine Lernsituation freigegeben ist.",
+  macht:["recherchiert vorab und belegt je Inhalt","Herkunft, Doppelstunde, Priorität A, B, C","Diagnose-Item zum Aufdecken, Aufgreifen im Unterricht"],
+  braucht:["Inhalte der Lernsituation","Literatur"],
+  liefert:["Fehlvorstellungen.docx"],
+  hand:["reine KI-Vermutungen ohne Bezug werden nicht aufgenommen","seminar.fehlvorstellungen_im_entwurf","quellen.web"],
+  t:"bbbb",ex:["06_LS03_Fehlvorstellungen.docx"]},
+ {lane:"mikro",nr:"13",name:"Verlaufsskizze",skill:"stundenplanung",
+  kurz:"Mikro-Einstieg, Interview, Verlauf",
+  wann:"Je Doppelstunde einer gelenkten LS und für jede Besuchsstunde.",
+  macht:["zeigt, was feststeht, und offene Punkte der letzten Nachbereitung","fragt zuerst den Stundentyp, dann Einstieg, Arbeitsblatt, Sozialform, Sicherung, Besonderheiten","Verlauf mit Zeiten lückenlos, didaktische Reserve genau einmal"],
+  braucht:["Lernsituation (04)","Klassen-Akte, Fehlvorstellungen","Profil"],
+  liefert:["Verlaufsskizze.docx (intern)","Verlaufsskizze_Seminar.docx ohne Minuten und ohne Hinweise zu einzelnen Lernenden"],
+  hand:["methoden.vielfalt, methoden.grundform","alltag.vorgabe, besuch.gestaltung","reserve_minuten, ruesten.*, hausaufgaben","form.seminar_zeiten, form.seminar_lernende_einzeln"],
+  t:"dndd",ex:["13_LS03_DS07_Verlaufsskizze.docx"]},
+ {lane:"mikro",nr:"KS",name:"Kurzskizze",skill:"stundenplanung",
+  kurz:"Verlaufsplanung auf einer Seite",
+  wann:"Je Doppelstunde einer selbstständigen LS (Stunden-Akte mit Feld arbeitsplan).",
+  macht:["kurze Verlaufsplanung in Seminarspalten","selbstständige Arbeit als ein Block mit Beratungspunkten","Kontrolle „Wie weit bin ich?“ am Ende der DS","prüft die Arbeitsblätter gegen den Lernpfad"],
+  braucht:["Arbeitsplan der LS"],
+  liefert:["Verlaufsplanung für die Ausbildungslehrkraft","kein eigener Materialauftrag je DS"],
+  hand:["lernsituation.planungstiefe","lernsituation.kontrolle"],
+  t:"ndnn"},
+ {lane:"mikro",nr:"14",name:"Materialauftrag",skill:"stundenplanung → Pipeline 2",
+  kurz:"Steckbrief je Anlage an Pipeline 2",
+  wann:"Je Doppelstunde, sobald der Verlauf steht.",
+  macht:["je Anlage: Zweck, Phase, Teilkompetenz · Inhalt und Wortlaut · Aufbau und Layout · Hilfen · Moodle · Werkzeug · Quellen · Abnahmekriterien · Erwartungshorizont","Anlagen chronologisch nummeriert, Arbeitsblätter fortlaufend"],
+  braucht:["Verlauf (13)","Fehlvorstellungen (06)"],
+  liefert:["Materialauftrag.docx"],
+  hand:["Pipeline 1 baut kein Material, sie beauftragt es","material.arbeitsblaetter_fortlaufend, material.beamer_zeigt_arbeitsblatt","material.schriftliche_hilfen, material.effektive_lernzeit","die Stunde plant kein Moodle; jede Anlage nennt ihre Moodle-Umsetzung"],
+  t:"dndd",ex:["14_LS03_DS07_Materialauftrag.docx"]},
+ {lane:"aus",nr:"07–12",name:"Besuch planen",skill:"besuchsstunde",
+  kurz:"Entscheidungen einzeln, mit Seminarvorgaben",
+  wann:"Wenn eine Stunde besucht oder geprüft wird.",
+  macht:["Umfang, Kern, Phasen, Kompetenzen (Kernkompetenz, TK mit „indem“)","besondere Bedarfe: sonderpädagogische Konzeption oder Heterogenitätstabelle","bei GUB und PU Sachanalyse und Reduktion (Grüner, keine Vermengung)","beim KUB Beobachtungsbogen"],
+  braucht:["Besuchsart, Klasse, LS, DS","Klassen-Akte"],
+  liefert:["Stunden-Daten mit Feld besuch"],
+  hand:["besuch.gestaltung","freigabe.besuch: Schritt für Schritt","seminar.afb_im_entwurf"],
+  t:"nndd",ex:["07_LS03_DS07_Sachanalyse.docx","09_LS03_DS07_Kompetenzen.docx"]},
+ {lane:"aus",nr:"E",name:"Entwurf zusammensetzen",skill:"besuchsstunde (entwurf.py, voll.py)",
+  kurz:"Kurzentwurf oder voller Entwurf",
+  wann:"Nach den Entscheidungen; Material aus Pipeline 2 wird angehängt.",
+  macht:["Deckblatt nach Seminar-Muster, Kompetenztabelle, Sequenzierung, kommentierter Sitzplan","GUB und PU: Kapitel 1 bis 3 mit Seitenbudget, im fertigen Satz gemessen","Material und Erwartungshorizont, Versicherung mit KI-Übersicht","Sichtprüfung als Bild, Abgleich mit den Seminar-Originalen"],
+  braucht:["Stunden-Daten","Anlagen aus Pipeline 2"],
+  liefert:["Entwurf_<Art>.docx","Pruefbericht_Entwurf_<Art>.docx","beim KUB KUB_Protokoll.docx"],
+  hand:["form.schrift, form.literatur (APA 7), form.blocksatz","Seitenbudget 1,5 · 0,5 · 0,5 · 1,5 · 1 · 1, höchstens sechs Seiten","persönliche Felder des Deckblatts bleiben Platzhalter"],
+  t:"nndd",ex:["GUB_Entwurf_LS03_DS07.docx","GUB_Entwurf_LS03_DS07_Muster.docx"]},
+ {lane:"nach",nr:"17",name:"Nachbereitung",skill:"nachbereitung",
+  kurz:"frei sprechen, das System sortiert",
+  wann:"Nach jeder Stunde oder jedem Besuch, als Text oder Sprachnachricht.",
+  macht:["zerlegt das Gesagte in einzelne Aussagen","schlägt je Aussage die Ablage vor: Stunde, Klasse, Lernsituation, Profil","offene Punkte stehen am Anfang der nächsten Stundenplanung"],
+  braucht:["Ihre Rückmeldung zur Stunde"],
+  liefert:["Nachbereitung.docx","Einträge in den Akten, Vorschläge fürs Profil"],
+  hand:["eine einzelne Stunde ändert das Profil nie, außer auf Zuruf","erledigte Punkte werden abgehakt, nicht gelöscht"],
+  t:"dddd"},
+ {lane:"nach",nr:"M",name:"Planungsmappe",skill:"planungsmappe",
+  kurz:"alles in einem Dokument zum Zeigen",
+  wann:"Wenn Sie etwas zeigen oder abgeben wollen: Schule, Mentor, Seminar.",
+  macht:["fasst die Akten einer Planung zusammen","Einführung für Außenstehende","Stand jedes Dokuments"],
+  braucht:["freigegebene Akten"],
+  liefert:["Planungsmappe als DOCX"],
+  hand:["ausgabe.format, ausgabe.pdf_nur_auf_wunsch"],
+  t:"dddd"}
+];
+const SIDES=[
+ {nr:"P",name:"Lehrkraft-Profil",skill:"profil/profil.py",c:"--hand",kurz:"persönliche Werte für alle drei Pipelines",
+  wann:"Wird von jedem Skill gelesen; ändert sich über Korrekturen, Nachbereitung oder die Werkbank.",
+  macht:["liefert persönliche Werte gegen den neutralen Standard der Vorlage","prüft die Werte und erzeugt Lehrkraft-Profil.docx"],braucht:["Profil/lehrkraft-profil.json im Arbeitsbereich"],liefert:["Werte über profil.lade()"],
+  hand:["Gruppen Arbeitsweise, Didaktik, Form, Fach und Quellen, Seminar, Material, Moodle","jede Korrektur der Lehrkraft wird sofort Regel: Profilwert, Regel in ARBEITSWEISE oder Prüfung im Generator"],t:"dddd"},
+ {nr:"F",name:"Freigabe mit Leseseite",skill:"akten/steckbrief.py",c:"--doc",kurz:"Leseseite und Korrekturzähler",
+  wann:"Vor jeder Freigabe in allen drei Pipelines.",
+  macht:["Prüfbericht mit Fehler, Warnung, Hinweis","Leseseite: neu, selbst entschieden, unsicher, je mit Verweis","Steckbrief auf freigegeben, Eintrag in .daten/freigaben.json mit Art und Zahl der grundsätzlichen Korrekturen"],braucht:["fertiges Dokument"],liefert:["Freigabe; nach zwei Freigaben einer Art ohne Korrektur reicht ein Gesamtblick"],
+  hand:["freigabe.leseseite","freigabe.alltag, freigabe.besuch"],t:"dddd"},
+ {nr:"W",name:"Werkbank und Stand",skill:"akten/stand.py · akten/app.py",c:"--accent",kurz:"private Webseite mit Stand, Freigaben, Dateien, Chat",
+  wann:"Nach jeder Freigabe und jede Nacht neu erzeugt.",
+  macht:["Fortschritt je Lernsituation: Planung, Material, Moodle","Freigabe-Knöpfe, Ordnerbaum mit Ansicht-PDFs, Profil-Schalter, Kursvorschau","Chat und Aufträge an die Arbeitssitzung"],braucht:["Akten, Profil, Freigaben"],liefert:[".daten/stand/ und Daten der Werkbank"],
+  hand:["Nachrichten und Aufträge der Werkbank sind Anliegen der Lehrkraft","höchstens ein offener Hinweis zur Zeit"],t:"dddd"},
+ {nr:"R",name:"Ref-Akte",skill:"geplant (KONZEPT 1a)",c:"--bg-step",kurz:"Ausbildungsdokumentation, noch nicht gebaut",
+  wann:"Geplant als eigener Skill; vorhanden sind bisher der Fahrplan der Personalisierung (akten/fahrplan.py) und die Seminarunterlagen in Ref/.",
+  macht:["geplant: Stundenübersicht, Besuche und Fristen, Dokumentation der Ausbildung"],braucht:["Stunden-Akten mit Besuchsart","Nachbereitungen"],liefert:["bisher: Fahrplan_Personalisierung.docx"],
+  hand:["vereinbarte Ziele stehen schon heute im Kurzentwurf","Versicherung und KI-Übersicht erzeugt der Entwurf"],t:"dddd"}
+];
+const TYP={d:["t-doc","Dokument"],b:["t-bg","Hintergrund"],n:["t-no","entfällt"]};
+const TN=["Alltag, gelenkt","Alltag, selbstständige LS","EUB/KUB/FLB","GUB/PU"];
+const TK="ASEG";
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const lanesEl=document.getElementById("lanes");
+const nodes=[];
+LANES.forEach((L,i)=>{
+  const lane=el("div","lane");lane.style.setProperty("--c",`var(${L.c})`);
+  if(i)lane.appendChild(el("span","arrow","▼"));
+  const h=el("div","lane-head");h.append(el("div","lv",L.lv),el("div","akte",L.akte),el("div","wie",L.wie));
+  const g=el("div","nodes");
+  S.filter(s=>s.lane===L.id).forEach(s=>{s.c=L.c;g.appendChild(card(s))});
+  lane.append(h,g);lanesEl.appendChild(lane);
+});
+const sidesEl=document.getElementById("sides");
+SIDES.forEach(s=>{const b=el("button","side");b.type="button";b.style.setProperty("--c",`var(${s.c})`);
+  b.append(el("b",null,s.name),el("span",null,s.kurz));b.addEventListener("click",()=>open(s));sidesEl.appendChild(b)});
+function card(s){
+  const b=el("button","node");b.type="button";b.style.setProperty("--c",`var(${s.c})`);b.dataset.t=s.t;
+  const top=el("div","top");top.append(el("span","nr",s.nr),el("h3",null,s.name));
+  const foot=el("div","foot");const ty=el("div","types");
+  [...s.t].forEach((k,i)=>{const sp=el("span",TYP[k][0],TK[i]);sp.title=TN[i]+": "+TYP[k][1];ty.appendChild(sp)});
+  foot.append(ty,el("span","hcount",s.hand.length+(s.hand.length===1?" Profilwert oder Regel":" Profilwerte und Regeln")));
+  b.append(top,el("div","skill",s.skill),el("div","does",s.kurz),foot);
+  b.setAttribute("aria-label",`${s.nr} ${s.name}: Details öffnen`);
+  b.addEventListener("click",()=>open(s));nodes.push(b);return b;
+}
+const dlg=document.getElementById("dlg");
+function fill(id,arr){const u=document.getElementById(id);u.replaceChildren(...arr.map(x=>el("li",null,x)))}
+function open(s){
+  document.getElementById("d-head").style.setProperty("--c",`var(${s.c})`);
+  const lane=LANES.find(l=>l.id===s.lane);
+  document.getElementById("d-meta").textContent=(lane?lane.lv+" · "+lane.akte:"läuft immer mit")+(/^\d/.test(s.nr)?" · Schritt "+s.nr:"");
+  document.getElementById("d-title").textContent=s.name;
+  document.getElementById("d-skill").textContent="Skill: "+s.skill;
+  document.getElementById("d-when").textContent="Wann: "+s.wann;
+  fill("d-does",s.macht);fill("d-needs",s.braucht);fill("d-gives",s.liefert);fill("d-hand",s.hand);
+  const tr=document.getElementById("d-types");tr.replaceChildren(...[...s.t].map((k,i)=>el("span",TYP[k][0],TN[i]+": "+TYP[k][1])));
+  const ex=document.getElementById("d-ex");ex.replaceChildren();
+  if(s.ex){ex.append("Demo-Beispiel (LS 3, DS 7 als GUB): ");s.ex.forEach((f,i)=>{const a=el("a",null,f);a.href=GH+f;a.target="_blank";a.rel="noopener";if(i)ex.append(" · ");ex.append(a)})}
+  if(typeof dlg.showModal==="function")dlg.showModal();else dlg.setAttribute("open","");
+}
+document.getElementById("d-close").addEventListener("click",()=>dlg.close());
+dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
+const segBtns=[...document.querySelectorAll(".seg button")];
+function setTyp(t){
+  if(!segBtns.some(b=>b.dataset.t===t))t="all";
+  segBtns.forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.t===t)));
+  const idx={a:0,s:1,e:2,g:3}[t];
+  nodes.forEach(n=>n.classList.toggle("dim",idx!=null&&n.dataset.t[idx]!=="d"));
+  try{localStorage.setItem("skillfahrplan-typ",t)}catch(e){}
+}
+segBtns.forEach(b=>b.addEventListener("click",()=>setTyp(b.dataset.t)));
+let start="all";try{start=localStorage.getItem("skillfahrplan-typ")||"all"}catch(e){}
+setTyp(start);
+</script>

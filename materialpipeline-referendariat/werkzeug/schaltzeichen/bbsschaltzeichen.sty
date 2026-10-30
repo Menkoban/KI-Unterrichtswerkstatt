@@ -1,0 +1,64 @@
+% Schaltzeichen-Bibliothek (DIN EN 60617) im abgenommenen Industriestil der Lehrkraft.
+% Raster: Kontakt- und Bauteillänge 1,0 (1 cm), senkrecht von oben (#1,#2) nach unten (#1,#2-1).
+% Jedes Symbol hat einen Eintrag in symbolliste.csv (Norm-Nummer, Beleg).
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{bbsschaltzeichen}[2026/10/13 Schaltzeichen BBS]
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+\tikzset{
+ ltg/.style={line width=0.8pt,line cap=round},
+ sym/.style={line width=0.8pt,line cap=round,line join=round},
+ duenn/.style={line width=0.5pt,line cap=round},
+ mech/.style={line width=0.5pt,dash pattern=on 3pt off 2pt},
+ kl/.style={font=\scriptsize,inner sep=1pt},
+ dot/.style={circle,fill,inner sep=0pt,minimum size=3.4pt},
+}
+% ---------------- Kontakte (07-02) ----------------
+% Schließer: Wirkpunkt (#3) für Betätigung/Wirklinie
+\newcommand{\szSchliesser}[3]{\draw[sym] (#1,#2) -- (#1,#2-0.3); \draw[sym] (#1,#2-1) -- (#1,#2-0.7) -- (#1-0.3,#2-0.25); \coordinate (#3) at (#1-0.15,#2-0.475);}
+\newcommand{\szOeffner}[3]{\draw[sym] (#1,#2) -- (#1,#2-0.3) -- (#1+0.24,#2-0.3); \draw[sym] (#1,#2-1) -- (#1,#2-0.7) -- (#1+0.3,#2-0.22); \coordinate (#3) at (#1+0.15,#2-0.46);}
+% Wechsler: gemeinsame Wurzel unten, Öffner-Festkontakt mit Haken rechts (Ruhelage), Schließer-Festkontakt links
+\newcommand{\szWechsler}[3]{\szOeffner{#1}{#2}{#3}\draw[sym] (#1-0.32,#2) -- (#1-0.32,#2-0.3);}
+% voreilender Schließer / nacheilender Öffner: Zusatzzeichen am beweglichen Teil
+\newcommand{\szSchliesserVor}[3]{\szSchliesser{#1}{#2}{#3}\draw[sym] (#1-0.3,#2-0.25) -- (#1-0.42,#2-0.25);}
+\newcommand{\szOeffnerNach}[3]{\szOeffner{#1}{#2}{#3}\draw[sym] (#1+0.3,#2-0.22) -- (#1+0.42,#2-0.22);}
+% ---------------- Betätigungen (02-13), an Wirkpunkt (#1) angesetzt, Wirklinie nach links ----------------
+\newcommand{\szWirklinie}[2]{\draw[mech] (#1) -- ++(-#2,0);}
+\newcommand{\szHand}[1]{\draw[sym] ($(#1)+(0,-0.16)$) -- ($(#1)+(0,0.16)$);}
+\newcommand{\szDruck}[1]{\draw[sym] ($(#1)+(0,-0.16)$) -- ($(#1)+(0,0.16)$); \draw[sym] ($(#1)+(0,0.16)$) -- ++(0.09,0) ($(#1)+(0,-0.16)$) -- ++(0.09,0);}
+\newcommand{\szZug}[1]{\draw[sym] ($(#1)+(0,-0.16)$) -- ($(#1)+(0,0.16)$); \draw[sym] ($(#1)+(0,0.16)$) -- ++(-0.09,0) ($(#1)+(0,-0.16)$) -- ++(-0.09,0);}
+\newcommand{\szDreh}[1]{\draw[sym] ($(#1)+(0.09,-0.16)$) -- ++(-0.09,0) -- ++(0,0.32) -- ++(-0.09,0);}
+\newcommand{\szNotHalt}[1]{\draw[sym] ($(#1)+(0,-0.16)$) -- ($(#1)+(0,0.16)$); \draw[sym] ($(#1)+(0,0.16)$) arc[start angle=90,end angle=270,radius=0.16];}
+\newcommand{\szRolle}[1]{\draw[sym] (#1) circle (0.09);}
+\newcommand{\szThermisch}[1]{\draw[sym] ($(#1)+(0.14,0.32)$) -- ++(0,-0.18) -- ++(-0.14,0) -- ++(0,-0.28) -- ++(0.14,0) -- ++(0,-0.18);}
+\newcommand{\szRastung}[1]{\draw[sym] ($(#1)+(-0.12,0.12)$) -- ++(0.12,-0.12) -- ++(-0.12,-0.12);}
+% ---------------- Schütz- und Relaisspulen (07-15) ----------------
+\newcommand{\szSpule}[2]{\draw[ltg] (#1,#2) -- (#1,#2-0.3) (#1,#2-0.7) -- (#1,#2-1); \draw[sym,fill=white] (#1-0.38,#2-0.3) rectangle (#1+0.38,#2-0.7);
+ \node[kl,anchor=east] at (#1-0.05,#2-0.17) {A1}; \node[kl,anchor=east] at (#1-0.05,#2-0.84) {A2};}
+% ansprechverzögert: Zusatzfeld mit Kreuz-Balken links; rückfallverzögert: ausgefülltes Feld
+\newcommand{\szSpuleAnzug}[2]{\szSpule{#1}{#2}\draw[sym] (#1-0.38,#2-0.3) -- (#1-0.62,#2-0.3) -- (#1-0.62,#2-0.7) -- (#1-0.38,#2-0.7); \draw[sym] (#1-0.62,#2-0.3) -- (#1-0.38,#2-0.7) (#1-0.62,#2-0.7) -- (#1-0.38,#2-0.3);}
+\newcommand{\szSpuleAbfall}[2]{\szSpule{#1}{#2}\draw[sym,fill=black] (#1-0.38,#2-0.3) -- (#1-0.62,#2-0.3) -- (#1-0.62,#2-0.7) -- (#1-0.38,#2-0.7) -- cycle;}
+% Thermischer Auslöser (Motorschutzrelais Hauptstrom, Kasten 07-15-21)
+\newcommand{\szThermAusl}[2]{\draw[sym] (#1,#2) -- (#1,#2-0.25) (#1,#2-0.75) -- (#1,#2-1); \draw[sym] (#1-0.13,#2-0.25) rectangle (#1+0.22,#2-0.75);
+ \draw[sym] (#1,#2-0.25) -- (#1,#2-0.38) -- (#1+0.09,#2-0.38) -- (#1+0.09,#2-0.62) -- (#1,#2-0.62) -- (#1,#2-0.75);}
+% ---------------- Schutzeinrichtungen (07-21) ----------------
+\newcommand{\szSicherung}[2]{\draw[sym] (#1,#2) -- (#1,#2-1); \draw[sym,fill=white] (#1-0.11,#2-0.25) rectangle (#1+0.11,#2-0.75); \draw[sym] (#1,#2-0.25) -- (#1,#2-0.75);}
+% Leistungsschalter: Schließer mit Kreuz am Festkontakt
+\newcommand{\szLeistungsschalter}[3]{\szSchliesser{#1}{#2}{#3}\draw[sym] (#1-0.07,#2-0.23) -- (#1+0.07,#2-0.37) (#1-0.07,#2-0.37) -- (#1+0.07,#2-0.23);}
+% Trennschalter: Schließer mit Querstrich am Festkontakt
+\newcommand{\szTrennschalter}[3]{\szSchliesser{#1}{#2}{#3}\draw[sym] (#1-0.08,#2-0.3) -- (#1+0.08,#2-0.3);}
+% Lasttrennschalter: Schließer mit Kreis am Festkontakt
+\newcommand{\szLasttrenn}[3]{\szSchliesser{#1}{#2}{#3}\draw[sym] (#1,#2-0.3) circle (0.05);}
+% Schützhauptkontakt: Schließer mit Halbkreis am Festkontakt
+\newcommand{\szSchuetzkontakt}[3]{\szSchliesser{#1}{#2}{#3}\draw[sym] (#1-0.07,#2-0.3) arc[start angle=180,end angle=360,radius=0.07];}
+% ---------------- Maschinen (06-04) ----------------
+\newcommand{\szMotor}[3]{\draw[sym,fill=white] (#1,#2) circle (0.45); \node[font=\small] at (#1,#2+0.1) {M}; \node[font=\scriptsize] at (#1,#2-0.17) {#3};}
+\newcommand{\szGenerator}[3]{\draw[sym,fill=white] (#1,#2) circle (0.45); \node[font=\small] at (#1,#2+0.1) {G}; \node[font=\scriptsize] at (#1,#2-0.17) {#3};}
+% ---------------- Verbindungen (03-02) ----------------
+\newcommand{\szKlemme}[2]{\draw[sym,fill=white] (#1,#2) circle (0.07); \draw[line width=0.5pt] ($(#1,#2)+(-0.05,-0.05)$) -- ($(#1,#2)+(0.05,0.05)$);}
+\newcommand{\szVerbindung}[2]{\node[dot] at (#1,#2) {};}
+\newcommand{\szPE}[2]{\draw[sym] (#1,#2) -- (#1,#2-0.3); \draw[sym] (#1-0.2,#2-0.3) -- (#1+0.2,#2-0.3) (#1-0.13,#2-0.38) -- (#1+0.13,#2-0.38) (#1-0.06,#2-0.46) -- (#1+0.06,#2-0.46); \draw[sym] (#1,#2-0.38) circle (0.27);}
+\newcommand{\szErde}[2]{\draw[sym] (#1,#2) -- (#1,#2-0.3); \draw[sym] (#1-0.2,#2-0.3) -- (#1+0.2,#2-0.3) (#1-0.13,#2-0.38) -- (#1+0.13,#2-0.38) (#1-0.06,#2-0.46) -- (#1+0.06,#2-0.46);}
+% ---------------- Melder ----------------
+\newcommand{\szLeuchte}[2]{\draw[ltg] (#1,#2) -- (#1,#2-0.3) (#1,#2-0.7) -- (#1,#2-1); \draw[sym] (#1,#2-0.5) circle (0.2); \draw[sym] ($(#1,#2-0.5)+(-0.141,-0.141)$) -- ++(0.283,0.283) ($(#1,#2-0.5)+(-0.141,0.141)$) -- ++(0.283,-0.283);}
+\endinput

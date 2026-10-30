@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1256.3600000000001" viewBox="0 0 1800 1256.3600000000001" role="img" aria-labelledby="t"><title id="t">Pipeline 3 Moodle: Ablauf vom Eingang bis zur Kurssicherung</title><defs><marker id="spitze08349C" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#08349C"/></marker><marker id="spitze1F6B1B" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1F6B1B"/></marker><marker id="spitzeB42318" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#B42318"/></marker></defs><rect width="1800" height="1256.3600000000001" rx="18" fill="#F7F9FC"/>
+<text x="40.0" y="62.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="700" fill="#08349C" text-anchor="start">Pipeline 3 · Moodle-Themenkurs</text>
+<text x="40.0" y="92.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#5B6578" text-anchor="start">Skill themenkurs · aus einer fertigen Lernsituation ein Kurs für Moodle ab 5.0 · Bau nach Freigabe in höchstens 30 Minuten · Stand 25.10.2026</text>
+<rect x="1618.8" y="44.0" width="141.2" height="22.0" rx="11.0" fill="#7DDE78"/>
+<text x="1689.4" y="59.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#14213D" text-anchor="middle">Kurs LS 1 gebaut</text>
+<rect x="1495.5" y="44.0" width="115.3" height="22.0" rx="11.0" fill="#FFF3D6"/>
+<text x="1553.2" y="59.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#8A5300" text-anchor="middle">Übungsphase</text>
+<line x1="40" y1="110" x2="1760" y2="110" stroke="#D3DAE6" stroke-width="2"/>
+<rect x="40.0" y="128.0" width="557.3" height="120.0" rx="12" fill="#08349C" stroke="#08349C" stroke-width="1.4"/>
+<text x="56.0" y="156.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="start">aus Pipeline 1: Planung</text>
+<text x="56.0" y="180.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#FFFFFF" text-anchor="start">Lernsituation mit Leitfragen, Teilkompetenzen und Bewertung;</text>
+<text x="56.0" y="197.6" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#FFFFFF" text-anchor="start">Fehlvorstellungen mit Diagnose-Items; Klassen-Akte (Niveau, Sprache)</text>
+<text x="56.0" y="232.0" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#7DDE78" text-anchor="start">.daten/lernsituation/&lt;ls&gt;.json</text>
+<rect x="621.3" y="128.0" width="557.3" height="120.0" rx="12" fill="#08349C" stroke="#08349C" stroke-width="1.4"/>
+<text x="637.3" y="156.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF" text-anchor="start">aus Pipeline 2: Material</text>
+<text x="637.3" y="180.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#FFFFFF" text-anchor="start">Anlagen aller Doppelstunden, Gesamtfassung mit Infotexten,</text>
+<text x="637.3" y="197.6" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#FFFFFF" text-anchor="start">Erwartungshorizonte, Glossar-Daten</text>
+<text x="637.3" y="232.0" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#7DDE78" text-anchor="start">Anlagen/uebergabe.json · glossar_dsnn.json</text>
+<rect x="1202.7" y="128.0" width="557.3" height="120.0" rx="12" fill="#ECF9EB" stroke="#7DDE78" stroke-width="1.4"/>
+<text x="1218.7" y="156.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#1F6B1B" text-anchor="start">Profil der Lehrkraft</text>
+<text x="1218.7" y="180.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Gruppe Moodle (Kachelformat, Schulfarben, Freischaltung, Sterne und</text>
+<text x="1218.7" y="197.6" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Medaillen, KI-Hinweis …) und lehrkraft.* für den Steckbrief</text>
+<text x="1218.7" y="232.0" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#1F6B1B" text-anchor="start">python3 werkzeug/arbeitsbereich.py</text>
+<rect x="40.0" y="292.0" width="470.0" height="168.4" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="54.0" y="306.0" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="65.5" y="321.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="86.0" y="322.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Eingang lesen</text>
+<text x="54.0" y="345.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">die ganze Lernsituation als Rohstoff; was Pipeline 1 und 2</text>
+<text x="54.0" y="364.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">schon entschieden haben, wird nicht neu gefragt</text>
+<path d="M 512.0 376.2 L 546.0 376.2" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="550.0" y="292.0" width="700.0" height="168.4" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="564.0" y="306.0" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="575.5" y="321.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="596.0" y="322.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Grilling bis zum gemeinsamen Kursplan</text>
+<text x="564.0" y="345.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">erste Frage immer: Umfang des Kurses. Dann eine Frage zur Zeit, drei gleich ausführliche</text>
+<text x="564.0" y="364.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Vorschläge und freie Antwort; didaktischer Sparringspartner, widerspricht begründet mit</text>
+<text x="564.0" y="384.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Alternative</text>
+<path d="M 1252.0 376.2 L 1286.0 376.2" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="1290.0" y="292.0" width="470.0" height="168.4" rx="12" fill="#ECF9EB" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1304.0" y="322.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Kursplan</text>
+<text x="1304.0" y="345.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">wächst nach jeder Antwort mit: je Aktivität Teilkompetenz,</text>
+<text x="1304.0" y="364.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Phase, Fehlvorstellung, Lernzeit, Sozialform; Sterne,</text>
+<text x="1304.0" y="384.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Rückblick, Lehrkraftbereich</text>
+<text x="1304.0" y="408.4" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">Kursplan.docx</text>
+<rect x="1579.8" y="427.4" width="168.2" height="21.0" rx="10.5" fill="#7DDE78"/>
+<text x="1663.9" y="441.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#14213D" text-anchor="middle">Freigabe = Startsignal</text>
+<path d="M 318.7 250.0 L 318.7 288.0" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<path d="M 900.0 250.0 L 900.0 288.0" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<path d="M 1481.3 250.0 L 1481.3 288.0" fill="none" stroke="#1F6B1B" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#spitze1F6B1B)"/>
+<path d="M 1525.0 462.4 L 1525.0 500.4" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="40.0" y="504.4" width="1720.0" height="270.0" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="58.0" y="520.4" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="69.5" y="535.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="91.0" y="536.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#14213D" text-anchor="start">Bau in einem Lauf, ohne Rückfragen</text>
+<text x="474.6" y="536.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#5B6578" text-anchor="start">Ergebnis je Schritt im Arbeitsbereich unter &lt;LS&gt;/Moodle/</text>
+<rect x="58.0" y="562.4" width="470.0" height="194.0" rx="10" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="72.0" y="588.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="700" fill="#08349C" text-anchor="start">Helfer je Abschnitt, alle parallel</text>
+<text x="72.0" y="610.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Kurstext in Sie-Form, Fragen aus dem Material (Distraktoren als</text>
+<text x="72.0" y="628.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Fehlvorstellungen, Rechnungen mit Zufallswerten), Aktivitäten;</text>
+<text x="72.0" y="645.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">je Abschnitt ein Teil der Kursdefinition (abschnitt_N.json)</text>
+<rect x="72.0" y="706.4" width="103.0" height="36.0" rx="8" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="123.5" y="729.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#08349C" text-anchor="middle">Abschnitt 1</text>
+<rect x="185.0" y="706.4" width="103.0" height="36.0" rx="8" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="236.5" y="729.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#08349C" text-anchor="middle">Abschnitt 2</text>
+<rect x="298.0" y="706.4" width="103.0" height="36.0" rx="8" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="349.5" y="729.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#08349C" text-anchor="middle">Abschnitt 3</text>
+<rect x="411.0" y="706.4" width="103.0" height="36.0" rx="8" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="462.5" y="729.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#08349C" text-anchor="middle">Abschnitt n</text>
+<path d="M 530.0 659.4 L 564.0 659.4" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="568.0" y="562.4" width="330.0" height="194.0" rx="10" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="582.0" y="588.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="700" fill="#08349C" text-anchor="start">Zusammenbau per Programm</text>
+<text x="582.0" y="610.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">ohne KI: Kursdefinition (JSON) wird zur</text>
+<text x="582.0" y="628.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Kurssicherung</text>
+<text x="582.0" y="722.4" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">werkzeug/mbz/kursdefinition.py</text>
+<text x="582.0" y="740.4" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">werkzeug/mbz/bauen.py</text>
+<path d="M 900.0 659.4 L 934.0 659.4" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="938.0" y="562.4" width="520.0" height="194.0" rx="10" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="952.0" y="588.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="700" fill="#08349C" text-anchor="start">Neun schützende Prüfer</text>
+<rect x="952.0" y="604.4" width="86.9" height="24.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="995.5" y="620.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#14213D" text-anchor="middle">einspielbar</text>
+<rect x="1046.9" y="604.4" width="146.6" height="24.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1120.2" y="620.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#14213D" text-anchor="middle">Lösungen verborgen</text>
+<rect x="1201.5" y="604.4" width="135.8" height="24.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1269.3" y="620.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#14213D" text-anchor="middle">gerechnete Fragen</text>
+<rect x="952.0" y="636.4" width="138.7" height="24.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1021.4" y="652.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#14213D" text-anchor="middle">keine leeren Hüllen</text>
+<rect x="1098.7" y="636.4" width="182.2" height="24.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1189.8" y="652.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#14213D" text-anchor="middle">Angekündigtes vorhanden</text>
+<rect x="1289.0" y="636.4" width="140.4" height="24.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1359.2" y="652.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#14213D" text-anchor="middle">Medaillen lückenlos</text>
+<rect x="952.0" y="668.4" width="111.3" height="24.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1007.6" y="684.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#14213D" text-anchor="middle">Alternativtexte</text>
+<rect x="1071.3" y="668.4" width="126.4" height="24.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1134.5" y="684.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#14213D" text-anchor="middle">Abgabe je Kachel</text>
+<rect x="1205.7" y="668.4" width="89.8" height="24.0" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1250.6" y="684.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#14213D" text-anchor="middle">Sternzähler</text>
+<text x="952.0" y="740.4" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">werkzeug/mbz/pruefen.py</text>
+<path d="M 1198.0 758.4 L 1198.0 768.4 L 733.0 768.4 L 733.0 760.4" fill="none" stroke="#B42318" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#spitzeB42318)"/>
+<path d="M 1460.0 659.4 L 1494.0 659.4" fill="none" stroke="#1F6B1B" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#spitze1F6B1B)"/>
+<rect x="1498.0" y="562.4" width="244.0" height="194.0" rx="10" fill="#ECF9EB" stroke="#7DDE78" stroke-width="1.2"/>
+<text x="1512.0" y="588.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1F6B1B" text-anchor="start">Live in der Werkbank</text>
+<text x="1512.0" y="610.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Sie sehen den Kurs Kachel für</text>
+<text x="1512.0" y="628.0" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Kachel entstehen, nach jedem</text>
+<text x="1512.0" y="645.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">fertigen Abschnitt neu</text>
+<text x="1512.0" y="740.4" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12" style="font-variant-ligatures:none" fill="#1F6B1B" text-anchor="start">werkzeug/mbz/vorschau.py</text>
+<path d="M 220.0 776.4 L 220.0 814.4" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="40.0" y="818.4" width="400.0" height="124.7" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="54.0" y="832.4" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="65.5" y="847.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="86.0" y="848.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Sichtprüfung</text>
+<text x="54.0" y="871.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Vorschaubilder je Abschnitt; ein frischer Helfer</text>
+<text x="54.0" y="891.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">klickt den Kurs in der Rolle der Lernenden durch</text>
+<path d="M 442.0 880.8 L 476.0 880.8" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="480.0" y="818.4" width="400.0" height="124.7" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="494.0" y="848.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Prüfbericht</text>
+<text x="494.0" y="871.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Fehler, Warnung, Hinweis; Leseseite: neu, selbst</text>
+<text x="494.0" y="891.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">entschieden, unsicher</text>
+<rect x="788.3" y="910.2" width="79.7" height="21.0" rx="10.5" fill="#7DDE78"/>
+<text x="828.1" y="924.7" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#14213D" text-anchor="middle">Abnahme</text>
+<path d="M 882.0 880.8 L 916.0 880.8" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="920.0" y="818.4" width="400.0" height="124.7" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="934.0" y="832.4" width="23.0" height="21" rx="6" fill="#08349C"/>
+<text x="945.5" y="847.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="966.0" y="848.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Ablage</text>
+<text x="934.0" y="871.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">Kursplan, Kursdefinition, Bauskript und Sicherung</text>
+<text x="934.0" y="891.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">unter &lt;LS&gt;/Moodle/ im Arbeitsbereich</text>
+<text x="934.0" y="915.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">&lt;Klasse&gt;-LFnn-LSnn.mbz</text>
+<path d="M 1322.0 880.8 L 1356.0 880.8" fill="none" stroke="#08349C" stroke-width="2.2" stroke-linejoin="round" marker-end="url(#spitze08349C)"/>
+<rect x="1360.0" y="818.4" width="400.0" height="124.7" rx="12" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<text x="1374.0" y="848.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#14213D" text-anchor="start">Einspielen</text>
+<text x="1374.0" y="871.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">immer als neuer Kurs, erst im Test-Moodle, dann</text>
+<text x="1374.0" y="891.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14.5" fill="#2B3550" text-anchor="start">im Moodle der Schule; Anleitung für alle Kurse</text>
+<text x="1374.0" y="915.2" font-family="'JetBrains Mono', 'DejaVu Sans Mono', Consolas, monospace" font-size="12.5" style="font-variant-ligatures:none" fill="#08349C" text-anchor="start">docs/anleitung_einspielen.md</text>
+<text x="40.0" y="995.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="700" fill="#08349C" text-anchor="start">So sieht der Themenkurs aus (ein Kurs je Lernsituation)</text>
+<rect x="40.0" y="1011.2" width="332.8" height="105.2" rx="10" fill="#E8EEF9" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="40.0" y="1011.2" width="332.8" height="6" rx="3" fill="#08349C"/>
+<text x="54.0" y="1041.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="700" fill="#08349C" text-anchor="start">Allgemein</text>
+<text x="54.0" y="1063.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Vorgeschmack, Steckbrief, „So arbeiten Sie“,</text>
+<text x="54.0" y="1081.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Schullogo mit dem einzigen KI-Hinweis</text>
+<rect x="386.8" y="1011.2" width="332.8" height="105.2" rx="10" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="386.8" y="1011.2" width="332.8" height="6" rx="3" fill="#08349C"/>
+<text x="400.8" y="1041.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="700" fill="#08349C" text-anchor="start">1 Einstieg</text>
+<text x="400.8" y="1063.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">volle Handlungssituation als Auftrag,</text>
+<text x="400.8" y="1081.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Selbsteinschätzung, Eingangstest</text>
+<rect x="733.6" y="1011.2" width="332.8" height="105.2" rx="10" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="733.6" y="1011.2" width="332.8" height="6" rx="3" fill="#08349C"/>
+<text x="747.6" y="1041.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="700" fill="#08349C" text-anchor="start">2 … n je Leitfrage</text>
+<text x="747.6" y="1063.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">ein Abschnitt je Leitfrage einer DS; Auftrag</text>
+<text x="747.6" y="1081.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">im Kacheltext, jede Kachel mit Abgabe</text>
+<rect x="1080.4" y="1011.2" width="332.8" height="105.2" rx="10" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="1080.4" y="1011.2" width="332.8" height="6" rx="3" fill="#08349C"/>
+<text x="1094.4" y="1041.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="700" fill="#08349C" text-anchor="start">Rückblick</text>
+<text x="1094.4" y="1063.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Selbsteinschätzung, Generalprobe,</text>
+<text x="1094.4" y="1081.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Abschlusstest, Medaillen, Glossar,</text>
+<text x="1094.4" y="1099.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Evaluationsbogen</text>
+<rect x="1427.2" y="1011.2" width="332.8" height="105.2" rx="10" fill="#ECF9EB" stroke="#7DDE78" stroke-width="1.2" stroke-dasharray="6 4"/>
+<rect x="1427.2" y="1011.2" width="332.8" height="6" rx="3" fill="#1F6B1B"/>
+<text x="1441.2" y="1041.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" font-weight="700" fill="#1F6B1B" text-anchor="start">Lehrkraftbereich</text>
+<text x="1441.2" y="1063.2" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">verborgen: Druckvorlagen, Handreichung,</text>
+<text x="1441.2" y="1081.5" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13.5" fill="#14213D" text-anchor="start">Kursplan, Erwartungshorizonte, Dashboard</text>
+<text x="40.0" y="1142.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#5B6578" text-anchor="start">Sterne als eine Währung für den ganzen Kurs, Medaillen erst nach dem Abschlusstest. In Moodle nur automatisierte Bewertung; Abgaben ohne Note, die Lehrkraft bewertet außerhalb des Kurses. Lernende erscheinen nur als Kürzel.</text>
+<rect x="40.0" y="1176.4" width="1720.0" height="56.0" rx="12" fill="#FFFFFF" stroke="#C9D6F0" stroke-width="1.2"/>
+<rect x="58.0" y="1192.4" width="151.6" height="21.0" rx="10.5" fill="#7DDE78"/>
+<text x="133.8" y="1206.9" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="700" fill="#14213D" text-anchor="middle">Freigabe · Abnahme</text>
+<text x="223.6" y="1209.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#14213D" text-anchor="start">nur zwei Freigaben: Kursplan vor dem Bau, Abnahme danach; Eintrag in .daten/freigaben.json (Art moodle)</text>
+<path d="M 1270.0 1204.4 L 1314.0 1204.4" fill="none" stroke="#B42318" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="5 4" marker-end="url(#spitzeB42318)"/>
+<text x="1328.0" y="1209.4" font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#14213D" text-anchor="start">Fehler: beheben und neu bauen</text>
+</svg>

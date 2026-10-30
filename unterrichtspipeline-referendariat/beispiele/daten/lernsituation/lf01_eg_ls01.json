@@ -1,0 +1,161 @@
+{
+ "nr": "1",
+ "titel": "Der Stromhof und das Haus Schütte",
+ "lernfeld": "LF 1 Elektroniker/in EG",
+ "std": 8,
+ "std_von_bis": "Std. 1–8",
+ "fach": "Elektrotechnik",
+ "datum": "2026-10-11",
+ "stand": "von der Lehrkraft freigegeben am 2026-10-11",
+ "ordner": "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/LS01_Der_Stromhof_und_das_Haus_Schuette",
+ "baut_auf": [
+  "Elektrotechnik/Elektroniker_EG/LF01_Elektrotechnische_Systeme/Lernsituationen_Skizze.docx",
+  "Elektrotechnik/Elektroniker_EG/Modellbetrieb_Stromhof_Elektro.docx"
+ ],
+ "kernkompetenz": "Die Schülerinnen und Schüler verfügen über die Kompetenz, einen Kundenauftrag zu analysieren, die elektrotechnische Anlage eines Wohnhauses auf Anlagen-, Geräte-, Baugruppen- und Bauelementebene zu strukturieren und sie Kundinnen und Kunden fachlich richtig und verständlich darzustellen.",
+ "handlungssituation": "Familie Schütte hat ein Einfamilienhaus von 1968 gekauft und will es sanieren lassen. Bei der Erstbegehung hat Meisterin Svenja Terhorst Fotos gemacht: Zählerplatz mit alten Schraubsicherungen, Unterverteilung im Flur, Steckdosen, Leuchten, ein alter Durchlauferhitzer im Bad, eine Sauna im Keller. Herr und Frau Schütte fragen: „Was steckt eigentlich alles in unserem Haus, und wer sind Sie, die da bei uns arbeiten?“",
+ "auftrag": "Die Meisterin beauftragt Sie als Gesellin bzw. Geselle: Werten Sie die Erstbegehung aus und stellen Sie für die Familie dar, wie die Elektrik des Hauses aufgebaut ist. Stellen Sie außerdem den Stromhof vor und vergleichen Sie ihn mit Ihrem eigenen Ausbildungsbetrieb.",
+ "handlungsergebnis": "Info-Mappe für Familie Schütte: (1) „So ist die Elektrik Ihres Hauses aufgebaut“ (Systemübersicht vom Hausanschluss bis zum Bauelement, mit Fachbegriffen und Erklärung) und (2) „Wer bei Ihnen arbeitet“ (Steckbrief Stromhof im Vergleich mit dem eigenen Ausbildungsbetrieb).",
+ "entscheidung": "Wie stellen wir die Elektrik für Laien dar (Raumplan, Systembaum oder Ebenenmodell), und wie tief gehen wir in die Ebenen?",
+ "lk": [
+  "LK-01",
+  "LK-02",
+  "LK-03",
+  "LK-09"
+ ],
+ "bewertung": "Systemübersicht fachlich richtig (Betriebsmittel den Ebenen korrekt zugeordnet, Zusammenhänge stimmen) · für Laien verständlich (Fachbegriff plus Erklärung) · Darstellungsform begründet gewählt · Steckbrief vollständig (Arbeitsfelder, Abläufe, Kommunikation) und Vergleich mit dem eigenen Betrieb nachvollziehbar · Präsentation fachsprachlich sicher.",
+ "zyklen": [
+  {
+   "nr": "1",
+   "leitfrage": "Was steckt in Haus Schütte?",
+   "teilergebnis": "Systembaum der Elektrik von Haus Schütte (Ebenen, Betriebsmittel, Schaltzeichen)",
+   "ds": "DS 1–2"
+  },
+  {
+   "nr": "2",
+   "leitfrage": "Wer sind wir, und wie erklären wir es der Familie?",
+   "teilergebnis": "Betriebssteckbrief mit Vergleich und fertige Info-Mappe, präsentiert und bewertet",
+   "ds": "DS 3–4"
+  }
+ ],
+ "doppelstunden": [
+  {
+   "ds": "1",
+   "std_nr": "1–2",
+   "zyklus": "1",
+   "leitfrage": "Was hat die Meisterin bei Schüttes gesehen?",
+   "inhalte": "Kennenlernen (Vorstellung der Lehrkraft, Partnerinterview); Auftrag analysieren; Fotos der Erstbegehung auswerten; Betriebsmittel benennen (Zählerplatz, Sicherungen, Unterverteilung, Leitungen, Steckdosen, Leuchten, Geräte); Arbeitsplan im Team beginnen",
+   "teilergebnis": "Begehungsprotokoll, Auftragsanalyse, Begriffswand (Anfang)",
+   "phasen": [
+    "Informieren",
+    "Planen"
+   ],
+   "lk": [
+    "LK-01",
+    "LK-03"
+   ]
+  },
+  {
+   "ds": "2",
+   "std_nr": "3–4",
+   "zyklus": "1",
+   "leitfrage": "Wie hängt das alles zusammen?",
+   "inhalte": "Arbeitsplan im Team fertigstellen; Systemebenen (Anlage, Gerät, Baugruppe, Bauelement); Energiefluss vom Hausanschluss zum Verbraucher; erste Schaltzeichen; Darstellungsform entscheiden; Systembaum erstellen und gegen Checkliste prüfen",
+   "teilergebnis": "Arbeitsplan, Systembaum Haus Schütte",
+   "phasen": [
+    "Entscheiden",
+    "Durchführen",
+    "Kontrollieren",
+    "Bewerten"
+   ],
+   "lk": [
+    "LK-02",
+    "LK-09"
+   ]
+  },
+  {
+   "ds": "3",
+   "std_nr": "5–6",
+   "zyklus": "2",
+   "leitfrage": "Wer sind wir?",
+   "inhalte": "Stromhof erkunden (Arbeitsfelder, Abläufe vom Auftrag bis zur Rechnung, Kommunikation mit Kunden); eigenen Ausbildungsbetrieb recherchieren; Vergleichskriterien und Darstellung der Info-Mappe planen und entscheiden",
+   "teilergebnis": "Kriterienliste, Steckbrief-Entwurf",
+   "phasen": [
+    "Informieren",
+    "Planen",
+    "Entscheiden"
+   ],
+   "lk": [
+    "LK-01",
+    "LK-03"
+   ]
+  },
+  {
+   "ds": "4",
+   "std_nr": "7–8",
+   "zyklus": "2",
+   "leitfrage": "Versteht die Familie unsere Mappe?",
+   "inhalte": "Info-Mappe fertigstellen; Präsentation vor der „Familie“ (Rollenspiel); Rückmeldung nach Kriterien; Bewertung des Handlungsergebnisses; kurze Reflexion",
+   "teilergebnis": "Info-Mappe, Bewertung",
+   "phasen": [
+    "Durchführen",
+    "Kontrollieren",
+    "Bewerten"
+   ],
+   "lk": [
+    "LK-02",
+    "LK-09"
+   ]
+  }
+ ],
+ "lk_legende": [
+  [
+   "LK-01",
+   "Betriebliche Arbeitsaufträge analysieren und sich über Aufgaben, Tätigkeiten und Arbeitsprozesse im betrieblichen Umfeld informieren",
+   "Informieren"
+  ],
+  [
+   "LK-02",
+   "Elektrotechnische Systeme auf Anlagen-, Geräte-, Baugruppen- und Bauelementebene sowie Wirkungszusammenhänge zwischen den Ebenen analysieren",
+   "Informieren"
+  ],
+  [
+   "LK-03",
+   "Informationen, auch digital, beschaffen und auswerten; fremdsprachige Dokumentationen mit Hilfsmitteln auswerten",
+   "Informieren"
+  ],
+  [
+   "LK-09",
+   "Sich unter Anwendung von Fachsprache über Erkenntnisse austauschen",
+   "Ausführen"
+  ]
+ ],
+ "hinweise": [
+  "Material (Auftrag an Pipeline 2): Fotos der Erstbegehung (Zählerplatz mit Schraubsicherungen, Unterverteilung, Bad, Keller), Grundriss Haus Schütte, Auftrag der Meisterin, Vorlage Systembaum, Kriterien für den Betriebsvergleich, Rollenkarten für die Präsentation.",
+  "Lernort Betrieb: ARP D1 (Aufbau und Arbeitsprozesse des Ausbildungsbetriebs) und A7 (Systeme analysieren). Die Lernenden bringen Informationen aus dem eigenen Betrieb mit (vorher ankündigen).",
+  "Abgrenzung: Sicherungen, Unterverteilung und Schutzmaßnahmen werden nur benannt und zugeordnet; Bewertung des alten Zustands (z. B. fehlender Fehlerstromschutz) als Ausblick auf LF 5.",
+  "Moodle (Profil: Endprodukt): Zyklus 1 als Lernpfad mit Fotos zum Zuordnen; Zyklus 2 mit Abgabe der Info-Mappe."
+ ],
+ "pruefbericht": [
+  [
+   "Hinweis",
+   "Die Lernsituation folgt der freigegebenen Skizze (LS 1, 8 Std., LK-01, 02, 03, 09) und dem Modellbetrieb Stromhof."
+  ],
+  [
+   "Hinweis",
+   "Zwei innere Zyklen zu je zwei Doppelstunden nach Profil (innerer Zyklus je Arbeitsschritt); jeder Zyklus durchläuft alle Phasen, Planen in DS 1 und DS 3."
+  ],
+  [
+   "Warnung",
+   "Ein Haus von 1968 mit Schraubsicherungen und ohne Fehlerstromschutz ist realistisch; im Unterricht nur benennen, nicht bewerten oder bearbeiten (LF 5). Darauf achten, dass Lernende daraus keine Handlungsanweisung für echte Altbauten ableiten."
+  ],
+  [
+   "Hinweis",
+   "Fehlvorstellungen und Lernausgangslage zu LS 1 folgen in Schritt 06 (themenbezogener Teil)."
+  ],
+  [
+   "Hinweis",
+   "Nach Ansage der Lehrkraft (2026-10-11): DS 1 beginnt mit einem Kennenlernen (Vorstellung der Lehrkraft, Partnerinterview); der Arbeitsplan wird deshalb in DS 2 fertiggestellt."
+  ]
+ ]
+}
