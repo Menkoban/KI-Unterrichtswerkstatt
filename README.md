@@ -12,6 +12,11 @@ offenen Standards, die auch OpenAI Codex, Google Antigravity und Hermes Agent le
 
 ![Gesamtübersicht: drei Pipelines und der persönliche Arbeitsbereich](unterrichtspipeline-referendariat/docs/visualisierung/gesamtuebersicht_4k.png)
 
+**Zum Einlesen:** [Einführung für Kolleginnen und Kollegen](Einfuehrung_KI-Unterrichtswerkstatt.pdf) (auch als
+[Word](Einfuehrung_KI-Unterrichtswerkstatt.docx)): was die Werkstatt ist, wie sie didaktisch gedacht ist, wie sie
+personalisiert wird und was Sie brauchen. **Zum Einrichten:** [Startprompt](STARTPROMPT.md) kopieren und in Ihrer
+KI-App in einem leeren Ordner einfügen.
+
 ## Was es ist
 
 Drei Werkzeuge, die nacheinander arbeiten, und ein persönlicher Arbeitsbereich je Lehrkraft:
@@ -106,7 +111,7 @@ Die ausführliche Fassung mit Erklärungen steht in [`ANLEITUNG.md`](ANLEITUNG.m
    Ihrer KI-App Zugriff auf beide geben (bei Claude: [claude.ai/connect-github](https://claude.ai/connect-github)).
 3. **Sitzung starten** mit beiden Repositories, etwa unter [claude.ai/code](https://claude.ai/code), in Codex oder
    Antigravity, oder am eigenen Rechner in der Wurzel dieses Repositorys. Die Skills aller drei Pipelines werden dann
-   gefunden; andere Apps als Claude Code führen zu Beginn `bash einrichten.sh` aus (steht in `AGENTS.md`).
+   gefunden; andere Apps als Claude Code führen zu Beginn `python3 einrichten.py` aus (steht in `AGENTS.md`).
 4. **Startprompt einfügen** aus [`STARTPROMPT.md`](STARTPROMPT.md). Die KI richtet den Arbeitsbereich ein und führt
    Sie durch ein Interview (Schule, Seminar, Fächer, didaktische Quellen, eigene Unterlagen, Vorlieben). Daraus entsteht Ihr
    Lehrkraft-Profil.
