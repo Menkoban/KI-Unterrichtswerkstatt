@@ -3,41 +3,46 @@
 Für Kolleginnen und Kollegen, die die KI-Unterrichtswerkstatt nutzen möchten. Technische Vorkenntnisse sind kaum nötig;
 die KI erklärt jeden Schritt und wartet auf Sie.
 
-## 1. Konten
+## 1. GitHub-Konto anlegen (einmalig, etwa fünf Minuten)
 
-1. **GitHub:** auf [github.com](https://github.com) ein kostenloses Konto anlegen. GitHub ist die Ablage und
-   Sicherung Ihrer Planungen.
-2. **Claude:** ein Abo mit Claude Code (Pro oder höher) auf [claude.ai](https://claude.ai). Unter
+GitHub ist die Ablage und Sicherung Ihrer Planungen, mit Versionsgeschichte: Nichts geht verloren, jeder ältere Stand
+lässt sich zurückholen. Sie müssen dafür nichts über Git wissen; das erledigt die KI.
+
+1. Auf [github.com/signup](https://github.com/signup) ein kostenloses Konto anlegen (E-Mail, Passwort, Benutzername)
+   und die E-Mail bestätigen. Den kostenlosen Tarif behalten.
+2. Empfehlenswert: unter **Settings → Password and authentication** die Zwei-Faktor-Anmeldung einschalten.
+
+## 2. Zwei Repositories in Ihrem Konto (zwei Klicks)
+
+1. **Werkzeug übernehmen:** [github.com/Menkoban/KI-Unterrichtswerkstatt](https://github.com/Menkoban/KI-Unterrichtswerkstatt)
+   öffnen und oben rechts **Fork**, dann **Create fork** tippen. Damit liegt eine eigene Kopie des Werkzeugs in Ihrem
+   Konto. Sie ist öffentlich wie das Original und enthält nichts Persönliches.
+2. **Privaten Arbeitsbereich anlegen:** [diesen Link öffnen](https://github.com/new?name=unterrichtspipeline-referendariat-IHRNAME&visibility=private&description=Pers%C3%B6nlicher+Arbeitsbereich+zur+KI-Unterrichtswerkstatt), im Feld *Repository name* `IHRNAME` durch
+   Ihren Nachnamen ersetzen (zum Beispiel `unterrichtspipeline-referendariat-mueller`), prüfen, dass **Private**
+   gewählt ist, und **Create repository** tippen. Sonst nichts ankreuzen. Hier landet alles, was nur Ihnen gehört:
+   Profil, Quellen, Planungen, Material, Kurse.
+
+## 3. Claude verbinden
+
+1. Ein Abo mit Claude Code (Pro oder höher) auf [claude.ai](https://claude.ai). Unter
    [claude.ai/code](https://claude.ai/code) läuft Claude Code im Browser oder in der App, auch auf dem Tablet.
-3. Claude Zugriff auf GitHub geben: in claude.ai unter den Einstellungen GitHub verbinden und Ihr künftiges
-   Arbeitsbereich-Repository freigeben.
+2. [claude.ai/connect-github](https://claude.ai/connect-github) öffnen, GitHub verbinden und der Claude-App Zugriff auf
+   **beide** Repositories geben (bei „Only select repositories“ beide auswählen).
+3. Unter [claude.ai/code](https://claude.ai/code) eine neue Sitzung starten und **beide** Repositories auswählen:
+   Ihre Kopie der KI-Unterrichtswerkstatt und Ihren Arbeitsbereich. Der Sitzungsstart richtet die Programme ein und
+   findet den Arbeitsbereich von selbst.
 
-## 2. Privaten Arbeitsbereich anlegen
-
-Auf GitHub: **New repository**, Name `unterrichtspipeline-referendariat-<ihr name>` (zum Beispiel
-`unterrichtspipeline-referendariat-mueller`), Sichtbarkeit **Private**, ohne README, ohne Lizenz. Hier landet alles,
-was nur Ihnen gehört: Profil, Planungen, Material, Kurse. Das Repository bleibt privat.
-
-## 3. Werkzeug und Arbeitsbereich zusammenbringen
-
-**Variante A: in der Cloud (claude.ai/code, empfohlen am Tablet)**
-
-1. Neue Sitzung starten und **beide** Repositories auswählen: `Menkoban/ki-unterrichtswerkstatt` (oder Ihre Kopie davon) und
-   Ihren Arbeitsbereich.
-2. Der Sitzungsstart richtet die Programme ein und findet den Arbeitsbereich von selbst.
-
-**Variante B: auf dem eigenen Rechner**
+**Am eigenen Rechner** geht es auch: Claude Code installieren, dann im Terminal
 
 ```bash
-git clone https://github.com/Menkoban/ki-unterrichtswerkstatt.git
-cd ki-unterrichtswerkstatt
+git clone https://github.com/<ihr-konto>/KI-Unterrichtswerkstatt.git
+cd KI-Unterrichtswerkstatt
 git clone https://github.com/<ihr-konto>/unterrichtspipeline-referendariat-<ihr name>.git
 claude
 ```
 
-Der Arbeitsbereich liegt im Werkzeug-Ordner, wird von dessen Git ignoriert und sichert sich in sein eigenes
-Repository. Unter Windows geht dasselbe in der Eingabeaufforderung; Python 3, Git und LibreOffice müssen installiert
-sein (die KI hilft beim Nachholen).
+Der Arbeitsbereich liegt dann im Werkzeug-Ordner, wird von dessen Git ignoriert und sichert sich in sein eigenes
+privates Repository. Python 3, Git und LibreOffice müssen installiert sein (die KI hilft beim Nachholen).
 
 ## 4. Einrichtung mit dem Startprompt
 
@@ -70,9 +75,10 @@ Regel in Ihrem Profil, damit sie nicht zweimal nötig ist.
 
 ## 6. Aktuell halten und weitergeben
 
-- Neue Fassung des Werkzeugs: `git pull` im Werkzeug-Ordner (in der Cloud geschieht das beim Sitzungsstart). Ihr
-  Arbeitsbereich bleibt unberührt.
-- Weitergeben: den Link zu diesem Repository teilen. Jede Person legt ihren eigenen privaten Arbeitsbereich an.
+- Neue Fassung des Werkzeugs: auf GitHub in Ihrer Kopie der KI-Unterrichtswerkstatt **Sync fork**, dann **Update
+  branch** tippen (oder die KI darum bitten). Ihr Arbeitsbereich bleibt unberührt.
+- Weitergeben: den Link zu dieser Anleitung teilen. Jede Person legt ihr eigenes Konto, ihre Kopie und ihren privaten
+  Arbeitsbereich an.
 - Nie in dieses Repository: Namen von Lernenden, Noten, Klassendaten, Ihr Profil.
 
 ## Häufige Fragen

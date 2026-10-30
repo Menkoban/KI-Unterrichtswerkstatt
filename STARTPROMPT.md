@@ -1,6 +1,6 @@
 # Startprompt: Einrichtung beim ersten Mal
 
-Claude Code in der Wurzel dieses Repositorys starten (lokal oder unter claude.ai/code mit diesem Repository und Ihrem
+Claude Code in der Wurzel dieses Repositorys starten (unter claude.ai/code mit Ihrer Kopie dieses Repositorys und Ihrem
 leeren, privaten Arbeitsbereich), dann den Text zwischen den Linien einfügen. Mehr ist nicht nötig; alles Weitere
 fragt die KI.
 
@@ -17,9 +17,12 @@ Warte jeweils meine Antwort ab.
 2. **Technik prüfen:** Python 3, Git, `python-docx`, LibreOffice (`soffice`); fehlt etwas, sag mir kurz, wie ich es
    nachhole, und warte. Dann `python3 unterrichtspipeline-referendariat/setup_laptop.py`.
 3. **Arbeitsbereich:** Finde mein privates Repository `unterrichtspipeline-referendariat-<name>` (im Werkzeug-Ordner
-   oder daneben). Fehlt es, erkläre mir, wie ich es auf GitHub **privat** anlege, und warte. Ist es leer, kopiere
-   den Inhalt von `unterrichtspipeline-referendariat/docs/arbeitsbereich/repo-geruest/` hinein (mit versteckten
-   Dateien). Prüfe, dass der Arbeitsbereich **nicht** im Git dieses Werkzeugs landet.
+   oder daneben). Fehlt es, führe mich Schritt für Schritt durch `ANLEITUNG.md` (Abschnitte 1 bis 3: Konto, Fork,
+   privates Repository über den vorausgefüllten Link, Zugriff für Claude) und warte; ich muss danach eine neue
+   Sitzung mit beiden Repositories starten. Ist es leer, kopiere den Inhalt von
+   `unterrichtspipeline-referendariat/docs/arbeitsbereich/repo-geruest/` hinein (mit versteckten Dateien), committe
+   und pushe. Prüfe, dass der Arbeitsbereich **privat** ist und **nicht** im Git dieses Werkzeugs landet. Ich kenne
+   Git nicht: Erledige alles Technische selbst und erkläre es nur in einem Satz.
 4. **Einrichtungs-Interview**, eine Frage zur Zeit, in dieser Reihenfolge:
    1. Name und gewünschte Anrede in Dokumenten; Rolle (Referendariat, Lehrkraft, Quereinstieg).
    2. Schule: Name, Ort, Logo (ich lade es hoch, du legst es unter `Profil/` ab).

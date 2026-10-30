@@ -94,20 +94,12 @@ Weitere Übersichten (jede Pipeline einzeln, Planungsebenen, Skill-Fahrplan zum 
 
 Die ausführliche Fassung mit Erklärungen steht in [`ANLEITUNG.md`](ANLEITUNG.md).
 
-1. **Privaten Arbeitsbereich anlegen:** auf GitHub ein neues, **privates** Repository
-   `unterrichtspipeline-referendariat-<ihr name>` erstellen (leer, ohne README).
-2. **Werkzeug holen:**
-
-   ```bash
-   git clone https://github.com/Menkoban/ki-unterrichtswerkstatt.git
-   cd ki-unterrichtswerkstatt
-   git clone https://github.com/<ihr-konto>/unterrichtspipeline-referendariat-<ihr name>.git
-   ```
-
-   Der Arbeitsbereich liegt damit im Werkzeug-Ordner, wird von dessen Git aber ignoriert und hat sein eigenes,
-   privates Repository. In der Cloud (claude.ai/code) wählen Sie stattdessen beide Repositories für die Sitzung aus;
-   der Sitzungsstart findet den Arbeitsbereich auch als Nachbarordner.
-3. **Claude Code in der Wurzel dieses Repositorys starten.** Die Skills aller drei Pipelines werden dann gefunden.
+1. **GitHub-Konto** anlegen (kostenlos), falls noch keins da ist.
+2. **Zwei Repositories:** dieses Repository mit **Fork** in Ihr Konto übernehmen und einen **privaten** Arbeitsbereich
+   `unterrichtspipeline-referendariat-<ihr name>` anlegen ([vorausgefüllter Link](https://github.com/new?name=unterrichtspipeline-referendariat-IHRNAME&visibility=private&description=Pers%C3%B6nlicher+Arbeitsbereich+zur+KI-Unterrichtswerkstatt)). Dann unter
+   [claude.ai/connect-github](https://claude.ai/connect-github) Claude Zugriff auf beide geben.
+3. **Sitzung starten** unter [claude.ai/code](https://claude.ai/code) mit beiden Repositories (oder am eigenen Rechner
+   in der Wurzel dieses Repositorys). Die Skills aller drei Pipelines werden dann gefunden.
 4. **Startprompt einfügen** aus [`STARTPROMPT.md`](STARTPROMPT.md). Die KI richtet den Arbeitsbereich ein und führt
    Sie durch ein Interview (Schule, Seminar, Fächer, didaktische Quellen, eigene Unterlagen, Vorlieben). Daraus entsteht Ihr
    Lehrkraft-Profil.
@@ -118,8 +110,8 @@ Die ausführliche Fassung mit Erklärungen steht in [`ANLEITUNG.md`](ANLEITUNG.m
 
 - **Weitergeben:** einfach den Link zu diesem Repository teilen. Jede Lehrkraft legt ihren eigenen privaten
   Arbeitsbereich an; geteilt wird nur das Werkzeug.
-- **Aktualisieren:** `git pull` im Werkzeug-Ordner. Ihr Arbeitsbereich bleibt unberührt, weil er ein eigenes
-  Repository ist.
+- **Aktualisieren:** in Ihrem Fork **Sync fork** tippen (am eigenen Rechner zusätzlich `git pull`). Ihr Arbeitsbereich
+  bleibt unberührt, weil er ein eigenes Repository ist.
 - **Eigene Verbesserungen:** Persönliche Vorlieben gehören ins Profil, nicht ins Werkzeug. Allgemeine Verbesserungen
   (neue Prüfung, neuer Skill, ein neues Seminarprofil) gern als Pull Request oder Issue.
 - **Nie hochladen:** Namen von Lernenden, Noten, echte Klassendaten. Sie stehen nur im privaten Arbeitsbereich und
