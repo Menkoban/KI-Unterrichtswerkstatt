@@ -66,6 +66,10 @@ Skill gelten relativ zu seinem Werkzeug-Ordner.
   (empfohlener zuerst), dazu freie Antwort; erst die Antwort abwarten. Begründet widersprechen, immer mit Alternative.
 - Vor jeder Freigabe ein Prüfbericht mit Fehler, Warnung, Hinweis. Jede Korrektur der Lehrkraft sofort als Regel
   festhalten (Profilwert, Stilregel oder Prüfung).
+- **Moodle-Kurse: Live-Restore ist Pflicht.** Jede .mbz wird vor der Abnahme mit
+  `python3 moodlepipeline-referendariat/werkzeug/testmoodle/testmoodle.py einspielen <kurs.mbz>` in das lokale
+  Test-Moodle 5.1.6 mit Kachelformat eingespielt (fehlt es: `einrichten`); `testmoodle.py pruefen <kurs.mbz>` muss OK
+  melden. Ohne erfolgreichen Live-Restore gilt ein Kurs nicht als fertig.
 - Ausgaben für die Lehrkraft als DOCX (bzw. XLSX, PPTX, HTML); interne Daten als JSON in `.daten/` des Arbeitsbereichs.
 - Lernende nur als Kürzel (S01 …), nie mit Namen. Keine Bezeichnungen von KI-Modellen in Dateien, die ins Repository
   gehen.

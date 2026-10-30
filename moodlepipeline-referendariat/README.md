@@ -64,7 +64,7 @@ Themenkurse. Fester Rahmen, sonst keine Pflichtbausteine:
 | `werkzeug/mbz/allgemein.py`, `sterne.py`, `fragen.py`, `docx_seite.py`, `pdf_formular.py`, `profilwerte.py` | Abschnitt „Allgemein“, Sterne und Medaillen, Fragen-XML, Word als Moodle-Seite, ausfüllbares PDF, Profilwerte |
 | `werkzeug/mbz/vorschau.py` | Kursvorschau für die Werkbank |
 | `werkzeug/mbz/beispiel.py` | fiktiver Beispielkurs mit allen Prüfern |
-| `werkzeug/testmoodle/einspielen.sh` | echtes Einspielen in ein frisches Moodle 5.1.6 im Container und Nachzählen |
+| `werkzeug/testmoodle/testmoodle.py` | **Live-Restore, Pflicht für jeden Kurs:** lokales Test-Moodle 5.1.6 mit Kachelformat (Windows, macOS, Linux) einrichten, Kurs einspielen und nachzählen, Einspielprotokoll; `pruefen` vor der Abnahme, `ansehen` im Browser (`einspielen.sh` als Kurzform für Linux) |
 | `werkzeug/muster/infoblatt_moodle.py` | Muster: Infoblatt als Moodle-Textseite |
 
 Tests: `python3 -m pytest werkzeug/mbz/tests`.
@@ -95,8 +95,10 @@ Tests: `python3 -m pytest werkzeug/mbz/tests`.
 ## Einrichtung
 
 Python 3 mit `python-docx` und `pymupdf` (für ausfüllbare PDF), `pytest` für die Tests; für die Umwandlung von Word
-nach PDF Word (unter Windows) oder LibreOffice (`soffice`). Das Einspielen im Container (`einspielen.sh`) braucht PHP 8.3 und PostgreSQL 16 und
-lädt Moodle 5.1.6 beim ersten Lauf selbst herunter. Kurse werden im Moodle der Schule immer **als neuer Kurs**
+nach PDF Word (unter Windows) oder LibreOffice (`soffice`). Das Test-Moodle (`werkzeug/testmoodle/testmoodle.py einrichten`, einmalig, etwa 600 MB)
+lädt Moodle 5.1.6 und das Kachelformat von moodle.org; unter Windows bringt es PHP 8.3 und PostgreSQL 16 selbst mit
+(nichts wird ins System installiert, nötig ist nur die Microsoft-Laufzeit Visual C++), unter macOS und Linux nutzt es
+PHP 8.2+ und PostgreSQL 16 aus dem System. Kurse werden im Moodle der Schule immer **als neuer Kurs**
 eingespielt: [`docs/anleitung_einspielen.md`](docs/anleitung_einspielen.md).
 
 ## Ordner

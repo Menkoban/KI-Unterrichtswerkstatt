@@ -53,7 +53,8 @@ privates Repository. Python 3, Git und LibreOffice müssen installiert sein (die
 
 Den Text aus [`STARTPROMPT.md`](STARTPROMPT.md) einfügen. Die KI
 
-- prüft die Technik,
+- prüft die Technik und richtet das **lokale Test-Moodle** ein (Moodle 5.1.6 mit Kachelformat; jeder Kurs wird dort
+  vor der Abnahme live eingespielt, damit er sicher auch im Moodle der Schule hochgeht),
 - legt das Gerüst des Arbeitsbereichs an,
 - fragt Sie **eine Frage nach der anderen**: Schule und Logo, Seminar, Fächer und Klassen, Lehrpläne, didaktische Quellen, eigene
   Unterlagen, Modellbetrieb, Vorlieben,

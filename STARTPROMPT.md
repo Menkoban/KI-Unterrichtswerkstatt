@@ -15,7 +15,11 @@ Warte jeweils meine Antwort ab.
    `unterrichtspipeline-referendariat/docs/ARBEITSWEISE.md` und die Profil-Vorlage
    `unterrichtspipeline-referendariat/profil/vorlage.json` (alle Einstellungen mit neutralem Standard).
 2. **Technik prüfen:** Python 3, Git, `python-docx`, LibreOffice (`soffice`); fehlt etwas, sag mir kurz, wie ich es
-   nachhole, und warte. Dann `python3 unterrichtspipeline-referendariat/setup_laptop.py`.
+   nachhole, und warte. Dann `python3 unterrichtspipeline-referendariat/setup_laptop.py`. Danach **immer** das lokale
+   Test-Moodle einrichten: `python3 moodlepipeline-referendariat/werkzeug/testmoodle/testmoodle.py einrichten`
+   (Moodle 5.1.6 mit Kachelformat, etwa 600 MB, einige Minuten). Jeder Moodle-Kurs wird später vor der Abnahme live
+   dort eingespielt; ohne Test-Moodle gibt es keine fertigen Kurse. Meldet der Befehl einen Fehler (unter Windows
+   meist die fehlende Visual-C++-Laufzeit), erkläre mir die Abhilfe und wiederhole ihn, bis „Test-Moodle bereit“ kommt.
 3. **Arbeitsbereich:** Finde mein privates Repository `unterrichtspipeline-referendariat-<name>` (im Werkzeug-Ordner
    oder daneben). Fehlt es, führe mich Schritt für Schritt durch `ANLEITUNG.md` (Abschnitte 1 bis 3: Konto, Fork,
    privates Repository über den vorausgefüllten Link, Zugriff für die KI-App) und warte; ich muss danach eine neue

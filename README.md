@@ -91,7 +91,8 @@ Weitere Übersichten (jede Pipeline einzeln, Planungsebenen, Skill-Fahrplan zum 
     [claude.ai/code](https://claude.ai/code), auch am Tablet, oder auf dem eigenen Rechner;
   - **OpenAI Codex** (ChatGPT-Abo), **Google Antigravity** oder **Hermes Agent**: lesen `AGENTS.md` und die Skills in
     `.agents/skills/`; noch nicht im Alltag erprobt, Rückmeldungen willkommen,
-- auf dem eigenen Rechner zusätzlich Python 3, Git und LibreOffice; für Material mit Formeln und Schaltplänen
+- auf dem eigenen Rechner zusätzlich Python 3, Git und LibreOffice sowie etwa 1 GB Platz für das **lokale
+  Test-Moodle 5.1.6** (richtet die Einrichtung selbst ein; jeder Kurs wird dort vor der Abnahme live eingespielt); für Material mit Formeln und Schaltplänen
   LuaLaTeX. Das Skript `materialpipeline-referendariat/werkzeug/einrichten.sh` installiert unter Linux alles, was
   fehlt; in Cloud-Sitzungen läuft es beim Start von selbst.
 

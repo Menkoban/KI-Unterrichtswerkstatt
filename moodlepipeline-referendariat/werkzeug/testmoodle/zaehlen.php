@@ -1,9 +1,9 @@
 <?php
-// Zählt einen eingespielten Kurs in der Moodle-Datenbank nach (php zaehlen.php <moodle-ordner>).
+// Zählt einen eingespielten Kurs in der Moodle-Datenbank nach (php zaehlen.php <moodle-ordner> [kurs-id]).
 define('CLI_SCRIPT', true);
 require($argv[1] . '/config.php');
 global $DB;
-$c = 2;
+$c = (int)($argv[2] ?? 2);
 $course = $DB->get_record('course', ['id' => $c]);
 echo "Kurs: {$course->fullname} | {$course->shortname} | Format {$course->format} | Abschluss {$course->enablecompletion}\n";
 echo "Beschreibung: " . strip_tags($course->summary) . "\n";

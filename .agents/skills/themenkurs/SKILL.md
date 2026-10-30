@@ -69,9 +69,19 @@ in den Arbeitsbereich: `<Fach>/<Beruf>/<LF>/<LS>/Moodle/` (`arbeitsbereich.moodl
 2. **Zusammenbau per Programm** (`werkzeug/mbz/bauen.py`), ohne KI.
 3. **Die Prüfer** (`werkzeug/mbz/pruefen.py`, derzeit 14, Liste in `TITEL`; Prüfer 14 „Inseln“ wertet die
    Voraussetzungen der Übungsinseln für alle Wege aus; Prüfer 13 „Vorgriff“ an der
-   Kursdefinition), bei Fehlern beheben und neu bauen; danach im Test-Moodle einspielen (`werkzeug/testmoodle/einspielen.sh`).
-4. Vorschaubilder je Abschnitt; **Sichtprüfung durch einen frischen Helfer** in der Rolle der Lernenden.
-5. **Prüfbericht** (Fehler / Warnung / Hinweis) und **Abnahme** durch die Lehrkraft.
+   Kursdefinition), bei Fehlern beheben und neu bauen.
+4. **Live-Restore, Pflicht für jeden Kurs** (Lehrkraft 2026-10-30, auf jedem Rechner, auch lokal mit Codex unter
+   Windows): `python3 werkzeug/testmoodle/testmoodle.py einspielen <kurs.mbz>` spielt die Sicherung als neuen Kurs in
+   das lokale Test-Moodle 5.1.6 mit Kachelformat ein, zählt nach und schreibt `<kurs>.einspielprotokoll.json` neben
+   die .mbz. Fehlt das Test-Moodle, richtet der Befehl es selbst ein (`einrichten`). Bricht das Einspielen ab, ist der
+   Kurs nicht fertig: Ursache beheben, neu bauen, erneut einspielen. Nie ohne Live-Restore weitermachen und nie
+   behaupten, ein Kurs lasse sich einspielen, ohne dass dieser Befehl erfolgreich war.
+5. Vorschaubilder je Abschnitt; **Sichtprüfung durch einen frischen Helfer** in der Rolle der Lernenden, im
+   Test-Moodle (`testmoodle.py ansehen`, http://localhost:8095) oder an der Kursvorschau (`werkzeug/mbz/vorschau.py`).
+6. **Prüfbericht** (Fehler / Warnung / Hinweis) und **Abnahme** durch die Lehrkraft. Vor der Abnahme
+   `python3 werkzeug/testmoodle/testmoodle.py pruefen <kurs.mbz>`: Meldet er FEHLER (kein Protokoll oder .mbz danach
+   verändert), ist das ein **Fehler im Prüfbericht** und es gibt keine Abnahme. Im Prüfbericht stehen Moodle-Version,
+   Kursformat und Datum des Live-Restores.
 
 **Live in der Werkbank** (Lehrkraft 2026-10-24): Nach jedem fertigen Abschnitt (abschnitt_N.json) und nach der
 fertigen Sicherung `python3 ../unterrichtspipeline-referendariat/akten/app.py <arbeitsbereich>` ausführen, neue Bilder
@@ -136,7 +146,8 @@ aus `.daten/ansicht/hochladen.txt` als Asset der Werkbank hochladen (`--assets`)
 ## 5. Ablage
 
 Kursplan, Kursdefinition, Bauskript und `.mbz` unter `<LS>/Moodle/` im Arbeitsbereich; KONZEPT nur bei neuen
-Entscheidungen; commit und push in beiden Repos. **Test-Moodle ist die Spielwiese** (`C:\moodle-playground`,
-http://localhost:8090): dort jeden Kurs **als neuen Kurs** einspielen
-(`python ~/.claude/skills/moodle-spielwiese/scripts/spielwiese.py import --schueler <mbz>`) und durchklicken.
+Entscheidungen; commit und push in beiden Repos, mit dem Einspielprotokoll neben der .mbz. **Test-Moodle** ist
+`werkzeug/testmoodle/testmoodle.py` (Moodle 5.1.6 mit Kachelformat, auf Windows, macOS und Linux; einmal
+eingerichtet im Startprompt). Wer zusätzlich ein eigenes Test-Moodle hat (z. B. eine Spielwiese unter Windows), spielt
+dort ergänzend ein; das ersetzt den Live-Restore mit Protokoll nicht.
 Einspiel-Anleitung: `docs/anleitung_einspielen.md` (allgemein, gilt für alle Kurse; immer als neuen Kurs).
