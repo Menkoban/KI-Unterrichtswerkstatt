@@ -39,7 +39,7 @@ TITEL = {1: "Paket gültig", 2: "Lösungen verborgen", 3: "Rechenfragen",
          4: "Keine leeren Hüllen", 5: "Angekündigtes vorhanden",
          6: "Medaillen lückenlos", 7: "Alternativtexte", 8: "Abgabe je Kachel", 9: "Sternzähler",
          10: "Sternebuch", 11: "Kursseite nur Auftrag", 12: "Infoseiten mit Word und PDF", 13: "Vorgriff",
-         14: "Inseln", 15: "Kein Lösungsweg"}
+         14: "Inseln", 15: "Keine Problemführung"}
 
 
 @dataclass
@@ -1343,48 +1343,52 @@ def _wege(p: Paket, teile: dict, nummern: list, start: str, grenzen: tuple) -> l
     return [Befund(FEHLER, 14, b) for b in befunde]
 
 
-# Lehrkraft 2026-10-30: Nach der Handlungssituation wird nie gesagt, wie das Problem zu lösen ist; die Lernenden planen
-# ihr Vorgehen selbst (problem- und handlungsorientiert). Der Lehrkraftbereich (Handreichung) ist ausgenommen.
-_VORGEHEN = re.compile(r"so gehen sie vor|gehen sie (?:so|wie folgt|folgendermaßen|schrittweise|schritt für schritt) vor|"
-                       r"schritt für schritt|ihr vorgehen\s*:|schritte in der reihenfolge|in dieser reihenfolge",
-                       re.IGNORECASE)
-_ABFOLGE = re.compile(r"\b(?:zuerst|zunächst|als erstes)\b[^.!?]{0,160}\b(?:dann|danach|anschließend|zum schluss)\b",
-                      re.IGNORECASE)
+# Lehrkraft 2026-10-30: Keine Problemführung. Nach der Handlungssituation verraten Kacheltitel, Kacheltexte und
+# Aktivitäten nicht, wo die Ursache liegt; die Lernenden vermuten, informieren sich und planen selbst. Die Reihenfolge
+# der Aktivitäten darf genannt werden. Geprüft wird gegen den Kursplan: kurs.ursache = {"begriffe": [...],
+# "ab_kachel": n} (ohne zu findende Ursache {"keine": true}); vor Kachel n darf keiner der Begriffe für Lernende sichtbar sein (Lehrkraftbereich ausgenommen).
 
 
-def p15_loesungsweg(p: Paket, kursdef: dict | None) -> list[Befund]:
+def p15_problemfuehrung(p: Paket, kursdef: dict | None) -> list[Befund]:
+    ursache = ((kursdef or {}).get("kurs") or {}).get("ursache")
+    if ursache and ursache.get("keine"):          # Lernsituation ohne zu findende Ursache (z. B. Planungsauftrag)
+        return []
+    if not ursache or not ursache.get("begriffe"):
+        return [Befund(HINWEIS, 15, "kurs.ursache fehlt im Kursplan (Begriffe der Ursache und ab welcher Kachel sie "
+                                    "gefunden wird); ob der Kurs zur Ursache hinführt, ist so nicht prüfbar")]
+    muster = re.compile("|".join(re.escape(b) for b in ursache["begriffe"]), re.IGNORECASE)
+    ab = int(ursache.get("ab_kachel", 1 << 30))
+    reihenfolge = {s["sectionid"]: n for n, s in enumerate(p.secs)}
     f = []
-    lehr_abschnitte = {s["sectionid"] for s in p.secs if "lehrkr" in (s["title"] or "").lower()}
-    texte = []
+
+    def pruefe(ort, text, kachel):
+        m = muster.search(_klartext(text) if "<" in (text or "") else (text or ""))
+        if m and kachel < ab:
+            f.append(Befund(FEHLER, 15, f"{ort} (Kachel {kachel}) nennt „{m.group(0)}“, bevor die Lernenden die "
+                                        f"Ursache selbst finden sollen (ab Kachel {ab}); Problemführung"))
     k = p.xml("course/course.xml")
     if k is not None:
-        texte.append(("Kursbeschreibung", k.findtext("summary") or "", False))
+        pruefe("Kursbeschreibung", k.findtext("summary") or "", 0)
     for s in p.secs:
-        if s["sectionid"] in lehr_abschnitte:
+        if "lehrkr" in (s["title"] or "").lower():
             continue
+        n = reihenfolge[s["sectionid"]]
+        pruefe(f"Kacheltitel {s['title']!r}", s["title"] or "", n)
         sx = p.xml(f"{s['directory']}/section.xml")
         if sx is not None:
-            texte.append((f"Kacheltext {s['title']!r}", sx.findtext("summary") or "", True))
+            pruefe(f"Kacheltext {s['title']!r}", sx.findtext("summary") or "", n)
     for a in p.akts:
         h = p.haupt(a)
-        if h is None or a["sectionid"] in lehr_abschnitte or _lehr(p, a, kursdef):
+        sec = p.abschnitt(a["sectionid"])
+        if h is None or _lehr(p, a, kursdef) or a["sectionid"] not in reihenfolge:
             continue
+        if sec is not None and "lehrkr" in (sec.findtext("name") or "").lower():
+            continue
+        n = reihenfolge[a["sectionid"]]
+        pruefe(f"{a['title']!r}", a["title"], n)
         for feld in ("intro", "content"):
-            if h.findtext(feld):
-                texte.append((f"{a['title']!r}", h.findtext(feld), False))
-    for ort, html, kachel in texte:
-        klar = _klartext(html)
-        m = _VORGEHEN.search(klar)
-        if m:
-            f.append(Befund(FEHLER, 15, f"{ort}: gibt das Vorgehen vor („{m.group(0)}“); nur Problem, Auftrag und "
-                                        f"Ergebnis nennen, den Weg planen die Lernenden selbst"))
-        elif kachel and re.search(r"<ol\b", html or "", re.IGNORECASE):
-            f.append(Befund(FEHLER, 15, f"{ort}: nummerierte Schrittfolge im Kacheltext; den Lösungsweg nicht vorgeben"))
-        elif _ABFOLGE.search(klar):
-            f.append(Befund(HINWEIS, 15, f"{ort}: Abfolge „{_ABFOLGE.search(klar).group(0)[:60]} …“; prüfen, ob "
-                                         f"sie den Lösungsweg vorgibt"))
+            pruefe(f"{a['title']!r}", h.findtext(feld) or "", n)
     return f
-
 
 _ROLLE = {"uebung": "Übung", "kurztest": "Kurztest", "empfehlung": "„Ihre Stufe“"}
 
@@ -1395,7 +1399,7 @@ def _pt(o) -> str:
 
 PRUEFER = (p1_paket, p2_verborgen, p3_rechnen, p4_huellen, p5_angekuendigt,
            p6_medaillen, p7_alt, p8_abgabe, p9_sternzaehler, p10_sternebuch, p11_kursseite, p12_infoseiten,
-           p13_vorgriff, p14_inseln, p15_loesungsweg)
+           p13_vorgriff, p14_inseln, p15_problemfuehrung)
 
 
 def pruefe(paket: Path, kursdef: dict | None = None) -> list[Befund]:

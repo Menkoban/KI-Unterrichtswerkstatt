@@ -469,12 +469,15 @@ ohne Formeln (z. B. Messplan) bleiben leer mit Auftrag. Module, die einen Formel
   Tabellenwerten, oder die Tabelle entfällt dort.
 
 
-## Kein Lösungsweg nach der Handlungssituation (Lehrkraft 2026-10-30)
+## Keine Problemführung (Lehrkraft 2026-10-30)
 
-- Nach Handlungssituation und Problemstellung wird **nie gesagt, wie das Problem zu lösen ist**: kein „So gehen Sie
-  vor“, keine nummerierte Schrittfolge zum Lösungsweg, kein „zuerst … dann … danach“, keine Messanleitung, die
-  Messpunkte, Reihenfolge und Vorgehen vorgibt, wenn das Planen der Messung Teil der Aufgabe ist.
-- Erlaubt sind Problem, Auftrag, erwartetes Ergebnis, Rahmen (Zeit, Sicherheit, Abgabe) und fachliche Aufgaben, die
-  einen Inhalt klären. Das Vorgehen planen die Lernenden selbst; Impulse dazu stehen im Erwartungshorizont für die
-  Lehrkraft, nicht im Material.
-- Gilt für Material und Moodle-Kurs gleich (Pipeline 3: Prüfer 15 „Kein Lösungsweg“).
+- Nach Handlungssituation und Problemstellung führt das Material **nicht zur Ursache hin**: Überschriften, Leitfragen,
+  Aufträge und Aufgaben verraten nicht, wo der Fehler liegt oder wie das Problem zu lösen ist (Beispiel: „Der Motor ist
+  defekt“ verlangt, dass die Lernenden selbst überlegen, woran es liegen könnte, und nicht „Prüfen Sie die Wicklung“).
+- Die Lernenden stellen Vermutungen auf, informieren sich selbst (Informationspool, Fach- und Tabellenbuch), legen
+  einen eigenen Plan an und durchlaufen die vollständige Handlung (Informieren, Planen, Entscheiden, Durchführen,
+  Kontrollieren, Bewerten). Impulse für Steckengebliebene stehen im Erwartungshorizont für die Lehrkraft.
+- Erlaubt: Problem, Auftrag, erwartetes Ergebnis, Rahmen (Zeit, Sicherheit, Abgabe) und eine Reihenfolge der
+  Aktivitäten als Orientierung. Fachliche Aufgaben, die nach der eigenen Planung einen Inhalt klären, sind erlaubt;
+  eine fertige Messanleitung ist es nicht, wenn das Planen der Messung Teil des Auftrags ist.
+- Gilt für Material und Moodle-Kurs gleich (Pipeline 3: Prüfer 15 „Keine Problemführung“).

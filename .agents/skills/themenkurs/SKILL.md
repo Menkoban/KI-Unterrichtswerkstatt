@@ -112,10 +112,12 @@ aus `.daten/ansicht/hochladen.txt` als Asset der Werkbank hochladen (`--assets`)
 - **Die volle Handlungssituation steht in Kachel 1** (Einstieg) als deren Auftrag (`moodle.handlungssituation`),
   darunter Selbsteinschätzung und Eingangstest.
 - **Auftrag im Kacheltext** (Abschnittsbeschreibung) ganz oben, genau einmal, kein eigenes Element „Ihr Auftrag“:
-  Problem und Ergebnis, **nie der Lösungsweg** (Lehrkraft 2026-10-30): keine Liste „So gehen Sie vor“, keine
-  nummerierten Schritte, kein „zuerst … dann …“; die Lernenden planen ihr Vorgehen selbst (problem- und
-  handlungsorientiert). Darunter die Aktivitäten; ihre Anordnung ist ein Angebot, keine Anleitung. Prüfer 15
-  „Kein Lösungsweg“ meldet Verstöße als Fehler (Lehrkraftbereich ausgenommen).
+  Problem und Ergebnis; darunter die Aktivitäten in der Reihenfolge, in der sie bearbeitet werden (eine Liste der
+  Aktivitäten ist erlaubt). **Keine Problemführung** (Lehrkraft 2026-10-30): Kacheltitel, Leitfragen, Aufträge und
+  Aufgaben verraten nicht, wo die Ursache liegt oder wie das Problem gelöst wird. Die Lernenden stellen selbst
+  Vermutungen auf, informieren sich selbst, legen ihren eigenen Plan an und durchlaufen die vollständige Handlung.
+  Prüfer 15 „Keine Problemführung“ meldet Ursachenbegriffe vor der Kachel, in der die Ursache gefunden werden soll
+  (Kursplan: `kurs.ursache` mit `begriffe` und `ab_kachel`).
 - **Word-Dateien nie nur als Download:** je Datei eine Infoseite, die den Inhalt zeigt, Download am Ende.
 - Kachelformat laut Profil; **Kachelbilder** (`moodle.kachelbilder`, flache SVG-Illustration in den Schulfarben, als
   PNG) und **Kachelnummern** 1, 2, 3 … (`moodle.kachelnummern`); der Lehrkraftbereich hat weder Bild noch Nummer.

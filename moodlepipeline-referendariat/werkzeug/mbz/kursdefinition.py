@@ -11,6 +11,7 @@ gültig, wenn `pruefe(kursdef)` eine leere Liste liefert.
         "beschreibung": "<p>…</p>",              # HTML
         "ki_hinweis": "Erstellt von Alex … mit Hilfe von künstlicher Intelligenz",
         "format": "tiles",                        # Standard Kachelformat (format_tiles); "topics" nur ohne Plugin
+        "ursache": {"begriffe": ["Spannungsteiler"], "ab_kachel": 5},  # Prüfer 15 Keine Problemführung; sonst {"keine": true}
         "abschlussverfolgung": true,
         "allgemein": "<p>…</p>",                  # optional, Text im Abschnitt „Allgemein“ (0)
         "allgemein_dateien": ["Profil/logo.png"], # optional, Dateien darin (wie dateien eines Abschnitts)

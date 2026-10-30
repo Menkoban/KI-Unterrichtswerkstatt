@@ -378,9 +378,18 @@ def test_skript_kurztest_fehlt_und_text(tmp_path):
     assert aus[3] == 1 and aus[4] == 84.5
 
 
-def test_kein_loesungsweg_im_kacheltext():
-    """Lehrkraft 2026-10-30: „So gehen Sie vor“ oder eine Schrittliste im Kacheltext ist ein Fehler (Prüfer 15)."""
-    assert pruefen._VORGEHEN.search("So gehen Sie vor: 1. messen")
-    assert pruefen._VORGEHEN.search("Gehen Sie Schritt für Schritt vor.")
-    assert not pruefen._VORGEHEN.search("Finden Sie heraus, warum das Thermostat falsch anzeigt.")
-    assert pruefen._ABFOLGE.search("Messen Sie zuerst die Spannung, danach den Strom.")
+
+def test_problemfuehrung_meldet_ursache_vor_der_kachel(tmp_path):
+    """Lehrkraft 2026-10-30: Ursachenbegriffe vor der Kachel, in der sie gefunden werden sollen, sind ein Fehler."""
+    class P:
+        secs = [{"sectionid": "1", "title": "Allgemein", "directory": "x"},
+                {"sectionid": "2", "title": "Einstieg: Der Keller ist überflutet", "directory": "x"},
+                {"sectionid": "3", "title": "Prüfen Sie die Hebeanlage", "directory": "x"}]
+        akts = []
+        def xml(self, rel): return None
+    kd = {"kurs": {"ursache": {"begriffe": ["Hebeanlage"], "ab_kachel": 3}}}
+    befunde = pruefen.p15_problemfuehrung(P(), kd)
+    assert len(befunde) == 1 and "Hebeanlage" in befunde[0].text
+    kd["kurs"]["ursache"]["ab_kachel"] = 2
+    assert pruefen.p15_problemfuehrung(P(), kd) == []
+    assert pruefen.p15_problemfuehrung(P(), {"kurs": {}})[0].stufe == pruefen.HINWEIS
