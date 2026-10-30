@@ -66,7 +66,7 @@ in den Arbeitsbereich: `<Fach>/<Beruf>/<LF>/<LS>/Moodle/` (`arbeitsbereich.moodl
    Rechnungen als berechnete Fragen mit Zufallswerten auf gleichem Niveau), Aktivitätsbeschreibungen. Ausgabe je
    Abschnitt als Teil der Kursdefinition (JSON, `werkzeug/mbz/kursdefinition.py`).
 2. **Zusammenbau per Programm** (`werkzeug/mbz/bauen.py`), ohne KI.
-3. **Die Prüfer** (`werkzeug/mbz/pruefen.py`, derzeit 14, Liste in `TITEL`; Prüfer 14 „Inseln“ wertet die
+3. **Die Prüfer** (`werkzeug/mbz/pruefen.py`, derzeit 15, Liste in `TITEL`; Prüfer 14 „Inseln“ wertet die
    Voraussetzungen der Übungsinseln für alle Wege aus; Prüfer 13 „Vorgriff“ an der
    Kursdefinition), bei Fehlern beheben und neu bauen.
 4. **Live-Restore, Pflicht für jeden Kurs** (Lehrkraft 2026-10-30, auf jedem Rechner, auch lokal mit Codex unter
@@ -111,8 +111,10 @@ aus `.daten/ansicht/hochladen.txt` als Asset der Werkbank hochladen (`--assets`)
 - **Die volle Handlungssituation steht in Kachel 1** (Einstieg) als deren Auftrag (`moodle.handlungssituation`),
   darunter Selbsteinschätzung und Eingangstest.
 - **Auftrag im Kacheltext** (Abschnittsbeschreibung) ganz oben, genau einmal, kein eigenes Element „Ihr Auftrag“:
-  Problem und Ergebnis, Arbeitsschritte in der Reihenfolge, in der sie gemacht werden; darunter die Aktivitäten
-  chronologisch.
+  Problem und Ergebnis, **nie der Lösungsweg** (Lehrkraft 2026-10-30): keine Liste „So gehen Sie vor“, keine
+  nummerierten Schritte, kein „zuerst … dann …“; die Lernenden planen ihr Vorgehen selbst (problem- und
+  handlungsorientiert). Darunter die Aktivitäten; ihre Anordnung ist ein Angebot, keine Anleitung. Prüfer 15
+  „Kein Lösungsweg“ meldet Verstöße als Fehler (Lehrkraftbereich ausgenommen).
 - **Word-Dateien nie nur als Download:** je Datei eine Infoseite, die den Inhalt zeigt, Download am Ende.
 - Kachelformat laut Profil; **Kachelbilder** (`moodle.kachelbilder`, flache SVG-Illustration in den Schulfarben, als
   PNG) und **Kachelnummern** 1, 2, 3 … (`moodle.kachelnummern`); der Lehrkraftbereich hat weder Bild noch Nummer.

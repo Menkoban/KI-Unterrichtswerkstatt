@@ -157,3 +157,5 @@ Eine Abweichung von Rahmenlehrplan, Seminar oder Schule wird im Dokument ausgewi
 
 Nach jeder Änderung an einem Generator (`stunde/stunde.py`, `entwurf/entwurf.py`, `entwurf/voll.py`, …) ihn an
 einer echten Akte laufen lassen; erst ohne Fehler committen und pushen.
+
+- **Kein Lösungsweg nach der Problemstellung** (Lehrkraft 2026-10-30): Planung, Material und Moodle-Kurs nennen nach der Handlungssituation Problem, Auftrag und Ergebnis, aber nie die Schritte zur Lösung. Die Lernenden planen ihr Vorgehen selbst; Impulse stehen nur im Erwartungshorizont für die Lehrkraft.

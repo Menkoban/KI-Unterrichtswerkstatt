@@ -75,3 +75,5 @@ Kennzeichnung: **[A]** = automatisch geprüft (`werkzeug/vorlagen/alle_bauen.py`
 
 - **L24 QR-Codes** (2026-10-25): Jeder QR-Code wird beim Bau mit `zxingcpp` ausgelesen; die gelesene Adresse muss
   der Zieladresse gleichen. Unter dem Code stehen Kurzadresse und Quelle.
+
+- **L34 Kein Lösungsweg** (2026-10-30): Nach der Problemstellung kein vorgegebenes Vorgehen (keine Schrittliste, kein „So gehen Sie vor“, kein „zuerst … dann“); Fehler.

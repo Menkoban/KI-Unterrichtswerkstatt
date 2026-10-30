@@ -175,7 +175,7 @@ def test_beispiel_ohne_fehler(gebaut):
     befunde = pruefen.pruefe(ziel, k)
     assert [str(b) for b in befunde if b.stufe == pruefen.FEHLER] == []
     assert not [b for b in befunde if b.pruefer == 14]
-    assert pruefen.TITEL[14] == "Inseln" and len(pruefen.PRUEFER) == 14
+    assert pruefen.TITEL[14] == "Inseln" and len(pruefen.PRUEFER) == 15
 
 
 def test_bau_schreibt_bewertet_und_und_gruppe(gebaut, tmp_path):
@@ -376,3 +376,11 @@ def test_skript_kurztest_fehlt_und_text(tmp_path):
     assert aus[0] is True and aus[1] is False
     assert "Kurztest fehlt" in aus[2] and "geübt: Standard" in aus[2]
     assert aus[3] == 1 and aus[4] == 84.5
+
+
+def test_kein_loesungsweg_im_kacheltext():
+    """Lehrkraft 2026-10-30: „So gehen Sie vor“ oder eine Schrittliste im Kacheltext ist ein Fehler (Prüfer 15)."""
+    assert pruefen._VORGEHEN.search("So gehen Sie vor: 1. messen")
+    assert pruefen._VORGEHEN.search("Gehen Sie Schritt für Schritt vor.")
+    assert not pruefen._VORGEHEN.search("Finden Sie heraus, warum das Thermostat falsch anzeigt.")
+    assert pruefen._ABFOLGE.search("Messen Sie zuerst die Spannung, danach den Strom.")

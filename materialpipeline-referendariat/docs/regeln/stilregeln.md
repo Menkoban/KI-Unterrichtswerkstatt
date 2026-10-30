@@ -467,3 +467,14 @@ ohne Formeln (z. B. Messplan) bleiben leer mit Auftrag. Module, die einen Formel
 - **Lösung nicht daneben** (Lehrkraft 2026-10-27, Material LS 5 Aufgabe 7): Keine Aufgabe, deren Lösung im Material
   direkt daneben steht (Ablesen bei Werten, die in der Tabelle neben dem Diagramm stehen). Abgelesen wird zwischen den
   Tabellenwerten, oder die Tabelle entfällt dort.
+
+
+## Kein Lösungsweg nach der Handlungssituation (Lehrkraft 2026-10-30)
+
+- Nach Handlungssituation und Problemstellung wird **nie gesagt, wie das Problem zu lösen ist**: kein „So gehen Sie
+  vor“, keine nummerierte Schrittfolge zum Lösungsweg, kein „zuerst … dann … danach“, keine Messanleitung, die
+  Messpunkte, Reihenfolge und Vorgehen vorgibt, wenn das Planen der Messung Teil der Aufgabe ist.
+- Erlaubt sind Problem, Auftrag, erwartetes Ergebnis, Rahmen (Zeit, Sicherheit, Abgabe) und fachliche Aufgaben, die
+  einen Inhalt klären. Das Vorgehen planen die Lernenden selbst; Impulse dazu stehen im Erwartungshorizont für die
+  Lehrkraft, nicht im Material.
+- Gilt für Material und Moodle-Kurs gleich (Pipeline 3: Prüfer 15 „Kein Lösungsweg“).
