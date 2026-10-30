@@ -481,3 +481,5 @@ ohne Formeln (z. B. Messplan) bleiben leer mit Auftrag. Module, die einen Formel
   Aktivitäten als Orientierung. Fachliche Aufgaben, die nach der eigenen Planung einen Inhalt klären, sind erlaubt;
   eine fertige Messanleitung ist es nicht, wenn das Planen der Messung Teil des Auftrags ist.
 - Gilt für Material und Moodle-Kurs gleich (Pipeline 3: Prüfer 15 „Keine Problemführung“).
+
+- **Einstieg einer Lernsituation** (Lehrkraft 2026-10-30): Situation mit dem Symptom und den Fragen der Kundschaft; die Rolle (Gesellin bzw. Geselle, Facharbeiter/in) steckt in der Geschichte („Ihre Meisterin gibt Ihnen als … den Auftrag“). Der Auftrag nennt nur das Ziel, ohne Vorgehen und ohne Qualitätskriterien („systematisch“, „mit Messwerten belegen“ gehören in die Bewertung des Meilensteins); das Handlungsprodukt zeigt sich über die Fragen der Kundschaft („… und beantworten Sie der Familie ihre Fragen“). Kein eigener Absatz „Ergebnis“ im Einstieg; Bestandteile der Abgabe stehen in der Kachel bzw. im Arbeitsplan des Meilensteins. Organisation (eigenes Tempo, Meilensteine) gehört in „So arbeiten Sie“, nicht in die Situation.

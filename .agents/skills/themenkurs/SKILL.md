@@ -111,6 +111,9 @@ aus `.daten/ansicht/hochladen.txt` als Asset der Werkbank hochladen (`--assets`)
   behalten ihre KI-Fußzeile.
 - **Die volle Handlungssituation steht in Kachel 1** (Einstieg) als deren Auftrag (`moodle.handlungssituation`),
   darunter Selbsteinschätzung und Eingangstest.
+  Form des Einstiegs (Lehrkraft 2026-10-30): Situation mit Symptom und Fragen der Kundschaft, Rolle in der Geschichte,
+  Auftrag nur mit Ziel (kein „systematisch“, kein „mit Messwerten belegen“), kein Absatz „Ergebnis“; die Abgabe steht in
+  der Kachel des Meilensteins, Tempo und Meilensteine unter „So arbeiten Sie“ in Allgemein.
 - **Auftrag im Kacheltext** (Abschnittsbeschreibung) ganz oben, genau einmal, kein eigenes Element „Ihr Auftrag“:
   Problem und Ergebnis; darunter die Aktivitäten in der Reihenfolge, in der sie bearbeitet werden (eine Liste der
   Aktivitäten ist erlaubt). **Keine Problemführung** (Lehrkraft 2026-10-30): Kacheltitel, Leitfragen, Aufträge und
