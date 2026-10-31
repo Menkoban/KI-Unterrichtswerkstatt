@@ -12,7 +12,7 @@ global $DB, $USER;
 
 $c = $DB->get_record('course', ['shortname' => 'KD-PROBE']);
 if (!$c) {
-    $c = create_course((object)['fullname' => 'Probe Klassen-Dashboard EG1a', 'shortname' => 'KD-PROBE', 'category' => 1,
+    $c = create_course((object)['fullname' => 'Probe Klassen-Dashboard Musterklasse', 'shortname' => 'KD-PROBE', 'category' => 1,
         'format' => 'tiles', 'numsections' => 2, 'enablecompletion' => 1]);
 }
 $ctx = context_course::instance($c->id);
