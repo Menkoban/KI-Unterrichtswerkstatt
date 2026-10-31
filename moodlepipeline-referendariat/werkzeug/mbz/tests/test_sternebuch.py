@@ -47,8 +47,12 @@ def bauen_und_entpacken(kurs, tmp_path):
 
 
 def datenbank_xml(ordner):
-    d = next((ordner / "activities").glob("data_*"))
-    return ET.parse(d / "data.xml").getroot().find("data")
+    """Die Datenbank des Kurses; das Klassen-Dashboard im Lehrkraftbereich zählt nicht mit."""
+    for d in sorted((ordner / "activities").glob("data_*")):
+        x = ET.parse(d / "data.xml").getroot().find("data")
+        if x.findtext("name") != "Klassen-Dashboard":
+            return x
+    raise AssertionError("keine Datenbank im Kurs")
 
 
 def akt_von(kurs, name):

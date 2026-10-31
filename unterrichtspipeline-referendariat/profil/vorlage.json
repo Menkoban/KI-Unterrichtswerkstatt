@@ -198,6 +198,15 @@
       "standard": "gemischt"
     },
     {
+      "id": "methoden.vorschlag",
+      "gruppe": "Didaktik",
+      "titel": "Wann die Werkstatt eine Methode vorschlägt",
+      "erklaerung": "„aus_auftrag“: eine Methode (Experiment, Rollenspiel, Projekt, Gruppenpuzzle, Stationenlernen, Planspiel) nur, wenn sie aus der beruflichen Handlung des Auftrags entsteht und zur Lerngruppe passt (Klassen-Akte: Bedingungsfeld, Klientel); sonst bleibt die Grundform. „je_ls“: bei jeder Lernsituation fragen. „repertoire“: je Lernsituation höchstens eine kooperative Methode an passender Stelle.",
+      "typ": "auswahl",
+      "optionen": ["je_ls", "aus_auftrag", "repertoire"],
+      "standard": "je_ls"
+    },
+    {
       "id": "lernsituation.form",
       "gruppe": "Didaktik",
       "titel": "Form der Lernsituation",
@@ -219,10 +228,26 @@
       "id": "bewertung.wer",
       "gruppe": "Didaktik",
       "titel": "Wer bewertet das Handlungsergebnis",
-      "erklaerung": "„lehrkraft“: die Lehrkraft bewertet mit dem Raster, Rückmeldung in der nächsten Stunde; „team_und_lehrkraft“: Selbsteinschätzung der Teams mit demselben Raster, dann Lehrkraft; „person_und_lehrkraft“: Selbsteinschätzung jeder Person ohne Note, Lehrkraft bewertet das Teamergebnis.",
+      "erklaerung": "„lehrkraft“: die Lehrkraft bewertet mit dem Raster, Rückmeldung in der nächsten Stunde; „team_und_lehrkraft“: Selbsteinschätzung der Teams mit demselben Raster, dann Lehrkraft; „person_und_lehrkraft“: Selbsteinschätzung jeder Person ohne Note, Lehrkraft bewertet das Teamergebnis; „selbst_und_lehrkraft“: jede Person schätzt ihr eigenes Ergebnis an jedem Meilenstein direkt vor der Abgabe mit dem Raster der Lehrkraft ein (Raster ab Kachel 1 sichtbar), die Lehrkraft bewertet dasselbe Ergebnis mit demselben Raster; Rückmeldung individuell in der nächsten Doppelstunde nach der eigenen Abgabe, Gespräch ab bewertung.gespraech_ab Stufen Abweichung; Bewertungsbogen als Excel je Meilenstein (Pipeline 2, werkzeug/bewertung).",
       "typ": "auswahl",
-      "optionen": ["lehrkraft", "team_und_lehrkraft", "person_und_lehrkraft"],
+      "optionen": ["lehrkraft", "team_und_lehrkraft", "person_und_lehrkraft", "selbst_und_lehrkraft"],
       "standard": "team_und_lehrkraft"
+    },
+    {
+      "id": "moodle.klassendashboard",
+      "gruppe": "Moodle",
+      "titel": "Klassen-Dashboard im Lehrkraftbereich",
+      "erklaerung": "Jeder Themenkurs bekommt im verborgenen Lehrkraftbereich ein Klassen-Dashboard (Datenbank-Aktivität mit Skript): Selbsteinschätzungen der Meilensteine automatisch, Stufe der Lehrkraft antippen, Abweichung rot ab bewertung.gespraech_ab, Note nach IHK, Download als Tabelle. Namen und Bewertungen bleiben im Moodle der Schule. Aus: Bewertung im Excel-Bogen (Pipeline 2).",
+      "typ": "ja_nein",
+      "standard": false
+    },
+    {
+      "id": "bewertung.gespraech_ab",
+      "gruppe": "Didaktik",
+      "titel": "Gespräch ab Abweichung",
+      "erklaerung": "Ab wie vielen Stufen Unterschied zwischen Selbsteinschätzung und Einschätzung der Lehrkraft (in einem Kriterium des vierstufigen Rasters) ein kurzes Gespräch geführt wird; der Bewertungsbogen markiert diese Fälle rot.",
+      "typ": "zahl",
+      "standard": 2
     },
     {
       "id": "besuch.gestaltung",

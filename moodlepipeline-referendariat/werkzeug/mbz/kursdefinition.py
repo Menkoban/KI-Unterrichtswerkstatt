@@ -146,7 +146,8 @@ Typabhängige Felder:
                rolle "stern" (Stern-Quiz „selbst gelöst“, sterne.stern_aktivitaet),
                "test" | "test2" (erster/zweiter Versuch, sterne.zwei_versuche)
     feedback   anonym (bool), elemente [{typ: "likert"|"auswahl"|"text"|"info",
-               frage, optionen, mehrfach}], ergebnis_zeigen (bool: Lernende sehen
+               frage, optionen, mehrfach, kennung (Moodle-Label, z. B. K1; erscheint
+               im Export als „(K1) …“), pflicht}], ergebnis_zeigen (bool: Lernende sehen
                die Auswertung, publish_stats)
     glossary   kategorien [Namen], eintraege [{begriff, definition, kategorie,
                bild, bild_alt, bild_quelle (Text unter dem Bild), aliasse [Texte,

@@ -1,0 +1,39 @@
+{
+ "titel": "Lernsituation Fehlersuche · Meilenstein 2",
+ "klasse": "Musterklasse",
+ "kuerzel": ["S01", "S02", "S03", "S04"],
+ "gespraech_ab": 2,
+ "punkte": "stufe_minus_1",
+ "kriterien": [
+  {"name": "Fehlerbild und Vermutungen", "stufen": [
+   "Fehlerbild fehlt oder ist ungenau; keine eigene Vermutung.",
+   "Fehlerbild beschrieben; eine Vermutung ohne Begründung.",
+   "Fehlerbild vollständig; mehrere Vermutungen, teilweise begründet.",
+   "Fehlerbild vollständig und genau; mehrere Vermutungen, jede fachlich begründet."]},
+  {"name": "Eigener Prüfplan", "stufen": [
+   "Kein Plan oder nur eine Liste ohne Reihenfolge.",
+   "Plan mit Schritten, Reihenfolge nicht begründet.",
+   "Plan mit begründeter Reihenfolge und den nötigen Messmitteln.",
+   "Plan begründet, mit Messmitteln, Sollwerten und Gegenprobe."]},
+  {"name": "Sicher gearbeitet", "stufen": [
+   "Sicherheitsregeln missachtet.",
+   "Sicherheitsregeln nur nach Hinweis eingehalten.",
+   "Sicherheitsregeln selbstständig eingehalten.",
+   "Sicherheitsregeln eingehalten und im Plan ausgewiesen."]},
+  {"name": "Messen und Auswerten", "stufen": [
+   "Messwerte fehlen oder sind unbrauchbar.",
+   "Messwerte vorhanden, Auswertung lückenhaft.",
+   "Messwerte vollständig und mit Sollwerten verglichen.",
+   "Messwerte vollständig, verglichen und Abweichungen beurteilt."]},
+  {"name": "Ursache belegt", "stufen": [
+   "Keine Ursache genannt.",
+   "Ursache genannt, ohne Beleg.",
+   "Ursache mit Messwerten belegt.",
+   "Ursache belegt und andere Vermutungen begründet ausgeschlossen."]},
+  {"name": "Information für die Kundschaft", "stufen": [
+   "Fehlt oder ist unverständlich.",
+   "Verständlich, fachlich lückenhaft.",
+   "Verständlich und fachlich richtig, Fragen der Kundschaft beantwortet.",
+   "Verständlich, fachlich richtig, alle Fragen beantwortet, Lösung mit Begründung."]}
+ ]
+}

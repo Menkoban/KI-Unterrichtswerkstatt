@@ -120,6 +120,14 @@ aus `.daten/ansicht/hochladen.txt` als Asset der Werkbank hochladen (`--assets`)
   Vermutungen auf, informieren sich selbst, legen ihren eigenen Plan an und durchlaufen die vollständige Handlung.
   Prüfer 15 „Keine Problemführung“ meldet Ursachenbegriffe vor der Kachel, in der die Ursache gefunden werden soll
   (Kursplan: `kurs.ursache` mit `begriffe` und `ab_kachel`).
+- **Selbsteinschätzung und Klassen-Dashboard** (Lehrkraft 2026-10-30/31, Profil `moodle.klassendashboard`,
+  `bewertung.wer = selbst_und_lehrkraft`): je Meilenstein `dashboard.selbsteinschaetzung(ms)` direkt vor die Abgabe
+  (die Abgabe setzt sie als Voraussetzung voraus); das Raster steht ab Kachel 1 lesbar unter „So arbeiten Sie“ und
+  verrät die Ursache nicht. Im Lehrkraftbereich `dashboard.dashboard_aktivitaet([alle Meilensteine],
+  gespraech_ab=Profil bewertung.gespraech_ab)`: die Stelle der Bewertung (Selbsteinschätzung automatisch, Stufe der
+  Lehrkraft antippen, rot ab der Grenze, Note nach IHK, Download als Tabelle). Der Excel-Bogen aus Pipeline 2 ist nur
+  noch Ersatz, wenn ein Kurs ohne Moodle läuft. Nach dem Live-Restore im Test-Moodle mit Testkonten prüfen
+  (`werkzeug/mbz/prototypen/`).
 - **Word-Dateien nie nur als Download:** je Datei eine Infoseite, die den Inhalt zeigt, Download am Ende.
 - Kachelformat laut Profil; **Kachelbilder** (`moodle.kachelbilder`, flache SVG-Illustration in den Schulfarben, als
   PNG) und **Kachelnummern** 1, 2, 3 … (`moodle.kachelnummern`); der Lehrkraftbereich hat weder Bild noch Nummer.

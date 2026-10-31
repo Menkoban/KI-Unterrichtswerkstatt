@@ -89,3 +89,12 @@ Notenschlüssel …). Alle Entscheidungen richten sich nach dem Profil; Ergebnis
 - Jede Korrektur der Lehrkraft sofort als Regel festhalten (Checkliste, Stilregel oder Beispiel im Fach-Skill).
 - Je Materialart Buch führen: nach drei Freigaben in Folge ohne inhaltliche Änderung vorschlagen, Freigabe 1 für
   diese Art wegzulassen (Endfreigabe bleibt).
+
+## Bewertungsbogen je Meilenstein (Lehrkraft 2026-10-31)
+
+Bei Profil `bewertung.wer = selbst_und_lehrkraft` **und ohne** `moodle.klassendashboard` (Bewertung im Klassen-Dashboard
+des Moodle-Kurses, Lehrkraft 2026-10-31) entsteht zu jedem Meilenstein ein Excel-Bogen mit
+`werkzeug/bewertung/bewertungsbogen.py` (Raster, Bewertung je Kürzel, Einlesen des Moodle-Exports, Namen nur lokal).
+Kürzel aus der Klassen-Akte (`klassenakte` im Bogen), Gesprächsgrenze aus `bewertung.gespraech_ab`, Punkte aus
+`material.notenschluessel_punkte`. Die Kriterien verraten die Ursache nicht (Regel „Keine Problemführung“). Ablage bei
+den Anlagen des Meilensteins und im Lehrkraftbereich des Kurses. Beispiel: `werkzeug/bewertung/beispiel_bogen.json`.

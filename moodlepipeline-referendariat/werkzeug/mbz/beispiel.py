@@ -17,6 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import bauen  # noqa: E402
+import dashboard  # noqa: E402
 import pruefen  # noqa: E402
 
 BLAU, GRUEN = (8, 52, 156), (125, 222, 120)
@@ -137,6 +138,12 @@ def fragen() -> list[dict]:
     ]
 
 
+MEILENSTEIN = {"id": "m1", "kurz": "Meilenstein 1", "titel": "Meilenstein 1 · Begehung auswerten", "kriterien": [
+    {"name": "Messwerte", "stufen": ["fehlen", "lückenhaft", "vollständig mit Einheit", "vollständig und geprüft"]},
+    {"name": "Rechnung", "stufen": ["fehlt", "Ansatz richtig", "richtig mit Einheit", "richtig und begründet"]},
+    {"name": "Sicher gearbeitet", "stufen": ["Regeln missachtet", "nur nach Hinweis", "selbstständig", "selbstständig und begründet"]}]}
+
+
 def kursdefinition() -> dict:
     medaillen = [{"typ": "page", "name": f"Ihre Medaille: {n}", "medaille": n,
                   "inhalt": f"<p>Herzlichen Glückwunsch zur Medaille {n}.</p>"
@@ -206,6 +213,7 @@ def kursdefinition() -> dict:
                               "beschreibung": "vom Typenschild"},
                              {"name": "Bemerkung", "typ": "textarea"}],
                   "abschluss": "eintraege", "eintraege_fuer_abschluss": 1},
+                 dashboard.selbsteinschaetzung(MEILENSTEIN),
                  {"typ": "assign", "name": "Auftrag: Skizze Zählerschrank", "bewertung": "keine",
                   "beschreibung": "<p>Laden Sie ein Foto Ihrer Skizze des Zählerschranks hoch.</p>",
                   "abgabe": ["datei"], "gruppenabgabe": True, "abschluss": "abgabe",
@@ -236,7 +244,8 @@ def kursdefinition() -> dict:
                   "dateien": ["lehrkraft/Anlage_1_Arbeitsblatt.docx",
                               "lehrkraft/Anlage_2_Messprotokoll.docx"]},
                  {"typ": "page", "name": "Erwartungshorizont Messprotokoll", "markierungen": ["loesung"],
-                  "sichtbar": False, "inhalt": "<p>P = 230 V · 10 A = 2300 W</p>"}]},
+                  "sichtbar": False, "inhalt": "<p>P = 230 V · 10 A = 2300 W</p>"},
+                 dashboard.dashboard_aktivitaet([MEILENSTEIN])]},
         ],
         "abzeichen": [{"name": f"Medaille {n}: LS 1 Der Stromhof",
                        "beschreibung": f"Medaille {n} im Themenkurs LS 1 Der Stromhof und das Haus Schütte.",

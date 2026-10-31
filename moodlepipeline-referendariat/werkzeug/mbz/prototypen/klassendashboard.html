@@ -1,0 +1,238 @@
+<!doctype html>
+<!--
+  Klassen-Dashboard (Prototyp, Lehrkraft 2026-10-31): Datei-Aktivität im verborgenen Lehrkraftbereich. Liest mit der
+  Sitzung der Lehrkraft die Teilnehmenden, die Selbsteinschätzungen (Feedback, CSV-Download, Spalten „(K1)“ …) und die
+  gespeicherten Stufen (Datenbank-Aktivität mit Feldern lernende, meilenstein, stufen; Listenvorlage mit class="kiw");
+  speichert jede Stufe sofort über das normale Formular der Datenbank. Rot ab KONFIG.gespraech_ab, Note nach IHK.
+  Im Test-Moodle 5.1.6 geprüft (10 Testkonten). Beide Aktivitäten müssen selbst verborgen sein, nicht nur ihr Abschnitt.
+-->
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Klassen-Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Aufbau: Kopf mit Klassen-, Lernfeld- und LS-Auswahl · Kennzahlen · drei Ansichten (Bewertung je Meilenstein, Stufenweg der Klasse, eine Person) */
+:root{
+  --bg:#f3f5fa; --surface:#ffffff; --ink:#151b2b; --muted:#5a6377; --line:#d6dbe7; --soft:#e9edf7;
+  --schule:#08349C; --schule-soft:#e3e9f8; --gruen:#2f9e44; --gruen-soft:#e5f5e8;
+  --rot:#c92a2a; --rot-soft:#fbe3e3; --gelb:#b7791f; --gelb-soft:#fdf1dc;
+  --st0:#c98a2a; --st1:#08349C; --st2:#2f9e44;
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10141f; --surface:#171d2b; --ink:#e6eaf4; --muted:#9aa4bb; --line:#2b3448; --soft:#1f2738;
+  --schule:#7f9df0; --schule-soft:#1d2a4d; --gruen:#69c97a; --gruen-soft:#173323;
+  --rot:#ff8a8a; --rot-soft:#3d1c1f; --gelb:#e9b356; --gelb-soft:#3a2d14;
+  --st0:#e9b356; --st1:#7f9df0; --st2:#69c97a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10141f; --surface:#171d2b; --ink:#e6eaf4; --muted:#9aa4bb; --line:#2b3448; --soft:#1f2738;
+  --schule:#7f9df0; --schule-soft:#1d2a4d; --gruen:#69c97a; --gruen-soft:#173323;
+  --rot:#ff8a8a; --rot-soft:#3d1c1f; --gelb:#e9b356; --gelb-soft:#3a2d14;
+  --st0:#e9b356; --st1:#7f9df0; --st2:#69c97a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:15px;line-height:1.45;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px}
+h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance}
+button,select,input{font:inherit;color:inherit}
+.app{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.probe{font-size:13px;color:var(--gelb);background:var(--gelb-soft);border:1px solid var(--gelb);border-radius:8px;padding:6px 10px}
+header{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-end;justify-content:space-between}
+.titel .ort{font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.titel h1{font-size:28px;font-weight:800;color:var(--schule);letter-spacing:-.3px}
+.wahl{display:flex;flex-wrap:wrap;gap:8px}
+.wahl label{display:flex;flex-direction:column;gap:2px;font-size:11.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.wahl select{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 10px;min-height:38px;text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink)}
+.zahlen{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:720px){.zahlen{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.zahl{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.zahl .w{font-family:var(--font-mono);font-size:24px;font-weight:700;font-variant-numeric:tabular-nums}
+.zahl .l{font-size:13px;color:var(--muted)}
+.zahl.alarm{border-color:var(--rot)} .zahl.alarm .w{color:var(--rot)}
+nav{display:flex;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--line)}
+nav button{border:0;background:transparent;padding:9px 14px;border-radius:8px 8px 0 0;cursor:pointer;color:var(--muted);font-weight:700;margin-bottom:-2px;border-bottom:3px solid transparent}
+nav button[aria-selected="true"]{color:var(--schule);border-bottom-color:var(--schule);background:var(--surface)}
+nav button:focus-visible,.stb:focus-visible,select:focus-visible,.zeile-btn:focus-visible{outline:3px solid var(--schule);outline-offset:2px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px}
+.hinweis{font-size:13.5px;color:var(--muted);margin:0 0 10px}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:separate;border-spacing:0;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle;white-space:nowrap}
+th{font-size:12px;letter-spacing:.4px;color:var(--muted);font-weight:700;background:var(--soft)}
+th.kr{color:var(--ink);font-size:13px;white-space:normal;min-width:150px;border-left:2px solid var(--surface)}
+td.name,th.name{text-align:left;position:sticky;left:0;background:var(--surface);z-index:1}
+th.name{background:var(--soft)}
+td.name b{font-family:var(--font-mono)}
+td.name span{display:block;font-size:12.5px;color:var(--muted)}
+td.grenze,th.grenze{border-left:2px solid var(--line)}
+.selbst{display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;background:var(--soft);font-family:var(--font-mono);font-weight:700}
+.stufen{display:inline-flex;gap:3px}
+.stb{width:30px;height:30px;border-radius:7px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-family:var(--font-mono);font-weight:700;color:var(--muted)}
+.stb[aria-pressed="true"]{background:var(--schule);border-color:var(--schule);color:var(--surface)}
+.abw{font-family:var(--font-mono);font-weight:700;min-width:34px;display:inline-block;border-radius:6px;padding:3px 0}
+.abw.rot{background:var(--rot-soft);color:var(--rot);outline:2px solid var(--rot)}
+.offen{color:var(--muted);font-size:13px}
+.pill{display:inline-block;border-radius:999px;padding:2px 10px;font-size:13px;font-weight:700}
+.pill.gespraech{background:var(--rot);color:var(--surface)}
+.pill.ok{background:var(--gruen-soft);color:var(--gruen)}
+.pill.warten{background:var(--soft);color:var(--muted)}
+.note{font-family:var(--font-mono);font-weight:700;font-size:16px}
+tr.ist-gespraech td.name{box-shadow:inset 4px 0 0 var(--rot)}
+.legende{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted);margin-top:10px;align-items:center}
+.legende i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.kopfzeile{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:8px}
+.knopf{border:1px solid var(--schule);background:var(--surface);color:var(--schule);border-radius:8px;padding:7px 12px;font-weight:700;cursor:pointer;min-height:38px}
+.knopf:hover{background:var(--schule-soft)}
+.meldung{font-size:13px;color:var(--gruen)}
+/* Stufenweg */
+.weg td{padding:6px}
+.ringe{display:inline-block;vertical-align:middle}
+.pfeil{font-size:12px;font-weight:700;margin-left:2px}
+.pfeil.auf{color:var(--gruen)} .pfeil.ab{color:var(--gelb)}
+.vert{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:12px}
+@media (max-width:720px){.vert{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.vk{border:1px solid var(--line);border-radius:10px;padding:8px}
+.vk h3{font-family:var(--font-body);font-size:13px;color:var(--muted);margin-bottom:6px}
+.balken{display:flex;flex-direction:column;gap:4px}
+.balken div{display:flex;align-items:center;gap:6px;font-size:12.5px}
+.balken span.b{height:10px;border-radius:5px;display:inline-block}
+.zeile-btn{border:0;background:transparent;cursor:pointer;text-align:left;padding:0;color:inherit}
+.zeile-btn b{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+/* Person */
+.person{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px}
+@media (max-width:860px){.person{grid-template-columns:minmax(0,1fr)}}
+.karte{border:1px solid var(--line);border-radius:10px;padding:12px}
+.karte h3{font-size:16px;margin-bottom:8px}
+.verlauf svg{width:100%;height:auto;display:block}
+.mini td,.mini th{font-size:13px;padding:5px 6px}
+.beobachtung{margin-top:10px;font-size:13.5px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.abw,.stb{transition:background .15s,color .15s}}
+</style></head><body>
+
+<div class="app">
+  <header>
+    <div class="titel">
+      <div class="ort">Material für Lehrkräfte · nur für Sie sichtbar</div>
+      <h1>Klassen-Dashboard</h1>
+    </div>
+    <div class="wahl"><span class="meldung" id="status">lädt …</span></div>
+  </header>
+  <section class="zahlen" aria-label="Überblick">
+    <div class="zahl"><div class="w" id="zAbgabe">–</div><div class="l">Selbsteinschätzungen da</div></div>
+    <div class="zahl"><div class="w" id="zBewertet">–</div><div class="l">von Ihnen bewertet</div></div>
+    <div class="zahl alarm"><div class="w" id="zGespraech">–</div><div class="l">Gespräche nötig</div></div>
+    <div class="zahl"><div class="w" id="zSchnitt">–</div><div class="l">Notenschnitt</div></div>
+  </section>
+  <nav role="tablist" aria-label="Ansichten" id="reiter"></nav>
+  <section class="panel" id="ansicht" role="tabpanel"><p class="hinweis">Daten werden aus dem Kurs gelesen …</p></section>
+</div>
+<script>
+(function(){
+'use strict';
+var KONFIG = /*KONFIG*/{}/*/KONFIG*/;
+var GESPRAECH_AB = KONFIG.gespraech_ab || 2;
+var IHK = [[92,1],[81,2],[67,3],[50,4],[30,5],[0,6]];
+var WURZEL = location.href.split('/pluginfile.php')[0];
+var L = [], MS = KONFIG.meilensteine, tab = MS[0].id, person = null, SESSKEY = null;
+
+function el(tag,attrs,kids){ var e=document.createElement(tag); attrs=attrs||{};
+  Object.keys(attrs).forEach(function(k){ if(k==='text') e.textContent=attrs[k]; else if(k==='on') Object.keys(attrs.on).forEach(function(ev){e.addEventListener(ev,attrs.on[ev]);}); else e.setAttribute(k,attrs[k]); });
+  (kids||[]).forEach(function(c){ if(c!==null&&c!==undefined) e.appendChild(typeof c==='string'?document.createTextNode(c):c); }); return e; }
+function status(t){ document.getElementById('status').textContent=t; }
+function seite(pfad){ return fetch(WURZEL+pfad,{credentials:'same-origin'}).then(function(r){ return r.text(); }); }
+function doc(t){ return new DOMParser().parseFromString(t,'text/html'); }
+
+// CSV mit Anführungszeichen lesen
+function csv(t){ var z=[],f=[],w='',q=false; for(var i=0;i<t.length;i++){ var c=t[i];
+  if(q){ if(c==='"'&&t[i+1]==='"'){w+='"';i++;} else if(c==='"') q=false; else w+=c; }
+  else if(c==='"') q=true; else if(c===','){f.push(w);w='';} else if(c==='\n'){f.push(w);z.push(f);f=[];w='';} else if(c!=='\r') w+=c; }
+  if(w||f.length){f.push(w);z.push(f);} return z; }
+
+function sesskey(){ try{ if(window.parent&&window.parent.M&&window.parent.M.cfg) return Promise.resolve(window.parent.M.cfg.sesskey); }catch(e){}
+  return seite('/my/').then(function(t){ var m=t.match(/"sesskey":"([^"]+)"/); return m?m[1]:null; }); }
+
+function teilnehmende(){ return seite('/user/index.php?id='+KONFIG.kurs+'&perpage=5000').then(function(t){
+  var d=doc(t), aus=[];
+  d.querySelectorAll('table tbody tr').forEach(function(tr){ var a=tr.querySelector('a[href*="user/view.php"]'); if(!a) return;
+    var k=a.cloneNode(true); k.querySelectorAll('.userinitials,img,span.userpicture').forEach(function(x){x.remove();});
+    var name=k.textContent.replace(/\s+/g,' ').trim(); var rollen=tr.textContent;
+    if(name&&/Student|Teilnehmer|Schüler/i.test(rollen)&&!/Teacher|Trainer|Lehr/i.test(rollen)) aus.push(name); });
+  return aus; }); }
+
+function selbst(m){ return seite('/mod/feedback/show_entries.php?id='+m.feedback+'&download=csv').then(function(t){
+  var z=csv(t.replace(/^\ufeff/,'')), kopf=z.shift()||[], sp=m.kriterien.map(function(_,i){ return kopf.findIndex(function(h){ return h.indexOf('(K'+(i+1)+')')===0; }); });
+  var aus={}; z.forEach(function(r){ if(!r[0]) return; aus[r[0].trim()]=sp.map(function(j){ var v=parseInt(String(r[j]||'').trim(),10); return isNaN(v)?null:v; }); });
+  return aus; }); }
+
+function gespeichert(){ return seite('/mod/data/view.php?d='+KONFIG.daten.id+'&perpage=1000').then(function(t){
+  var aus={}; doc(t).querySelectorAll('.kiw').forEach(function(x){ var rid=(x.getAttribute('data-more').match(/rid=(\d+)/)||[])[1];
+    aus[x.getAttribute('data-l')+'|'+x.getAttribute('data-m')]={rid:rid,s:x.getAttribute('data-s').split(',').map(function(v){ var n=parseInt(v,10); return isNaN(n)?null:n; })}; });
+  return aus; }); }
+
+var warten={};
+function speichern(p,m){ var key=p.n+'|'+m.id; clearTimeout(warten[key]); status('speichert …');
+  warten[key]=setTimeout(function(){
+    var f=new FormData(); f.append('d',KONFIG.daten.id); f.append('sesskey',SESSKEY);
+    if(p[m.id].rid) f.append('rid',p[m.id].rid);
+    f.append('field_'+KONFIG.daten.felder.lernende,p.n); f.append('field_'+KONFIG.daten.felder.meilenstein,m.id);
+    f.append('field_'+KONFIG.daten.felder.stufen,p[m.id].l.map(function(v){return v===null?'':v;}).join(','));
+    f.append('saveandview','1');
+    fetch(WURZEL+'/mod/data/edit.php',{method:'POST',body:f,credentials:'same-origin'}).then(function(r){
+      var rid=(r.url.match(/rid=(\d+)/)||[])[1]; if(rid) p[m.id].rid=rid; status(rid?'gespeichert':'Speichern fehlgeschlagen'); })
+    .catch(function(){ status('Speichern fehlgeschlagen'); }); },500); }
+
+function auswertung(p,m){
+  var d=p[m.id], n=m.kriterien.length, abw=[], g=false, alle=true, pkt=0;
+  for(var i=0;i<n;i++){ var s=d.s?d.s[i]:null, l=d.l[i]; if(l===null) alle=false; else pkt+=l-1;
+    var a=(s!==null&&l!==null)?Math.abs(s-l):null; abw.push(a); if(a!==null&&a>=GESPRAECH_AB) g=true; }
+  var proz=alle?Math.round(pkt/(3*n)*100):null, note=null;
+  if(proz!==null) for(var j=0;j<IHK.length;j++) if(proz>=IHK[j][0]){ note=IHK[j][1]; break; }
+  return {abw:abw,gespraech:g,proz:proz,note:note,selbst:!!d.s,bewertet:alle}; }
+
+function kennzahlen(){ var m=MS.filter(function(x){return x.id===tab;})[0]||MS[0], s=0,b=0,g=0,su=0,n=0;
+  L.forEach(function(p){ var a=auswertung(p,m); if(a.selbst) s++; if(a.bewertet) b++; if(a.gespraech) g++; if(a.note){su+=a.note;n++;} });
+  document.getElementById('zAbgabe').textContent=s+' / '+L.length; document.getElementById('zBewertet').textContent=b+' / '+L.length;
+  document.getElementById('zGespraech').textContent=g; document.getElementById('zSchnitt').textContent=n?(su/n).toFixed(1).replace('.',','):'–'; }
+
+function bewertung(m){
+  var box=document.getElementById('ansicht'); box.innerHTML='';
+  box.appendChild(el('div',{class:'kopfzeile'},[el('h2',{text:m.titel,style:'font-size:19px'})]));
+  box.appendChild(el('p',{class:'hinweis',text:'Grau: Selbsteinschätzung aus „'+m.name+'“, von selbst gelesen. Tippen Sie Ihre Stufe an; sie wird sofort gespeichert. Ab '+GESPRAECH_AB+' Stufen Abweichung wird das Feld rot und „Gespräch“ erscheint.'}));
+  var tb=el('table'), r1=el('tr'), r2=el('tr');
+  r1.appendChild(el('th',{class:'name',rowspan:'2',text:'Lernende'}));
+  m.kriterien.forEach(function(k){ r1.appendChild(el('th',{class:'kr',colspan:'3',text:k.name})); });
+  ['Prozent','Note','Rückmeldung'].forEach(function(t,i){ r1.appendChild(el('th',{rowspan:'2',class:i===0?'grenze':'',text:t})); });
+  m.kriterien.forEach(function(){ ['selbst','Ihre Stufe','Abw.'].forEach(function(t,i){ r2.appendChild(el('th',{class:i===0?'grenze':'',text:t})); }); });
+  tb.appendChild(el('thead',{},[r1,r2])); var body=el('tbody');
+  L.forEach(function(p){ var a=auswertung(p,m), tr=el('tr',{class:a.gespraech?'ist-gespraech':''});
+    tr.appendChild(el('td',{class:'name'},[el('b',{text:p.n})]));
+    m.kriterien.forEach(function(k,i){
+      tr.appendChild(el('td',{class:'grenze'},[p[m.id].s?el('span',{class:'selbst',title:k.st[p[m.id].s[i]-1]||'',text:String(p[m.id].s[i])}):el('span',{class:'offen',text:'fehlt'})]));
+      var grp=el('div',{class:'stufen',role:'group','aria-label':p.n+' · '+k.name});
+      [1,2,3,4].forEach(function(v){ grp.appendChild(el('button',{class:'stb',type:'button',title:'Stufe '+v+': '+k.st[v-1],'aria-pressed':String(p[m.id].l[i]===v),text:String(v),
+        on:{click:function(){ p[m.id].l[i]=(p[m.id].l[i]===v)?null:v; zeichnen(); speichern(p,m); }}})); });
+      tr.appendChild(el('td',{},[grp]));
+      var ab=a.abw[i]; tr.appendChild(el('td',{},[el('span',{class:'abw'+(ab!==null&&ab>=GESPRAECH_AB?' rot':''),text:ab===null?'–':String(ab)})]));
+    });
+    tr.appendChild(el('td',{class:'grenze',text:a.proz===null?'–':a.proz+' %'}));
+    tr.appendChild(el('td',{},[el('span',{class:'note',text:a.note===null?'–':String(a.note)})]));
+    tr.appendChild(el('td',{},[a.gespraech?el('span',{class:'pill gespraech',text:'Gespräch'}):(a.bewertet?el('span',{class:'pill ok',text:'schriftlich'}):el('span',{class:'pill warten',text:a.selbst?'zu bewerten':'wartet'}))]));
+    body.appendChild(tr); });
+  tb.appendChild(body); box.appendChild(el('div',{class:'tw'},[tb]));
+}
+
+function zeichnen(){ kennzahlen(); var m=MS.filter(function(x){return x.id===tab;})[0]; if(m) bewertung(m); }
+function reiter(){ var nav=document.getElementById('reiter'); nav.innerHTML='';
+  MS.forEach(function(m){ nav.appendChild(el('button',{role:'tab',type:'button','aria-selected':String(m.id===tab),'data-tab':m.id,text:m.kurz,on:{click:function(){ tab=m.id; reiter(); zeichnen(); }}})); }); }
+
+Promise.all([sesskey(),teilnehmende(),Promise.all(MS.map(selbst)),gespeichert()]).then(function(r){
+  SESSKEY=r[0]; var namen=r[1], sb=r[2], gs=r[3];
+  L=namen.map(function(n){ var p={n:n}; MS.forEach(function(m,i){ var g=gs[n+'|'+m.id];
+    p[m.id]={s:sb[i][n]||null,l:g?g.s.concat([]).slice(0,m.kriterien.length):m.kriterien.map(function(){return null;}),rid:g?g.rid:null};
+    while(p[m.id].l.length<m.kriterien.length) p[m.id].l.push(null); }); return p; });
+  status(L.length+' Lernende geladen'); reiter(); zeichnen();
+}).catch(function(e){ status('Daten konnten nicht gelesen werden: '+e); });
+})();
+</script>
+</body></html>

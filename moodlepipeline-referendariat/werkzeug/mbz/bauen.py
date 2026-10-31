@@ -1229,7 +1229,7 @@ def b_feedback(b: Bau, r: Akt) -> str:
                              f"(info, likert, auswahl, text)")
         items.append(
             f'      <item id="{b.ids("misc")}">\n        <template>0</template>\n'
-            f"        {el('name', name)}\n        <label></label>\n"
+            f"        {el('name', name)}\n        {el('label', e.get('kennung', ''))}\n"
             f"        {el('presentation', pres)}\n        {el('typ', typ)}\n"
             f"        {el('hasvalue', wert)}\n        {el('position', pos)}\n"
             f"        {el('required', 1 if e.get('pflicht') else 0)}\n"
