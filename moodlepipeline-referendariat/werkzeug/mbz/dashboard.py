@@ -20,7 +20,7 @@ JS_DATEI = Path(__file__).with_name("klassendashboard.js")
 NAME = "Klassen-Dashboard"
 
 CSS = """
-.kd{--kd-blau:#08349C;--kd-blau-hell:#e3e9f8;--kd-rot:#c92a2a;--kd-rot-hell:#fbe3e3;--kd-gruen:#2f7d3a;--kd-gruen-hell:#e5f5e8;
+.kd{--kd-st0:#c98a2a;--kd-st1:#08349C;--kd-st2:#2f9e44;--kd-blau:#08349C;--kd-blau-hell:#e3e9f8;--kd-rot:#c92a2a;--kd-rot-hell:#fbe3e3;--kd-gruen:#2f7d3a;--kd-gruen-hell:#e5f5e8;
   --kd-linie:#d6dbe7;--kd-grau:#eef1f7;--kd-text:#151b2b;--kd-leise:#5a6377;color:var(--kd-text);margin-bottom:1.5rem;
   font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .kd-kopf{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:baseline;justify-content:space-between}
@@ -56,6 +56,22 @@ CSS = """
 .kd-pill-rot{background:var(--kd-rot);color:#fff} .kd-pill-ok{background:var(--kd-gruen-hell);color:var(--kd-gruen)}
 .kd-gespraech-zeile td.kd-name{box-shadow:inset 4px 0 0 var(--kd-rot)}
 .kd-knopf{border:1px solid var(--kd-blau);background:#fff;color:var(--kd-blau);border-radius:8px;padding:.35rem .8rem;font-weight:700}
+.kd-erklaerung{background:var(--kd-grau);border-radius:10px;padding:.5rem .9rem;margin:.4rem 0 .6rem;font-size:.92rem}
+.kd-erklaerung p{margin:.25rem 0}
+.kd-details{margin:.3rem 0 .8rem} .kd-details summary{cursor:pointer;color:var(--kd-blau);font-weight:700}
+.kd-tab th.kd-klein{font-size:.75rem;white-space:normal;max-width:6.5rem}
+.kd-umbruch{white-space:normal !important;text-align:left !important;min-width:8rem}
+.kd-person{border:0;background:none;padding:0;font-weight:700;color:var(--kd-text);text-decoration:underline;text-decoration-color:var(--kd-linie);text-underline-offset:3px}
+.kd-ringe{vertical-align:middle} .kd-auf{color:var(--kd-gruen);font-weight:700;margin-left:2px} .kd-ab{color:var(--kd-st0);font-weight:700;margin-left:2px}
+.kd-vert{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.5rem}
+.kd-vk{border:1px solid var(--kd-linie);border-radius:10px;padding:.5rem;background:#fff}
+.kd-balken{display:flex;align-items:center;gap:.4rem;font-size:.85rem} .kd-b{height:10px;border-radius:5px;display:inline-block}
+.kd-person-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:.8rem}
+.kd-karte{border:1px solid var(--kd-linie);border-radius:10px;padding:.7rem;background:#fff}
+.kd-kurve{width:100%;height:auto;display:block}
+.kd-verlauf{max-width:46rem;margin-bottom:.9rem} .kd-verlauf .kd-kurve{max-height:20rem}
+.kd-wahl{border:1px solid var(--kd-linie);border-radius:8px;padding:.35rem .6rem;min-height:2.3rem}
+.kd-mini td,.kd-mini th{font-size:.85rem}
 .kd-liste,[data-region="empty-message"],#sticky-footer,.stickyfooter{display:none !important}
 """
 
@@ -80,12 +96,50 @@ def skript(konfig: dict) -> str:
     return neu
 
 
-def dashboard_aktivitaet(meilensteine: list[dict], gespraech_ab: int = 2) -> dict:
-    """Verborgene Datenbank-Aktivität für den Lehrkraftbereich."""
-    konfig = {"gespraech_ab": gespraech_ab,
-              "meilensteine": [{"id": m["id"], "kurz": m["kurz"], "titel": m.get("titel", m["kurz"]),
-                                "name": selbsteinschaetzung(m)["name"], "kriterien": m["kriterien"]} for m in meilensteine]}
-    return {"typ": "data", "name": NAME, "idnummer": "klassendashboard", "abschluss": "keine", "sichtbar": False,
+def _konfig(meilensteine: list[dict], gespraech_ab: int, kursdef: dict | None, name: str) -> dict:
+    sw = None
+    if kursdef and kursdef.get("stufen"):
+        import stufen
+        k = stufen.konfig(kursdef, "verlauf")
+        sw = {key: k[key] for key in ("grenzen", "start", "stufen", "kacheln")}
+    return {"gespraech_ab": gespraech_ab, "stufenweg": sw, "daten_name": name,
+            "meilensteine": [{"id": m["id"], "kurz": m["kurz"], "titel": m.get("titel", m["kurz"]),
+                              "name": selbsteinschaetzung(m)["name"], "kriterien": m["kriterien"]} for m in meilensteine]}
+
+
+DATEN_NAME = "Klassen-Dashboard: Bewertungen"
+
+
+def in_lernstand(html: str, meilensteine: list[dict], gespraech_ab: int = 2, kursdef: dict | None = None) -> str:
+    """Das Lernstand-Dashboard (Original aus der BSB-Pipeline, Datei im Lehrkraftbereich) um die Ansicht „Bewertung und
+    Stufenweg“ ergänzen; alle bisherigen Ansichten bleiben unverändert. Gespeichert wird in der Datenbank
+    DATEN_NAME (dashboard_aktivitaet(..., name=DATEN_NAME) daneben in den Lehrkraftbereich legen)."""
+    knopf = ('<button type="button" role="tab" id="tab-live" aria-controls="p-live" aria-selected="true">Klasse live</button>')
+    if html.count(knopf) != 1 or html.count('<section role="tabpanel" id="p-abschluss"') != 1:
+        raise ValueError("Lernstand-Dashboard: Reiterleiste nicht gefunden")
+    html = html.replace(knopf, knopf + '\n    <button type="button" role="tab" id="tab-kd" aria-controls="p-kd" '
+                        'aria-selected="false" tabindex="-1">Bewertung und Stufenweg</button>', 1)
+    html = html.replace('<section role="tabpanel" id="p-abschluss"', '<section role="tabpanel" id="p-kd" '
+                        'aria-labelledby="tab-kd" hidden><div id="kd-ziel"></div></section>\n  '
+                        '<section role="tabpanel" id="p-abschluss"', 1)
+    alt = 'document.getElementById("laden").hidden = tab.id === "tab-live";'
+    if html.count(alt) != 1:
+        raise ValueError("Lernstand-Dashboard: Umschalten der Export-Ablage nicht gefunden")
+    html = html.replace(alt, 'document.getElementById("laden").hidden = tab.id === "tab-live" || tab.id === "tab-kd";', 1)
+    zusatz = ("<style>" + CSS.replace("#sticky-footer,.stickyfooter", ".kd-nie") + "</style>\n<script>\n"
+              + skript(_konfig(meilensteine, gespraech_ab, kursdef, DATEN_NAME)).replace("</", "<\\/") + "\n</script>\n</body>")
+    if html.count("</body>") != 1:
+        raise ValueError("Lernstand-Dashboard: </body> nicht eindeutig")
+    return html.replace("</body>", zusatz, 1)
+
+
+def dashboard_aktivitaet(meilensteine: list[dict], gespraech_ab: int = 2, kursdef: dict | None = None,
+                         name: str = NAME) -> dict:
+    """Verborgene Datenbank-Aktivität für den Lehrkraftbereich. Mit kursdef und gestuften Aufgaben (stufen.einsetzen)
+    zeigt das Dashboard auch den Stufenweg der Klasse und je Person (gleiche Regel wie „Mein Stufenweg“).
+    Mit name=DATEN_NAME dient sie als Speicher des Lernstand-Dashboards (in_lernstand)."""
+    konfig = _konfig(meilensteine, gespraech_ab, kursdef, name)
+    return {"typ": "data", "name": name, "idnummer": "klassendashboard", "abschluss": "keine", "sichtbar": False,
             "beschreibung": "<p>Nur für Lehrkräfte: Selbsteinschätzungen und Ihre Bewertung je Meilenstein.</p>",
             "felder": [{"name": "lernende", "typ": "text", "beschreibung": "Name wie in Moodle"},
                        {"name": "meilenstein", "typ": "text", "beschreibung": "Kennung des Meilensteins"},
@@ -97,3 +151,20 @@ def dashboard_aktivitaet(meilensteine: list[dict], gespraech_ab: int = 2) -> dic
                          "addtemplate": '<div data-feld="lernende">[[lernende]]</div><div data-feld="meilenstein">'
                                         '[[meilenstein]]</div><div data-feld="stufen">[[stufen]]</div>',
                          "csstemplate": CSS, "jstemplate": skript(konfig)}}
+
+
+LERNSTAND_VORLAGE = Path(__file__).with_name("lernstand-dashboard.html")
+
+
+def lernstand_datei(lernstand_konfig: dict, meilensteine: list[dict], gespraech_ab: int = 2,
+                    kursdef: dict | None = None) -> str:
+    """Komplettes Lernstand-Dashboard eines Kurses: Vorlage (Original aus der BSB-Pipeline, abgenommene Fassung aus
+    LS 2), Konfiguration des Kurses (kurs, kurzname, medaillen, stern_tests, hilfekarten, testpaare, sterne_max,
+    fehlvorstellungen, tests, feedbacks) und die Ansicht „Bewertung und Stufenweg“."""
+    html = LERNSTAND_VORLAGE.read_text(encoding="utf-8")
+    daten = json.dumps(lernstand_konfig, ensure_ascii=False, indent=1).replace("</", "<\\/")
+    html, n = re.subn(r'(<script id="konfig" type="application/json">)(.*?)(</script>)',
+                      lambda m: m.group(1) + "\n" + daten + "\n" + m.group(3), html, count=1, flags=re.S)
+    if n != 1:
+        raise ValueError("Lernstand-Dashboard: Konfigurationsblock fehlt")
+    return in_lernstand(html, meilensteine, gespraech_ab, kursdef) if meilensteine else html

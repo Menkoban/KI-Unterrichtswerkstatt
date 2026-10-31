@@ -25,3 +25,13 @@ def test_dashboard_aktivitaet():
     assert konfig["meilensteine"][0]["name"] == "Selbsteinschätzung Meilenstein 1" and konfig["gespraech_ab"] == 2
     assert "fonts.googleapis" not in d["vorlagen"]["jstemplate"] + d["vorlagen"]["csstemplate"]
     assert 'data-feld="stufen"' in d["vorlagen"]["addtemplate"] and "kd-eintrag" in d["vorlagen"]["listtemplate"]
+
+
+def test_lernstand_behaelt_alle_ansichten():
+    """Das Original (Lernstand-Dashboard) bleibt erhalten; dazu kommt genau eine Ansicht „Bewertung und Stufenweg“."""
+    html = dashboard.lernstand_datei({"kurs": "K", "kurzname": "K", "medaillen": [], "stern_tests": [], "hilfekarten": [],
+                                      "testpaare": [], "sterne_max": 3, "fehlvorstellungen": [], "tests": [], "feedbacks": []},
+                                     [MS])
+    for tab in ("tab-live", "tab-abschluss", "tab-paare", "tab-fv", "tab-vn", "tab-kd"):
+        assert html.count(f'id="{tab}"') == 1
+    assert 'id="kd-ziel"' in html and dashboard.DATEN_NAME in html and "fonts.googleapis" not in html

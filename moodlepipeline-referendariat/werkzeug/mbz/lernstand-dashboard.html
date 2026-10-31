@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lernstand-Dashboard – Lehrkräfte</title>
+<!--
+ Lernstand-Dashboard für einen Themenkurs (nur Lehrkräfte, im verborgenen Bereich).
+ Erste Ansicht "Klasse live": die Klassenübersicht der Moodle-Pipeline BSB
+ (zeugnis.klassenuebersicht), auf Sterne umgestellt. Sie liest über die Moodle-Sitzung der
+ Lehrkraft das Teilnehmerverzeichnis, je Person die Übersicht für Teilnehmer/in (Kurs gesamt =
+ erreichte von möglichen Sternen), den Kursaufbau (welcher Stern zu welcher Kachel gehört) und den
+ Bericht Aktivitätsabschluss (geöffnete Hilfekarten). Sie liest nur, schreibt nichts in Moodle.
+ Die übrigen Ansichten lesen Moodle-Exporte (CSV), die die Lehrkraft hineinzieht; sie laufen
+ offline, speichern nichts und senden nichts.
+ Medaillengrenzen, Stern-Quiz und Hilfekarten je Kachel und die Zuordnung Frage → Fehlvorstellung
+ stehen unten im Block "konfig" (vom Kursbau erzeugt).
+ "Nur für Lehrkräfte" ist keine Zugriffskontrolle: die Datei liegt im verborgenen Abschnitt.
+-->
+<style>
+:root{
+  --blau:#08349C; --blau2:#062a7d; --blauhell:#e8eef8;
+  --gruen:#7DDE78; --gruendunkel:#1d6b1a; --gruenhell:#e9f9e8;
+  --text:#1b1f24; --grau:#4a525c; --linie:#c9ced6; --hell:#f5f7fa;
+  --rot:#a3261e; --rothell:#fde8e6; --gelbhell:#fff4cf;
+}
+*{box-sizing:border-box}
+html,body{margin:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.45;color:var(--text);background:#fff}
+header{background:var(--blau);color:#fff;padding:.8rem 1rem}
+header h1{margin:0;font-size:1.3rem}
+header p{margin:.2rem 0 0;font-size:1rem;opacity:.95}
+main{max-width:1200px;margin:0 auto;padding:1rem}
+h2{color:var(--blau);font-size:1.2rem;margin:1.2rem 0 .5rem}
+h3{color:var(--blau);font-size:1.05rem;margin:1rem 0 .4rem}
+.ablage{border:2px dashed var(--blau);border-radius:8px;padding:1rem;background:var(--blauhell)}
+.ablage.ueber{background:#d6e2f7}
+.ablage label.knopf{display:inline-block}
+button,.knopf{font:inherit;font-size:1rem;padding:.45rem .9rem;border-radius:6px;border:2px solid var(--blau);background:#fff;color:var(--blau);cursor:pointer}
+button.primaer,.knopf.primaer{background:var(--blau);color:#fff}
+button:focus-visible,.knopf:focus-within,select:focus-visible,input:focus-visible{outline:3px solid var(--gruen);outline-offset:2px}
+input[type=file]{position:absolute;width:1px;height:1px;opacity:0}
+select{font:inherit;font-size:1rem;padding:.3rem;max-width:100%}
+table{border-collapse:collapse;width:100%;margin:.4rem 0 1rem}
+caption{text-align:left;font-weight:bold;padding:.2rem 0}
+th,td{border:1px solid var(--linie);padding:.4rem .55rem;text-align:left;vertical-align:top}
+th{background:var(--blauhell)}
+td.zahl,th.zahl{text-align:right;white-space:nowrap}
+.tabs{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0 .2rem;border-bottom:2px solid var(--blau)}
+.tabs button{border-radius:6px 6px 0 0;border-bottom:none}
+.tabs button[aria-selected=true]{background:var(--blau);color:#fff}
+.hinweis{background:var(--hell);border-left:4px solid var(--gruen);padding:.5rem .8rem;margin:.6rem 0}
+.warnung{background:var(--gelbhell);border-left:4px solid #9a6800;padding:.5rem .8rem;margin:.6rem 0}
+.leer{color:var(--grau);font-style:italic}
+.balken{display:inline-block;height:.8rem;background:var(--blau);vertical-align:middle;margin-right:.4rem;border-radius:2px}
+.balken.hoch{background:var(--rot)}
+.medaille{display:inline-block;padding:.05rem .5rem;border-radius:999px;border:2px solid;font-weight:bold}
+.m-Gold{border-color:#8a6d00;background:#fff3c4}
+.m-Silber{border-color:#5f6670;background:#eef0f3}
+.m-Bronze{border-color:#8a4b1f;background:#f6e3d3}
+.m-Grün{border-color:var(--gruendunkel);background:var(--gruenhell)}
+.m-keine{border-color:var(--linie);background:#fff}
+.scroll{overflow-x:auto}
+ul.dateien{list-style:none;padding:0;margin:.6rem 0}
+ul.dateien li{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;padding:.35rem 0;border-bottom:1px solid var(--linie)}
+ul.dateien li span.dname{font-weight:bold;word-break:break-all}
+.klein{font-size:1rem;color:var(--grau)}
+[hidden]{display:none!important}
+#live-zeilen td,#live-zeilen th{vertical-align:middle}
+@media print{.ablage,.tabs,#dateiliste button,#live-steuerung{display:none} [role=tabpanel][hidden],#laden[hidden]{display:block!important}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Lernstand-Dashboard</h1>
+  <p id="kursname">Themenkurs</p>
+</header>
+<main>
+  <div class="tabs" role="tablist" aria-label="Ansichten">
+    <button type="button" role="tab" id="tab-live" aria-controls="p-live" aria-selected="true">Klasse live</button>
+    <button type="button" role="tab" id="tab-abschluss" aria-controls="p-abschluss" aria-selected="false" tabindex="-1">Abschlusstests und Abzeichen</button>
+    <button type="button" role="tab" id="tab-paare" aria-controls="p-paare" aria-selected="false" tabindex="-1">Kacheltests und Sterne</button>
+    <button type="button" role="tab" id="tab-fv" aria-controls="p-fv" aria-selected="false" tabindex="-1">Fehlvorstellungen</button>
+    <button type="button" role="tab" id="tab-vn" aria-controls="p-vn" aria-selected="false" tabindex="-1">Vorher-nachher</button>
+  </div>
+  <section role="tabpanel" id="p-live" aria-labelledby="tab-live">
+    <h2>Klasse live</h2>
+    <p class="hinweis">Je Person: erreichte von möglichen Sternen (Kurs gesamt in der Bewertung), der Anteil in Prozent,
+      die Medaille (<span id="live-grenzen"></span>), die Kacheln ohne Stern „selbst gelöst“ und die geöffneten
+      Hilfekarten. Die Zahlen kommen direkt aus Moodle – diese Ansicht zeigt nur etwas, wenn Sie die Datei in Moodle
+      als Lehrkraft öffnen. Sie liest nur und ändert nichts.</p>
+    <p id="live-steuerung">
+      <button type="button" class="primaer" id="live-neu">Neu laden</button>
+      <span id="live-kurswahl" hidden>
+        <label for="live-kursid">Kurs-ID (Zahl hinter „course/view.php?id=“):</label>
+        <input type="text" id="live-kursid" inputmode="numeric" size="6">
+      </span>
+      <span id="live-status" class="klein" aria-live="polite"></span>
+    </p>
+    <div id="live-wartet" class="warnung" hidden>Moodle berechnet die Bewertungen gerade neu. Laden Sie die Ansicht
+      in einer Minute noch einmal.</div>
+    <div id="live-fehler" class="warnung" role="alert" hidden></div>
+    <div class="scroll">
+      <table>
+        <caption>Sterne und Medaille je Person</caption>
+        <thead><tr>
+          <th scope="col">Person</th><th scope="col" class="zahl">Sterne erreicht / möglich</th>
+          <th scope="col" class="zahl">Anteil</th><th scope="col">Medaille</th>
+          <th scope="col">Kacheltests: 1. / 2. Versuch · Sterne</th>
+          <th scope="col">Kacheln ohne Stern „selbst gelöst“</th><th scope="col">Geöffnete Hilfekarten</th>
+        </tr></thead>
+        <tbody id="live-zeilen"></tbody>
+      </table>
+    </div>
+    <p id="live-medaillen" class="klein"></p>
+  </section>
+
+  <section aria-labelledby="h-laden" id="laden" hidden>
+    <h2 id="h-laden">Moodle-Exporte laden</h2>
+    <div class="ablage" id="ablage">
+      <p style="margin-top:0">CSV-Dateien hierher ziehen oder auswählen. Erkannt werden:</p>
+      <ul>
+        <li><strong>Testergebnisse</strong>: Test → Ergebnisse → Bewertungen → „Herunterladen“ als CSV
+          (Eingangstest, Selbsttests, Generalprobe, Abschlusstest).</li>
+        <li><strong>Selbsteinschätzung vorher/nachher</strong>: Feedback → Antworten anzeigen → „Herunterladen“ als CSV.</li>
+        <li><strong>Bewertungsübersicht</strong>: Bewertungen → Export → Textdatei (CSV), Tests in Prozent, Sterne in
+          Punkten – für „Kacheltests und Sterne“ (erster und zweiter Versuch, Sterne je Schritt).</li>
+      </ul>
+      <label class="knopf primaer">Dateien auswählen
+        <input type="file" id="dateiwahl" accept=".csv,text/csv,.txt" multiple>
+      </label>
+      <button type="button" id="verwerfen">Alle Daten verwerfen</button>
+      <p class="klein" style="margin-bottom:0">Die Daten bleiben in diesem Browserfenster. Nichts wird gespeichert oder gesendet;
+        nach dem Schließen ist alles weg. Lernende erscheinen so, wie sie im Export stehen.</p>
+    </div>
+    <ul class="dateien" id="dateiliste" aria-live="polite"></ul>
+    <p>
+      <label for="versuchswahl">Bei mehreren Versuchen einer Person zählen:</label>
+      <select id="versuchswahl">
+        <option value="erster">nur der erste beendete Versuch</option>
+        <option value="alle">alle beendeten Versuche</option>
+      </select>
+    </p>
+  </section>
+
+  <section role="tabpanel" id="p-abschluss" aria-labelledby="tab-abschluss" hidden></section>
+  <section role="tabpanel" id="p-paare" aria-labelledby="tab-paare" hidden></section>
+  <section role="tabpanel" id="p-fv" aria-labelledby="tab-fv" hidden></section>
+  <section role="tabpanel" id="p-vn" aria-labelledby="tab-vn" hidden></section>
+</main>
+
+<script id="konfig" type="application/json">
+{
+ "kurs": "Beispielkurs",
+ "kurzname": "BEISPIEL",
+ "medaillen": [
+  {
+   "name": "Gold",
+   "ab": 92
+  },
+  {
+   "name": "Silber",
+   "ab": 81
+  },
+  {
+   "name": "Bronze",
+   "ab": 50
+  },
+  {
+   "name": "Grün",
+   "ab": 1
+  }
+ ],
+ "stern_tests": [],
+ "hilfekarten": [],
+ "testpaare": [],
+ "sterne_max": 3,
+ "fehlvorstellungen": [],
+ "tests": [],
+ "feedbacks": []
+}
+</script>
+<script id="auswertung-testpaare">
+/* Kacheltests mit zweitem Versuch (Lehrkraft 2026-10-23): je Schritt erster Versuch, zweiter Versuch und die Sterne
+   aus dem berechneten Bewertungsposten „Sterne: <Test>“ – nie aus der Testnote (die zählt mit Gewicht 0).
+   Eigener Block ohne Zugriff auf die Seite: liest den Bewertungsexport (Bewertungen → Export → Textdatei) oder die
+   Zeilen der Übersicht für Teilnehmer/in. Spalten im Export heißen „Test: <Name> (Prozent)“ bzw. „(Punkte)“, der
+   berechnete Posten „Sterne: <Test> (Punkte)“ (ohne Modulvorsatz). */
+var Testpaare = (function () {
+  "use strict";
+  var ANZEIGE = /^(punkte|real|points|prozent|prozentsatz|percentage|buchstabe|letter)$/i;
+  function zahl(s) {
+    s = String(s == null ? "" : s).trim().replace(/\s|%/g, "");
+    if (s === "" || s === "-" || s === "–") return null;
+    if (s.indexOf(",") >= 0) s = s.replace(/\./g, "").replace(",", ".");
+    var z = parseFloat(s);
+    return isNaN(z) ? null : z;
+  }
+  function rund(x) { return x == null ? null : Math.round(x * 100) / 100; }
+  function form(t) {
+    t = String(t || "");
+    if (t.normalize) t = t.normalize("NFC");
+    return t.replace(/[\s\u00a0\u202f\u2007]+/g, " ").trim();
+  }
+  // „Test: Name (Prozent)“ → {name: "Test: Name", art: "prozent"}; Klammern im Namen selbst bleiben stehen.
+  function zerlege(h) {
+    h = form(h);
+    var m = h.match(/^(.*\S)\s*\(([^()]*)\)$/), art = "";
+    if (m && ANZEIGE.test(m[2].trim())) {
+      art = /^(prozent|prozentsatz|percentage)$/i.test(m[2].trim()) ? "prozent" : "punkte";
+      h = m[1];
+    }
+    return {name: h, art: art};
+  }
+  // Test: gleicher Name oder Modulvorsatz „Test: “ / „Quiz: “. Der Sternposten „Sterne: X“ ist nie der Test „X“.
+  function passt(spalte, gesucht, modul) {
+    var a = form(spalte), b = form(gesucht);
+    if (!b) return false;
+    if (a === b) return true;
+    if (!modul) return false;
+    var i = a.indexOf(": ");
+    return i > 0 && /^(test|quiz)$/i.test(a.slice(0, i)) && a.slice(i + 2) === b;
+  }
+  function spalten(kopf, gesucht, modul) {
+    var sp = {prozent: -1, punkte: -1};
+    kopf.forEach(function (h, i) {
+      var z = zerlege(h), art = z.art || "punkte";
+      if (passt(z.name, gesucht, modul) && sp[art] < 0) sp[art] = i;
+    });
+    return sp;
+  }
+  function maxVon(K, name) {
+    var t = (K.tests || []).filter(function (x) { return x.name === name; })[0];
+    return t && t.punkte ? t.punkte : 10;
+  }
+  // Prozent eines Tests; Punkte über die Höchstpunktzahl aus der Konfiguration
+  function prozentAus(roh, art, max) {
+    var w = zahl(roh);
+    if (w == null) return null;
+    if (art === "prozent" || /%/.test(String(roh))) return rund(w);
+    return max ? rund(100 * w / max) : null;
+  }
+  function sterneAus(roh, art, K) {
+    var w = zahl(roh);
+    if (w == null) return null;
+    if (art === "prozent" || /%/.test(String(roh))) return K.sterne_max ? rund(w * K.sterne_max / 100) : null;
+    return rund(w);
+  }
+  function wert(z, sp, fn) {
+    if (sp.prozent >= 0) return fn(z[sp.prozent], "prozent");
+    if (sp.punkte >= 0) return fn(z[sp.punkte], "punkte");
+    return null;
+  }
+  function personSpalte(kopf, muster) {
+    for (var i = 0; i < kopf.length; i++) if (muster.test(form(kopf[i]))) return i;
+    return -1;
+  }
+  function person(kopf, z) {
+    var vor = personSpalte(kopf, /^(vorname|first ?name)$/i), nach = personSpalte(kopf, /^(nachname|last ?name|surname)$/i);
+    var voll = personSpalte(kopf, /^(vollst(ä|ae)ndiger name|full ?name|name|nutzer\/in|benutzer\/in)$/i);
+    var mail = personSpalte(kopf, /^(e-?mail(-adresse)?|email address)$/i), teile = [];
+    if (vor >= 0 && z[vor]) teile.push(z[vor].trim());
+    if (nach >= 0 && z[nach]) teile.push(z[nach].trim());
+    if (!teile.length && voll >= 0 && z[voll]) teile.push(z[voll].trim());
+    if (!teile.length && mail >= 0 && z[mail]) teile.push(z[mail].trim());
+    return teile.join(" ").trim();
+  }
+  // Erkennt der Export mindestens eine Spalte eines Testpaars?
+  function erkannt(K, kopf) {
+    return (K.testpaare || []).some(function (p) {
+      return [[p.erster.name, true], [p.zweiter.name, true], [p.sterne, false]].some(function (x) {
+        var sp = spalten(kopf, x[0], x[1]); return sp.prozent >= 0 || sp.punkte >= 0;
+      });
+    });
+  }
+  // Bewertungsexport → [{person, paare: [{kachel, schritt, erster, zweiter, sterne}]}] (Prozent, Sterne; leer = null)
+  function auswerten(K, kopf, zeilen) {
+    if (!erkannt(K, kopf)) return [];
+    var paare = (K.testpaare || []).map(function (p) {
+      return {p: p, s1: spalten(kopf, p.erster.name, true), s2: spalten(kopf, p.zweiter.name, true),
+              ss: spalten(kopf, p.sterne, false), m1: maxVon(K, p.erster.name), m2: maxVon(K, p.zweiter.name)};
+    });
+    var erg = [];
+    zeilen.forEach(function (z) {
+      var name = person(kopf, z);
+      if (!name || /durchschnitt|average|gesamt/i.test(name)) return;
+      erg.push({person: name, paare: paare.map(function (x) {
+        return {kachel: x.p.kachel, schritt: x.p.schritt,
+                erster: wert(z, x.s1, function (r, a) { return prozentAus(r, a, x.m1); }),
+                zweiter: wert(z, x.s2, function (r, a) { return prozentAus(r, a, x.m2); }),
+                sterne: wert(z, x.ss, function (r, a) { return sterneAus(r, a, K); })};
+      })});
+    });
+    return erg;
+  }
+  // Klasse live: Zeilen der Übersicht für Teilnehmer/in [{name, prozent, note}] → [{kachel, schritt, erster, ...}]
+  function ausBewertung(K, zeilen) {
+    function zeile(name, modul) {
+      return zeilen.filter(function (z) { return !z.gesamt && passt(z.name, name, modul); })[0] || null;
+    }
+    function pr(z, max) {
+      if (!z) return null;
+      var p = zahl(z.prozent);
+      return p != null ? rund(p) : prozentAus(z.note, "punkte", max);
+    }
+    return (K.testpaare || []).map(function (p) {
+      var st = zeile(p.sterne, false);
+      return {kachel: p.kachel, schritt: p.schritt, erster: pr(zeile(p.erster.name, true), maxVon(K, p.erster.name)),
+              zweiter: pr(zeile(p.zweiter.name, true), maxVon(K, p.zweiter.name)),
+              sterne: st ? sterneAus(st.note, "punkte", K) : null};
+    });
+  }
+  return {auswerten: auswerten, ausBewertung: ausBewertung, erkannt: erkannt};
+})();
+</script>
+<script>
+"use strict";
+var K = {};
+try { K = JSON.parse(document.getElementById("konfig").textContent || "{}"); } catch (e) { K = {}; }
+K.tests = K.tests || []; K.feedbacks = K.feedbacks || []; K.fehlvorstellungen = K.fehlvorstellungen || [];
+K.medaillen = K.medaillen || [{name:"Gold",ab:92},{name:"Silber",ab:81},{name:"Bronze",ab:50},{name:"Grün",ab:1}];
+if (K.kurs) document.getElementById("kursname").textContent = K.kurs;
+
+var DATEIEN = [];   // {id, name, kopf, zeilen, art, ziel}
+var naechsteId = 1;
+
+/* ---------- Hilfen ---------- */
+function el(tag, attr, kinder) {
+  var e = document.createElement(tag);
+  if (attr) Object.keys(attr).forEach(function (k) {
+    if (k === "text") e.textContent = attr[k];
+    else if (k === "cls") e.className = attr[k];
+    else e.setAttribute(k, attr[k]);
+  });
+  (kinder || []).forEach(function (c) { if (c != null) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
+  return e;
+}
+function norm(s) {
+  return String(s || "").toLowerCase().replace(/ä/g, "ae").replace(/ö/g, "oe").replace(/ü/g, "ue").replace(/ß/g, "ss")
+    .replace(/[^a-z0-9]+/g, " ").trim();
+}
+function zahl(s) {
+  s = String(s == null ? "" : s).trim().replace(/\s|%/g, "");
+  if (s === "" || s === "-" || s === "–") return null;
+  if (s.indexOf(",") >= 0) s = s.replace(/\./g, "").replace(",", ".");
+  var z = parseFloat(s);
+  return isNaN(z) ? null : z;
+}
+function prozent(x) { return x == null ? "–" : (Math.round(x * 10) / 10).toLocaleString("de-DE") + " %"; }
+
+/* ---------- CSV ---------- */
+function parseCSV(text) {
+  text = text.replace(/^﻿/, "");
+  var ersteZeile = text.split(/\r?\n/)[0] || "";
+  var trenn = [",", ";", "\t"].map(function (t) {
+    var n = 0, q = false;
+    for (var i = 0; i < ersteZeile.length; i++) { var c = ersteZeile[i]; if (c === '"') q = !q; else if (!q && c === t) n++; }
+    return [t, n];
+  }).sort(function (a, b) { return b[1] - a[1]; })[0][0];
+  var zeilen = [], zeile = [], feld = "", inQ = false;
+  for (var i = 0; i < text.length; i++) {
+    var c = text[i];
+    if (inQ) {
+      if (c === '"') { if (text[i + 1] === '"') { feld += '"'; i++; } else inQ = false; }
+      else feld += c;
+    } else if (c === '"') inQ = true;
+    else if (c === trenn) { zeile.push(feld); feld = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (c === "\r" && text[i + 1] === "\n") i++;
+      zeile.push(feld); feld = "";
+      if (zeile.some(function (x) { return x.trim() !== ""; })) zeilen.push(zeile);
+      zeile = [];
+    } else feld += c;
+  }
+  if (feld !== "" || zeile.length) { zeile.push(feld); if (zeile.some(function (x) { return x.trim() !== ""; })) zeilen.push(zeile); }
+  return zeilen;
+}
+
+/* ---------- Spalten erkennen ---------- */
+var RE_FRAGE = /^\s*(?:f|q|fr|frage|question)\.?\s*(\d+)\s*\/\s*([\d.,]+)\s*$/i;
+var RE_NOTE = /^\s*(?:bewertung|grade|note)\s*\/\s*([\d.,]+)\s*$/i;
+function spalte(kopf, muster) {
+  for (var i = 0; i < kopf.length; i++) if (muster.test(kopf[i].trim())) return i;
+  return -1;
+}
+function personSpalten(kopf) {
+  return {
+    nach: spalte(kopf, /^(nachname|last ?name|surname)$/i),
+    vor: spalte(kopf, /^(vorname|first ?name)$/i),
+    voll: spalte(kopf, /^(vollst(ä|ae)ndiger name|full ?name|name|nutzer\/in|benutzer\/in)$/i),
+    mail: spalte(kopf, /^(e-?mail(-adresse)?|email address)$/i),
+    status: spalte(kopf, /^(status|state|zustand)$/i)
+  };
+}
+function personName(z, p) {
+  var teile = [];
+  if (p.vor >= 0 && z[p.vor]) teile.push(z[p.vor].trim());
+  if (p.nach >= 0 && z[p.nach]) teile.push(z[p.nach].trim());
+  if (!teile.length && p.voll >= 0 && z[p.voll]) teile.push(z[p.voll].trim());
+  if (!teile.length && p.mail >= 0 && z[p.mail]) teile.push(z[p.mail].trim());
+  return teile.join(" ").trim();
+}
+function istSummenzeile(name) { return !name || /durchschnitt|average|gesamt/i.test(name); }
+function beendet(z, p) {
+  if (p.status < 0) return true;
+  var s = norm(z[p.status]);
+  return s === "" || /beendet|finished|abgeschlossen|abgegeben|submitted/.test(s);
+}
+
+function erkenne(d) {
+  var k = d.kopf, nk = k.map(norm), nn = norm(d.name);
+  var istTest = k.some(function (h) { return RE_FRAGE.test(h) || RE_NOTE.test(h); });
+  if (istTest) {
+    d.art = "test";
+    var best = null, laenge = 0;
+    K.tests.forEach(function (t) {
+      var n = norm(t.name);
+      if (n && nn.indexOf(n) >= 0 && n.length > laenge) { best = t.name; laenge = n.length; }
+    });
+    if (!best) K.tests.forEach(function (t) {  // Teilwort, z. B. "abschlusstest"
+      var erstes = norm(t.name).split(" ")[0];
+      if (!best && erstes.length > 5 && nn.indexOf(erstes) >= 0) best = t.name;
+    });
+    d.ziel = best || "";
+    return;
+  }
+  var fbTreffer = K.feedbacks.some(function (f) {
+    return f.saetze.some(function (s) { var ns = norm(s).slice(0, 40); return nk.some(function (h) { return h.indexOf(ns) >= 0; }); });
+  }) || nk.some(function (h) { return h.indexOf("ich kann") >= 0; });
+  if (fbTreffer) {
+    d.art = "feedback";
+    d.ziel = /nachher/.test(nn) ? "nachher" : (/vorher/.test(nn) ? "vorher" : "");
+    return;
+  }
+  if (nk.some(function (h) { return h.indexOf("abschlusstest") >= 0; }) || Testpaare.erkannt(K, k)) {
+    d.art = "uebersicht"; d.ziel = ""; return;
+  }
+  d.art = "unbekannt"; d.ziel = "";
+}
+
+/* ---------- Dateien laden ---------- */
+function ladeDateien(liste) {
+  var offen = liste.length;
+  Array.prototype.forEach.call(liste, function (f) {
+    var r = new FileReader();
+    r.onload = function () {
+      var zeilen = parseCSV(String(r.result));
+      if (zeilen.length) {
+        var d = {id: naechsteId++, name: f.name, kopf: zeilen[0], zeilen: zeilen.slice(1)};
+        erkenne(d);
+        DATEIEN.push(d);
+      }
+      if (--offen === 0) alles();
+    };
+    r.onerror = function () { if (--offen === 0) alles(); };
+    r.readAsText(f, "utf-8");
+  });
+}
+
+function zeichneDateiliste() {
+  var ul = document.getElementById("dateiliste");
+  ul.textContent = "";
+  DATEIEN.forEach(function (d) {
+    var sel = el("select", {"aria-label": "Art der Datei " + d.name});
+    var opts = [["ignorieren", "nicht auswerten"]];
+    K.tests.forEach(function (t) { opts.push(["test|" + t.name, "Testergebnisse: " + t.name]); });
+    opts.push(["feedback|vorher", "Selbsteinschätzung vorher"]);
+    opts.push(["feedback|nachher", "Selbsteinschätzung nachher"]);
+    opts.push(["uebersicht|", "Bewertungsübersicht"]);
+    var aktuell = d.art === "unbekannt" || (d.art !== "uebersicht" && !d.ziel) ? "ignorieren" : d.art + "|" + d.ziel;
+    opts.forEach(function (o) { var op = el("option", {value: o[0], text: o[1]}); if (o[0] === aktuell) op.selected = true; sel.appendChild(op); });
+    sel.addEventListener("change", function () {
+      if (sel.value === "ignorieren") { d.art = "unbekannt"; d.ziel = ""; }
+      else { var t = sel.value.split("|"); d.art = t[0]; d.ziel = t.slice(1).join("|"); }
+      alles();
+    });
+    var weg = el("button", {type: "button", text: "Entfernen", "aria-label": "Datei " + d.name + " entfernen"});
+    weg.addEventListener("click", function () { DATEIEN = DATEIEN.filter(function (x) { return x !== d; }); alles(); });
+    var warn = aktuell === "ignorieren" ? el("span", {cls: "klein", text: "– bitte zuordnen"}) : null;
+    ul.appendChild(el("li", null, [el("span", {cls: "dname", text: d.name}),
+      el("span", {cls: "klein", text: "(" + d.zeilen.length + " Zeilen)"}), sel, warn, weg]));
+  });
+}
+
+/* ---------- Auswertung Tests ---------- */
+function testKonfig(name) { for (var i = 0; i < K.tests.length; i++) if (K.tests[i].name === name) return K.tests[i]; return null; }
+
+function versucheAus(d) {
+  // Liefert [{person, prozent, fragen: {nr: {wert, max}}}]
+  var p = personSpalten(d.kopf), note = -1, notemax = null, fragen = [];
+  d.kopf.forEach(function (h, i) {
+    var m = RE_FRAGE.exec(h); if (m) fragen.push({i: i, nr: parseInt(m[1], 10), max: zahl(m[2])});
+    var n = RE_NOTE.exec(h); if (n && note < 0) { note = i; notemax = zahl(n[1]); }
+  });
+  var erg = [];
+  d.zeilen.forEach(function (z) {
+    var name = personName(z, p);
+    if (istSummenzeile(name) || !beendet(z, p)) return;
+    var pr = null;
+    if (note >= 0) { var w = zahl(z[note]); if (w != null && notemax) pr = 100 * w / notemax; }
+    var fr = {};
+    fragen.forEach(function (f) { fr[f.nr] = {wert: zahl(z[f.i]), max: f.max}; });
+    erg.push({person: name, prozent: pr, fragen: fr});
+  });
+  return erg;
+}
+function filtereVersuche(versuche) {
+  if (document.getElementById("versuchswahl").value === "alle") return versuche;
+  var gesehen = {};
+  return versuche.filter(function (v) { if (gesehen[v.person]) return false; gesehen[v.person] = true; return true; });
+}
+function medaille(pr) {
+  if (pr == null) return "–";
+  for (var i = 0; i < K.medaillen.length; i++) if (pr >= K.medaillen[i].ab) return K.medaillen[i].name;
+  return "keine";
+}
+function medaillenEl(m) { return m === "–" ? document.createTextNode("–") : el("span", {cls: "medaille m-" + m, text: m}); }
+
+function zeichneAbschluss() {
+  var p = document.getElementById("p-abschluss");
+  p.textContent = "";
+  p.appendChild(el("h2", {text: "Abschlusstests und Abzeichen"}));
+  var grenzen = K.medaillen.slice().reverse().map(function (m) { return m.name + " ab " + m.ab + " %"; }).join(", ");
+  p.appendChild(el("p", {cls: "hinweis", text: "Medaille aus dem bewerteten Abschlusstest (ein Versuch): " + grenzen + ". Jede Person hat genau eine."}));
+  var personen = {}, reihenfolge = [];
+  function person(n) { if (!personen[n]) { personen[n] = {abschluss: null, gp: null, gpn: 0}; reihenfolge.push(n); } return personen[n]; }
+  var quelle = false;
+  DATEIEN.forEach(function (d) {
+    if (d.art !== "test") return;
+    var t = testKonfig(d.ziel); if (!t) return;
+    if (t.rolle === "abschluss") {
+      quelle = true;
+      var gesehen = {};
+      versucheAus(d).forEach(function (v) { if (gesehen[v.person]) return; gesehen[v.person] = true; person(v.person).abschluss = v.prozent; });
+    } else if (t.rolle === "generalprobe") {
+      quelle = true;
+      versucheAus(d).forEach(function (v) {
+        var q = person(v.person); q.gpn++;
+        if (v.prozent != null && (q.gp == null || v.prozent > q.gp)) q.gp = v.prozent;
+      });
+    }
+  });
+  DATEIEN.forEach(function (d) {
+    if (d.art !== "uebersicht") return;
+    var ps = personSpalten(d.kopf), sp = -1, gp = -1, max = null;
+    d.kopf.forEach(function (h, i) {
+      var n = norm(h);
+      if (sp < 0 && n.indexOf("abschlusstest") >= 0) sp = i;
+      if (gp < 0 && n.indexOf("generalprobe") >= 0) gp = i;
+    });
+    var t = null; K.tests.forEach(function (x) { if (x.rolle === "abschluss") t = x; });
+    var istProzent = sp >= 0 && /prozent|percentage|%/i.test(d.kopf[sp]);
+    max = t && t.punkte ? t.punkte : null;
+    d.zeilen.forEach(function (z) {
+      var name = personName(z, ps); if (istSummenzeile(name)) return;
+      var roh = sp >= 0 ? z[sp] : "", w = zahl(roh);
+      if (w == null) { person(name); return; }
+      quelle = true;
+      var pr = (istProzent || /%/.test(roh)) ? w : (max ? 100 * w / max : null);
+      var q = person(name); if (q.abschluss == null) q.abschluss = pr;
+    });
+  });
+  if (!quelle) { p.appendChild(el("p", {cls: "leer", text: "Noch keine Ergebnisse von Abschlusstest oder Generalprobe geladen."})); return; }
+  var zaehl = {}; K.medaillen.forEach(function (m) { zaehl[m.name] = 0; }); zaehl.keine = 0; zaehl["–"] = 0;
+  var tab = el("table"), kopf = el("tr");
+  tab.appendChild(el("caption", {text: "Ergebnis je Person"}));
+  ["Person", "Abschlusstest", "Medaille", "Generalprobe (bester Versuch)", "Versuche Generalprobe"].forEach(function (h, i) {
+    kopf.appendChild(el("th", {scope: "col", cls: i === 1 || i >= 3 ? "zahl" : "", text: h}));
+  });
+  tab.appendChild(el("thead", null, [kopf]));
+  var tb = el("tbody");
+  reihenfolge.forEach(function (n) {
+    var q = personen[n], m = medaille(q.abschluss); zaehl[m] = (zaehl[m] || 0) + 1;
+    tb.appendChild(el("tr", null, [el("th", {scope: "row", text: n}), el("td", {cls: "zahl", text: prozent(q.abschluss)}),
+      el("td", null, [medaillenEl(m)]), el("td", {cls: "zahl", text: prozent(q.gp)}), el("td", {cls: "zahl", text: String(q.gpn)})]));
+  });
+  tab.appendChild(tb);
+  p.appendChild(el("div", {cls: "scroll"}, [tab]));
+  var ue = el("table"); ue.appendChild(el("caption", {text: "Medaillen in der Klasse"}));
+  var r1 = el("tr"), r2 = el("tr");
+  K.medaillen.map(function (m) { return m.name; }).concat(["keine", "–"]).forEach(function (m) {
+    r1.appendChild(el("th", {scope: "col", text: m === "–" ? "noch kein Ergebnis" : (m === "keine" ? "keine (0 %)" : m)}));
+    r2.appendChild(el("td", {cls: "zahl", text: String(zaehl[m] || 0)}));
+  });
+  ue.appendChild(el("thead", null, [r1])); ue.appendChild(el("tbody", null, [r2]));
+  p.appendChild(el("div", {cls: "scroll"}, [ue]));
+}
+
+/* ---------- Kacheltests und Sterne (Bewertungsübersicht) ---------- */
+K.testpaare = K.testpaare || [];
+function sterneZelle(x) { return x == null ? "–" : sterneText(x) + " ★"; }
+function zeichnePaare() {
+  var p = document.getElementById("p-paare");
+  p.textContent = "";
+  p.appendChild(el("h2", {text: "Kacheltests und Sterne"}));
+  p.appendChild(el("p", {cls: "hinweis", text: "Je Kacheltest: Ergebnis im ersten Versuch, im zweiten Versuch (nur wer " +
+    "den ersten nicht bestanden hat) und die Sterne aus der berechneten Bewertung „Sterne: …“. Quelle: " +
+    "Bewertungsübersicht (Bewertungen → Export → Textdatei)."}));
+  if (!K.testpaare.length) { p.appendChild(el("p", {cls: "leer", text: "Dieser Kurs hat keine Kacheltests mit zweitem Versuch."})); return; }
+  var personen = [];
+  DATEIEN.forEach(function (d) {
+    if (d.art !== "uebersicht") return;
+    Testpaare.auswerten(K, d.kopf, d.zeilen).forEach(function (x) { personen.push(x); });
+  });
+  if (!personen.length) { p.appendChild(el("p", {cls: "leer", text: "Noch keine Bewertungsübersicht geladen."})); return; }
+  var tab = el("table"), k1 = el("tr"), k2 = el("tr");
+  tab.appendChild(el("caption", {text: "Kacheltests je Person"}));
+  k1.appendChild(el("th", {scope: "col", rowspan: "2", text: "Person"}));
+  K.testpaare.forEach(function (tp) {
+    k1.appendChild(el("th", {scope: "colgroup", colspan: "3", title: tp.kachel, text: tp.schritt}));
+    ["1. Versuch", "2. Versuch", "Sterne"].forEach(function (h) { k2.appendChild(el("th", {scope: "col", cls: "zahl", text: h})); });
+  });
+  k1.appendChild(el("th", {scope: "col", rowspan: "2", cls: "zahl", text: "Sterne gesamt"}));
+  tab.appendChild(el("thead", null, [k1, k2]));
+  var tb = el("tbody");
+  personen.forEach(function (x) {
+    var tr = el("tr", null, [el("th", {scope: "row", text: x.person})]), summe = 0, da = false;
+    x.paare.forEach(function (w) {
+      tr.appendChild(el("td", {cls: "zahl", text: prozent(w.erster)}));
+      tr.appendChild(el("td", {cls: "zahl", text: prozent(w.zweiter)}));
+      tr.appendChild(el("td", {cls: "zahl", text: sterneZelle(w.sterne)}));
+      if (w.sterne != null) { summe += w.sterne; da = true; }
+    });
+    tr.appendChild(el("td", {cls: "zahl", text: da ? sterneZelle(summe) : "–"}));
+    tb.appendChild(tr);
+  });
+  tab.appendChild(tb);
+  p.appendChild(el("div", {cls: "scroll"}, [tab]));
+}
+
+/* ---------- Fehlvorstellungen ---------- */
+var FV_SPALTEN = [["eingang", "Eingangstest"], ["selbsttest", "Selbsttests"], ["abschluss", "Abschlusstest"]];
+function zeichneFV() {
+  var p = document.getElementById("p-fv");
+  p.textContent = "";
+  p.appendChild(el("h2", {text: "Fehlvorstellungen"}));
+  p.appendChild(el("p", {cls: "hinweis", text: "Anteil falscher Antworten je Fehlvorstellung: eine Frage zählt als falsch, wenn sie nicht die volle Punktzahl bekam. Unbeantwortete Fragen zählen nicht mit. Die Generalprobe bleibt außen vor."}));
+  var klasse = {}, proPerson = {}, personen = [], ohneZuordnung = [], geladen = false;
+  K.fehlvorstellungen.forEach(function (f) { klasse[f.nr] = {}; FV_SPALTEN.forEach(function (s) { klasse[f.nr][s[0]] = {f: 0, n: 0}; }); });
+  DATEIEN.forEach(function (d) {
+    if (d.art !== "test") return;
+    var t = testKonfig(d.ziel); if (!t || t.rolle === "generalprobe") return;
+    geladen = true;
+    var zu = {}; (t.fragen || []).forEach(function (q) { if (q.fv && q.fv.length) zu[q.nr] = q.fv; });
+    if (!Object.keys(zu).length) { ohneZuordnung.push(t.name); return; }
+    filtereVersuche(versucheAus(d)).forEach(function (v) {
+      if (!proPerson[v.person]) { proPerson[v.person] = {}; personen.push(v.person); }
+      Object.keys(zu).forEach(function (nr) {
+        var a = v.fragen[nr]; if (!a || a.wert == null) return;
+        var falsch = a.max != null ? a.wert < a.max - 1e-9 : a.wert <= 0;
+        zu[nr].forEach(function (fv) {
+          if (!klasse[fv]) { klasse[fv] = {}; FV_SPALTEN.forEach(function (s) { klasse[fv][s[0]] = {f: 0, n: 0}; }); }
+          var z = klasse[fv][t.rolle] || klasse[fv].selbsttest; z.n++; if (falsch) z.f++;
+          var pp = proPerson[v.person][fv] = proPerson[v.person][fv] || {f: 0, n: 0}; pp.n++; if (falsch) pp.f++;
+        });
+      });
+    });
+  });
+  if (!geladen) { p.appendChild(el("p", {cls: "leer", text: "Noch keine Testergebnisse geladen (Eingangstest, Selbsttests oder Abschlusstest)."})); return; }
+  if (ohneZuordnung.length) p.appendChild(el("p", {cls: "warnung", text: "Für diese Tests fehlt die Zuordnung Frage → Fehlvorstellung im Dashboard: " + ohneZuordnung.join("; ") + ". Das Dashboard bitte aus dem fertigen Kursbau neu erzeugen lassen."}));
+  var namen = {}; K.fehlvorstellungen.forEach(function (f) { namen[f.nr] = f.name; });
+  var tab = el("table"), kopf = el("tr", null, [el("th", {scope: "col", text: "Fehlvorstellung"})]);
+  tab.appendChild(el("caption", {text: "Klasse: Anteil falscher Antworten"}));
+  FV_SPALTEN.forEach(function (s) { kopf.appendChild(el("th", {scope: "col", text: s[1]})); });
+  tab.appendChild(el("thead", null, [kopf]));
+  var tb = el("tbody");
+  Object.keys(klasse).sort().forEach(function (fv) {
+    var tr = el("tr", null, [el("th", {scope: "row", text: fv + (namen[fv] ? " " + namen[fv] : "")})]);
+    FV_SPALTEN.forEach(function (s) {
+      var z = klasse[fv][s[0]];
+      if (!z.n) { tr.appendChild(el("td", {cls: "leer", text: "keine Daten"})); return; }
+      var a = 100 * z.f / z.n;
+      tr.appendChild(el("td", null, [el("span", {cls: "balken" + (a >= 50 ? " hoch" : ""), style: "width:" + Math.max(2, Math.round(a)) + "px", "aria-hidden": "true"}),
+        prozent(a) + " falsch (" + z.f + " von " + z.n + ")" + (a >= 50 ? " – häufig" : "")]));
+    });
+    tb.appendChild(tr);
+  });
+  tab.appendChild(tb);
+  p.appendChild(el("div", {cls: "scroll"}, [tab]));
+  if (!personen.length) return;
+  var fvs = Object.keys(klasse).sort();
+  var t2 = el("table"), k2 = el("tr", null, [el("th", {scope: "col", text: "Person"})]);
+  t2.appendChild(el("caption", {text: "Je Person: falsche von beantworteten Fragen (alle zugeordneten Tests)"}));
+  fvs.forEach(function (fv) { k2.appendChild(el("th", {scope: "col", cls: "zahl", text: fv})); });
+  t2.appendChild(el("thead", null, [k2]));
+  var b2 = el("tbody");
+  personen.forEach(function (n) {
+    var tr = el("tr", null, [el("th", {scope: "row", text: n})]);
+    fvs.forEach(function (fv) {
+      var z = proPerson[n][fv];
+      tr.appendChild(el("td", {cls: "zahl", text: z ? z.f + " / " + z.n + (z.n && z.f / z.n >= 0.5 ? " !" : "") : "–"}));
+    });
+    b2.appendChild(tr);
+  });
+  t2.appendChild(b2);
+  p.appendChild(el("div", {cls: "scroll"}, [t2]));
+  p.appendChild(el("p", {cls: "klein", text: "„!“ = mindestens die Hälfte falsch."}));
+}
+
+/* ---------- Vorher-nachher ---------- */
+function fbKonfig(rolle) { for (var i = 0; i < K.feedbacks.length; i++) if (K.feedbacks[i].rolle === rolle) return K.feedbacks[i]; return null; }
+function stufeVon(wert, f) {
+  var n = norm(wert); if (!n) return null;
+  var m = /^\(?(\d)\)?\s/.exec(String(wert).trim());
+  var opts = (f && f.optionen) || [];
+  for (var i = 0; i < opts.length; i++) if (norm(opts[i]) === n) return f.stufen[i];
+  var best = -1, len = 0;
+  for (var j = 0; j < opts.length; j++) { var o = norm(opts[j]); if (o && n.indexOf(o) >= 0 && o.length > len) { best = j; len = o.length; } }
+  if (best >= 0) return f.stufen[best];
+  if (m) return parseInt(m[1], 10);
+  return null;
+}
+function saetzeAus(d, f) {
+  // {satz: {werte: [stufen], person: {name: stufe}}}
+  var p = personSpalten(d.kopf), erg = {};
+  var saetze = (f && f.saetze && f.saetze.length) ? f.saetze : [];
+  d.kopf.forEach(function (h, i) {
+    var nh = norm(h), satz = null;
+    saetze.forEach(function (s) { var ns = norm(s).replace(/^\d+ /, ""); if (!satz && (nh.indexOf(ns.slice(0, 40)) >= 0 || ns.indexOf(nh) >= 0 && nh.length > 15)) satz = s; });
+    if (!satz && !saetze.length && nh.indexOf("ich kann") >= 0) satz = h.replace(/^\s*\(?item\d+\)?\s*/i, "");
+    if (!satz) return;
+    var e = erg[satz] = erg[satz] || {werte: [], person: {}};
+    d.zeilen.forEach(function (z) {
+      var name = personName(z, p);
+      if (/durchschnitt|average/i.test(name)) return;
+      var s = stufeVon(z[i], f); if (s == null) return;
+      e.werte.push(s); if (name) e.person[name] = s;
+    });
+  });
+  return erg;
+}
+function mittel(a) { return a.length ? a.reduce(function (x, y) { return x + y; }, 0) / a.length : null; }
+function zeichneVN() {
+  var p = document.getElementById("p-vn");
+  p.textContent = "";
+  p.appendChild(el("h2", {text: "Vorher-nachher: Selbsteinschätzung"}));
+  var fv = fbKonfig("vorher"), fn = fbKonfig("nachher");
+  var opts = (fv && fv.optionen) || [];
+  var skala = opts.map(function (o, i) { return fv.stufen[i] + " = " + o; }).sort().reverse().join(", ");
+  p.appendChild(el("p", {cls: "hinweis", text: "Mittelwert der Einschätzung je Satz" + (skala ? " (" + skala + ")" : "") + "; höher ist sicherer."}));
+  var v = {}, n = {}, hat = false;
+  DATEIEN.forEach(function (d) {
+    if (d.art !== "feedback" || !d.ziel) return;
+    hat = true;
+    var erg = saetzeAus(d, d.ziel === "vorher" ? fv : fn), ziel = d.ziel === "vorher" ? v : n;
+    Object.keys(erg).forEach(function (s) {
+      ziel[s] = ziel[s] || {werte: [], person: {}};
+      ziel[s].werte = ziel[s].werte.concat(erg[s].werte);
+      Object.keys(erg[s].person).forEach(function (pn) { ziel[s].person[pn] = erg[s].person[pn]; });
+    });
+  });
+  if (!hat) { p.appendChild(el("p", {cls: "leer", text: "Noch keine Selbsteinschätzung geladen."})); return; }
+  var saetze = [];
+  (fv && fv.saetze.length ? fv.saetze : []).forEach(function (s) { saetze.push(s); });
+  Object.keys(v).concat(Object.keys(n)).forEach(function (s) { if (saetze.indexOf(s) < 0) saetze.push(s); });
+  var tab = el("table"), kopf = el("tr");
+  tab.appendChild(el("caption", {text: "Klasse"}));
+  ["Ich-kann-Satz", "vorher", "nachher", "Veränderung"].forEach(function (h, i) { kopf.appendChild(el("th", {scope: "col", cls: i ? "zahl" : "", text: h})); });
+  tab.appendChild(el("thead", null, [kopf]));
+  var tb = el("tbody");
+  function fmt(a) { var m = mittel(a); return m == null ? "–" : m.toLocaleString("de-DE", {minimumFractionDigits: 1, maximumFractionDigits: 1}) + " (n = " + a.length + ")"; }
+  saetze.forEach(function (s) {
+    var a = v[s] ? v[s].werte : [], b = n[s] ? n[s].werte : [];
+    var ma = mittel(a), mb = mittel(b), diff = ma != null && mb != null ? mb - ma : null;
+    var dt = diff == null ? "–" : (diff > 0 ? "+" : "") + diff.toLocaleString("de-DE", {minimumFractionDigits: 1, maximumFractionDigits: 1}) + (diff > 0.05 ? " sicherer" : diff < -0.05 ? " unsicherer" : " gleich");
+    tb.appendChild(el("tr", null, [el("th", {scope: "row", text: s}), el("td", {cls: "zahl", text: fmt(a)}), el("td", {cls: "zahl", text: fmt(b)}), el("td", {cls: "zahl", text: dt})]));
+  });
+  tab.appendChild(tb);
+  p.appendChild(el("div", {cls: "scroll"}, [tab]));
+  var namen = [];
+  saetze.forEach(function (s) {
+    [v[s], n[s]].forEach(function (x) { if (x) Object.keys(x.person).forEach(function (pn) { if (namen.indexOf(pn) < 0) namen.push(pn); }); });
+  });
+  if (!namen.length) { p.appendChild(el("p", {cls: "klein", text: "Die Selbsteinschätzung ist anonym; es gibt nur den Klassenvergleich."})); return; }
+  var t2 = el("table"), k2 = el("tr", null, [el("th", {scope: "col", text: "Person"})]);
+  t2.appendChild(el("caption", {text: "Je Person: vorher → nachher"}));
+  saetze.forEach(function (s, i) { k2.appendChild(el("th", {scope: "col", cls: "zahl", title: s, text: "Satz " + (i + 1)})); });
+  t2.appendChild(el("thead", null, [k2]));
+  var b2 = el("tbody");
+  namen.forEach(function (pn) {
+    var tr = el("tr", null, [el("th", {scope: "row", text: pn})]);
+    saetze.forEach(function (s) {
+      var a = v[s] && v[s].person[pn], b = n[s] && n[s].person[pn];
+      tr.appendChild(el("td", {cls: "zahl", text: (a == null ? "–" : a) + " → " + (b == null ? "–" : b)}));
+    });
+    b2.appendChild(tr);
+  });
+  t2.appendChild(b2);
+  p.appendChild(el("div", {cls: "scroll"}, [t2]));
+}
+
+/* ---------- Klasse live (Moodle-Sitzung der Lehrkraft) ----------
+   Nach zeugnis.klassenuebersicht() der Moodle-Pipeline BSB: Teilnehmende aus /user/index.php, je Person
+   /grade/report/user/index.php. Statt Abzeichentests und Stufen zählen Sterne: Kurs gesamt (Bewertung
+   von Bereich) = erreichte von möglichen Sternen. Die Oberfläche kann deutsch oder englisch sein; gelesen
+   wird deshalb über die Spaltenklassen von Moodle, Spaltenköpfe nur als Rückfall in beiden Sprachen. */
+K.stern_tests = K.stern_tests || []; K.hilfekarten = K.hilfekarten || [];
+
+// Wie im Original: geschützte Leerzeichen, doppelte Leerzeichen und zerlegte Umlaute stören den Vergleich nicht.
+function gleichform(t) {
+  t = String(t || "");
+  if (t.normalize) t = t.normalize("NFC");
+  return t.replace(/[\s   ]+/g, " ").trim();
+}
+// Gleich, oder höchstens ein Vorspann ohne Leerzeichen (Modultyp vor dem Namen, wenn der Link fehlt).
+function passt(name, gesucht) {
+  var a = gleichform(name), b = gleichform(gesucht);
+  if (a === b) return true;
+  if (!b || a.length <= b.length || a.slice(-b.length) !== b) return false;
+  var vorne = a.slice(0, a.length - b.length);
+  return vorne.length <= 20 && vorne.indexOf(" ") < 0;
+}
+function liveZahl(text) {
+  var m = String(text || "").replace(/\s/g, "").replace(",", ".").match(/-?\d+(\.\d+)?/);
+  return m ? parseFloat(m[0]) : null;
+}
+function sterneText(x) { return (Math.round(x * 100) / 100).toLocaleString("de-DE"); }
+
+function liveWurzel() {
+  var M = null;
+  try { M = window.parent !== window ? window.parent.M : window.M; } catch (e) { M = window.M; }
+  if (M && M.cfg && M.cfg.wwwroot) return M.cfg.wwwroot;
+  var i = location.pathname.indexOf("/pluginfile.php");   // Datei aus dem Kurs: Moodle kann in einem Unterordner liegen
+  return location.origin + (i >= 0 ? location.pathname.slice(0, i) : "");
+}
+async function holeSeite(url) {
+  var r = await fetch(url, {credentials: "same-origin"});
+  if (!r.ok) throw new Error("Moodle antwortet mit " + r.status + " auf " + url.replace(/^https?:\/\/[^/]+/, ""));
+  return new DOMParser().parseFromString(await r.text(), "text/html");
+}
+function kursIdAus(text) {
+  var m = String(text || "").match(/course\/view\.php\?id=(\d+)/) || String(text || "").match(/[?&]course=(\d+)/);
+  return m ? m[1] : null;
+}
+// Welcher Kurs? Eingabe, Moodle-Seite drumherum, Herkunft, Adresse – sonst über Kursname oder Kurzname suchen.
+async function liveKursId(wurzel) {
+  var eingabe = document.getElementById("live-kursid").value.trim();
+  if (/^\d+$/.test(eingabe)) return eingabe;
+  try {
+    if (window.parent !== window) {
+      var M = window.parent.M;
+      if (M && M.cfg && M.cfg.courseId > 1) return String(M.cfg.courseId);
+      var a = window.parent.document.querySelector('a[href*="course/view.php?id="]');
+      if (a && kursIdAus(a.href)) return kursIdAus(a.href);
+    }
+  } catch (e) { /* andere Herkunft: weiter unten suchen */ }
+  var id = kursIdAus(document.referrer) || kursIdAus(location.href);
+  if (id) return id;
+  var suche = K.kurzname || K.kurs;
+  if (!suche) return null;
+  var doc = await holeSeite(wurzel + "/course/search.php?search=" + encodeURIComponent(suche));
+  var gefunden = {};
+  doc.querySelectorAll('a[href*="course/view.php?id="]').forEach(function (a) {
+    if (K.kurs && gleichform(a.textContent) === gleichform(K.kurs)) gefunden[kursIdAus(a.href)] = true;
+  });
+  var ids = Object.keys(gefunden);
+  return ids.length === 1 ? ids[0] : null;
+}
+
+// Kursaufbau: zu welcher Kachel gehört welche Aktivität? Die Stern-Quiz heißen in jeder Kachel gleich.
+async function liveAufbau(wurzel, kursid, sesskey) {
+  if (!sesskey) return null;
+  try {
+    var r = await fetch(wurzel + "/lib/ajax/service.php?sesskey=" + encodeURIComponent(sesskey) +
+      "&info=core_courseformat_get_state", {method: "POST", credentials: "same-origin",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify([{index: 0, methodname: "core_courseformat_get_state", args: {courseid: Number(kursid)}}])});
+    var antwort = await r.json();
+    if (!antwort[0] || antwort[0].error) return null;
+    var st = JSON.parse(antwort[0].data), titel = {};
+    st.section.forEach(function (s) { titel[s.id] = s.title; });
+    return st.cm.map(function (c) { return {id: String(c.id), name: c.name, kachel: titel[c.sectionid] || ""}; });
+  } catch (e) { return null; }
+}
+// Je Eintrag {kachel, name} die Nummer der Aktivität im Kurs (cmid) – oder null, wenn der Aufbau fehlt.
+function cmFuer(aufbau, kachel, name) {
+  if (!aufbau) return null;
+  var t = aufbau.filter(function (c) { return passt(c.kachel, kachel) && passt(c.name, name); });
+  return t.length === 1 ? t[0].id : null;
+}
+
+// Übersicht für Teilnehmer/in: Zeilen mit Name, cmid, Bewertung, Bereich, Prozentsatz.
+function liesBewertung(doc) {
+  function kopfId(klasse, worte) {
+    var th = doc.querySelector("th." + klasse);
+    if (th && th.id) return th.id;
+    var alle = Array.prototype.slice.call(doc.querySelectorAll("thead th"));
+    for (var i = 0; i < alle.length; i++) {
+      if (worte.indexOf(gleichform(alle[i].textContent).toLowerCase()) >= 0 && alle[i].id) return alle[i].id;
+    }
+    return null;
+  }
+  var ids = {
+    note: kopfId("column-grade", ["bewertung", "grade"]),
+    bereich: kopfId("column-range", ["bereich", "range"]),
+    prozent: kopfId("column-percentage", ["prozentsatz", "percentage"])
+  };
+  function zelle(tr, art) {
+    var z = tr.querySelector("td.column-" + {note: "grade", bereich: "range", prozent: "percentage"}[art]);
+    if (!z && ids[art]) z = tr.querySelector('td[headers~="' + ids[art] + '"]');
+    if (!z) return "";
+    z = z.cloneNode(true);   // Aktionsmenü („Bewertungsanalyse“) steht in derselben Zelle
+    z.querySelectorAll(".action-menu, .dropdown, .dropdown-menu, [role=menu]").forEach(function (m) { m.remove(); });
+    return gleichform(z.textContent);
+  }
+  var zeilen = [];
+  doc.querySelectorAll("table.user-grade tr, table.generaltable tr").forEach(function (tr) {
+    var kopf = tr.querySelector("th.column-itemname") || tr.querySelector("th");
+    if (!kopf || !tr.querySelector("td")) return;
+    var a = kopf.querySelector(".rowtitle a, a.gradeitemheader"), titel = kopf.querySelector(".gradeitemheader");
+    var name = gleichform((a || titel || kopf).textContent);
+    var cm = a ? ((a.getAttribute("href") || "").match(/\/mod\/\w+\/view\.php\?id=(\d+)/) || [])[1] : null;
+    var gesamt = !!kopf.querySelector(".courseitem") || /\bbaggt\b/.test(kopf.className) ||
+      /^(kurs gesamt|course total)$/i.test(name);
+    zeilen.push({name: name, cm: cm || null, gesamt: gesamt,
+                 note: zelle(tr, "note"), bereich: zelle(tr, "bereich"), prozent: zelle(tr, "prozent")});
+  });
+  return zeilen;
+}
+// Erreichte Sterne = Kurs gesamt (Bewertung). Der Bereich dort zählt nur, was schon bewertet ist (Moodle-Einstellung
+// „Nur bewertete Aspekte“: nach einem Test mit 1 Punkt steht „0–1“ statt „0–51“) – die möglichen Sterne kommen
+// deshalb aus dem Setup für Bewertungen (moeglichKurs); der Bereich der Person ist nur der Rückfall.
+function sterneAus(zeilen, moeglichKurs) {
+  var g = zeilen.filter(function (z) { return z.gesamt; })[0];
+  if (!g) return null;
+  var grenzen = (g.bereich.replace(/,/g, ".").match(/\d+(\.\d+)?/g) || []).map(parseFloat);
+  var bereich = grenzen.length ? grenzen[grenzen.length - 1] : null;
+  var pr = liveZahl(g.prozent), erreicht = null;
+  if (/%/.test(g.note) || liveZahl(g.note) === null) {
+    if (pr !== null && bereich) erreicht = bereich * pr / 100;   // Kurs zeigt Prozent statt Punkte
+  } else erreicht = liveZahl(g.note);
+  return {erreicht: erreicht, moeglich: moeglichKurs || bereich};
+}
+// Höchstbewertung von Kurs gesamt aus dem Setup für Bewertungen (nur für Lehrkräfte sichtbar).
+async function liveMoeglich(wurzel, kursid) {
+  try {
+    var doc = await holeSeite(wurzel + "/grade/edit/tree/index.php?id=" + kursid);
+    var z = doc.querySelector("tr.courseitem td.column-range");
+    return z ? liveZahl(z.textContent) : null;
+  } catch (e) { return null; }
+}
+function sternGeholt(zeilen, cm, name, nr) {
+  var z = cm ? zeilen.filter(function (x) { return x.cm === cm; })[0] : null;
+  if (!z && !cm) z = zeilen.filter(function (x) { return passt(x.name, name); })[nr];   // ohne Aufbau: nach Reihenfolge
+  if (!z) return false;
+  var w = liveZahl(z.note);
+  return w !== null && w > 0;
+}
+
+// Bericht Aktivitätsabschluss: {nutzerId: {cmid: true/false}}, dazu die Spalten (cmid → Name).
+async function liveAbschluss(wurzel, kursid) {
+  var stand = {}, spalten = {};
+  for (var start = 0, seite = 0; seite < 40; seite++) {
+    var doc;
+    try {
+      doc = await holeSeite(wurzel + "/report/progress/index.php?course=" + kursid + "&start=" + start);
+    } catch (e) { return seite ? {stand: stand, spalten: spalten} : null; }
+    var tab = doc.getElementById("completion-progress");
+    if (!tab) return seite ? {stand: stand, spalten: spalten} : null;
+    var cms = [];
+    tab.querySelectorAll("thead th").forEach(function (th) {
+      var a = th.querySelector('a[href*="/mod/"]');
+      var m = a ? (a.getAttribute("href") || "").match(/\/mod\/\w+\/view\.php\?id=(\d+)/) : null;
+      cms.push(m ? m[1] : null);
+      if (m) spalten[m[1]] = a.getAttribute("title") || gleichform(a.textContent);
+    });
+    var neu = 0;
+    tab.querySelectorAll("tbody tr").forEach(function (tr) {
+      var a = tr.querySelector('a[href*="user/view.php?id="]');
+      var u = a ? ((a.getAttribute("href") || "").match(/user\/view\.php\?id=(\d+)/) || [])[1] : null;
+      if (!u || stand[u]) return;
+      neu++; stand[u] = {};
+      Array.prototype.forEach.call(tr.children, function (z, i) {
+        if (!cms[i]) return;
+        var img = z.querySelector("img, i.icon, [title]");
+        var zeichen = img ? (img.getAttribute("src") || "") + " " + (img.getAttribute("title") || "") : "";
+        stand[u][cms[i]] = /completion-(auto|manual)-(y|pass)\b/.test(zeichen);
+      });
+    });
+    if (!neu) break;
+    start += neu;
+  }
+  return {stand: stand, spalten: spalten};
+}
+
+var liveLaeuft = false;
+async function ladeLive() {
+  if (liveLaeuft) return;
+  liveLaeuft = true;
+  var status = document.getElementById("live-status"), fehler = document.getElementById("live-fehler");
+  var koerper = document.getElementById("live-zeilen");
+  status.dataset.fertig = "0"; fehler.hidden = true; document.getElementById("live-wartet").hidden = true;
+  koerper.textContent = ""; document.getElementById("live-medaillen").textContent = "";
+  try {
+    if (!/^https?:$/.test(location.protocol)) {
+      throw new Error("Diese Ansicht braucht Moodle: Öffnen Sie die Datei im Kurs (Material für Lehrkräfte), " +
+                      "nicht vom eigenen Rechner. Die übrigen Ansichten funktionieren auch so.");
+    }
+    var wurzel = liveWurzel();
+    status.textContent = "Kurs wird gesucht …";
+    var kursid = await liveKursId(wurzel);
+    if (!kursid) {
+      document.getElementById("live-kurswahl").hidden = false;
+      throw new Error("Der Kurs ließ sich nicht finden. Tragen Sie die Kurs-ID ein und klicken Sie auf „Neu laden“.");
+    }
+
+    // 1 · Wer ist in der Klasse? Name = nur die Textknoten im Link (davor steht ein Kürzel-Bild „S0“).
+    status.textContent = "Teilnehmende werden geladen …";
+    var r = await fetch(wurzel + "/user/index.php?id=" + kursid + "&perpage=5000", {credentials: "same-origin"});
+    if (!r.ok) throw new Error("Das Teilnehmerverzeichnis ließ sich nicht laden (Moodle antwortet mit " + r.status + ").");
+    var roh = await r.text();
+    var liste = new DOMParser().parseFromString(roh, "text/html");
+    // Die eigene Zeile der Lehrkraft fällt weg – Vergleich über die Nutzer-ID, nicht über einen Rollennamen.
+    var eigen = (roh.match(/"userId":\s*"?(\d+)/) || [])[1] || null;
+    var sesskey = (roh.match(/"sesskey":"([^"]+)"/) || [])[1] || null;
+    var leute = [], gesehen = {};
+    liste.querySelectorAll('a[href*="/user/view.php?id="]').forEach(function (a) {
+      var t = (a.getAttribute("href") || "").match(/user\/view\.php\?id=(\d+)/);
+      var name = Array.prototype.filter.call(a.childNodes, function (n) { return n.nodeType === 3; })
+        .map(function (n) { return n.textContent; }).join("").trim();
+      if (!t || !name || gesehen[t[1]] || t[1] === eigen) return;
+      gesehen[t[1]] = true;
+      leute.push({id: t[1], name: name});
+    });
+    if (!leute.length) throw new Error("Im Teilnehmerverzeichnis steht niemand – oder Sie sind nicht als Lehrkraft angemeldet.");
+
+    // 2 · Kursaufbau und Abschlussstand (für Sterne je Kachel und Hilfekarten)
+    status.textContent = "Kursaufbau und Aktivitätsabschluss werden geladen …";
+    var aufbau = (K.stern_tests.length || K.hilfekarten.length) ? await liveAufbau(wurzel, kursid, sesskey) : null;
+    var sterne = K.stern_tests.map(function (s) { return {kachel: s.kachel, name: s.name, cm: cmFuer(aufbau, s.kachel, s.name)}; });
+    var hilfen = [];
+    K.hilfekarten.forEach(function (h) {
+      (h.namen || []).forEach(function (n) { hilfen.push({kachel: h.kachel, name: n, cm: cmFuer(aufbau, h.kachel, n)}); });
+    });
+    var abschluss = hilfen.length ? await liveAbschluss(wurzel, kursid) : null;
+    if (abschluss) hilfen.forEach(function (h) {     // ohne Aufbau: Spalte über den Namen (eindeutig)
+      if (h.cm) return;
+      var t = Object.keys(abschluss.spalten).filter(function (c) { return passt(abschluss.spalten[c], h.name); });
+      if (t.length === 1) h.cm = t[0];
+    });
+
+    // 3 · Je Person die Übersicht für Teilnehmer/in
+    var moeglichKurs = await liveMoeglich(wurzel, kursid);
+    var zaehl = {}, wartet = false, gemeldet = 0;
+    K.medaillen.forEach(function (m) { zaehl[m.name] = 0; }); zaehl.keine = 0;
+    for (var i = 0; i < leute.length; i++) {
+      var p = leute[i];
+      status.textContent = "Bewertungen: " + (i + 1) + " von " + leute.length + " …";
+      var doc;
+      try { doc = await holeSeite(wurzel + "/grade/report/user/index.php?id=" + kursid + "&userid=" + p.id); }
+      catch (e) { doc = null; }
+      var zeilen = doc ? liesBewertung(doc) : [];
+      if (doc && !zeilen.length && /neu berechnen|recalculat|regrad/i.test(doc.body.textContent || "")) wartet = true;
+      var s = doc ? sterneAus(zeilen, moeglichKurs) : null;
+      var anteil = s && s.moeglich ? (s.erreicht === null ? null : 100 * s.erreicht / s.moeglich) : null;
+      var m = anteil === null ? "–" : medaille(anteil);
+      if (zaehl[m] !== undefined) zaehl[m]++;
+      var ohne = "–";
+      if (sterne.length && zeilen.length) {
+        var fehlt = sterne.filter(function (st, nr) { return !sternGeholt(zeilen, st.cm, st.name, nr); })
+          .map(function (st) { return st.kachel; });
+        ohne = fehlt.length ? fehlt.join(" · ") : "keine – alle Sterne geholt";
+      }
+      var offen = "–";
+      if (hilfen.length && abschluss && abschluss.stand[p.id]) {
+        var mit = hilfen.filter(function (h) { return h.cm && abschluss.stand[p.id][h.cm] !== undefined; });
+        if (mit.length) {
+          var auf = mit.filter(function (h) { return abschluss.stand[p.id][h.cm]; }).map(function (h) { return h.name; });
+          offen = auf.length + " von " + mit.length + (auf.length ? ": " + auf.join(" · ") : "");
+        }
+      }
+      var paare = "–";
+      if (K.testpaare.length && zeilen.length) {
+        paare = Testpaare.ausBewertung(K, zeilen).map(function (w) {
+          return w.schritt + ": " + prozent(w.erster) + " / " + prozent(w.zweiter) + " · " + sterneZelle(w.sterne);
+        }).join("; ");
+      }
+      var link = el("a", {href: wurzel + "/grade/report/user/index.php?id=" + kursid + "&userid=" + p.id,
+                          target: "_blank", rel: "noopener", text: p.name});
+      koerper.appendChild(el("tr", null, [
+        el("th", {scope: "row"}, [link]),
+        el("td", {cls: "zahl", text: s && s.moeglich ? sterneText(s.erreicht || 0) + " / " + sterneText(s.moeglich) : "–"}),
+        el("td", {cls: "zahl", text: prozent(anteil)}),
+        el("td", null, [medaillenEl(m)]),
+        el("td", {text: paare}), el("td", {text: ohne}), el("td", {text: offen})]));
+      if (s && s.moeglich) gemeldet++;
+    }
+    document.getElementById("live-wartet").hidden = !wartet;
+    document.getElementById("live-medaillen").textContent = "Medaillen in der Klasse: " +
+      K.medaillen.map(function (x) { return x.name + " " + zaehl[x.name]; }).join(", ") + ", keine " + zaehl.keine +
+      (gemeldet < leute.length ? "; ohne Ergebnis " + (leute.length - gemeldet) : "") + ".";
+    if (!gemeldet && !wartet) throw new Error("Die Übersicht für Teilnehmer/in ließ sich nicht lesen – sind Sie als Lehrkraft angemeldet?");
+    status.textContent = "Stand: " + new Date().toLocaleTimeString("de-DE", {hour: "2-digit", minute: "2-digit"}) +
+      " Uhr, " + leute.length + " Personen.";
+  } catch (e) {
+    fehler.textContent = e && e.message ? e.message : String(e);
+    fehler.hidden = false;
+    status.textContent = "";
+  } finally {
+    status.dataset.fertig = "1";
+    liveLaeuft = false;
+  }
+}
+document.getElementById("live-grenzen").textContent =
+  K.medaillen.slice().reverse().map(function (m) { return m.name + " ab " + m.ab + " %"; }).join(", ");
+document.getElementById("live-neu").addEventListener("click", ladeLive);
+
+/* ---------- Ablauf ---------- */
+function alles() { zeichneDateiliste(); zeichneAbschluss(); zeichnePaare(); zeichneFV(); zeichneVN(); }
+
+document.getElementById("dateiwahl").addEventListener("change", function (e) { if (e.target.files.length) ladeDateien(e.target.files); e.target.value = ""; });
+document.getElementById("verwerfen").addEventListener("click", function () { DATEIEN = []; alles(); });
+document.getElementById("versuchswahl").addEventListener("change", alles);
+var ablage = document.getElementById("ablage");
+["dragenter", "dragover"].forEach(function (t) { ablage.addEventListener(t, function (e) { e.preventDefault(); ablage.classList.add("ueber"); }); });
+["dragleave", "drop"].forEach(function (t) { ablage.addEventListener(t, function (e) { e.preventDefault(); ablage.classList.remove("ueber"); }); });
+ablage.addEventListener("drop", function (e) { if (e.dataTransfer && e.dataTransfer.files.length) ladeDateien(e.dataTransfer.files); });
+window.addEventListener("dragover", function (e) { e.preventDefault(); });
+window.addEventListener("drop", function (e) { e.preventDefault(); });
+
+var tabs = Array.prototype.slice.call(document.querySelectorAll("[role=tab]"));
+function waehle(tab) {
+  tabs.forEach(function (t) {
+    var an = t === tab; t.setAttribute("aria-selected", an ? "true" : "false"); t.tabIndex = an ? 0 : -1;
+    document.getElementById(t.getAttribute("aria-controls")).hidden = !an;
+  });
+  document.getElementById("laden").hidden = tab.id === "tab-live";   // CSV-Ablage nur für die Export-Ansichten
+  tab.focus();
+}
+tabs.forEach(function (t, i) {
+  t.addEventListener("click", function () { waehle(t); });
+  t.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") waehle(tabs[(i + 1) % tabs.length]);
+    if (e.key === "ArrowLeft") waehle(tabs[(i - 1 + tabs.length) % tabs.length]);
+  });
+});
+alles();
+ladeLive();
+</script>
+</body>
+</html>

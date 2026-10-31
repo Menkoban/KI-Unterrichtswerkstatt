@@ -126,7 +126,12 @@ aus `.daten/ansicht/hochladen.txt` als Asset der Werkbank hochladen (`--assets`)
   (die Abgabe setzt sie als Voraussetzung voraus); das Raster steht ab Kachel 1 lesbar unter „So arbeiten Sie“ und
   verrät die Ursache nicht. Im Lehrkraftbereich `dashboard.dashboard_aktivitaet([alle Meilensteine],
   gespraech_ab=Profil bewertung.gespraech_ab)`: die Stelle der Bewertung (Selbsteinschätzung automatisch, Stufe der
-  Lehrkraft antippen, rot ab der Grenze, Note nach IHK, Download als Tabelle). Der Excel-Bogen aus Pipeline 2 ist nur
+  Lehrkraft antippen, rot ab der Grenze, Note nach IHK, Download als Tabelle). **Ein Dashboard** (Lehrkraft 2026-10-31):
+  Das Lernstand-Dashboard (Original aus der BSB-Pipeline, Vorlage `werkzeug/mbz/lernstand-dashboard.html`, Ansichten
+  Klasse live, Abschlusstests und Abzeichen, Kacheltests und Sterne, Fehlvorstellungen, Vorher-nachher) bleibt die
+  Datei im Lehrkraftbereich; `dashboard.lernstand_datei(konfig, meilensteine, grenze, kursdef)` fügt die Ansicht
+  „Bewertung und Stufenweg“ hinzu (Meilensteine, Stufenweg der Klasse mit Auswahlmenü und Kurve, eine Person), und
+  `dashboard.dashboard_aktivitaet(..., name=dashboard.DATEN_NAME)` daneben speichert die Bewertungen. Der Excel-Bogen aus Pipeline 2 ist nur
   noch Ersatz, wenn ein Kurs ohne Moodle läuft. Nach dem Live-Restore im Test-Moodle mit Testkonten prüfen
   (`werkzeug/mbz/prototypen/`).
 - **Word-Dateien nie nur als Download:** je Datei eine Infoseite, die den Inhalt zeigt, Download am Ende.
